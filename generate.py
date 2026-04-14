@@ -614,23 +614,34 @@ def main():
     print("\n【第二栏 · 独立记者 Newsletter】", file=sys.stderr)
     col3_data = fetch_column(COLUMN_3)
 
-    # 第三栏：从前两栏所有文章里筛 AI/经济/就业
+    # 第三栏：每个来源最多取 2 条匹配文章，再按日期排序
+    # 避免单一来源（如 Sixth Tone）占满整栏
+    seen_links = set()
+    per_source_count = {}
+    col4_deduped = []
+
     all_entries = []
     for data in [col1_data, col3_data]:
         for entries in data.values():
             all_entries.extend(entries)
 
-    col4_entries = [e for e in all_entries if is_col4_worthy(e)]
-    # 去重（同一文章可能来自多个栏目）
-    seen_links = set()
-    col4_deduped = []
-    for e in col4_entries:
-        link = get_link(e)
-        if link not in seen_links:
-            seen_links.add(link)
-            col4_deduped.append(e)
+    # 先按日期排，让最新的有优先权
+    all_entries.sort(key=sort_key, reverse=True)
 
-    print(f"\n【第三栏】聚合 {len(col4_deduped)} 条重点议题文章", file=sys.stderr)
+    for e in all_entries:
+        if not is_col4_worthy(e):
+            continue
+        link = get_link(e)
+        if link in seen_links:
+            continue
+        source = getattr(e, "_source_name", "")
+        if per_source_count.get(source, 0) >= 2:
+            continue
+        seen_links.add(link)
+        per_source_count[source] = per_source_count.get(source, 0) + 1
+        col4_deduped.append(e)
+
+    print(f"\n【第三栏】聚合 {len(col4_deduped)} 条重点议题文章（每源最多 2 条）", file=sys.stderr)
 
     html_content = render_html(col1_data, col3_data, col4_deduped, today)
 
