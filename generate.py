@@ -346,6 +346,20 @@ body {
   margin-bottom: 2.5rem;
 }
 .masthead h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.08em; }
+.masthead .nav {
+  margin-top: 0.7rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+.masthead .nav a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.masthead .nav a:hover { color: #1a1a1a; text-decoration: underline; }
+.masthead .nav .active { color: #1a1a1a; font-weight: 600; }
 .masthead .meta {
   font-size: 0.82rem; color: #666; margin-top: 0.4rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -502,6 +516,10 @@ def render_html(col1_data, col3_data, col4_entries, date_str):
 <div class="page-wrap">
   <div class="masthead">
     <h1>中国社会情报内参</h1>
+    <div class="nav">
+      <span class="active">中国</span>
+      <a href="/china-digest/dprk/">朝鲜</a>
+    </div>
     <div class="meta">CHINA SOCIAL INTELLIGENCE DIGEST &nbsp;·&nbsp; {date_str} &nbsp;·&nbsp; 自动生成</div>
   </div>
   <div class="columns">
