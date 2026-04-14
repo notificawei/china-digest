@@ -77,6 +77,13 @@ COLUMN_1 = {
             "filter": "none",
             "require_china": True,
         },
+        {
+            "name": "NBC News",
+            "url": "https://www.nbcnews.com/feed",
+            "lang": "en",
+            "filter": "none",
+            "require_china": True,
+        },
     ],
 }
 

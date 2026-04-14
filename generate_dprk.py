@@ -59,7 +59,7 @@ COLUMN_2 = {
         },
         {
             "name": "Korea Herald",
-            "url": "https://www.koreaherald.com/rss/020100000000.xml",
+            "url": "https://www.koreaherald.com/rss/newsAll",
         },
     ],
 }
