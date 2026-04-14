@@ -84,6 +84,33 @@ COLUMN_1 = {
             "filter": "none",
             "require_china": True,
         },
+        {
+            "name": "CNBC",
+            "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+            "lang": "en",
+            "filter": "none",
+            "require_china": True,
+        },
+        {
+            "name": "ABC News",
+            "url": "https://feeds.abcnews.com/abcnews/internationalheadlines",
+            "lang": "en",
+            "filter": "none",
+            "require_china": True,
+        },
+        {
+            "name": "BBC",
+            "url": "https://feeds.bbci.co.uk/news/world/asia/china/rss.xml",
+            "lang": "en",
+            "filter": "none",            # 已是中国专栏
+        },
+        {
+            "name": "CNN",
+            "url": "http://rss.cnn.com/rss/edition_asia.rss",
+            "lang": "en",
+            "filter": "none",
+            "require_china": True,
+        },
     ],
 }
 
