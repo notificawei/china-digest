@@ -541,7 +541,7 @@ def render_html(col1_data, col3_data, col4_entries, date_str):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中国社会情报内参 · {date_str}</title>
+<title>China Intelligence Digest · {date_str}</title>
 <style>
 {CSS}
 </style>
@@ -549,12 +549,12 @@ def render_html(col1_data, col3_data, col4_entries, date_str):
 <body>
 <div class="page-wrap">
   <div class="masthead">
-    <h1>中国社会情报内参</h1>
+    <h1>China Intelligence Digest</h1>
     <div class="nav">
-      <span class="active">中国</span>
-      <a href="/china-digest/dprk/">朝鲜</a>
+      <span class="active">China</span>
+      <a href="/china-digest/dprk/">North Korea</a>
     </div>
-    <div class="meta">CHINA SOCIAL INTELLIGENCE DIGEST &nbsp;·&nbsp; {date_str} &nbsp;·&nbsp; 自动生成</div>
+    <div class="meta">{date_str} &nbsp;·&nbsp; Auto-generated</div>
   </div>
   <div class="columns">
 {col1_html}
