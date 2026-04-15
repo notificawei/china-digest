@@ -52,14 +52,17 @@ COLUMN_2 = {
         {
             "name": "Yonhap News",
             "url": "https://en.yna.co.kr/RSS/news.xml",
+            "require_dprk": True,
         },
         {
             "name": "Korea Times",
             "url": "https://www.koreatimes.co.kr/www/rss/rss.xml",
+            "require_dprk": True,
         },
         {
             "name": "Korea Herald",
             "url": "https://www.koreaherald.com/rss/newsAll",
+            "require_dprk": True,
         },
     ],
 }
@@ -219,9 +222,10 @@ def sort_key(entry):
 
 
 DPRK_KEYWORDS = [
-    "north korea", "dprk", "kim jong", "pyongyang", "조선", "朝鲜",
-    "korean peninsula", "inter-korean", "hanoi summit", "denuclearization",
-    "choe son hui", "kim yo jong", "korean war",
+    "north korea", "n. korea", "n.korea", "dprk", "kim jong", "pyongyang",
+    "조선", "朝鲜", "korean peninsula", "inter-korean", "denuclearization",
+    "choe son hui", "kim yo jong", "korean war", "unification ministry",
+    "ministry of unification",
 ]
 
 def passes_dprk_filter(entry, source_cfg):
@@ -252,7 +256,7 @@ def fetch_source(source_cfg):
         return []
 
     results = []
-    for entry in feed.entries[:40]:
+    for entry in feed.entries[:100]:
         if not passes_dprk_filter(entry, source_cfg):
             continue
         entry._source_name = name
