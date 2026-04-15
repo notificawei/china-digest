@@ -23,26 +23,38 @@ COLUMN_1 = {
         {
             "name": "AP",
             "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:apnews.com&hl=en",
+            "require_russia": True,
+            "require_dprk": True,
         },
         {
             "name": "Reuters",
             "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:reuters.com&hl=en",
+            "require_russia": True,
+            "require_dprk": True,
         },
         {
             "name": "AFP",
             "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:afp.com&hl=en",
+            "require_russia": True,
+            "require_dprk": True,
         },
         {
             "name": "The Economist",
             "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:economist.com&hl=en",
+            "require_russia": True,
+            "require_dprk": True,
         },
         {
             "name": "The Guardian",
             "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:theguardian.com&hl=en",
+            "require_russia": True,
+            "require_dprk": True,
         },
         {
             "name": "BBC",
             "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:bbc.com&hl=en",
+            "require_russia": True,
+            "require_dprk": True,
         },
     ],
 }
@@ -67,8 +79,23 @@ COLUMN_2 = {
             "require_dprk": True,
         },
         {
-            "name": "Meduza",
-            "url": "https://meduza.io/rss/all",
+            "name": "Meduza EN",
+            "url": "https://meduza.io/rss/en/all",
+            "require_dprk": True,
+        },
+        {
+            "name": "iStories",
+            "url": "https://news.google.com/rss/search?q=site:istories.media&hl=en",
+            "require_dprk": True,
+        },
+        {
+            "name": "OVD-Info",
+            "url": "https://news.google.com/rss/search?q=site:ovd.info&hl=en",
+            "require_dprk": True,
+        },
+        {
+            "name": "Novaya Gazeta Europe",
+            "url": "https://news.google.com/rss/search?q=site:novayagazeta.eu&hl=en",
             "require_dprk": True,
         },
     ],
@@ -94,8 +121,18 @@ COLUMN_3 = {
             "require_china": True,
         },
         {
-            "name": "Meduza",
-            "url": "https://meduza.io/rss/all",
+            "name": "Meduza EN",
+            "url": "https://meduza.io/rss/en/all",
+            "require_china": True,
+        },
+        {
+            "name": "iStories",
+            "url": "https://news.google.com/rss/search?q=site:istories.media&hl=en",
+            "require_china": True,
+        },
+        {
+            "name": "Novaya Gazeta Europe",
+            "url": "https://news.google.com/rss/search?q=site:novayagazeta.eu&hl=en",
             "require_china": True,
         },
         {
@@ -116,6 +153,8 @@ DPRK_KEYWORDS = [
 ]
 
 CHINA_KEYWORDS = ["china", "chinese", "beijing", "shanghai", "中国"]
+
+RUSSIA_KEYWORDS = ["russia", "russian", "kremlin", "moscow", "putin", "ukraine"]
 
 # ============================================================
 # 工具函数
@@ -177,6 +216,10 @@ def passes_filter(entry, source_cfg):
 
     if source_cfg.get("require_china"):
         if not any(kw in full_text for kw in CHINA_KEYWORDS):
+            return False
+
+    if source_cfg.get("require_russia"):
+        if not any(kw in full_text for kw in RUSSIA_KEYWORDS):
             return False
 
     return True
@@ -408,15 +451,17 @@ def render_column(col_cfg, data_dict, max_articles=20):
         all_entries.extend(data_dict.get(src["name"], []))
     sorted_entries = sorted(all_entries, key=sort_key, reverse=True)[:max_articles]
 
+    en_label = esc(col_cfg["en_label"])
+
     parts = [f"""
   <div class="section">
-    <div class="section-header"><h2>{label}</h2></div>"""]
+    <div class="section-header"><h2>{en_label}</h2></div>"""]
 
     if sorted_entries:
         for e in sorted_entries:
             parts.append(render_entry(e))
     else:
-        parts.append('    <p class="no-articles">暂无内容</p>')
+        parts.append('    <p class="no-articles">No articles available</p>')
 
     parts.append("  </div>")
     return "\n".join(parts)
