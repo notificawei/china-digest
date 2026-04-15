@@ -11,14 +11,15 @@ body {
   font-family: "Georgia", "Times New Roman", "宋体", serif;
   background: #f9f7f2; color: #1a1a1a; line-height: 1.7;
 }
-.page-wrap { max-width: 1280px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+.page-wrap { max-width: 1600px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
 .columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem; align-items: start;
 }
 .columns > div { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
-@media (max-width: 860px) { .columns { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .columns { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .columns { grid-template-columns: 1fr; } }
 .masthead {
   text-align: center;
   border-top: 3px solid #1a1a1a; border-bottom: 3px solid #1a1a1a;
@@ -64,10 +65,12 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 .entry-meta { font-size: 0.75rem; color: #999; margin-top: 0.4rem; font-family: "Helvetica Neue", Arial, sans-serif; }
-.source-label {
-  font-size: 0.72rem; font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase; letter-spacing: 0.1em; color: #888;
-  border-left: 2px solid #ccc; padding-left: 0.5rem; margin: 1.4rem 0 0.8rem;
+.entry-meta .source-tag {
+  display: inline-block;
+  font-size: 0.68rem; font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #fff; background: #888;
+  border-radius: 2px; padding: 0 0.35rem; margin-right: 0.4rem;
 }
 .no-articles { font-size: 0.88rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
 .footer {
@@ -95,177 +98,145 @@ body {
       <h2>🔬 智库分析</h2>
       <span class="en-label">Think Tank &amp; Analysis</span>
     </div>
-    <div class="source-label">NK Pro</div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/us-rok-and-japan-discuss-naval-cooperation-to-counter-north-korea/" target="_blank">US, ROK and Japan discuss naval cooperation to counter North Korea</a></div>
       <div class="entry-title-zh">美韩日讨论海军合作对抗朝鲜</div>
       <div class="entry-summary">Senior naval commanders from the U.S., ROK and Japan met on Wednesday to discuss strengthening maritime security cooperation against North Korea’s advancing nuclear and missile threats. ROK Navy Chief of Staff Adm. Kim Kyung-ryul first held separate…</div>
-      <div class="entry-meta">2026-04-15 08:53</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 08:53</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/north-korean-economy-is-recovering-thanks-to-russia-china-ties-seoul/" target="_blank">North Korean economy is ‘recovering’ thanks to Russia, China ties: Seoul</a></div>
       <div class="entry-title-zh">首尔：得益于俄罗斯和中国的关系，朝鲜经济正在“复苏”</div>
       <div class="entry-summary">North Korea’s economy has entered a phase of gradual recovery after a period of contraction, according to Seoul’s Unification Ministry, citing the DPRK’s cooperation with Russia and rebounding trade with China. Pyongyang has formed and maintained…</div>
-      <div class="entry-meta">2026-04-15 08:48</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 08:48</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/north-korea-registers-its-largest-warship-with-un-maritime-watchdog/" target="_blank">North Korea registers its largest warship with UN maritime watchdog</a></div>
       <div class="entry-title-zh">朝鲜向联合国海事监督机构登记其最大军舰</div>
       <div class="entry-summary">North Korea has registered its largest modern warship with the U.N. maritime watchdog, records show, a move that could be aimed at showcasing the vessel’s readiness for operational deployment. The DPRK’s No. 51 Choe Hyon destroyer appeared on the…</div>
-      <div class="entry-meta">2026-04-15 08:45</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 08:45</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/russian-north-korean-trade-unions-ink-cooperation-deal-in-pyongyang/" target="_blank">Russian, North Korean trade unions ink cooperation deal in Pyongyang</a></div>
       <div class="entry-title-zh">俄罗斯与朝鲜工会在平壤签署合作协议</div>
       <div class="entry-summary">The largest labor organizations in Russia and North Korea have inked a cooperation deal, according to state media, a move that comes as the DPRK deploys large numbers of workers to Russia. The Federation of Independent Trade Unions of Russia signed…</div>
-      <div class="entry-meta">2026-04-15 05:59</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 05:59</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/china-greenlights-new-seafood-inspection-facility-on-north-korea-border/" target="_blank">China greenlights new seafood inspection facility on North Korea border</a></div>
       <div class="entry-title-zh">中国批准在朝鲜边境新建海鲜检验设施</div>
       <div class="entry-summary">China has greenlit the operation of a seafood inspection facility that can process imports in a city on the North Korea border, despite U.N. Security Council sanctions and customs rules on the DPRK’s seafood trade. The General Administration of…</div>
-      <div class="entry-meta">2026-04-15 03:35</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 03:35</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/trumps-war-with-iran-has-left-prospects-for-north-korea-talks-on-life-support/" target="_blank">Trump’s war with Iran has left prospects for North Korea talks on life support</a></div>
       <div class="entry-title-zh">特朗普与伊朗的战争为朝鲜生命支持谈判留下了前景</div>
       <div class="entry-summary">Over a month into the U.S. war with Iran, the repercussions for North Korea are coming into focus, and they aren’t good. The U.S. decision to attack an adversary in the middle of nuclear talks — going so far as to take out its leadership — will be…</div>
-      <div class="entry-meta">2026-04-15 02:05</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 02:05</div>
     </div>
-    <div class="source-label">38 North</div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/call-for-applications-38-north-emerging-scholars-fellowship-program-2026-2027/" target="_blank">Call for Applications: 38 North Emerging Scholars Fellowship Program 2026-2027</a></div>
-      <div class="entry-title-zh">征集申请：38 名北方新兴学者奖学金计划 2026-2027</div>
-      <div class="entry-summary">38 NORTH EMERGING SCHOLARS FELLOWSHIP PROGRAM 2026-2027 Application Open: April 13, 2025 ... The post Call for Applications: 38 North Emerging Scholars Fellowship Program 2026-2027 appeared first on 38 North .</div>
-      <div class="entry-meta">2026-04-13 16:00</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/wang-yis-pyongyang-visit-kim-jong-un-signals-renewed-efforts-to-improve-ties-but-alignment-still-lacking/" target="_blank">Wang Yi’s Pyongyang Visit: Kim Jong Un Signals Renewed Efforts to Improve Ties but Alignment Still Lacking</a></div>
-      <div class="entry-title-zh">王毅平壤之行：金正恩表示将再次努力改善关系，但仍缺乏协调</div>
-      <div class="entry-summary">Notably, North Korea’s summary report of the Ninth Party Congress made no mention of China or ... The post Wang Yi’s Pyongyang Visit: Kim Jong Un Signals Renewed Efforts to Improve Ties but Alignment Still Lacking appeared first on 38 North .</div>
-      <div class="entry-meta">2026-04-13 14:35</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/a-probable-new-hospital-at-wonsan-kalma-beach-resort/" target="_blank">A Probable New Hospital at Wonsan-Kalma Beach Resort</a></div>
-      <div class="entry-title-zh">元山卡尔马海滩度假村可能有一座新医院</div>
-      <div class="entry-summary">Commercial satellite imagery shows the Wonsan-Kalma Beach Resort likely has a new hospital. ... The post A Probable New Hospital at Wonsan-Kalma Beach Resort appeared first on 38 North .</div>
-      <div class="entry-meta">2026-04-10 15:35</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/quick-take-kim-yo-jongs-evolving-messaging/" target="_blank">Quick Take: Kim Yo Jong’s Evolving Messaging</a></div>
-      <div class="entry-title-zh">快速浏览：金与正不断变化的信息传递</div>
-      <div class="entry-summary">Kim Yo Jong’s April 6 communiqué replying to South Korean President Lee Jae Myung’s apology for ... The post Quick Take: Kim Yo Jong’s Evolving Messaging appeared first on 38 North .</div>
-      <div class="entry-meta">2026-04-08 16:17</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/assessing-the-limits-of-female-leadership-in-north-korea/" target="_blank">Assessing the Limits of Female Leadership in North Korea</a></div>
-      <div class="entry-title-zh">评估朝鲜女性领导力的局限性</div>
-      <div class="entry-summary">This article was written and researched as part of the second cohort of 38 North’s Emerging ... The post Assessing the Limits of Female Leadership in North Korea appeared first on 38 North .</div>
-      <div class="entry-meta">2026-04-06 18:17</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/over-three-decades-of-north-korea-policy-divide-south-korea-should-give-bipartisanship-a-chance/" target="_blank">Over Three Decades of North Korea Policy Divide: South Korea Should Give Bipartisanship a Chance</a></div>
-      <div class="entry-title-zh">三十多年来的朝鲜政策分歧：韩国应该给两党合作一个机会</div>
-      <div class="entry-summary">This article was written and researched as part of the second cohort of 38 North’s Emerging ... The post Over Three Decades of North Korea Policy Divide: South Korea Should Give Bipartisanship a Chance appeared first on 38 North .</div>
-      <div class="entry-meta">2026-04-06 13:01</div>
-    </div>
-    <div class="source-label">Beyond Parallel (CSIS)</div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/suspected-uranium-enrichment-building-at-yongbyon-complete/" target="_blank">Suspected Uranium Enrichment Building at Yongbyon Complete</a></div>
-      <div class="entry-title-zh">宁边疑似铀浓缩大楼竣工</div>
-      <div class="entry-summary">Recent imagery shows the completion of a building at Yongbyon, widely believed to be a new uranium enrichment plant. The post Suspected Uranium Enrichment Building at Yongbyon Complete appeared first on Beyond Parallel .</div>
-      <div class="entry-meta">2026-04-13 19:09</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/a-closer-look-at-the-yelabuga-uav-factory/" target="_blank">A Closer Look at the Yelabuga UAV Factory</a></div>
-      <div class="entry-title-zh">近距离观察 Yelabuga 无人机工厂</div>
-      <div class="entry-summary">Satellite imagery shows rapid expansion of Russian UAV and UCAV production infrastructure at the Yelabuga Special Economic Zone, with reports suggesting potential North Korean labor involvement. The post A Closer Look at the Yelabuga UAV Factory…</div>
-      <div class="entry-meta">2026-03-09 21:02</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/north-korean-uavs-at-panghyon/" target="_blank">North Korean UAVs at Panghyon</a></div>
-      <div class="entry-title-zh">朝鲜无人机在板贤基地</div>
-      <div class="entry-summary">Recent imagery shows two types of North Korean UAVs at Panghyon Airbase, observed together for the first time at the location. The post North Korean UAVs at Panghyon appeared first on Beyond Parallel .</div>
-      <div class="entry-meta">2026-03-03 15:19</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/the-strategic-value-of-china-to-korea/" target="_blank">The Strategic Value of China to Korea</a></div>
-      <div class="entry-title-zh">中国对韩国的战略价值</div>
-      <div class="entry-summary">CSIS Korea Chair is producing a three-part series on examining […] The post The Strategic Value of China to Korea appeared first on Beyond Parallel .</div>
-      <div class="entry-meta">2026-02-28 06:12</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/korea-update-nds-coupang-and-congress/" target="_blank">Korea Update: NDS, Coupang and Congress</a></div>
-      <div class="entry-title-zh">韩国最新动态：NDS、Coupang 和国会</div>
-      <div class="entry-summary">In this episode, Dr. Victor Cha moderated a discussion with Adam Farrar and Igor Khrestin on the recent Coupang investigation, the key elements of Trump’s National Defense Strategy, what that means for South Korea and for any future response to…</div>
-      <div class="entry-meta">2026-02-13 06:32</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/china-relocates-pmz-structure-to-weihai-shipyard/" target="_blank">China Relocates PMZ Structure to Weihai Shipyard</a></div>
-      <div class="entry-title-zh">中国将 PMZ 结构迁至威海造船厂</div>
-      <div class="entry-summary">The Atlantic Amsterdam, a Chinese platform that was a point of tension between South Korea and China due to its unilateral placement by Beijing in the Provisional Measures Zone (PMZ), arrived at a commercial shipyard in China last week. The post…</div>
-      <div class="entry-meta">2026-02-02 22:54</div>
-    </div>
-    <div class="source-label">Daily NK</div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/north-korea-self-reliance-policy-factory-accident-chongjin/" target="_blank">North Korea’s self-reliance push costs factory worker a finger</a></div>
       <div class="entry-title-zh">朝鲜的自力更生让工厂工人损失了一根手指</div>
       <div class="entry-summary">A technician at a coal mining machinery factory in Chongjin lost a finger recently while attempting to produce insulating paper using scrap lumber, an accident that workers and staff are attributing directly to North Korea’s “self-reliance” policy…</div>
-      <div class="entry-meta">2026-04-14 17:09</div>
+      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-14 17:09</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/kim-jong-un-cult-of-personality-north-korea-ninth-party-congress/" target="_blank">Kim Jong Un sidelines his predecessors in sweeping cult of personality push</a></div>
       <div class="entry-title-zh">金正恩在全面的个人崇拜推动中排挤前任</div>
       <div class="entry-summary">North Korea has launched an intensified cult of personality campaign around leader Kim Jong Un following the Ninth Congress of the Workers’ Party of Korea (WPK), held in February 2026, sidelining the ideological legacies of his predecessors and…</div>
-      <div class="entry-meta">2026-04-14 13:07</div>
+      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-14 13:07</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/north-korea-transport-costs-fuel-prices-2026/" target="_blank">Middle East oil shock doubles North Korea freight costs, squeezes traders</a></div>
       <div class="entry-title-zh">中东石油危机使朝鲜货运成本翻倍，令贸易商陷入困境</div>
       <div class="entry-summary">Rising oil prices driven by instability in the Middle East are pushing up fuel costs inside North Korea, with transport fees charged by private freight vehicles doubling in a short period and squeezing market traders already struggling through a…</div>
-      <div class="entry-meta">2026-04-14 10:37</div>
+      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-14 10:37</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/human-rights-commission-says-seoul-should-protect-north-korean-pows-in-ukraine/" target="_blank">Human rights commission says Seoul should protect North Korean POWs in Ukraine</a></div>
+      <div class="entry-title-zh">人权委员会表示首尔应保护在乌克兰的朝鲜战俘</div>
+      <div class="entry-summary">The South Korean government’s human rights watchdog says the country’s foreign and prime ministers should use all available resources to protect and repatriate two North Korean prisoners of war held in Ukraine. The state-funded National Human Rights…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 09:23</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/kim-jong-un-donates-2m-to-educate-pro-north-korea-youth-in-japan/" target="_blank">Kim Jong Un donates $2M to educate pro-North Korea youth in Japan</a></div>
+      <div class="entry-title-zh">金正恩捐赠200万美元用于在日本教育亲朝鲜青年</div>
+      <div class="entry-summary">North Korean leader Kim Jong Un has sent nearly $2 million to a pro-DPRK organization in Japan, an annual donation made to support youth education ahead of the country’s most important holiday. State media reported on Tuesday that Kim sent 316…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 06:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/north-korea-lets-russians-run-in-pyongyang-despite-cancelling-marathon/" target="_blank">North Korea lets Russians run in Pyongyang despite cancelling marathon</a></div>
+      <div class="entry-title-zh">尽管取消了马拉松比赛，朝鲜仍允许俄罗斯人在平壤跑步</div>
+      <div class="entry-summary">North Korea allowed dozens of Russian athletes who signed up for the country’s international marathon to go for runs in central Pyongyang this month, despite abruptly cancelling the annual event. The exclusive tour once again highlighted the special…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 03:39</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/trump-nominates-former-congresswoman-michelle-steel-as-ambassador-to-seoul/" target="_blank">Trump nominates former congresswoman Michelle Steel as ambassador to Seoul</a></div>
+      <div class="entry-title-zh">特朗普提名前国会女议员米歇尔·斯蒂尔担任驻首尔大使</div>
+      <div class="entry-summary">President Donald Trump has nominated Michelle Steel, a former California congresswoman and an outspoken advocate for North Korean human rights, to serve as the next U.S. ambassador to South Korea. The White House announced the nomination on Monday,…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 03:39</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/cathy-kang-rethinking-korean-unification-from-a-global-perspective/" target="_blank">Cathy Kang: Rethinking Korean unification from a global perspective</a></div>
+      <div class="entry-title-zh">Cathy Kang：从全球角度重新思考韩国统一</div>
+      <div class="entry-summary">Korea Risk Group Executive Director Jeongmin Kim kicks off the podcast this week by discussing North Korea’s positive response after Seoul expressed regret for past civilian drone incursions, only to quickly undercut hopes for inter-Korean detente…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 02:01</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/kim-jong-un-watches-cruise-missile-tests-from-new-warship-on-west-coast/" target="_blank">Kim Jong Un watches cruise missile tests from new warship on west coast</a></div>
+      <div class="entry-title-zh">金正恩在西海岸观看新军舰的巡航导弹试验</div>
+      <div class="entry-summary">North Korean leader Kim Jong Un oversaw a test of cruise missiles from the deck of a new warship on the west coast on Sunday, according to state media, the third test in the last six weeks. Kim also claimed for the first time that a fourth new…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-13 22:26</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://beyondparallel.csis.org/suspected-uranium-enrichment-building-at-yongbyon-complete/" target="_blank">Suspected Uranium Enrichment Building at Yongbyon Complete</a></div>
+      <div class="entry-title-zh">宁边疑似铀浓缩大楼竣工</div>
+      <div class="entry-summary">Recent imagery shows the completion of a building at Yongbyon, widely believed to be a new uranium enrichment plant. The post Suspected Uranium Enrichment Building at Yongbyon Complete appeared first on Beyond Parallel .</div>
+      <div class="entry-meta"><span class="source-tag">Beyond Parallel (CSIS)</span>2026-04-13 19:09</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/south-koreas-rushed-embrace-of-kim-jong-uns-two-state-theory-is-sowing-confusion/" target="_blank">South Korea’s rushed embrace of Kim Jong Un’s ‘two-state theory’ is sowing confusion</a></div>
       <div class="entry-title-zh">韩国仓促接受金正恩的“两国理论”正在播下混乱的种子</div>
       <div class="entry-summary">North Korea’s Kim Jong Un first introduced the concept of two hostile states in late 2023, framing South Korea as the country’s foremost enemy. Since then, his government has claimed to have codified the doctrine in the Workers’ Party of Korea’s…</div>
-      <div class="entry-meta">2026-04-13 19:01</div>
+      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-13 19:01</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/when-one-north-korean-defector-disappears-in-china-police-round-up-everyone-they-know/" target="_blank">When one North Korean defector disappears in China, police round up everyone they know</a></div>
       <div class="entry-title-zh">当一名脱北者在中国失踪时，警方围捕了他们认识的所有人</div>
       <div class="entry-summary">Chinese police have sharply intensified surveillance of North Korean defectors living in China, summoning and interrogating entire social networks whenever a single individual goes missing. A Daily NK source in China reported on Monday that public…</div>
-      <div class="entry-meta">2026-04-13 17:31</div>
+      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-13 17:31</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/call-for-applications-38-north-emerging-scholars-fellowship-program-2026-2027/" target="_blank">Call for Applications: 38 North Emerging Scholars Fellowship Program 2026-2027</a></div>
+      <div class="entry-title-zh">征集申请：38 名北方新兴学者奖学金计划 2026-2027</div>
+      <div class="entry-summary">38 NORTH EMERGING SCHOLARS FELLOWSHIP PROGRAM 2026-2027 Application Open: April 13, 2025 ... The post Call for Applications: 38 North Emerging Scholars Fellowship Program 2026-2027 appeared first on 38 North .</div>
+      <div class="entry-meta"><span class="source-tag">38 North</span>2026-04-13 16:00</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/north-korean-factories-turn-workers-into-salespeople-under-revamped-informal-labor-system/" target="_blank">North Korean factories turn workers into salespeople under revamped informal labor system</a></div>
       <div class="entry-title-zh">朝鲜工厂在改革后的非正式劳动力制度下将工人转变为销售人员</div>
       <div class="entry-summary">A longstanding informal labor arrangement in North Korea is taking on a new form, with factory workers now directly distributing factory-made goods and remitting the proceeds back to their enterprises. A Daily NK source in North Pyongan province…</div>
-      <div class="entry-meta">2026-04-13 14:38</div>
+      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-13 14:38</div>
     </div>
   </div>
 
@@ -274,134 +245,292 @@ body {
       <h2>🇰🇷 韩国媒体</h2>
       <span class="en-label">South Korean Media</span>
     </div>
-    <div class="source-label">Yonhap News</div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415008600320" target="_blank">KOFIA chief, Indonesian envoy discuss investment cooperation</a></div>
-      <div class="entry-title-zh">KOFIA主席与印尼特使讨论投资合作</div>
-      <div class="entry-summary">SEOUL, April 15 (Yonhap) -- The head of the Korea Financial Investment Associati...</div>
-      <div class="entry-meta">2026-04-15 08:13</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415008700315" target="_blank">Yonhap News Summary</a></div>
-      <div class="entry-title-zh">韩联社新闻摘要</div>
-      <div class="entry-summary">The following is the second summary of major stories moved by Yonhap News Agency...</div>
-      <div class="entry-meta">2026-04-15 08:05</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415006600315" target="_blank">Top admirals of S. Korea, U.S., Japan discuss trilateral cooperation in Seoul</a></div>
-      <div class="entry-title-zh">韩美日三国海军上将在首尔讨论三边合作</div>
-      <div class="entry-summary">SEOUL, April 15 (Yonhap) -- Top naval commanders of South Korea, the United Stat...</div>
-      <div class="entry-meta">2026-04-15 08:00</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415006852320" target="_blank">(2nd LD) Seoul shares end above 6,000 for the 1st time since U.S.-Iran conflict</a></div>
-      <div class="entry-title-zh">(2nd LD) 首尔股市自美伊冲突以来首次突破 6,000 点</div>
-      <div class="entry-summary">SEOUL, April 15 (Yonhap) -- Seoul shares soared more than 2 percent Wednesday to...</div>
-      <div class="entry-meta">2026-04-15 07:32</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415008151315" target="_blank">(LEAD) S. Korea has no plans to pay Iran for passage of stranded ships in Strait of Hormuz: FM</a></div>
-      <div class="entry-title-zh">(LEAD) 韩国没有计划向伊朗支付霍尔木兹海峡搁浅船只通行费：FM</div>
-      <div class="entry-summary">SEOUL, April 15 (Yonhap) -- South Korea has no plans to pay Iran to get its stra...</div>
-      <div class="entry-meta">2026-04-15 07:29</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415006851320" target="_blank">(LEAD) Seoul shares end above 6,000 for the 1st time since U.S.-Iran conflict</a></div>
-      <div class="entry-title-zh">(LEAD) 首尔股市自美伊冲突以来首次收于 6,000 点上方</div>
-      <div class="entry-summary">SEOUL, April 15 (Yonhap) -- Seoul shares soared more than 2 percent Wednesday to...</div>
-      <div class="entry-meta">2026-04-15 07:06</div>
-    </div>
-    <div class="source-label">Korea Times</div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/20260415/top-admirals-of-s-korea-us-japan-discuss-trilateral-cooperation-in-seoul?utm_source=rss" target="_blank">Top admirals of S. Korea, US, Japan discuss trilateral cooperation in Seoul</a></div>
       <div class="entry-title-zh">韩美日三国海军上将在首尔讨论三边合作</div>
       <div class="entry-summary">Top naval commanders of South Korea, the United States and Japan gathered in Seoul on Wednesday to hold a series of talks aimed at strengthening their trilateral maritime security cooperation, the South&#x27;s Navy said. The gathering brought together…</div>
-      <div class="entry-meta">2026-04-15 08:57</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/entertainment/shows-dramas/20260415/kpop-demon-hunters-star-to-play-farmer-in-sbs-rom-com?utm_source=rss" target="_blank">&#x27;KPop Demon Hunters&#x27; star to play farmer in SBS rom-com</a></div>
       <div class="entry-title-zh">《韩流恶魔猎手》明星将在 SBS 浪漫喜剧中扮演农民</div>
       <div class="entry-summary">Ahn Hyo-seop, who shot to global fame as the voice of Jinu in the animated film &quot;KPop Demon Hunters,&quot; is returning to the small screen as a perfectionist farmer. In SBS’s new romantic comedy &quot;Sold Out on You,&quot; Ahn plays Matthew Lee, a genius…</div>
-      <div class="entry-meta">2026-04-15 08:57</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/southkorea/society/20260415/photo-12th-anniversary-of-sewol-ferry-disaster?utm_source=rss" target="_blank">[PHOTO] 12th anniversary of Sewol ferry disaster</a></div>
       <div class="entry-title-zh">[照片]世越号渡轮事故12周年</div>
       <div class="entry-summary">A mourner looks at the salvaged hull of the Sewol ferry at Mokpo New Port in South Jeolla Province, Wednesday, one day before the 12th anniversary of the 2014 Sewol ferry sinking disaster that killed more than 300 people, most of them students on a…</div>
-      <div class="entry-meta">2026-04-15 08:57</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/southkorea/20260415/kwangwoon-univ-korea-military-academy-forge-alliance-to-advance-defense-technology?utm_source=rss" target="_blank">Kwangwoon Univ., Korea Military Academy forge alliance to advance defense technology</a></div>
       <div class="entry-title-zh">光云大学与韩国军事学院结成联盟以推进国防技术</div>
       <div class="entry-summary">Kwangwoon University and the Korea Military Academy forged a formal alliance earlier this week to develop high-tech defense expertise, bridging the gap between civilian engineering and military strategy. The partnership, signed by Kwangwoon…</div>
-      <div class="entry-meta">2026-04-15 08:57</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/lifestyle/trends/20260415/6-ways-to-lift-yourself-out-of-depression?utm_source=rss" target="_blank">6 ways to lift yourself out of depression</a></div>
       <div class="entry-title-zh">6种让自己摆脱抑郁的方法</div>
       <div class="entry-summary">Click here for more articles by Kormedi.com. It is impossible for human beings to feel happy all the time. Experiencing periods of low mood is normal, but closer attention is needed when such feelings begin to significantly affect daily life. For…</div>
-      <div class="entry-meta">2026-04-15 08:57</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/sports/20260415/taiwanese-pitcher-wang-yan-cheng-wins-over-hanwha-fans?utm_source=rss" target="_blank">Taiwanese pitcher Wang Yan-cheng wins over Hanwha fans</a></div>
       <div class="entry-title-zh">台湾投手王彦成赢得韩华球迷的喜爱</div>
       <div class="entry-summary">Two wins in three starts, no losses, a 0.24 ERA and a 1.02 WHIP. For “Taiwanese prince” Wang Yan-cheng, who joined Hanwha Eagles under the Asian quota player system, the numbers are proof of how quickly the 25-year-old pitcher has settled into the…</div>
-      <div class="entry-meta">2026-04-15 08:57</div>
-    </div>
-    <div class="source-label">Korea Herald</div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718145" target="_blank">Opposition lawmaker slams govt’s blanket approval of requests to contact North Koreans</a></div>
-      <div class="entry-title-zh">反对派议员抨击政府全面批准联系朝鲜人的请求</div>
-      <div class="entry-summary">Rep. Bae Hyun-jin of the main opposition People Power Party on Wednesday slammed the government over its blanket approval of civilian requests to contact North Korean residents, following the scrapping of a previous screening guideline. Speaking at…</div>
-      <div class="entry-meta">2026-04-15 08:29</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718136" target="_blank">W3.5b is the new entry to Korea’s top 1%</a></div>
-      <div class="entry-title-zh">W3.5b 是韩国前 1% 的新成员</div>
-      <div class="entry-summary">A South Korean household needs net assets of about 3.5 billion won ($2.6 million) to rank among the top 1 percent, a report showed Wednesday. According to the “THE100 Report” by NH Investment &amp; Securities’ 100-Year Life Research Center, the cutoff…</div>
-      <div class="entry-meta">2026-04-15 08:21</div>
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/others/20260415/s-korea-required-to-make-ironclad-nonproliferation-guarantee-over-nuclear-submarine-plan-iaea-chief?utm_source=rss" target="_blank">S. Korea required to make ironclad nonproliferation guarantee over nuclear submarine plan: IAEA chief</a></div>
+      <div class="entry-title-zh">国际原子能机构主席：韩国必须就核潜艇计划做出铁定的防扩散保证</div>
+      <div class="entry-summary">South Korea must reach agreements on safeguards with the International Atomic Energy Agency (IAEA) before proceeding with its planned nuclear-powered submarine program, IAEA Director General Rafael Grossi said Wednesday. “It is indispensable to have…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718127" target="_blank">[단독] 중국 브로커들, 유출된 TOPIK 문제 온라인서 최대 750만원에 판매</a></div>
-      <div class="entry-title-zh">【独家】中国经纪商在网上出售泄露的TOPIK问题，最高售价750万韩元</div>
-      <div class="entry-summary">중국 브로커들이 한국어능력시험(TOPIK) 문제를 시험 전에 온라인에서 최대 750만원에 판매했다는 정황이 포착되면서 시험 공정성과 신뢰성에 대한 우려가 커지고 있다. 중국 소셜미디어 플랫폼 샤오홍슈에서 ‘TOPIK’을 검색하면 시험 관련 광고 게시물이 다수 확인된다. ‘카풀’, ‘점수 보장’, ‘즉시 합격’ 등으로 풀이되는 중국어 은어가 등장한다. 한국에 거주하는 한 학생은 코리아헤럴드에 “중국인 동급생들로부터 읽기·듣기 영역 답안을 시험…</div>
-      <div class="entry-meta">2026-04-15 08:17</div>
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/lifestyle/books/20260415/longing-for-human-connection-in-lisas-alter-ego?utm_source=rss" target="_blank">Longing for human connection in LISA&#x27;s &#x27;Alter Ego&#x27;</a></div>
+      <div class="entry-title-zh">LISA 的《Alter Ego》中渴望人与人之间的联系</div>
+      <div class="entry-summary">In the halogen glow of a sprawling metropolis, people find themselves increasingly isolated despite the technological advancements that are designed to help them connect. From quick one-person panels to faceless crowds, loneliness bleeds through the…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718126" target="_blank">Seoul locks in 273m barrels oil, 2.1m tons naphtha shielded from Hormuz risks</a></div>
-      <div class="entry-title-zh">首尔锁定2.73亿桶石油和210万吨石脑油以免受霍尔木兹风险影响</div>
-      <div class="entry-summary">South Korea has secured 273 million barrels of additional crude oil and up to 2.1 million tons of naphtha through the end of this year from Kazakhstan, Oman and Saudi Arabia, President Lee Jae Myung&#x27;s chief of staff said Wednesday. Kang Hoon-sik…</div>
-      <div class="entry-meta">2026-04-15 08:04</div>
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/20260415/korea-has-no-plans-to-pay-iran-for-passage-of-stranded-ships-in-strait-of-hormuz-fm?utm_source=rss" target="_blank">Korea has no plans to pay Iran for passage of stranded ships in Strait of Hormuz: FM</a></div>
+      <div class="entry-title-zh">FM：韩国没有计划向伊朗支付霍尔木兹海峡搁浅船只通行费用</div>
+      <div class="entry-summary">Korea has no plans to pay Iran to get its stranded ships out of the Strait of Hormuz, its top diplomat said Wednesday, noting that it does not intend to take any action that would run counter to the U.S.-led blockade of the shipping lane. Foreign…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718123" target="_blank">Korea women’s soccer team falls 1–3 to Canada in FIFA Series</a></div>
-      <div class="entry-title-zh">韩国女足在 FIFA 系列赛中以 1-3 负于加拿大队</div>
-      <div class="entry-summary">Korea’s women’s national soccer team suffered a 1-3 defeat to Canada despite holding a numerical advantage for much of the match, extending their losing streak in FIFA Series 2026. The Korean side lost to the Canada women’s national team on…</div>
-      <div class="entry-meta">2026-04-15 08:01</div>
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/business/20260415/hd-construction-equipment-sees-fuel-saving-excavator-sales-surge?utm_source=rss" target="_blank">HD Construction Equipment sees fuel-saving excavator sales surge</a></div>
+      <div class="entry-title-zh">HD Construction Equipment看到节油挖掘机销量激增</div>
+      <div class="entry-summary">In a construction industry squeezed by persistently high fuel costs, a new line of high-efficiency excavators is gaining rapid traction in the Korean market. HD Construction Equipment said Wednesday that its 32-ton Hyundai HX320 has emerged as a…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718122" target="_blank">Incheon striker Mugosa named K League&#x27;s top player for opening month</a></div>
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/economy/policy/20260415/bok-chief-nominee-apologizes-over-asset-nationality-controversies-at-hearing?utm_source=rss" target="_blank">BOK chief nominee apologizes over asset, nationality controversies at hearing</a></div>
+      <div class="entry-title-zh">韩国央行首席候选人在听证会上就资产和国籍争议道歉</div>
+      <div class="entry-summary">Bank of Korea (BOK) Gov. nominee Shin Hyun-song apologized to the public during a parliamentary confirmation hearing, Wednesday, over a series of controversies surrounding his ownership of multiple homes, his family’s foreign nationalities and his…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/economy/others/20260415/kospi-settles-above-6000-as-hope-grows-for-second-us-iran-truce-talks?utm_source=rss" target="_blank">KOSPI settles above 6,000 as hope grows for second US-Iran truce talks</a></div>
+      <div class="entry-title-zh">随着第二次美伊休战谈判的希望增强，KOSPI 收于 6,000 点上方</div>
+      <div class="entry-summary">KOSPI extended its gains for a second consecutive session, trading above the 6,100 level Wednesday amid expectations that a second round of ceasefire negotiations between the United States and Iran will soon commence. Kosdaq and the Korean won also…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/southkorea/politics/20260415/cho-kuk-han-dong-hoon-bid-for-assembly-seats-raising-stakes-for-by-elections?utm_source=rss" target="_blank">Cho Kuk, Han Dong-hoon bid for Assembly seats, raising stakes for by-elections</a></div>
+      <div class="entry-title-zh">曹国、韩东勋争夺议会席位，补选风险加大</div>
+      <div class="entry-summary">The parliamentary by-elections, scheduled alongside the June 3 local elections, are quickly becoming a political battleground in their own right, with the entry of high-profile candidates drawing comparisons to a “mini-general election.” The race…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/20260415/korea-israel-ties-intact-despite-stir-over-presidents-message-fm?utm_source=rss" target="_blank">Korea-Israel ties intact despite stir over president&#x27;s message: FM</a></div>
+      <div class="entry-title-zh">尽管总统的信息引起轩然大波，但韩国与以色列的关系完好无损：FM</div>
+      <div class="entry-summary">The relations between Korea and Israel remain intact, Foreign Minister Cho Hyun said, Wednesday, in response to diplomatic concerns over President Lee Jae Myung’s social media post that Israel perceived as trivializing the Holocaust. “We have…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/business/companies/20260415/trade-association-to-hold-1st-seminar-on-russian-market-after-war?utm_source=rss" target="_blank">Trade association to hold 1st seminar on Russian market after war</a></div>
+      <div class="entry-title-zh">贸易协会将举办第一次战后俄罗斯市场研讨会</div>
+      <div class="entry-summary">The Korea International Trade Association (KITA) will hold a seminar on trade with Russia for the first time since 2022 due to the country&#x27;s war on Ukraine, in an apparent move to help domestic companies prepare for postwar shifts in resource…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/sports/20260415/incheon-striker-mugosa-named-k-leagues-top-player-for-opening-month?utm_source=rss" target="_blank">Incheon striker Mugosa named K League&#x27;s top player for opening month</a></div>
       <div class="entry-title-zh">仁川前锋穆戈萨被评为K联赛首月最佳球员</div>
-      <div class="entry-summary">Incheon United striker Stefan Mugosa was named the season&#x27;s first winner of the Player of the Month award in South Korean soccer Wednesday. The Korea Professional Football League said Mugosa beat out three candidates for the Player of the Month…</div>
-      <div class="entry-meta">2026-04-15 08:01</div>
+      <div class="entry-summary">Incheon United striker Stefan Mugosa was named the season&#x27;s first winner of the Player of the Month award in Korean football Wednesday. The Korea Professional Football League (K League) said Mugosa beat out three candidates for the Player of the…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/business/companies/20260415/us-firms-now-favor-hong-kong-over-korea-for-apac-headquarters-survey?utm_source=rss" target="_blank">US firms now favor Hong Kong over Korea for APAC headquarters: survey</a></div>
+      <div class="entry-title-zh">调查显示美国公司现在更青睐香港而不是韩国作为亚太区总部</div>
+      <div class="entry-summary">Korea is becoming less attractive as a base for Asia-Pacific headquarters for U.S. companies, with Hong Kong overtaking it, the American Chamber of Commerce (AMCHAM) in Korea said Wednesday. AMCHAM attributed the result partly to Korea&#x27;s inflexible…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/business/20260415/kumho-petrochemical-hyundai-motor-win-top-industrial-prize-for-breakthrough-in-recycled-plastics?utm_source=rss" target="_blank">Kumho Petrochemical, Hyundai Motor win top industrial prize for breakthrough in recycled plastics</a></div>
+      <div class="entry-title-zh">锦湖石化和现代汽车因再生塑料突破而荣获最高工业奖</div>
+      <div class="entry-summary">Kumho Petrochemical said Wednesday that it had won the IR52 Jang Young-sil Award, alongside Hyundai Motor, for developing a recycled acrylonitrile butadiene styrene (ABS) material suitable for use in mass-produced vehicle interiors. The award, one…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/business/companies/20260415/hyundai-motor-ceo-underscores-role-of-autonomous-driving-ai-robotics?utm_source=rss" target="_blank">Hyundai Motor CEO underscores role of autonomous driving, AI robotics</a></div>
+      <div class="entry-title-zh">现代汽车首席执行官强调自动驾驶、人工智能机器人的作用</div>
+      <div class="entry-summary">Hyundai Motor CEO Jose Munoz has underscored the role of autonomous driving and artificial intelligence (AI) robotics in leading the future of mobility and the need to quickly pivot the company&#x27;s strategy to meet changing consumer demand. He shared…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/opinion/20260415/exhaustion-that-sleep-cant-fix?utm_source=rss" target="_blank">Exhaustion that sleep can’t fix</a></div>
+      <div class="entry-title-zh">睡眠无法解决的疲惫</div>
+      <div class="entry-summary">We tend to think about burnout as the result of doing too much. But lately, it seems that even doing less doesn’t seem to fix it. There is a particular kind of exhaustion that seems to linger in our lives. It doesn’t lift with sleep or a lighter…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:12</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>🌐 国际外媒</h2>
+      <span class="en-label">International Press</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/apr/15/north-korea-nuclear-weapons-capability-un-watchdog-rafael-grossi" target="_blank">North Korea rapidly expanding nuclear weapons capability, UN watchdog warns</a></div>
+      <div class="entry-title-zh">联合国监督机构警告朝鲜迅速扩大核武器能力</div>
+      <div class="entry-summary">Pyongyang making ‘very serious’ progress on producing weapons, with rapid rise in activity at main nuclear complex North Korea has made “very serious” progress in its ability to produce more nuclear weapons, the head of the UN’s nuclear watchdog has…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-04-15 07:51</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/lifeandstyle/2026/apr/08/lib-dem-sue-miller-interview-nuclear-war-disarmament" target="_blank">‘We’d all be in the destruction zone!’ Can anything stop today’s nuclear free-for-all?</a></div>
+      <div class="entry-title-zh">“我们都会在毁灭区！”有什么能阻止今天的核混战吗？</div>
+      <div class="entry-summary">The Lib Dems’ Sue Miller has spent most of her life trying to reduce the risk of nuclear war. And it’s not going well. Why are so few people talking about non-proliferation, let alone disarmament? Almost the mildest remark that Sue Miller makes…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-04-08 09:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/news/audio/2026/apr/08/north-koreas-most-beloved-daughter-podcast" target="_blank">North Korea’s ‘most beloved daughter’ – podcast</a></div>
+      <div class="entry-title-zh">朝鲜“最心爱的女儿”——播客</div>
+      <div class="entry-summary">Journalist Jean H Lee on Kim Ju-ae, the daughter of Kim Jong-un, and the future of North Korea The North Korean leader, Kim Jong-un, has attended many photo ops with his daughter Kim Ju-ae in recent months, adding to speculation she will be…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-04-08 02:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/commentisfree/2026/apr/07/the-guardian-view-on-north-korea-and-the-kims-whoevers-at-the-helm-the-regime-serves-only-itself" target="_blank">The Guardian view on North Korea and the Kims: whoever’s at the helm, the regime serves only itself | Editorial</a></div>
+      <div class="entry-title-zh">《卫报》对朝鲜和金氏家族的看法：无论谁掌舵，该政权都只为自己服务 |社论</div>
+      <div class="entry-summary">Speculation that the leader’s teenage daughter will succeed him is rife. But Ju-ae’s high profile is about continuity, not change North Korea is unique in turning a putatively communist state into a dynastic system now in its third generation. So…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-04-07 17:46</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/apr/03/ukraine-war-briefing-zelenskyy-expertise-waterways-open-middle-east-conflict" target="_blank">Ukraine war briefing: Zelenskyy offers expertise on keeping waterways open amid Middle East conflict</a></div>
+      <div class="entry-title-zh">乌克兰战争简报：泽伦斯基提供在中东冲突中保持水道开放的专业知识</div>
+      <div class="entry-summary">‘Ukraine has expertise concerning sea waterways, and the defence and reopening of maritime traffic,’ says president. What we know on day 1,500 Volodymyr Zelenskyy offered on Thursday to provide Ukraine’s expertise in dealing with freedom of…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-04-03 00:20</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/mar/26/north-korea-belarus-friendship-cooperation-treaty" target="_blank">North Korea and Belarus sign ‘friendship and cooperation’ treaty</a></div>
+      <div class="entry-title-zh">朝鲜与白俄罗斯签署“友好合作”条约</div>
+      <div class="entry-summary">Kim Jong-un welcomed Alexander Lukashenko with lavish ceremony, including artillery salute and goose-stepping soldiers before a large flag-waving crowd North Korea and Belarus’s strongmen leaders signed a “friendship and cooperation” treaty on…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-03-26 06:48</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/mar/14/north-korea-fires-projectile-towards-sea-amid-us-south-korea-military-drills" target="_blank">North Korea fires missiles into the sea as US and South Korea conduct military drills</a></div>
+      <div class="entry-title-zh">美国和韩国进行军事演习时朝鲜向海上发射导弹</div>
+      <div class="entry-summary">Missiles were launched from an area near the capital Pyongyang, according to South Korea’s military North Korea fired more than 10 ballistic missiles into the sea on Saturday, South Korea’s military said, as the US and South Korean forces conducted…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-03-14 06:05</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/mar/10/china-north-korea-trains-to-resume-after-six-year-halt-following-covid-outbreak" target="_blank">China-North Korea trains to restart, six years after Covid brought them to stop</a></div>
+      <div class="entry-title-zh">中朝列车在新冠疫情导致列车停止六年后重新启动</div>
+      <div class="entry-summary">Travel operators say Chinese and North Koreans can now buy tickets for services leaving this week Passenger train services between China and North Korea are to resume this week, six years after their suspension because of the Covid-19 pandemic,…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-03-10 10:13</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/mar/10/north-korea-nuclear-weapons-trump-iran-war" target="_blank">Trump’s Iran war will reinforce North Korea’s view that nuclear weapons are the only path to security</a></div>
+      <div class="entry-title-zh">特朗普的伊朗战争将强化朝鲜的观点，即核武器是实现安全的唯一途径</div>
+      <div class="entry-summary">As speculation mounts that Kim Jong-un and Trump could meet this month, analysts say Pyongyang will continue to see nuclear weapons as a matter of survival Middle East crisis – live updates North Korea’s launch last week of a missile from a naval…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-03-10 02:09</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/business/2026/mar/06/north-korean-agents-using-ai-to-trick-western-firms-into-hiring-them-microsoft-says" target="_blank">North Korean agents using AI to trick western firms into hiring them, Microsoft says</a></div>
+      <div class="entry-title-zh">微软表示，朝鲜特工利用人工智能诱骗西方公司雇用他们</div>
+      <div class="entry-summary">Firm says AI tools are masking identities of false applicants, who then funnel wages from remote IT jobs to North Korea Fake IT workers deployed by North Korea are using AI technology, including voice-changing tools, to trick western companies into…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-03-06 17:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/feb/27/north-korea-kim-jong-un-daughter-ju-ae-succession" target="_blank">North Korea’s ‘most beloved’ child: what the key congress revealed about Kim Jong-un’s succession plans</a></div>
+      <div class="entry-title-zh">朝鲜“最心爱”的孩子：关键大会透露了金正恩的继任计划</div>
+      <div class="entry-summary">Many observers believe North Korean leader has decided daughter Kim Ju-ae will succeed him, but others say gender politics could block her path to power When North Korea’s ruling party held a top-level meeting this month there were predictable…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-02-27 05:53</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/feb/16/north-korea-housing-ukraine-war-families" target="_blank">Kim Jong-un unveils housing for families of North Koreans killed in Ukraine war</a></div>
+      <div class="entry-title-zh">金正恩为在乌克兰战争中丧生的朝鲜人家属提供住房</div>
+      <div class="entry-summary">Leader vows to repay the ‘young martyrs’ who died as North Korea intensifies propaganda glorifying troops deployed to fight for Russia North Korea has said it completed a new housing district in Pyongyang for families of North Korean soldiers killed…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-02-16 03:49</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/feb/12/kim-jong-un-daughter-future-leader-north-korea-south" target="_blank">Kim close to naming teenage daughter as future North Korean leader, South believes</a></div>
+      <div class="entry-title-zh">韩国认为，金正恩即将任命十几岁的女儿为未来的朝鲜领导人</div>
+      <div class="entry-summary">South Korea’s spy agency monitoring whether girl, believed to be 13, will appear at political conference this month South Korea’s spy agency has told lawmakers it believes the teenage daughter of Kim Jong-un, the North Korean dictator, is close to…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-02-12 14:32</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/video/2026/feb/12/south-korea-kim-jong-un-to-announce-teenage-daughter-successor-video" target="_blank">South Korea&#x27;s spy agency believes Kim Jong-un&#x27;s teenage daughter to be his successor – video</a></div>
+      <div class="entry-title-zh">韩国间谍机构认为金正恩十几岁的女儿是他的继任者 – 视频</div>
+      <div class="entry-summary">South Korea’s spy agency has told lawmakers it believes the teenage daughter of the North Korean dictator, Kim Jong-un, is close to being designated as the country’s future leader as Kim moves to extend the family dynasty to a fourth generation.…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-02-12 14:22</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/feb/01/living-hell-of-north-koreas-paradise-on-earth-scheme-back-in-spotlight-in-japan" target="_blank">Living hell of North Korea’s ‘paradise on Earth’ scheme back in spotlight in Japan</a></div>
+      <div class="entry-title-zh">朝鲜“人间天堂”计划的人间地狱再次成为日本关注的焦点</div>
+      <div class="entry-summary">Plaintiffs in case say they were lured from Japan, exploited for labour and cut off from families for generations It has been more than six decades since Eiko Kawasaki left Japan to begin a new life in North Korea . Then 17, she was among tens of…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-02-01 05:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/business/2026/jan/30/british-american-tobacco-lawsuit-north-korea-terrorism" target="_blank">British American Tobacco accused of helping North Korea fund terrorism in lawsuit</a></div>
+      <div class="entry-title-zh">英美烟草在诉讼中被指控帮助朝鲜资助恐怖主义</div>
+      <div class="entry-summary">Victims of terrorist attacks say BAT’s operations in North Korea helped fund weapons used in the Middle East Hundreds of US military service members, civilians and their families have filed a lawsuit for unspecified damages against British American…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-01-30 11:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/jan/27/ukraine-war-briefing-mark-rutte-nato-russian-attack-kharkiv-power-outages-kyiv-monastery" target="_blank">Ukraine war briefing: Nato chief warns of ‘harshest winter’ in a decade as Russian attacks cut power in Kharkiv</a></div>
+      <div class="entry-title-zh">乌克兰战争简报：北约主席警告俄罗斯袭击导致哈尔科夫停电，十年来“最严冬”</div>
+      <div class="entry-summary">Strikes knock out electricity to 80% of Ukraine’s second-largest city and surrounding region and damage 11th-century Kyiv monastery. What we know on day 1,434 Continue reading...</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-01-27 06:29</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/jan/24/north-korea-pentagon-to-reduce-role-deterrence" target="_blank">Pentagon to reduce its role in deterrence of North Korea</a></div>
+      <div class="entry-title-zh">五角大楼将减少对朝鲜的威慑作用</div>
+      <div class="entry-summary">US policy document suggests South Korea take primary responsibility, as Pentagon prioritises defending US homeland The Pentagon foresees a “more limited” role in deterring North Korea, with South Korea taking primary responsibility for the task, a…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-01-24 06:18</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/jan/20/kim-jong-un-fires-vice-premier-yang-sung-ho-goat-ox-cart" target="_blank">Kim Jong-un fires vice-premier and likens him to ‘a goat yoked to an ox cart’</a></div>
+      <div class="entry-title-zh">金正恩解雇副总理并将其比作“牛车上的山羊”</div>
+      <div class="entry-summary">North Korean leader reportedly blames Yang Sung-ho for ‘confusion’ at factory project as major congress looms The North Korean leader, Kim Jong-un , has dismissed a vice-premier over troubles in a factory modernisation project, in an apparent move…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-01-20 11:46</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.theguardian.com/world/2026/jan/16/bts-new-album-arirang-name-meaning" target="_blank">BTS named their new album Arirang. What is so striking about their choice?</a></div>
+      <div class="entry-title-zh">BTS 将他们的新专辑命名为 Arirang。他们的选择有何惊人之处？</div>
+      <div class="entry-summary">The title is loaded with meaning for all Koreans, and will give fans globally an insight into the folksong culture that shaped the world’s biggest K-pop group BTS announced their long-awaited comeback and world tour this week, with their first…</div>
+      <div class="entry-meta"><span class="source-tag">The Guardian</span>2026-01-16 05:08</div>
     </div>
   </div>
 
@@ -410,7 +539,6 @@ body {
       <h2>📢 朝鲜官方</h2>
       <span class="en-label">DPRK Official Media</span>
     </div>
-    <div class="source-label">KCNA (English)</div>
     <p class="no-articles">暂无文章（抓取失败或无相关内容）</p>
   </div>
   </div>

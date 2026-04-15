@@ -65,10 +65,45 @@ COLUMN_2 = {
 }
 
 COLUMN_3 = {
+    "label": "🌐 国际外媒",
+    "en_label": "International Press",
+    "sources": [
+        {
+            "name": "BBC",
+            "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+            "require_dprk": True,
+        },
+        {
+            "name": "CNN",
+            "url": "http://rss.cnn.com/rss/edition_world.rss",
+            "require_dprk": True,
+        },
+        {
+            "name": "Washington Post",
+            "url": "https://feeds.washingtonpost.com/rss/world",
+            "require_dprk": True,
+        },
+        {
+            "name": "NYT",
+            "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+            "require_dprk": True,
+        },
+        {
+            "name": "The Guardian",
+            "url": "https://www.theguardian.com/world/north-korea/rss",
+        },
+        {
+            "name": "Al Jazeera",
+            "url": "https://www.aljazeera.com/xml/rss/all.xml",
+            "require_dprk": True,
+        },
+    ],
+}
+
+COLUMN_4 = {
     "label": "📢 朝鲜官方",
     "en_label": "DPRK Official Media",
     "sources": [
-        # KCNA Watch 域名不稳定，暂用朝中社英文版替代
         {
             "name": "KCNA (English)",
             "url": "https://kcna.kp/en/rss",
@@ -140,6 +175,22 @@ def sort_key(entry):
     d = get_date(entry)
     return d if d else "0000-00-00 00:00"
 
+
+DPRK_KEYWORDS = [
+    "north korea", "dprk", "kim jong", "pyongyang", "조선", "朝鲜",
+    "korean peninsula", "inter-korean", "hanoi summit", "denuclearization",
+    "choe son hui", "kim yo jong", "korean war",
+]
+
+def passes_dprk_filter(entry, source_cfg):
+    """返回 True 表示文章包含朝鲜相关内容，可以展示"""
+    if not source_cfg.get("require_dprk"):
+        return True
+    title = clean_text(entry.get("title", ""), max_chars=500).lower()
+    summary = clean_text(entry.get("summary", "") or entry.get("description", ""), max_chars=500).lower()
+    full_text = title + " " + summary
+    return any(kw in full_text for kw in DPRK_KEYWORDS)
+
 # ============================================================
 # 抓取
 # ============================================================
@@ -160,6 +211,8 @@ def fetch_source(source_cfg):
 
     results = []
     for entry in feed.entries[:40]:
+        if not passes_dprk_filter(entry, source_cfg):
+            continue
         entry._source_name = name
         results.append(entry)
 
@@ -183,14 +236,15 @@ body {
   font-family: "Georgia", "Times New Roman", "宋体", serif;
   background: #f9f7f2; color: #1a1a1a; line-height: 1.7;
 }
-.page-wrap { max-width: 1280px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+.page-wrap { max-width: 1600px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
 .columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem; align-items: start;
 }
 .columns > div { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
-@media (max-width: 860px) { .columns { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .columns { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .columns { grid-template-columns: 1fr; } }
 .masthead {
   text-align: center;
   border-top: 3px solid #1a1a1a; border-bottom: 3px solid #1a1a1a;
@@ -236,10 +290,12 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 .entry-meta { font-size: 0.75rem; color: #999; margin-top: 0.4rem; font-family: "Helvetica Neue", Arial, sans-serif; }
-.source-label {
-  font-size: 0.72rem; font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase; letter-spacing: 0.1em; color: #888;
-  border-left: 2px solid #ccc; padding-left: 0.5rem; margin: 1.4rem 0 0.8rem;
+.entry-meta .source-tag {
+  display: inline-block;
+  font-size: 0.68rem; font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #fff; background: #888;
+  border-radius: 2px; padding: 0 0.35rem; margin-right: 0.4rem;
 }
 .no-articles { font-size: 0.88rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
 .footer {
@@ -254,7 +310,7 @@ def esc(s):
     return htmllib.escape(str(s or ""), quote=True)
 
 
-def render_entry(entry):
+def render_entry(entry, show_source=False):
     title_en = esc(clean_text(entry.get("title", ""), max_chars=200))
     link = esc(entry.get("link", "#") or "#")
     summary = esc(clean_text(entry.get("summary", "") or entry.get("description", ""), max_chars=250))
@@ -263,18 +319,31 @@ def render_entry(entry):
     title_zh = esc(translate(entry.get("title", "")))
     title_zh_html = f'<div class="entry-title-zh">{title_zh}</div>' if title_zh else ""
 
+    source_tag = ""
+    if show_source:
+        src_name = esc(getattr(entry, "_source_name", ""))
+        if src_name:
+            source_tag = f'<span class="source-tag">{src_name}</span>'
+
     return f"""
     <div class="entry">
       <div class="entry-title-en"><a href="{link}" target="_blank">{title_en}</a></div>
       {title_zh_html}
       <div class="entry-summary">{summary}</div>
-      <div class="entry-meta">{date}</div>
+      <div class="entry-meta">{source_tag}{date}</div>
     </div>"""
 
 
-def render_column(col_cfg, data_dict):
+def render_column(col_cfg, data_dict, max_articles=20):
     label = esc(col_cfg["label"])
     en_label = esc(col_cfg["en_label"])
+
+    # 合并所有来源，按时间倒序排列
+    all_entries = []
+    for src in col_cfg["sources"]:
+        all_entries.extend(data_dict.get(src["name"], []))
+
+    sorted_entries = sorted(all_entries, key=sort_key, reverse=True)[:max_articles]
 
     parts = [f"""
   <div class="section">
@@ -283,25 +352,21 @@ def render_column(col_cfg, data_dict):
       <span class="en-label">{en_label}</span>
     </div>"""]
 
-    for src in col_cfg["sources"]:
-        name = src["name"]
-        entries = data_dict.get(name, [])
-        parts.append(f'    <div class="source-label">{esc(name)}</div>')
-        if entries:
-            sorted_entries = sorted(entries, key=sort_key, reverse=True)
-            for e in sorted_entries[:6]:
-                parts.append(render_entry(e))
-        else:
-            parts.append('    <p class="no-articles">暂无文章（抓取失败或无相关内容）</p>')
+    if sorted_entries:
+        for e in sorted_entries:
+            parts.append(render_entry(e, show_source=True))
+    else:
+        parts.append('    <p class="no-articles">暂无文章（抓取失败或无相关内容）</p>')
 
     parts.append("  </div>")
     return "\n".join(parts)
 
 
-def render_html(col1_data, col2_data, col3_data, date_str):
+def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
     col1_html = render_column(COLUMN_1, col1_data)
     col2_html = render_column(COLUMN_2, col2_data)
     col3_html = render_column(COLUMN_3, col3_data)
+    col4_html = render_column(COLUMN_4, col4_data)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -327,6 +392,7 @@ def render_html(col1_data, col2_data, col3_data, date_str):
 {col1_html}
 {col2_html}
 {col3_html}
+{col4_html}
   </div>
   <div class="footer">
     本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
@@ -352,10 +418,13 @@ def main():
     print("\n【第二栏 · 韩国媒体】", file=sys.stderr)
     col2_data = fetch_column(COLUMN_2)
 
-    print("\n【第三栏 · 朝鲜官方】", file=sys.stderr)
+    print("\n【第三栏 · 国际外媒】", file=sys.stderr)
     col3_data = fetch_column(COLUMN_3)
 
-    html_content = render_html(col1_data, col2_data, col3_data, today)
+    print("\n【第四栏 · 朝鲜官方】", file=sys.stderr)
+    col4_data = fetch_column(COLUMN_4)
+
+    html_content = render_html(col1_data, col2_data, col3_data, col4_data, today)
 
     out = docs_dir / "index.html"
     out.write_text(html_content, encoding="utf-8")
