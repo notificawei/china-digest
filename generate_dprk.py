@@ -85,6 +85,19 @@ COLUMN_3 = {
             "name": "RFA",
             "url": "https://www.rfa.org/english/news/korea/rss2.xml",
         },
+        # 通讯社（通过 Google News RSS 抓取，已按关键词过滤）
+        {
+            "name": "AP",
+            "url": "https://news.google.com/rss/search?q=north+korea+site:apnews.com&hl=en",
+        },
+        {
+            "name": "AFP",
+            "url": "https://news.google.com/rss/search?q=north+korea+site:afp.com&hl=en",
+        },
+        {
+            "name": "Reuters",
+            "url": "https://news.google.com/rss/search?q=north+korea+site:reuters.com&hl=en",
+        },
         # 综合频道（过滤朝鲜关键词）
         {
             "name": "BBC",
