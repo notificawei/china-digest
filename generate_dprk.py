@@ -68,6 +68,24 @@ COLUMN_3 = {
     "label": "🌐 国际外媒",
     "en_label": "International Press",
     "sources": [
+        # 专题频道（无需过滤）
+        {
+            "name": "The Diplomat",
+            "url": "https://thediplomat.com/tag/north-korea/feed/",
+        },
+        {
+            "name": "The Guardian",
+            "url": "https://www.theguardian.com/world/north-korea/rss",
+        },
+        {
+            "name": "Straits Times",
+            "url": "https://www.straitstimes.com/tags/north-korea/rss.xml",
+        },
+        {
+            "name": "RFA",
+            "url": "https://www.rfa.org/english/news/korea/rss2.xml",
+        },
+        # 综合频道（过滤朝鲜关键词）
         {
             "name": "BBC",
             "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -89,12 +107,13 @@ COLUMN_3 = {
             "require_dprk": True,
         },
         {
-            "name": "The Guardian",
-            "url": "https://www.theguardian.com/world/north-korea/rss",
-        },
-        {
             "name": "Al Jazeera",
             "url": "https://www.aljazeera.com/xml/rss/all.xml",
+            "require_dprk": True,
+        },
+        {
+            "name": "Nikkei Asia",
+            "url": "https://asia.nikkei.com/rss/feed/nar",
             "require_dprk": True,
         },
     ],
