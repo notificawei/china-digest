@@ -111,6 +111,38 @@ COLUMN_1 = {
             "filter": "none",
             "require_china": True,
         },
+        # 通讯社（Google News RSS，已按关键词过滤）
+        {
+            "name": "AP",
+            "url": "https://news.google.com/rss/search?q=china+site:apnews.com&hl=en",
+            "lang": "en",
+            "filter": "none",
+        },
+        {
+            "name": "AFP",
+            "url": "https://news.google.com/rss/search?q=china+site:afp.com&hl=en",
+            "lang": "en",
+            "filter": "none",
+        },
+        {
+            "name": "Reuters",
+            "url": "https://news.google.com/rss/search?q=china+site:reuters.com&hl=en",
+            "lang": "en",
+            "filter": "none",
+        },
+        # 财经媒体（直接 RSS，已是中国专栏）
+        {
+            "name": "The Economist",
+            "url": "https://www.economist.com/china/rss.xml",
+            "lang": "en",
+            "filter": "none",
+        },
+        {
+            "name": "Financial Times",
+            "url": "https://www.ft.com/china?format=rss",
+            "lang": "en",
+            "filter": "none",
+        },
     ],
 }
 
@@ -182,8 +214,9 @@ COLUMN_4_WHITELIST = [
     "生计", "民生", "收入", "贫困",
     # 英文对应词
     "artificial intelligence", "algorithm", "automation",
-    "layoff", "unemployment", "job", "worker", "labor",
+    "layoff", "unemployment", "job", "worker", "labor", "labour",
     "income", "poverty", "gig economy", "delivery",
+    "strike", "wage", "factory", "migrant",
 ]
 
 # ============================================================
@@ -518,7 +551,7 @@ def render_col4(col4_entries):
   <div class="section col-highlight">
     <div class="section-header">
       <h2>🔥 重点议题</h2>
-      <span class="en-label">AI · Economy · Employment</span>
+      <span class="en-label">AI · Economy · Employment · Labor</span>
     </div>"""]
 
     if col4_entries:

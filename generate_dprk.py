@@ -98,6 +98,16 @@ COLUMN_3 = {
             "name": "Reuters",
             "url": "https://news.google.com/rss/search?q=north+korea+site:reuters.com&hl=en",
         },
+        {
+            "name": "The Economist",
+            "url": "https://news.google.com/rss/search?q=north+korea+site:economist.com&hl=en",
+            "require_dprk": True,
+        },
+        {
+            "name": "Financial Times",
+            "url": "https://news.google.com/rss/search?q=north+korea+site:ft.com&hl=en",
+            "require_dprk": True,
+        },
         # 综合频道（过滤朝鲜关键词）
         {
             "name": "BBC",
