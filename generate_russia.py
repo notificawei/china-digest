@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-朝鲜局势情报内参 · 自动生成脚本
-每日抓取 RSS，渲染为报纸风格 HTML，输出到 docs/dprk/index.html
+俄罗斯情报内参 · 自动生成脚本
+每日抓取 RSS，渲染为报纸风格 HTML，输出到 docs/russia/index.html
 """
 
 import feedparser
@@ -12,149 +12,110 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-try:
-    from deep_translator import GoogleTranslator
-    HAS_TRANSLATOR = True
-except ImportError:
-    HAS_TRANSLATOR = False
-
 # ============================================================
 # RSS 来源配置
 # ============================================================
 
 COLUMN_1 = {
-    "label": "🔬 智库分析",
-    "en_label": "Think Tank & Analysis",
+    "label": "外媒报道 · 俄朝关系",
+    "en_label": "International Press · Russia–North Korea",
     "sources": [
         {
-            "name": "NK Pro",
-            "url": "https://www.nknews.org/feed/",
+            "name": "AP",
+            "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:apnews.com&hl=en",
         },
         {
-            "name": "38 North",
-            "url": "https://www.38north.org/feed/",
+            "name": "Reuters",
+            "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:reuters.com&hl=en",
         },
         {
-            "name": "Beyond Parallel (CSIS)",
-            "url": "https://beyondparallel.csis.org/feed/",
+            "name": "AFP",
+            "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:afp.com&hl=en",
         },
         {
-            "name": "Daily NK",
-            "url": "https://www.dailynk.com/english/feed/",
+            "name": "The Economist",
+            "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:economist.com&hl=en",
+        },
+        {
+            "name": "The Guardian",
+            "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:theguardian.com&hl=en",
+        },
+        {
+            "name": "BBC",
+            "url": "https://news.google.com/rss/search?q=russia+%22north+korea%22+site:bbc.com&hl=en",
         },
     ],
 }
 
 COLUMN_2 = {
-    "label": "🇰🇷 韩国媒体",
-    "en_label": "South Korean Media",
+    "label": "俄媒报道 · 朝鲜",
+    "en_label": "Russian Media · North Korea",
     "sources": [
         {
-            "name": "Yonhap News",
-            "url": "https://en.yna.co.kr/RSS/news.xml",
+            "name": "TASS",
+            "url": "https://tass.com/rss/v2.xml",
             "require_dprk": True,
         },
         {
-            "name": "Korea Times",
-            "url": "https://www.koreatimes.co.kr/www/rss/rss.xml",
+            "name": "RT",
+            "url": "https://www.rt.com/rss/news/",
             "require_dprk": True,
         },
         {
-            "name": "Korea Herald",
-            "url": "https://www.koreaherald.com/rss/newsAll",
+            "name": "Moscow Times",
+            "url": "https://www.themoscowtimes.com/rss/news",
+            "require_dprk": True,
+        },
+        {
+            "name": "Meduza",
+            "url": "https://meduza.io/rss/all",
             "require_dprk": True,
         },
     ],
 }
 
 COLUMN_3 = {
-    "label": "🌐 国际外媒",
-    "en_label": "International Press",
+    "label": "俄媒报道 · 中国",
+    "en_label": "Russian Media · China",
     "sources": [
-        # 专题频道（无需过滤）
         {
-            "name": "The Diplomat",
-            "url": "https://thediplomat.com/tag/north-korea/feed/",
+            "name": "TASS",
+            "url": "https://tass.com/rss/v2.xml",
+            "require_china": True,
         },
         {
-            "name": "The Guardian",
-            "url": "https://www.theguardian.com/world/north-korea/rss",
+            "name": "RT",
+            "url": "https://www.rt.com/rss/news/",
+            "require_china": True,
         },
         {
-            "name": "Straits Times",
-            "url": "https://www.straitstimes.com/tags/north-korea/rss.xml",
+            "name": "Moscow Times",
+            "url": "https://www.themoscowtimes.com/rss/news",
+            "require_china": True,
         },
         {
-            "name": "RFA",
-            "url": "https://www.rfa.org/english/news/korea/rss2.xml",
-        },
-        # 通讯社（通过 Google News RSS 抓取，已按关键词过滤）
-        {
-            "name": "AP",
-            "url": "https://news.google.com/rss/search?q=north+korea+site:apnews.com&hl=en",
+            "name": "Meduza",
+            "url": "https://meduza.io/rss/all",
+            "require_china": True,
         },
         {
-            "name": "AFP",
-            "url": "https://news.google.com/rss/search?q=north+korea+site:afp.com&hl=en",
-        },
-        {
-            "name": "Reuters",
-            "url": "https://news.google.com/rss/search?q=north+korea+site:reuters.com&hl=en",
-        },
-        {
-            "name": "The Economist",
-            "url": "https://news.google.com/rss/search?q=north+korea+site:economist.com&hl=en",
-            "require_dprk": True,
-        },
-        {
-            "name": "Financial Times",
-            "url": "https://news.google.com/rss/search?q=north+korea+site:ft.com&hl=en",
-            "require_dprk": True,
-        },
-        # 综合频道（过滤朝鲜关键词）
-        {
-            "name": "BBC",
-            "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-            "require_dprk": True,
-        },
-        {
-            "name": "CNN",
-            "url": "http://rss.cnn.com/rss/edition_world.rss",
-            "require_dprk": True,
-        },
-        {
-            "name": "Washington Post",
-            "url": "https://feeds.washingtonpost.com/rss/world",
-            "require_dprk": True,
-        },
-        {
-            "name": "NYT",
-            "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-            "require_dprk": True,
-        },
-        {
-            "name": "Al Jazeera",
-            "url": "https://www.aljazeera.com/xml/rss/all.xml",
-            "require_dprk": True,
-        },
-        {
-            "name": "Nikkei Asia",
-            "url": "https://asia.nikkei.com/rss/feed/nar",
-            "require_dprk": True,
+            "name": "Sputnik",
+            "url": "https://news.google.com/rss/search?q=china+site:sputnikglobe.com&hl=en",
         },
     ],
 }
 
-COLUMN_4 = {
-    "label": "📢 朝鲜官方",
-    "en_label": "DPRK Official Media",
-    "sources": [
-        {
-            "name": "KCNA (English)",
-            "url": "https://kcna.kp/en/rss",
-        },
-    ],
-}
+# ============================================================
+# 过滤关键词
+# ============================================================
+
+DPRK_KEYWORDS = [
+    "north korea", "n. korea", "n.korea", "dprk", "kim jong", "pyongyang",
+    "korean peninsula", "inter-korean", "denuclearization",
+    "kim yo jong", "korean war", "unification ministry",
+]
+
+CHINA_KEYWORDS = ["china", "chinese", "beijing", "shanghai", "中国"]
 
 # ============================================================
 # 工具函数
@@ -167,22 +128,6 @@ HEADERS = {
     ),
     "Accept": "application/rss+xml, application/xml, text/xml, */*",
 }
-
-_translator_cache = {}
-
-def translate(text, max_chars=300):
-    """翻译英文为中文，失败时返回空字符串"""
-    if not HAS_TRANSLATOR or not text:
-        return ""
-    text = text[:max_chars]
-    if text in _translator_cache:
-        return _translator_cache[text]
-    try:
-        result = GoogleTranslator(source="auto", target="zh-CN").translate(text)
-        _translator_cache[text] = result or ""
-        return _translator_cache[text]
-    except Exception:
-        return ""
 
 
 def clean_text(raw, max_chars=250):
@@ -221,21 +166,20 @@ def sort_key(entry):
     return d if d else "0000-00-00 00:00"
 
 
-DPRK_KEYWORDS = [
-    "north korea", "n. korea", "n.korea", "dprk", "kim jong", "pyongyang",
-    "조선", "朝鲜", "korean peninsula", "inter-korean", "denuclearization",
-    "choe son hui", "kim yo jong", "korean war", "unification ministry",
-    "ministry of unification",
-]
-
-def passes_dprk_filter(entry, source_cfg):
-    """返回 True 表示文章包含朝鲜相关内容，可以展示"""
-    if not source_cfg.get("require_dprk"):
-        return True
+def passes_filter(entry, source_cfg):
     title = clean_text(entry.get("title", ""), max_chars=500).lower()
     summary = clean_text(entry.get("summary", "") or entry.get("description", ""), max_chars=500).lower()
     full_text = title + " " + summary
-    return any(kw in full_text for kw in DPRK_KEYWORDS)
+
+    if source_cfg.get("require_dprk"):
+        if not any(kw in full_text for kw in DPRK_KEYWORDS):
+            return False
+
+    if source_cfg.get("require_china"):
+        if not any(kw in full_text for kw in CHINA_KEYWORDS):
+            return False
+
+    return True
 
 # ============================================================
 # 抓取
@@ -257,7 +201,7 @@ def fetch_source(source_cfg):
 
     results = []
     for entry in feed.entries[:100]:
-        if not passes_dprk_filter(entry, source_cfg):
+        if not passes_filter(entry, source_cfg):
             continue
         entry._source_name = name
         results.append(entry)
@@ -279,7 +223,7 @@ def fetch_column(col_cfg):
 CSS = """
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  font-family: "Georgia", "Times New Roman", "宋体", serif;
+  font-family: "Georgia", "Times New Roman", serif;
   background: #ffffff;
   color: #121212;
   line-height: 1.6;
@@ -314,7 +258,11 @@ body {
   text-transform: uppercase;
   color: #6f6f6f;
 }
-.masthead .nav a { color: #6f6f6f; text-decoration: none; margin: 0 0.7rem; }
+.masthead .nav a {
+  color: #6f6f6f;
+  text-decoration: none;
+  margin: 0 0.7rem;
+}
 .masthead .nav a:hover { color: #121212; }
 .masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
 .masthead .nav .sep { color: #ccc; }
@@ -327,10 +275,13 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.masthead-bottom-rule { border-top: 1px solid #121212; }
+.masthead-bottom-rule {
+  border-top: 1px solid #121212;
+  margin-bottom: 0;
+}
 .columns {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
   align-items: start;
   border-top: 1px solid #e2e2e2;
@@ -341,16 +292,15 @@ body {
   min-width: 0;
   overflow-wrap: break-word;
   word-break: break-word;
-  padding: 0 1.6rem;
+  padding: 0 2rem;
   border-right: 1px solid #e2e2e2;
 }
 .columns > div:first-child { padding-left: 0; }
 .columns > div:last-child { border-right: none; padding-right: 0; }
-@media (max-width: 1100px) {
+@media (max-width: 960px) {
   .columns { grid-template-columns: repeat(2, 1fr); }
   .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
-  .columns > div:nth-child(3) { padding-left: 0; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
-  .columns > div:nth-child(4) { border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+  .columns > div:nth-child(3) { padding-left: 0; border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
 }
 @media (max-width: 600px) {
   .columns { grid-template-columns: 1fr; }
@@ -372,9 +322,12 @@ body {
   color: #121212;
 }
 .section-header .en-label { display: none; }
-.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
+.entry {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 0.85rem 0;
+}
 .entry:last-child { border-bottom: none; }
-.entry-title-en {
+.entry-title {
   font-size: 1.02rem;
   font-weight: 700;
   color: #121212;
@@ -382,9 +335,8 @@ body {
   font-family: "Georgia", serif;
   line-height: 1.35;
 }
-.entry-title-en a { color: inherit; text-decoration: none; }
-.entry-title-en a:hover { text-decoration: underline; }
-.entry-title-zh { font-size: 0.8rem; color: #888; margin-bottom: 0.3rem; font-style: italic; font-family: "Helvetica Neue", Arial, sans-serif; }
+.entry-title a { color: inherit; text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
 .entry-summary {
   font-size: 0.85rem;
   color: #333;
@@ -400,13 +352,19 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.entry-meta .source-tag {
+.entry-source-tag {
   font-weight: 700;
   color: #6f6f6f;
   margin-right: 0.3rem;
 }
-.entry-meta .source-tag::after { content: " ·"; font-weight: 400; }
-.no-articles { font-size: 0.85rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  padding: 0.5rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
 .footer {
   text-align: center;
   font-size: 0.67rem;
@@ -425,25 +383,18 @@ def esc(s):
     return htmllib.escape(str(s or ""), quote=True)
 
 
-def render_entry(entry, show_source=False):
-    title_en = esc(clean_text(entry.get("title", ""), max_chars=200))
+def render_entry(entry):
+    title = esc(clean_text(entry.get("title", ""), max_chars=200))
     link = esc(entry.get("link", "#") or "#")
     summary = esc(clean_text(entry.get("summary", "") or entry.get("description", ""), max_chars=250))
     date = esc(get_date(entry))
+    src = esc(getattr(entry, "_source_name", ""))
 
-    title_zh = esc(translate(entry.get("title", "")))
-    title_zh_html = f'<div class="entry-title-zh">{title_zh}</div>' if title_zh else ""
-
-    source_tag = ""
-    if show_source:
-        src_name = esc(getattr(entry, "_source_name", ""))
-        if src_name:
-            source_tag = f'<span class="source-tag">{src_name}</span>'
+    source_tag = f'<span class="entry-source-tag">{src}</span>' if src else ""
 
     return f"""
     <div class="entry">
-      <div class="entry-title-en"><a href="{link}" target="_blank">{title_en}</a></div>
-      {title_zh_html}
+      <div class="entry-title"><a href="{link}" target="_blank">{title}</a></div>
       <div class="entry-summary">{summary}</div>
       <div class="entry-meta">{source_tag}{date}</div>
     </div>"""
@@ -451,44 +402,37 @@ def render_entry(entry, show_source=False):
 
 def render_column(col_cfg, data_dict, max_articles=20):
     label = esc(col_cfg["label"])
-    en_label = esc(col_cfg["en_label"])
 
-    # 合并所有来源，按时间倒序排列
     all_entries = []
     for src in col_cfg["sources"]:
         all_entries.extend(data_dict.get(src["name"], []))
-
     sorted_entries = sorted(all_entries, key=sort_key, reverse=True)[:max_articles]
 
     parts = [f"""
   <div class="section">
-    <div class="section-header">
-      <h2>{label}</h2>
-      <span class="en-label">{en_label}</span>
-    </div>"""]
+    <div class="section-header"><h2>{label}</h2></div>"""]
 
     if sorted_entries:
         for e in sorted_entries:
-            parts.append(render_entry(e, show_source=True))
+            parts.append(render_entry(e))
     else:
-        parts.append('    <p class="no-articles">暂无文章（抓取失败或无相关内容）</p>')
+        parts.append('    <p class="no-articles">暂无内容</p>')
 
     parts.append("  </div>")
     return "\n".join(parts)
 
 
-def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
+def render_html(col1_data, col2_data, col3_data, date_str):
     col1_html = render_column(COLUMN_1, col1_data)
     col2_html = render_column(COLUMN_2, col2_data)
     col3_html = render_column(COLUMN_3, col3_data)
-    col4_html = render_column(COLUMN_4, col4_data)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>North Korea Intelligence Digest · {date_str}</title>
+<title>Russia Intelligence Digest · {date_str}</title>
 <style>
 {CSS}
 </style>
@@ -497,13 +441,13 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
 <div class="page-wrap">
   <div class="masthead">
     <div class="masthead-rules">
-      <h1>North Korea Intelligence Digest</h1>
+      <h1>Russia Intelligence Digest</h1>
       <div class="nav">
         <a href="/china-digest/">China</a>
         <span class="sep">/</span>
-        <span class="active">North Korea</span>
+        <a href="/china-digest/dprk/">North Korea</a>
         <span class="sep">/</span>
-        <a href="/china-digest/russia/">Russia</a>
+        <span class="active">Russia</span>
       </div>
       <div class="meta">{date_str} &nbsp;·&nbsp; Auto-generated</div>
     </div>
@@ -513,10 +457,9 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
 {col1_html}
 {col2_html}
 {col3_html}
-{col4_html}
   </div>
   <div class="footer">
-    本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
+    Auto-generated · Content sourced from RSS feeds · For reference only
   </div>
 </div>
 </body>
@@ -528,24 +471,21 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
 
 def main():
     today = datetime.now().strftime("%Y-%m-%d")
-    docs_dir = Path(__file__).parent / "docs" / "dprk"
+    docs_dir = Path(__file__).parent / "docs" / "russia"
     docs_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"\n生成 DPRK {today} 日报...\n", file=sys.stderr)
+    print(f"\n生成 Russia {today} 日报...\n", file=sys.stderr)
 
-    print("【第一栏 · 智库分析】", file=sys.stderr)
+    print("【第一栏 · 外媒报道 俄朝关系】", file=sys.stderr)
     col1_data = fetch_column(COLUMN_1)
 
-    print("\n【第二栏 · 韩国媒体】", file=sys.stderr)
+    print("\n【第二栏 · 俄媒报道 朝鲜】", file=sys.stderr)
     col2_data = fetch_column(COLUMN_2)
 
-    print("\n【第三栏 · 国际外媒】", file=sys.stderr)
+    print("\n【第三栏 · 俄媒报道 中国】", file=sys.stderr)
     col3_data = fetch_column(COLUMN_3)
 
-    print("\n【第四栏 · 朝鲜官方】", file=sys.stderr)
-    col4_data = fetch_column(COLUMN_4)
-
-    html_content = render_html(col1_data, col2_data, col3_data, col4_data, today)
+    html_content = render_html(col1_data, col2_data, col3_data, today)
 
     out = docs_dir / "index.html"
     out.write_text(html_content, encoding="utf-8")

@@ -383,107 +383,153 @@ CSS = """
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: "Georgia", "Times New Roman", "宋体", serif;
-  background: #f9f7f2;
-  color: #1a1a1a;
-  line-height: 1.7;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
 }
 .page-wrap {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 0 1.5rem 4rem;
 }
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a {
+  color: #6f6f6f;
+  text-decoration: none;
+  margin: 0 0.7rem;
+}
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
 .columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 0;
   align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 .columns > div {
   min-width: 0;
   overflow-wrap: break-word;
   word-break: break-word;
+  padding: 0 2rem;
+  border-right: 1px solid #e2e2e2;
 }
-@media (max-width: 900px) { .columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .columns { grid-template-columns: 1fr; } }
-.masthead {
-  text-align: center;
-  border-top: 3px solid #1a1a1a;
-  border-bottom: 3px solid #1a1a1a;
-  padding: 1.2rem 0;
-  margin-bottom: 2.5rem;
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 960px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
 }
-.masthead h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.08em; }
-.masthead .nav {
-  margin-top: 0.7rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.8rem;
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 }
-.masthead .nav a {
-  color: #888;
-  text-decoration: none;
-  margin: 0 0.6rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.masthead .nav a:hover { color: #1a1a1a; text-decoration: underline; }
-.masthead .nav .active { color: #1a1a1a; font-weight: 600; }
-.masthead .meta {
-  font-size: 0.82rem; color: #666; margin-top: 0.4rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.05em;
-}
-.section { margin-bottom: 2.8rem; }
+.section { margin-bottom: 2.5rem; }
 .section-header {
-  display: flex; align-items: baseline; gap: 0.8rem;
-  border-bottom: 1.5px solid #1a1a1a;
-  padding-bottom: 0.4rem; margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
 }
-.section-header h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; }
-.section-header .en-label {
-  font-size: 0.75rem; color: #888;
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #121212;
 }
-/* 第四栏高亮 */
-.col-highlight .section-header { border-bottom-color: #c0392b; }
-.col-highlight .section-header h2 { color: #c0392b; }
-.source-label {
-  font-size: 0.72rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase; letter-spacing: 0.1em; color: #888;
-  border-left: 2px solid #ccc; padding-left: 0.5rem;
-  margin: 1.4rem 0 0.8rem;
-}
-.entry { border-bottom: 0.5px solid #ddd; padding: 0.9rem 0; }
+.section-header .en-label { display: none; }
+.col-highlight .section-header { border-bottom-color: #d0021b; }
+.col-highlight .section-header h2 { color: #d0021b; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
 .entry:last-child { border-bottom: none; }
 .entry-title {
-  font-size: 1rem; font-weight: 700; color: #1a1a1a;
-  margin-bottom: 0.15rem; font-family: "Georgia", serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
 }
 .entry-title a { color: inherit; text-decoration: none; }
 .entry-title a:hover { text-decoration: underline; }
 .entry-summary {
-  font-size: 0.88rem; color: #444; line-height: 1.65;
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
 }
 .entry-meta {
-  font-size: 0.75rem; color: #999; margin-top: 0.4rem;
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 .entry-source-tag {
-  display: inline-block; font-size: 0.68rem; color: #fff;
-  background: #888; border-radius: 2px;
-  padding: 0 4px; margin-right: 4px; vertical-align: middle;
+  font-weight: 700;
+  color: #6f6f6f;
+  margin-right: 0.3rem;
 }
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
 .no-articles {
-  font-size: 0.88rem; color: #999; font-style: italic;
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
   padding: 0.5rem 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 .footer {
-  text-align: center; font-size: 0.75rem; color: #bbb;
-  border-top: 1px solid #ddd; padding-top: 1.5rem; margin-top: 3rem;
-  font-family: "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.03em;
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 """
 
@@ -505,9 +551,9 @@ def render_entry(entry, show_source_tag=False):
 
     return f"""
     <div class="entry">
-      <div class="entry-title">{source_tag}<a href="{link}" target="_blank">{title}</a></div>
+      <div class="entry-title"><a href="{link}" target="_blank">{title}</a></div>
       <div class="entry-summary">{summary}</div>
-      <div class="entry-meta">{date}</div>
+      <div class="entry-meta">{source_tag}{date}</div>
     </div>"""
 
 
@@ -582,12 +628,18 @@ def render_html(col1_data, col3_data, col4_entries, date_str):
 <body>
 <div class="page-wrap">
   <div class="masthead">
-    <h1>China Intelligence Digest</h1>
-    <div class="nav">
-      <span class="active">China</span>
-      <a href="/china-digest/dprk/">North Korea</a>
+    <div class="masthead-rules">
+      <h1>China Intelligence Digest</h1>
+      <div class="nav">
+        <span class="active">China</span>
+        <span class="sep">/</span>
+        <a href="/china-digest/dprk/">North Korea</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+      </div>
+      <div class="meta">{date_str} &nbsp;·&nbsp; Auto-generated</div>
     </div>
-    <div class="meta">{date_str} &nbsp;·&nbsp; Auto-generated</div>
+    <div class="masthead-bottom-rule"></div>
   </div>
   <div class="columns">
 {col1_html}

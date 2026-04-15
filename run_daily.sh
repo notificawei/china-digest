@@ -16,6 +16,7 @@ echo "[$(date)] 开始生成..." | tee -a "$LOG_FILE"
 
 python3 "$SCRIPT_DIR/generate.py" 2>&1 | tee -a "$LOG_FILE"
 python3 "$SCRIPT_DIR/generate_dprk.py" 2>&1 | tee -a "$LOG_FILE"
+python3 "$SCRIPT_DIR/generate_russia.py" 2>&1 | tee -a "$LOG_FILE"
 
 echo "[$(date)] 推送到 GitHub..." | tee -a "$LOG_FILE"
 cd "$SCRIPT_DIR"

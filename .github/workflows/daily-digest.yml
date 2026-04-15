@@ -32,6 +32,9 @@ jobs:
       - name: Generate DPRK digest
         run: python3 generate_dprk.py
 
+      - name: Generate Russia digest
+        run: python3 generate_russia.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

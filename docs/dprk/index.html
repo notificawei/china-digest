@@ -9,74 +9,143 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: "Georgia", "Times New Roman", "宋体", serif;
-  background: #f9f7f2; color: #1a1a1a; line-height: 1.7;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
 }
-.page-wrap { max-width: 1600px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a { color: #6f6f6f; text-decoration: none; margin: 0 0.7rem; }
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
 .columns {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2rem; align-items: start;
+  gap: 0;
+  align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
-.columns > div { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
-@media (max-width: 1100px) { .columns { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .columns { grid-template-columns: 1fr; } }
-.masthead {
-  text-align: center;
-  border-top: 3px solid #1a1a1a; border-bottom: 3px solid #1a1a1a;
-  padding: 1.2rem 0; margin-bottom: 2.5rem;
+.columns > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 1.6rem;
+  border-right: 1px solid #e2e2e2;
 }
-.masthead h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.08em; }
-.masthead .nav {
-  margin-top: 0.7rem;
-  font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.8rem;
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 1100px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+  .columns > div:nth-child(4) { border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
 }
-.masthead .nav a {
-  color: #888; text-decoration: none; margin: 0 0.6rem;
-  letter-spacing: 0.05em; text-transform: uppercase;
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 }
-.masthead .nav a:hover { color: #1a1a1a; text-decoration: underline; }
-.masthead .nav .active { color: #1a1a1a; font-weight: 600; margin: 0 0.6rem; letter-spacing: 0.05em; text-transform: uppercase; }
-.masthead .meta {
-  font-size: 0.82rem; color: #666; margin-top: 0.4rem;
-  font-family: "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.05em;
-}
-.section { margin-bottom: 2.8rem; }
+.section { margin-bottom: 2.5rem; }
 .section-header {
-  display: flex; align-items: baseline; gap: 0.8rem;
-  border-bottom: 1.5px solid #1a1a1a; padding-bottom: 0.4rem; margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
 }
-.section-header h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; }
-.section-header .en-label {
-  font-size: 0.75rem; color: #888;
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #121212;
 }
-.entry { border-bottom: 0.5px solid #ddd; padding: 0.9rem 0; }
+.section-header .en-label { display: none; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
 .entry:last-child { border-bottom: none; }
 .entry-title-en {
-  font-size: 1rem; font-weight: 700; color: #1a1a1a;
-  margin-bottom: 0.15rem; font-family: "Georgia", serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
 }
 .entry-title-en a { color: inherit; text-decoration: none; }
 .entry-title-en a:hover { text-decoration: underline; }
-.entry-title-zh { font-size: 0.82rem; color: #777; margin-bottom: 0.4rem; font-style: italic; }
+.entry-title-zh { font-size: 0.8rem; color: #888; margin-bottom: 0.3rem; font-style: italic; font-family: "Helvetica Neue", Arial, sans-serif; }
 .entry-summary {
-  font-size: 0.88rem; color: #444; line-height: 1.65;
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
 }
-.entry-meta { font-size: 0.75rem; color: #999; margin-top: 0.4rem; font-family: "Helvetica Neue", Arial, sans-serif; }
+.entry-meta {
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 .entry-meta .source-tag {
-  display: inline-block;
-  font-size: 0.68rem; font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase; letter-spacing: 0.08em;
-  color: #fff; background: #888;
-  border-radius: 2px; padding: 0 0.35rem; margin-right: 0.4rem;
+  font-weight: 700;
+  color: #6f6f6f;
+  margin-right: 0.3rem;
 }
-.no-articles { font-size: 0.88rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
+.entry-meta .source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles { font-size: 0.85rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
 .footer {
-  text-align: center; font-size: 0.75rem; color: #bbb;
-  border-top: 1px solid #ddd; padding-top: 1.5rem; margin-top: 3rem;
-  font-family: "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.03em;
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 </style>
@@ -84,12 +153,18 @@ body {
 <body>
 <div class="page-wrap">
   <div class="masthead">
-    <h1>North Korea Intelligence Digest</h1>
-    <div class="nav">
-      <a href="/china-digest/">China</a>
-      <span class="active">North Korea</span>
+    <div class="masthead-rules">
+      <h1>North Korea Intelligence Digest</h1>
+      <div class="nav">
+        <a href="/china-digest/">China</a>
+        <span class="sep">/</span>
+        <span class="active">North Korea</span>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+      </div>
+      <div class="meta">2026-04-15 &nbsp;·&nbsp; Auto-generated</div>
     </div>
-    <div class="meta">2026-04-15 &nbsp;·&nbsp; Auto-generated</div>
+    <div class="masthead-bottom-rule"></div>
   </div>
   <div class="columns">
 
@@ -250,21 +325,21 @@ body {
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260415/n-koreas-economy-entering-recovery-phase-amid-closer-ties-with-russia-china-seoul?utm_source=rss" target="_blank">N. Korea&#x27;s economy entering recovery phase amid closer ties with Russia, China: Seoul</a></div>
       <div class="entry-title-zh">首尔：随着与俄罗斯、中国关系的密切，朝鲜经济进入复苏阶段</div>
       <div class="entry-summary">North Korea&#x27;s economy has entered a recovery phase thanks to closer relations with Russia and China, overcoming a period of recession, the unification ministry in Seoul said Wednesday. The ministry made the assessment in its five-year plan for…</div>
-      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:42</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 10:32</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260415/n-korea-russias-largest-labor-unions-sign-cooperation-agreement?utm_source=rss" target="_blank">N. Korea, Russia&#x27;s largest labor unions sign cooperation agreement</a></div>
       <div class="entry-title-zh">朝鲜与俄罗斯最大工会签署合作协议</div>
       <div class="entry-summary">The largest umbrella labor unions of North Korea and Russia held talks in Pyongyang and signed an agreement to boost cooperation, the North&#x27;s state media said Wednesday. Ri Won-jong, head of the General Federation of Trade Unions of Korea, and…</div>
-      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:42</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 10:32</div>
     </div>
 
     <div class="entry">
       <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260415/n-korea-calls-for-loyalty-to-leader-kim-on-founders-birth-anniversary?utm_source=rss" target="_blank">N. Korea calls for loyalty to leader Kim on founder&#x27;s birth anniversary</a></div>
       <div class="entry-title-zh">朝鲜在创始人诞辰纪念日呼吁效忠领导人金正恩</div>
       <div class="entry-summary">North Korea called on party members and citizens for increased loyalty to leader Kim Jong-un on Wednesday, the birth anniversary of state founder Kim Il-sung, highlighting the two leaders&#x27; shared people-centered policies. The ruling Workers&#x27; Party…</div>
-      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 09:42</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-15 10:32</div>
     </div>
 
     <div class="entry">
@@ -317,6 +392,13 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPeDRFbVJTek1Ld2lzRTFvNVFDajRHZkZXZFZWaFlXRnNONFRHb0NzQ0p6TzQ4N0FENUc1MGZDSUcyTF9Bb2E1ejMxSGpyUWFWR05feThJb1dFWG0zZGxDV0pHR1RoMDhZcnpMZFV1QWFpZmlaUlNuZi1PbmRfa1ZxN2F5NGtLYk4tazFqUGQ4NmU?oc=5" target="_blank">UN nuclear chief urges strict Iran checks in any deal to end war - AP News</a></div>
+      <div class="entry-title-zh">联合国核事务负责人敦促伊朗严格检查任何结束战争的协议 - 美联社</div>
+      <div class="entry-summary">UN nuclear chief urges strict Iran checks in any deal to end war AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 09:50</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxOYW5pMzJlRll6UEFDdXAtVzFaa3FSVlRWa05DWXdyUjhVUnVBVU1xRFd5NkVSVzBWTl9iRnl3cFNSRUxNQmd1U25tY09JWEdrQ3BMMjJvR3hEdDJhM1Z4QmJ6NTBvaHp6by0yTjg0V0lyTzhHeHJ4MjM4czZtR0g3VldubEFCVm8wQUE1aTFsbVVqOEFqVElR?oc=5" target="_blank">European shares are little changed after Asia finishes higher amid hopes for US-Iran talks - AP News</a></div>
       <div class="entry-title-zh">亚洲股市因美伊谈判的希望而收高，欧洲股市几乎没有变化 - 美联社新闻</div>
       <div class="entry-summary">European shares are little changed after Asia finishes higher amid hopes for US-Iran talks AP News</div>
@@ -338,20 +420,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNQTBsNEM2QjhCS1drOTRnb2duREZWNnItMUNEa2w4ZF9NMUdLckZSZnZtellTMlRuZjBjUnZFeWpNdkVFMG1xY1M4YmZVaHU4RXpXdVh4Tl80MVZvTGhLTHJEN3pGOFNaV0NlZjZiTU5IM2hDTS1jR2F3M3RhcU9NUWFUUHFSVUpqZmVhcHpnYktBbmNTdlJwdkpRLUNvaXE1SDZTMkdRcUJHMlk3OFFISDVveWp5YUNndzhidw?oc=5" target="_blank">Rohingya survivor recounts ordeal as 250 missing in Andaman sea tragedy - Reuters</a></div>
-      <div class="entry-title-zh">罗兴亚幸存者讲述安达曼海悲剧中250人失踪的痛苦经历 - 路透中文网</div>
-      <div class="entry-summary">Rohingya survivor recounts ordeal as 250 missing in Andaman sea tragedy Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 06:42</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPeDRFbVJTek1Ld2lzRTFvNVFDajRHZkZXZFZWaFlXRnNONFRHb0NzQ0p6TzQ4N0FENUc1MGZDSUcyTF9Bb2E1ejMxSGpyUWFWR05feThJb1dFWG0zZGxDV0pHR1RoMDhZcnpMZFV1QWFpZmlaUlNuZi1PbmRfa1ZxN2F5NGtLYk4tazFqUGQ4NmU?oc=5" target="_blank">UN nuclear chief urges strict Iran checks in any deal to end war - AP News</a></div>
-      <div class="entry-title-zh">联合国核事务负责人敦促伊朗严格检查任何结束战争的协议 - 美联社</div>
-      <div class="entry-summary">UN nuclear chief urges strict Iran checks in any deal to end war AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 06:29</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title-en"><a href="https://www.straitstimes.com/asia/east-asia/un-watchdog-says-north-korea-is-boosting-nuclear-weapons-capacity" target="_blank">UN watchdog says North Korea is boosting nuclear weapons capacity</a></div>
       <div class="entry-title-zh">联合国监督机构称朝鲜正在增强核武器能力</div>
       <div class="entry-summary"></div>
@@ -366,10 +434,10 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOX3c0bjU1V2d3RG5Zc200MFpTQXQxUWkzak1VWHV5emVxUGs0RFZmdVNlbU1FX0Y4UnlrY2Z0NzE1WU1YdjAzN2l4TFh6U1FyRHBQZzMzWWRrMFFYVXZXX1JfY3hRblVfcnhlYnJocklUcmxmR05FYTA2elh0eGxiTjBfUmhHVDYxcy03QjBkNEtTb0lnVllVaTdoVml3eXRuRVhlV0thT2lUZHc0ekE2Y3FSZFJyZ1RYNnFpQzgxOEg?oc=5" target="_blank">Rattled by Trump, US allies eye Japan&#x27;s biggest arms opening since World War Two - Reuters</a></div>
-      <div class="entry-title-zh">因特朗普而感到不安，美国盟友关注日本自第二次世界大战以来最大规模的开放 - 路透中文网</div>
-      <div class="entry-summary">Rattled by Trump, US allies eye Japan&#x27;s biggest arms opening since World War Two Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 04:02</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNVGF4UVRuVk1TZGoyV202ZkpPSFp4MldhZFJKYk5MY0R5dW80UTU3V0wtWW1ORGUtNW1MODlfeTZIWTgzZ3VUdTV6QUJJTmVjdVQ1dHJvOTlaN0dva2VlYlVUdnptTGl3cVFyY2VpTDZzajZxZURRb0RPUXVuSm94SmNMQ3NCdC12eWZ5em44dWlZakppN3dCSXdHQlRuMFluSzVKT194eXlLV3lTQ05MS3FlWQ?oc=5" target="_blank">Diplomats try to arrange more US-Iran talks during first full day of American blockade - AP News</a></div>
+      <div class="entry-title-zh">外交官试图在美国封锁的第一天安排更多美伊会谈 - 美联社新闻</div>
+      <div class="entry-summary">Diplomats try to arrange more US-Iran talks during first full day of American blockade AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 03:55</div>
     </div>
 
     <div class="entry">
@@ -387,20 +455,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOenJzVGFSQll2dXNabk92RHBpV01fUDc2eDg4djF0cHlyMGpQN0xXODh6Tng2RU5OZ05GWXVYWklZLWRTRFg0Unczb085U2VONTJHM01qVGxWczJ0eTkxRTZmTGZMc1F4Xzh2T0czNGJwRDBRN1N2T3dJNUgwMmRsMThJWkk2RW8yRVU2VFJrd0tuRndJTU1TZ2gteExjSVREMURiZEFUekgyUGM?oc=5" target="_blank">Justice Department moves to toss seditious conspiracy convictions of Oath Keepers and Proud Boys - AP News</a></div>
-      <div class="entry-title-zh">司法部决定撤销对誓言守护者和骄傲男孩的煽动共谋定罪 - 美联社新闻</div>
-      <div class="entry-summary">Justice Department moves to toss seditious conspiracy convictions of Oath Keepers and Proud Boys AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 01:41</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWUdzWjJ0X0diOWlZWHlkaEVpV0s1aDYyU1NsOHoyRV9kUE8zZkp5WTlBdFVlZEhJcTBHUzZrNE5sbkdUZWJGWml6UlJjYWZWUHBOOXJXNTdFQy1RcnF3RjZmTXJNeXlpSUZSQ0VLUFdrZ3g5dXRRejNrVzVsclBXSnhIaC1NbTMtV01aQjRKZjV2R1RsWVRfOTA4bDlSTWJNM0E0OW5yTHNycW53Zjl2N0VYZm82QU50?oc=5" target="_blank">Iran war promises green edge for Asia as plastic packaging runs short - Reuters</a></div>
-      <div class="entry-title-zh">由于塑料包装短缺，伊朗战争为亚洲带来绿色优势 - 路透中文网</div>
-      <div class="entry-summary">Iran war promises green edge for Asia as plastic packaging runs short Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 01:02</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title-en"><a href="https://www.straitstimes.com/asia/east-asia/north-korea-denounces-japans-diplomatic-report-calling-it-a-provocation" target="_blank">North Korea calls Japan diplomatic paper a ‘grave provocation’</a></div>
       <div class="entry-title-zh">朝鲜称日本外交文件是“严重挑衅”</div>
       <div class="entry-summary"></div>
@@ -415,10 +469,17 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPYzE0Z0V1bFR1NGhCcEp4U0pxZWtXRlhpNjdaYzRrY0xDcnk5NkJudlhUUkp2dWh3bEVrS19LT2JMVV9SQVYtTXJMQW1XelVKZ3ZiT1JMbVVuVVV1UjhsRlU4ZUtIVGlDUTB1YVlQQXFaam5naUpVWEg3aG9nb3VfWWNpSmgtODIzTGxjM2d0SEFhYjlhMlhR?oc=5" target="_blank">Powerball is going international in an effort to build larger jackpots that draw more players - AP News</a></div>
-      <div class="entry-title-zh">强力球正在走向国际，努力建立更大的累积奖金以吸引更多玩家 - 美联社新闻</div>
-      <div class="entry-summary">Powerball is going international in an effort to build larger jackpots that draw more players AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-14 21:21</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNd1BoTGQwQlA4dy1TVVFXazJtOGZic01rcFlMQWlfbWlWYTRhcTF1M0VwM1c2T2MzbDFlS3VFeE5QdFdsOWppMnp5MEN4a0oyRGpxRTQtanhLQmoxWFBvMkItZURTbEhsZ2NiWXAzLXlqMThUaWZGX3RsSkt3aFczM2d5Vm9vZktFd2QwX28yTGtMWlFQd192MXFDVGNibmVu?oc=5" target="_blank">Democrats seek to overturn Trump’s new rules for student loan forgiveness - AP News</a></div>
+      <div class="entry-title-zh">民主党人寻求推翻特朗普的学生贷款减免新规则 - 美联社新闻</div>
+      <div class="entry-summary">Democrats seek to overturn Trump’s new rules for student loan forgiveness AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-14 21:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNdjMtZ2lSdFZHMlR0YmsyYjdMc09NanQwbnJOTm1FdmFnV2JVT1ZmaDIzcHI1dklMaUtNdGo3ZUI4eHBIVWI4N0J0dVM1TkRfMExMN0MzTnNVZ0hza0dEMllZRF9CTG9zaUhiWkkzeHF6dG1UWjg3cWhEbVhaQXVoRC1GTlR1SnJLZzMyVGM5NVJ4WmM1cmNLeDJWQXpod3QyWm83SDN2WHM5NnpwVWc?oc=5" target="_blank">Severe storms accompanied by tornadoes damage communities from the Plains to the Midwest - AP News</a></div>
+      <div class="entry-title-zh">伴随着龙卷风的严重风暴破坏了从平原到中西部的社区 - 美联社新闻</div>
+      <div class="entry-summary">Severe storms accompanied by tornadoes damage communities from the Plains to the Midwest AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-14 20:32</div>
     </div>
 
     <div class="entry">
@@ -436,10 +497,10 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOb3A2bTc1ZlNqa19TNkIyem5FX3hNd0hlWk0tMGN4b21HT1l1LU9HUHo4OFV3cjI0UzVFVmhTcGtUb3pkaTN4bVE3VWYxSFppRXVjc2F6M2ZyMWNFTW1WX1U5ejhONDFxSXlEbmxnM0JUOUhCQU5SNl9ydEpaYkV0ZlNJVE9qUndhbDBUMzhPOWVfMmRjYUhWSG84cXRCcHAzU0RReEVoUS1tOWdyLTRIRzRFVDNUejg1NzhSQTZR?oc=5" target="_blank">Exclusive: Norway to lift ban on wealth fund investments in Syrian bonds, document shows - Reuters</a></div>
-      <div class="entry-title-zh">独家：文件显示挪威将取消财富基金投资叙利亚债券的禁令 - 路透</div>
-      <div class="entry-summary">Exclusive: Norway to lift ban on wealth fund investments in Syrian bonds, document shows Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 17:40</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQM2pRSjNJX3RqcUdRNTl2cXFzVmFpUkxqRUc3a3ctYkNrak5DYkpOODdJc0hSbnUtUXNYZTJBTFlrNEVwVlVJVUVWRkZOSXdxV01KVG5ia1A3a2M3b3hMYXhPMlh1bzZoVy1zV2Z0cFBlZHB6RkNOd3l1VmF0RHVSMVVVa1lvUmpHWkE?oc=5" target="_blank">Vatican visitors slam Trump over attacks on the US-born pope’s message of peace - AP News</a></div>
+      <div class="entry-title-zh">梵蒂冈游客抨击特朗普攻击美国出生的教皇的和平信息 - 美联社新闻</div>
+      <div class="entry-summary">Vatican visitors slam Trump over attacks on the US-born pope’s message of peace AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-14 19:43</div>
     </div>
 
     <div class="entry">
@@ -454,6 +515,20 @@ body {
       <div class="entry-title-zh">联合国机构称，罗兴亚人船只在安达曼海倾覆，约250人失踪 - 路透中文网</div>
       <div class="entry-summary">Around 250 missing after Rohingya boat capsizes in Andaman Sea, UN agencies say Reuters</div>
       <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 17:28</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOb3A2bTc1ZlNqa19TNkIyem5FX3hNd0hlWk0tMGN4b21HT1l1LU9HUHo4OFV3cjI0UzVFVmhTcGtUb3pkaTN4bVE3VWYxSFppRXVjc2F6M2ZyMWNFTW1WX1U5ejhONDFxSXlEbmxnM0JUOUhCQU5SNl9ydEpaYkV0ZlNJVE9qUndhbDBUMzhPOWVfMmRjYUhWSG84cXRCcHAzU0RReEVoUS1tOWdyLTRIRzRFVDNUejg1NzhSQTZR?oc=5" target="_blank">Exclusive: Norway to lift ban on wealth fund investments in Syrian bonds, document shows - Reuters</a></div>
+      <div class="entry-title-zh">独家：文件显示挪威将取消财富基金投资叙利亚债券的禁令 - 路透</div>
+      <div class="entry-summary">Exclusive: Norway to lift ban on wealth fund investments in Syrian bonds, document shows Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 17:10</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPa1dGU3hBb3hEWmhnWEwwWjVESUlNNTctUjMwRzJ3R2JJV0l2US1BdmROTlVrSTlPcS1nSWFoazJTUWYta3NWbDFCbTNwMDRCRzNWX0VCQ2RiZUpVajZhblpudDRZS0FSSEFvSmE5bERKUWc2UkhQTDFGbV9OQmlMT01aQndSRFYycU5JNTYyYjVTcTJnd29PMF9nWmVxbHJfWjBTWXQ5MnNRUXlVeU1RVQ?oc=5" target="_blank">Nigeria&#x27;s Edun says developing nations need more from IMF and World Bank - Reuters</a></div>
+      <div class="entry-title-zh">尼日利亚的埃德恩表示发展中国家需要国际货币基金组织和世界银行提供更多帮助 - 路透中文网</div>
+      <div class="entry-summary">Nigeria&#x27;s Edun says developing nations need more from IMF and World Bank Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 17:10</div>
     </div>
   </div>
 
