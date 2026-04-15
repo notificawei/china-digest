@@ -443,14 +443,14 @@ def render_entry(entry):
     </div>"""
 
 
-def render_column(col_cfg, data_dict, max_articles=20):
-    label = esc(col_cfg["label"])
-
+def render_column(col_cfg, data_dict, max_articles=20, max_per_source=5):
     all_entries = []
     for src in col_cfg["sources"]:
-        all_entries.extend(data_dict.get(src["name"], []))
+        entries = data_dict.get(src["name"], [])
+        # Cap each source so high-volume outlets (TASS, Sputnik) don't crowd out others
+        capped = sorted(entries, key=sort_key, reverse=True)[:max_per_source]
+        all_entries.extend(capped)
     sorted_entries = sorted(all_entries, key=sort_key, reverse=True)[:max_articles]
-
     en_label = esc(col_cfg["en_label"])
 
     parts = [f"""
