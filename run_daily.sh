@@ -20,7 +20,7 @@ python3 "$SCRIPT_DIR/generate_dprk.py" 2>&1 | tee -a "$LOG_FILE"
 echo "[$(date)] 推送到 GitHub..." | tee -a "$LOG_FILE"
 cd "$SCRIPT_DIR"
 git add docs/
-git commit -m "digest: $(date +%Y-%m-%d)" 2>&1 | tee -a "$LOG_FILE"
+git commit -m "digest: $(date +%Y-%m-%d-%H%M)" 2>&1 | tee -a "$LOG_FILE"
 git push 2>&1 | tee -a "$LOG_FILE"
 
 echo "[$(date)] 完成" | tee -a "$LOG_FILE"
