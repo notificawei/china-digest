@@ -484,13 +484,14 @@ body {
   color: #121212;
 }
 .section-header .en-label {
-  display: block;
+  display: inline;
   font-size: 0.62rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #999;
-  margin-top: 0.2rem;
+  font-weight: 400;
+  margin-left: 0.4rem;
 }
 .col-highlight .section-header { border-bottom-color: #d0021b; }
 .col-highlight .section-header h2 { color: #d0021b; }
@@ -604,8 +605,7 @@ def render_column(col_cfg, data_dict, col_class=""):
     parts = [f"""
   <div class="section {col_class}">
     <div class="section-header">
-      <h2>{label}</h2>
-      <span class="en-label">{en_label}</span>
+      <h2>{label} <span class="en-label">{en_label}</span></h2>
     </div>"""]
 
     # 合并所有来源，按日期降序排列
@@ -630,8 +630,7 @@ def render_col4(col4_entries):
     parts = ["""
   <div class="section col-highlight">
     <div class="section-header">
-      <h2>🔥 重点议题</h2>
-      <span class="en-label">AI · Economy · Employment · Labor</span>
+      <h2>🔥 重点议题 <span class="en-label">AI · Economy · Employment · Labor</span></h2>
     </div>"""]
 
     if col4_entries:

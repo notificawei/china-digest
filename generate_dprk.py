@@ -379,13 +379,14 @@ body {
   color: #121212;
 }
 .section-header .en-label {
-  display: block;
+  display: inline;
   font-size: 0.62rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #999;
-  margin-top: 0.2rem;
+  font-weight: 400;
+  margin-left: 0.4rem;
 }
 .entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
 .entry:last-child { border-bottom: none; }
@@ -498,8 +499,7 @@ def render_column(col_cfg, data_dict, max_articles=20):
     parts = [f"""
   <div class="section">
     <div class="section-header">
-      <h2>{label}</h2>
-      <span class="en-label">{en_label}</span>
+      <h2>{label} <span class="en-label">{en_label}</span></h2>
     </div>"""]
 
     if sorted_entries:
