@@ -100,7 +100,15 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #121212;
 }
-.section-header .en-label { display: none; }
+.section-header .en-label {
+  display: block;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-top: 0.2rem;
+}
 .entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
 .entry:last-child { border-bottom: none; }
 .entry-title-en {
@@ -147,6 +155,26 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
 
 </style>
 </head>
@@ -166,12 +194,36 @@ body {
     </div>
     <div class="masthead-bottom-rule"></div>
   </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
   <div class="columns">
 
   <div class="section">
     <div class="section-header">
       <h2>🔬 智库分析</h2>
       <span class="en-label">Think Tank &amp; Analysis</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/major-russian-airline-says-it-has-received-ok-to-fly-over-north-korea/" target="_blank">Major Russian airline says it has received OK to fly over North Korea</a></div>
+      <div class="entry-title-zh">俄罗斯主要航空公司表示已获准飞越朝鲜</div>
+      <div class="entry-summary">Russia’s largest private airline says it has received permission to fly over North Korea, currently operating two routes that cross through the country’s usually restricted airspace. A spokesperson for S7 Airlines said on Wednesday that the firm has…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-16 08:03</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/two-americans-sentenced-for-helping-north-korean-it-workers-steal-from-us-firms/" target="_blank">Two Americans sentenced for helping North Korean IT workers steal from US firms</a></div>
+      <div class="entry-title-zh">两名美国人因帮助朝鲜 IT 工人从美国公司盗窃而被判刑</div>
+      <div class="entry-summary">Two U.S. nationals were sentenced to prison on Wednesday for helping North Korean information technology workers pose as American employees at more than 100 U.S. companies, a yearslong scheme that generated over $5 million for Pyongyang’s weapons…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-16 07:21</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/russian-occupied-ukrainian-region-discusses-deepening-ties-with-north-korea/" target="_blank">Russian-occupied Ukrainian region discusses deepening ties with North Korea</a></div>
+      <div class="entry-title-zh">俄罗斯占领的乌克兰地区讨论深化与朝鲜的关系</div>
+      <div class="entry-summary">North Korea is looking to expand its cooperation with Russia-controlled regions of Donbas in Ukraine, a regional governor said after meeting the DPRK’s top envoy on Wednesday. Governor Vladimir Saldo of the Russian-occupied Kherson region raised the…</div>
+      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-16 06:22</div>
     </div>
 
     <div class="entry">
@@ -224,6 +276,41 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/with-little-incentive-to-engage-the-us-north-korea-deepens-russia-and-china-ties/" target="_blank">With Little Incentive to Engage the US, North Korea Deepens Russia and China Ties</a></div>
+      <div class="entry-title-zh">朝鲜缺乏与美国接触的动力，加深了俄罗斯和中国的关系</div>
+      <div class="entry-summary">This article is from the fourth edition (January – March 2026) of 38 North’s quarterly ... The post With Little Incentive to Engage the US, North Korea Deepens Russia and China Ties appeared first on 38 North .</div>
+      <div class="entry-meta"><span class="source-tag">38 North</span>2026-04-15 13:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/construction-projects-making-headway-as-part-of-five-year-plan/" target="_blank">Construction Projects Making Headway as Part of Five-Year Plan</a></div>
+      <div class="entry-title-zh">五年计划建设项目取得进展</div>
+      <div class="entry-summary">This article is from the fourth edition (January – March 2026) of 38 North’s quarterly ... The post Construction Projects Making Headway as Part of Five-Year Plan appeared first on 38 North .</div>
+      <div class="entry-meta"><span class="source-tag">38 North</span>2026-04-15 13:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/post-party-congress-elections/" target="_blank">Post-Party Congress Elections</a></div>
+      <div class="entry-title-zh">党代表大会后选举</div>
+      <div class="entry-summary">This article is from the fourth edition (January – March 2026) of 38 North’s quarterly ... The post Post-Party Congress Elections appeared first on 38 North .</div>
+      <div class="entry-meta"><span class="source-tag">38 North</span>2026-04-15 13:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/from-party-congress-to-supreme-peoples-assembly-kims-power-consolidation-self-reliance-strategy-and-new-five-year-plan/" target="_blank">From Party Congress to Supreme People’s Assembly: Kim’s Power Consolidation, Self-Reliance Strategy, and New Five-Year Plan</a></div>
+      <div class="entry-title-zh">从党代表大会到最高人民会议：金正恩的权力巩固、自力更生战略和新五年计划</div>
+      <div class="entry-summary">This article is from the fourth edition (January – March 2026) of 38 North’s quarterly ... The post From Party Congress to Supreme People’s Assembly: Kim’s Power Consolidation, Self-Reliance Strategy, and New Five-Year Plan appeared first on 38…</div>
+      <div class="entry-meta"><span class="source-tag">38 North</span>2026-04-15 13:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.38north.org/2026/04/north-korea-tests-new-theater-launch-platforms-as-party-congress-continues-nuclear-missile-buildup/" target="_blank">North Korea Tests New Theater Launch Platforms as Party Congress Continues Nuclear/Missile Buildup</a></div>
+      <div class="entry-title-zh">随着党代表大会继续核/导弹建设，朝鲜测试新的战区发射平台</div>
+      <div class="entry-summary">This article is from the fourth edition (January – March 2026) of 38 North’s quarterly ... The post North Korea Tests New Theater Launch Platforms as Party Congress Continues Nuclear/Missile Buildup appeared first on 38 North .</div>
+      <div class="entry-meta"><span class="source-tag">38 North</span>2026-04-15 13:00</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title-en"><a href="https://www.dailynk.com/english/north-korea-kim-il-sung-birthday-mobilization/" target="_blank">North Koreans forced to pay for Kim Il Sung birthday celebrations</a></div>
       <div class="entry-title-zh">朝鲜被迫支付金日成生日庆祝活动费用</div>
       <div class="entry-summary">North Korean people across the country were mobilized for pre-dawn street cleaning and forced to cover the costs of building repairs and flower baskets ahead of the April 15 birthday of founder Kim Il Sung as rising prices in 2026 deepened the…</div>
@@ -257,68 +344,47 @@ body {
       <div class="entry-summary">The largest labor organizations in Russia and North Korea have inked a cooperation deal, according to state media, a move that comes as the DPRK deploys large numbers of workers to Russia. The Federation of Independent Trade Unions of Russia signed…</div>
       <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 05:59</div>
     </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/china-greenlights-new-seafood-inspection-facility-on-north-korea-border/" target="_blank">China greenlights new seafood inspection facility on North Korea border</a></div>
-      <div class="entry-title-zh">中国批准在朝鲜边境新建海鲜检验设施</div>
-      <div class="entry-summary">China has greenlit the operation of a seafood inspection facility that can process imports in a city on the North Korea border, despite U.N. Security Council sanctions and customs rules on the DPRK’s seafood trade. The General Administration of…</div>
-      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 03:35</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/trumps-war-with-iran-has-left-prospects-for-north-korea-talks-on-life-support/" target="_blank">Trump’s war with Iran has left prospects for North Korea talks on life support</a></div>
-      <div class="entry-title-zh">特朗普与伊朗的战争为朝鲜生命支持谈判留下了前景</div>
-      <div class="entry-summary">Over a month into the U.S. war with Iran, the repercussions for North Korea are coming into focus, and they aren’t good. The U.S. decision to attack an adversary in the middle of nuclear talks — going so far as to take out its leadership — will be…</div>
-      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-15 02:05</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.dailynk.com/english/north-korea-self-reliance-policy-factory-accident-chongjin/" target="_blank">North Korea’s self-reliance push costs factory worker a finger</a></div>
-      <div class="entry-title-zh">朝鲜的自力更生让工厂工人损失了一根手指</div>
-      <div class="entry-summary">A technician at a coal mining machinery factory in Chongjin lost a finger recently while attempting to produce insulating paper using scrap lumber, an accident that workers and staff are attributing directly to North Korea’s “self-reliance” policy…</div>
-      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-14 17:09</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.dailynk.com/english/kim-jong-un-cult-of-personality-north-korea-ninth-party-congress/" target="_blank">Kim Jong Un sidelines his predecessors in sweeping cult of personality push</a></div>
-      <div class="entry-title-zh">金正恩在全面的个人崇拜推动中排挤前任</div>
-      <div class="entry-summary">North Korea has launched an intensified cult of personality campaign around leader Kim Jong Un following the Ninth Congress of the Workers’ Party of Korea (WPK), held in February 2026, sidelining the ideological legacies of his predecessors and…</div>
-      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-14 13:07</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.dailynk.com/english/north-korea-transport-costs-fuel-prices-2026/" target="_blank">Middle East oil shock doubles North Korea freight costs, squeezes traders</a></div>
-      <div class="entry-title-zh">中东石油危机使朝鲜货运成本翻倍，令贸易商陷入困境</div>
-      <div class="entry-summary">Rising oil prices driven by instability in the Middle East are pushing up fuel costs inside North Korea, with transport fees charged by private freight vehicles doubling in a short period and squeezing market traders already struggling through a…</div>
-      <div class="entry-meta"><span class="source-tag">Daily NK</span>2026-04-14 10:37</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/human-rights-commission-says-seoul-should-protect-north-korean-pows-in-ukraine/" target="_blank">Human rights commission says Seoul should protect North Korean POWs in Ukraine</a></div>
-      <div class="entry-title-zh">人权委员会表示首尔应保护在乌克兰的朝鲜战俘</div>
-      <div class="entry-summary">The South Korean government’s human rights watchdog says the country’s foreign and prime ministers should use all available resources to protect and repatriate two North Korean prisoners of war held in Ukraine. The state-funded National Human Rights…</div>
-      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 09:23</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/kim-jong-un-donates-2m-to-educate-pro-north-korea-youth-in-japan/" target="_blank">Kim Jong Un donates $2M to educate pro-North Korea youth in Japan</a></div>
-      <div class="entry-title-zh">金正恩捐赠200万美元用于在日本教育亲朝鲜青年</div>
-      <div class="entry-summary">North Korean leader Kim Jong Un has sent nearly $2 million to a pro-DPRK organization in Japan, an annual donation made to support youth education ahead of the country’s most important holiday. State media reported on Tuesday that Kim sent 316…</div>
-      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 06:02</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://www.nknews.org/2026/04/north-korea-lets-russians-run-in-pyongyang-despite-cancelling-marathon/" target="_blank">North Korea lets Russians run in Pyongyang despite cancelling marathon</a></div>
-      <div class="entry-title-zh">尽管取消了马拉松比赛，朝鲜仍允许俄罗斯人在平壤跑步</div>
-      <div class="entry-summary">North Korea allowed dozens of Russian athletes who signed up for the country’s international marathon to go for runs in central Pyongyang this month, despite abruptly cancelling the annual event. The exclusive tour once again highlighted the special…</div>
-      <div class="entry-meta"><span class="source-tag">NK Pro</span>2026-04-14 03:39</div>
-    </div>
   </div>
 
   <div class="section">
     <div class="section-header">
       <h2>🇰🇷 韩国媒体</h2>
       <span class="en-label">South Korean Media</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260416/how-north-korea-laundered-money-through-vietnamese-crypto-company?utm_source=rss" target="_blank">How North Korea laundered money through Vietnamese crypto company</a></div>
+      <div class="entry-title-zh">朝鲜如何通过越南加密货币公司洗钱</div>
+      <div class="entry-summary">On Sept. 22, 2025, a post seeking a verified U.S. Payoneer account appeared on a Telegram channel run by Quangvietdnbg International Services Co. Ltd., a Vietnamese online financial company. At first glance, it appeared to be a routine post seeking…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-16 08:17</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/southkorea/society/20260416/1st-baby-in-20-years-sparks-celebration-in-rural-korean-village?utm_source=rss" target="_blank">1st baby in 20 years sparks celebration in rural Korean village</a></div>
+      <div class="entry-title-zh">20年来第一个孩子在韩国乡村引发庆祝活动</div>
+      <div class="entry-summary">The sound of a baby crying in a rural town in Jeongseon County, Gangwon Province, has given residents reason to celebrate, marking the first birth there in 20 years. According to the county, a baby boy was born to Kim Hyun-dong and Jang Yoo-jin in…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-16 08:17</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/20260416/indo-pacific-usfk-commanders-to-attend-senate-house-hearings-amid-iran-war-concerns?utm_source=rss" target="_blank">Indo-Pacific, USFK commanders to attend Senate, House hearings amid Iran war concerns</a></div>
+      <div class="entry-title-zh">因伊朗战争担忧，印度-太平洋地区、驻韩美军指挥官将出席参众两院听证会</div>
+      <div class="entry-summary">WASHINGTON — Top U.S. commanders in the Indo-Pacific will attend Senate and House committee hearings at the Capitol in Washington next week, Congress&#x27;s website showed Wednesday, amid concerns that the U.S.-Israeli war against Iran could affect…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-16 08:17</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260416/n-koreas-kim-oversees-artillery-firing-contest-on-state-founders-birthday?utm_source=rss" target="_blank">N. Korea&#x27;s Kim oversees artillery firing contest on state founder&#x27;s birthday</a></div>
+      <div class="entry-title-zh">朝鲜金正恩在国家创始人生日之际监督炮兵射击比赛</div>
+      <div class="entry-summary">North Korean leader Kim Jong-un has overseen an artillery firing contest on the birth anniversary of state founder Kim Il-sung, grandfather of the current leader Kim, the North&#x27;s state media reported Thursday. &quot;Comrade Kim Jong-un ... oversaw an…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Times</span>2026-04-16 08:17</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://www.koreaherald.com/article/10718943" target="_blank">North Korean leader&#x27;s absence from Kumsusan Palace points to cementing of &#x27;Kim Jong-un era&#x27;</a></div>
+      <div class="entry-title-zh">朝鲜领导人缺席锦绣山宫标志着“金正恩时代”的巩固</div>
+      <div class="entry-summary">Analysts believe North Korean leader Kim Jong-un’s continued absence from Kumsusan Palace of the Sun on April 15 — the birthday of state founder Kim Il-sung — is a calculated move to distance himself from his predecessors and solidify his own…</div>
+      <div class="entry-meta"><span class="source-tag">Korea Herald</span>2026-04-16 06:33</div>
     </div>
 
     <div class="entry">
@@ -341,13 +407,6 @@ body {
       <div class="entry-summary">SEOUL, April 16 (Yonhap) -- North Korean leader Kim Jong-un has overseen an arti...</div>
       <div class="entry-meta"><span class="source-tag">Yonhap News</span>2026-04-15 21:53</div>
     </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://en.yna.co.kr/view/AEN20260415006300315" target="_blank">N. Korea&#x27;s economy entering recovery phase amid closer ties with Russia, China: Seoul</a></div>
-      <div class="entry-title-zh">首尔：随着与俄罗斯、中国关系的密切，朝鲜经济进入复苏阶段</div>
-      <div class="entry-summary">SEOUL, April 15 (Yonhap) -- North Korea&#x27;s economy has entered a recovery phase t...</div>
-      <div class="entry-meta"><span class="source-tag">Yonhap News</span>2026-04-15 05:13</div>
-    </div>
   </div>
 
   <div class="section">
@@ -364,45 +423,10 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQeFlaY05sTEZ0cmIxSFZUZmswcERjZWplQnlfdzRuRDB6Mm9YU05PMVZydHJuTUlJUl9ZMzBWVy1SSkd4QXBWbkttTjlxczBJUFhVVmxLT19QOXpVTUNKeDRTUkdGcFFIQ2dJbExXemtGZlRMSE1zM0xhWEc4cUV5M1ZTSlJybTBKVDlRcVBMZzJBUDN0cVZXYjVYaUQ2VjBMSnE2NV9tb1RBLUFWNDNFaw?oc=5" target="_blank">Children killed in Lebanon as Israeli strikes hit homes far from front lines of war with Hezbollah - AP News</a></div>
-      <div class="entry-title-zh">以色列袭击远离真主党战争前线的房屋，导致黎巴嫩儿童丧生 - 美联社新闻</div>
-      <div class="entry-summary">Children killed in Lebanon as Israeli strikes hit homes far from front lines of war with Hezbollah AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 15:32</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQX05JSmVxeVotR3EtVmpMWld4ME9yZ0lSci13YmZybTBSWFpfVUtVb3NvdU5kZlFONkdBX2ItVHR2RUh4WW1lbnZVcm56emRtOC1BaklRdllSU084YkRtRGFxMzE4N2JOcDVKcktNa2RFWndabG9UYV8xYWRCa2k1SU43b2w3LWM?oc=5" target="_blank">Explainer: Why is Sudan at war, and what is the impact? - Reuters</a></div>
-      <div class="entry-title-zh">解说：苏丹为什么会打仗，有什么影响？ - 路透社</div>
-      <div class="entry-summary">Explainer: Why is Sudan at war, and what is the impact? Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 15:03</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQYzBibnU1NzdFTE9Cd2JFWkI1OWhMSlpsa0p3RkF6SVQ3WkE1RnlhUW1JMmVUMzMwQVU2NnI0T2c5UlpQemhqZTgyaENiR2k2TVlhWkVLZEdWRzlrY3FKOUZmRndaMGJfTTFobWstazZMcHA4Smhrb01sdV9HeVpaYVp2cVl3cXdHTHZqZGN3NE83dE91WTR2WmxtMDBwYXlIVVdpNE5lRV9LX1pyd1dLVFNWbmlhNzdVeFd6dlV3?oc=5" target="_blank">Carmakers navigating the costly and tricky transition to battery storage systems - Reuters</a></div>
-      <div class="entry-title-zh">汽车制造商向电池存储系统过渡成本高昂且棘手 - 路透中文网</div>
-      <div class="entry-summary">Carmakers navigating the costly and tricky transition to battery storage systems Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 12:45</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1rUUhMWXZVZW5BdFBtSXg0VUFnQUlneVRMS19NWDVrM19Yb2dvZ2Ixak9GUUtTU0ZkYWI4c2xyQk1jSUJiak53ZkFUSzNGVzZtc09sSS02WjZ3TVNsT1JCbm5nTGZ6RXc?oc=5" target="_blank">UN watchdog says North Korea is boosting nuclear weapons capacity - Reuters</a></div>
       <div class="entry-title-zh">联合国监督机构称朝鲜正在增强核武器能力 - 路透中文网</div>
       <div class="entry-summary">UN watchdog says North Korea is boosting nuclear weapons capacity Reuters</div>
       <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 12:35</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOcmFkYnFXVC0xZjh3cnU5SWdZeFNpS3pEbi16VjlMM2V1Y1FLSEZ1VUxiSjQxNU8tUUpqTFIyMFVnekZVLTM5VFVnY2pqSEdkaEZVdnRGVTlsVWZQakNVQ1JHWUhuUllLUUhlZS1uekZybHc3YzRvNE5CdGtRRE9IeW5jSGh2QmktdEdDUWRyTQ?oc=5" target="_blank">Navan Selected by Opella to Streamline Global Travel and Expense - afp.com</a></div>
-      <div class="entry-title-zh">Opella 选择 Navan 来简化全球旅行和费用 - 法新社</div>
-      <div class="entry-summary">Navan Selected by Opella to Streamline Global Travel and Expense afp.com</div>
-      <div class="entry-meta"><span class="source-tag">AFP</span>2026-04-15 08:46</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQSHRjVW1Xa3BHTjhIRTR5VVk1bHZ4eEtZR0tNcDFTTVhtRWUzNnRIUEZPZ2xzd180bElqU0hiVlZJUmJvZzlOM3MyWk90ZHZ3VlhScGluaWE2c3JLRlc3d1drNTdIa2IwNS1ZckZVdm5MRzBtaWxwSEpxTW5uRjFZZE9mekJPRHViZWRGbVpGaUhBTEJoYkNRSFY0UXQ2MTJYRGk4Z1ZBd3REVmladjBTUnVuUWkzc01fb0hORVZMcG1uYjhmanc?oc=5" target="_blank">Victory Giant&#x27;s $2.2 billion Hong Kong listing seen pricing at top on demand, sources say - Reuters</a></div>
-      <div class="entry-title-zh">消息人士称，胜利巨人22亿美元香港上市的定价是按需定价 - 路透中文网</div>
-      <div class="entry-summary">Victory Giant&#x27;s $2.2 billion Hong Kong listing seen pricing at top on demand, sources say Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-15 08:39</div>
     </div>
 
     <div class="entry">
@@ -420,13 +444,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPdXpPbE14dmx0aVFTMFktSzR1MnlPcVFfTnMxaDNoaTJ5OGttdEhiYUZIVjJ6cGt0TGlsS2NKRTJkMWU1V0llTmFWYmwwTExJc011WFlBYVUyWlNkOGtJTTRvdnd5dnJvUGx6NGJCQVVIV1g4VGtGX2ZpbWxqMlhzUFdmZzREdXhRVVlXb29DS0cyZXJEYTUxazBFdTFkMFBzNXRLYXlzbWZWSFI3R2lrcA?oc=5" target="_blank">What to know about Eric Swalwell’s exit from Congress and the California governor’s race - AP News</a></div>
-      <div class="entry-title-zh">关于埃里克·斯瓦尔韦尔退出国会和加州州长竞选需要了解什么 - 美联社新闻</div>
-      <div class="entry-summary">What to know about Eric Swalwell’s exit from Congress and the California governor’s race AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 03:58</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYzJFNDdZa1Y3YlpFWmdnT0dHR2pKOF9CeHNPUVNfR0Y0TjNkd3RCZi01VFVPdDFiWXpKdHlUSVoxTTVHTVFFVWFBTTVId3g1b3IxZVRhOW1XNXBtTml4MWNzM01fenBpSTI2SUNKOHQ5OEtsUzZKaXlRWTBmNGRtT3pOQU1vTkF1ZnZSOGNJc2hBRzdpOGFKY3paR3p3R3liVmVySFVjWWJTUjRvYjUzXzY4b1FpMlN6d3VicU1IY0RyUQ?oc=5" target="_blank">UN watchdog says North Korea is boosting nuclear weapons capacity - Reuters</a></div>
       <div class="entry-title-zh">联合国监督机构称朝鲜正在增强核武器能力 - 路透中文网</div>
       <div class="entry-summary">UN watchdog says North Korea is boosting nuclear weapons capacity Reuters</div>
@@ -441,59 +458,101 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNeF9wLVpQWG1kTGlDWlNEVVpObVdWeFE5MUROTmJiRGRNR2JnNlJ2SnJfeXdFR2h3YUtnN1VEVTZUZTA3TXZ2Zy0xVldnWmQxczFWanpSTlRZTnFCRm4yY3ZjanNHYWhtM1U4dGJrdmhIcGdDek9lRW5yaTZPYklncXJPemRiUGg4ZXJYQ1k5cVo3RFlIRU1wMXRuRkFkaHJGcDlMN09mSQ?oc=5" target="_blank">Raphinha criticizes referees after Barcelona&#x27;s Champions League elimination, says club was &#x27;robbed&#x27; - AP News</a></div>
-      <div class="entry-title-zh">拉菲尼亚在巴塞罗那欧冠淘汰后批评裁判，称俱乐部被“抢劫” - 美联社新闻</div>
-      <div class="entry-summary">Raphinha criticizes referees after Barcelona&#x27;s Champions League elimination, says club was &#x27;robbed&#x27; AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-15 00:04</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQUUY3MG9wQktKUjc3ckdENzR6SVdKMGlUbjJwSzJsRVpObFpWQ05HT1kzLVlHUG9rWmFyaEJrQmxLMDlnZlFsWHZPLXppd1NheTRrQXRCc0Y0NmtGcUhFcDFUcHJTNUhwU0JCY0xCM3NoUF9tTGNWTkFPcHZQbjVKZE9qVUdJdHl0dlVJdnRrMms1N1FCVnV5WHl6ekEwSVpUU0E?oc=5" target="_blank">North Korean leader supervises missile tests from his naval destroyer - AP News</a></div>
+      <div class="entry-title-zh">朝鲜领导人监督其海军驱逐舰上的导弹试验 - 美联社新闻</div>
+      <div class="entry-summary">North Korean leader supervises missile tests from his naval destroyer AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-14 00:36</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOb3A2bTc1ZlNqa19TNkIyem5FX3hNd0hlWk0tMGN4b21HT1l1LU9HUHo4OFV3cjI0UzVFVmhTcGtUb3pkaTN4bVE3VWYxSFppRXVjc2F6M2ZyMWNFTW1WX1U5ejhONDFxSXlEbmxnM0JUOUhCQU5SNl9ydEpaYkV0ZlNJVE9qUndhbDBUMzhPOWVfMmRjYUhWSG84cXRCcHAzU0RReEVoUS1tOWdyLTRIRzRFVDNUejg1NzhSQTZR?oc=5" target="_blank">Exclusive: Norway to lift ban on wealth fund investments in Syrian bonds, document shows - Reuters</a></div>
-      <div class="entry-title-zh">独家：文件显示挪威将取消财富基金投资叙利亚债券的禁令 - 路透</div>
-      <div class="entry-summary">Exclusive: Norway to lift ban on wealth fund investments in Syrian bonds, document shows Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 17:10</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNSGhUbG9lV2k3M0tHUGNPUzlPb0ZiUi1rZmVNaFp1azc3akVVSG8xT0lzc0NsYWkwbDJLU0taRFdYcVlNbTZZMXJjNjZwUzNEVXkwODJ0WmpFVVItcHFkeU5zSC1XSGVna29MTWhENmprYVlRUDB1V0ZNY0ZaQ0NwUnpRZU9TWS1DVGFLdlo3Q1VubmdqSDBDOFpsejdjRVAzLTF4cm1ZMnVBOV9fcDVLcml3U1Q?oc=5" target="_blank">North Korea tests cruise and anti-ship missiles from naval destroyer - Reuters</a></div>
+      <div class="entry-title-zh">朝鲜从海军驱逐舰上测试巡航导弹和反舰导弹 - 路透中文网</div>
+      <div class="entry-summary">North Korea tests cruise and anti-ship missiles from naval destroyer Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-13 21:40</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPTDNMNG9vLTdYd3BubDRLQ1JPWXVDS3NtbEFnQk5TeW1LNE1wZkhyMmpGUi1GSjFKZVcyclFmSWdWZ1RGcUJWbmFyNGI1NmphdTZPUGd1dXRCbkR1Mjk1WE43a0JxbG5TUTVIME1zWXB2QzRaTV9DX3VheWUwUVhWaUNRZUdEREN6enBYVXZHS2l1bHhNdER3dThINzZGM0hqOGZSaTZUNjZuc0w0WHRvMk9jV2FCRnR3YVlBNTBpY3F4OVRM?oc=5" target="_blank">Indonesian foreign ministry urged caution over US military overflight proposal - Reuters</a></div>
-      <div class="entry-title-zh">印尼外交部敦促谨慎对待美国军事飞越提议 - 路透中文网</div>
-      <div class="entry-summary">Indonesian foreign ministry urged caution over US military overflight proposal Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 16:36</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaWotc1N5VXF6QjN2V2ZkenhZVklxajZYdkZGTm40elZhNWdYQnh5YkRmcEw2MW00ZklNbmFjQ084WHJVbUFTLTBDTDZSbk1qNjRjQlVMTWFSbnZlMzJSM3pJRE9PZE5RRWJDdno3UUdtWVZGUWVVYWxBWHVwR0dGd2YyMG5sYzdHY2ttLWo3R29RSGx0b1ZXNDZkZDJDa21LcDVOMGpMNTBDXzdnSEU4R2toZEdCZjVVdmY0Y3BuUkF6Zw?oc=5" target="_blank">China&#x27;s top diplomat meets North Korea&#x27;s Kim, calls for closer coordination - Reuters</a></div>
+      <div class="entry-title-zh">中国最高外交官会见朝鲜金正恩，呼吁加强协调 - 路透</div>
+      <div class="entry-summary">China&#x27;s top diplomat meets North Korea&#x27;s Kim, calls for closer coordination Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-12 10:07</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQM2pRSjNJX3RqcUdRNTl2cXFzVmFpUkxqRUc3a3ctYkNrak5DYkpOODdJc0hSbnUtUXNYZTJBTFlrNEVwVlVJVUVWRkZOSXdxV01KVG5ia1A3a2M3b3hMYXhPMlh1bzZoVy1zV2Z0cFBlZHB6RkNOd3l1VmF0RHVSMVVVa1lvUmpHWkE?oc=5" target="_blank">Vatican visitors slam Trump over attacks on the US-born pope’s message of peace - AP News</a></div>
-      <div class="entry-title-zh">梵蒂冈游客抨击特朗普攻击美国出生的教皇的和平信息 - 美联社新闻</div>
-      <div class="entry-summary">Vatican visitors slam Trump over attacks on the US-born pope’s message of peace AP News</div>
-      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-14 16:06</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPd0xLajZicURIZEZGa0VvZ01vOUpKa3FZRHctWkFuakdST3lrYVNoakNGbjh6N2Mwa0tSajVEV0pwRTIzc0d6RDl0OU5SVjZJSkpsS1k5dVF3VTRETmlqR1BpNXZxeXBfWmlWWWt3Q3JYOUVpSnFXWHdXYjJVcEp2MlFIYnpqYnRGVndTQUJxOVdTNEc3NXJheGw0Zw?oc=5" target="_blank">North Korea and China agree to deepen cooperation in talks between foreign ministers - AP News</a></div>
+      <div class="entry-title-zh">朝鲜和中国同意在外长会谈中深化合作 - 美联社新闻</div>
+      <div class="entry-summary">North Korea and China agree to deepen cooperation in talks between foreign ministers AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-11 17:28</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZl9kMnlqZzJWSEh1Yjc4SjdLNjI3ZVRxa0xvdmJPSUNFbDJHS0lWOGtWTEFSa1ZwWDA2VS0wNWZqaFN6eEFwUVlzYmE0QS10WklULWZpSFhxRUU0dmV5Vk9SRklkNlJvU09UT05MUmNCUWM2UV8xamZlTXhVSGQydjg4a2ZQTy1nTkJwRUpObDFLM1V1NTJDNEU2eDFwbWZlTFg0TkYxTmQxZw?oc=5" target="_blank">War is over for Wall Street: stocks, dollar and fear index unwind moves - Reuters</a></div>
-      <div class="entry-title-zh">华尔街的战争已经结束：股市、美元和恐惧指数缓解走势 - 路透中文网</div>
-      <div class="entry-summary">War is over for Wall Street: stocks, dollar and fear index unwind moves Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 15:11</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPdTRxUTZ3RVNFMGQweWs3UkZZSi00OWh5X0tScTFPZjJDWnRUVV9GazFVTlNkUmNMcjV0Sm9LSmhiZjU4ekZ6aV9oSXEwN1hpUzBVYl9sS0F2aWFWLTB2bjV6ZWltN1htYkJHZktMbXRqMUZhUVlfSVlwSW41dHVRVTRUZEUxZ1FBSS1VQWN1cVd5TThzYTNr?oc=5" target="_blank">North Korean leader Kim backs China&#x27;s push for ‘multipolar world’ in talks with foreign minister - AP News</a></div>
+      <div class="entry-title-zh">朝鲜领导人金正恩在与外长会谈中支持中国推动“多极世界” - 美联社新闻</div>
+      <div class="entry-summary">North Korean leader Kim backs China&#x27;s push for ‘multipolar world’ in talks with foreign minister AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-11 09:10</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQYkxDLUhreDFkNi1wakUzS3h6ci1ZR21OcVRGamNhRTIwYTJMM2ZobWpiWklPZDJSTXRHdkpoTGJKQk5CQ0ZKaUJ0U3BJMGg2UDZXM2ZXb0lMeXBhRlh3VHBFM0t5X2tYQ1RKOEhmeTZNN3ZINFhzV3l4SjhlTVptQVZNTmdoSk1hRmlEOXBKblpSZGowckNWTDAxQnJ2TWdNQmJYeXNPYjFCQQ?oc=5" target="_blank">Spanish immigration offices threaten strike over migrant amnesty - Reuters</a></div>
-      <div class="entry-title-zh">西班牙移民局威胁因移民特赦而罢工 - 路透中文网</div>
-      <div class="entry-summary">Spanish immigration offices threaten strike over migrant amnesty Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 11:27</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxNTVluVy1oMTRXQU50RGNaZnBGdFNIZFZCZkxNR05hLXIwZHFPcWFXd1A4bjJOOXdFWUg2N3U3cGdxSkFBWkRuc2xvY2N3UEMtb1NRY0dza2d0TTc4dExNX2tKUGlfdmtUWG8wcDlrLWhEd0JiaW9MWXJDM1lsYTRWa0FsQUJXQUxJTzlqakEwamRhUDFTU3RDZVRJSFp1R3JHRzhrYmlJeFkxT2xCSVJFM2pfX3dtRURBSXNqWFFFR1ZTTlZJcmFqWHc0aw?oc=5" target="_blank">North Korea&#x27;s Kim meets China&#x27;s foreign minister, calls for stronger ties, KCNA says - Reuters</a></div>
+      <div class="entry-title-zh">朝中社称，朝鲜金正恩会见中国外交部长，呼吁加强两国关系 - 路透</div>
+      <div class="entry-summary">North Korea&#x27;s Kim meets China&#x27;s foreign minister, calls for stronger ties, KCNA says Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-10 21:28</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPRS1pMDRibHh2aE5vTlRyWVhqRlpUaTF5cldMSjJTbVNucTdoQVRqWlRjNHVETWp6aFZzTDBGY1VyQ2o2dlNMLVZLM2N6VHNwOWdIZTNnVEloVy05UEtlZUFweGxkTWVCcURUMTJLY1FxMGlKbmFTQV9QTTZHckRuOTNKMmZhdWNaN2NsYl9HSGxRbDlqY1I5N3BKblhBT29ReVFtS0NWS19HaTNsV0k1aE5tblFQNjg?oc=5" target="_blank">Orban&#x27;s defeat topples a pillar of Europe&#x27;s far right, prompts scrutiny of MAGA links - Reuters</a></div>
-      <div class="entry-title-zh">欧尔班的失败推翻了欧洲极右翼的支柱，引发了对MAGA联系的审查 - 路透中文网</div>
-      <div class="entry-summary">Orban&#x27;s defeat topples a pillar of Europe&#x27;s far right, prompts scrutiny of MAGA links Reuters</div>
-      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-14 11:02</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5VU2ZScHMzcmlITDA5cm5YNmxZYTFwd2lyRlBWV3k5VU93Y0c4UkI2UUdZOXZzYnYyUUFEMDUxb0FuV0xJaVpNSE4tNGNMTlI2MHp4MXRjdWFrTUlYYTVXS2JiTFVPX0E?oc=5" target="_blank">China says North Korea advancing despite US ‘oppression’ - Reuters</a></div>
+      <div class="entry-title-zh">中国称朝鲜不顾美国的“压迫”继续前进 - 路透中文网</div>
+      <div class="entry-summary">China says North Korea advancing despite US ‘oppression’ Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-10 07:10</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title-en"><a href="https://www.straitstimes.com/asia/east-asia/n-korea-appears-to-have-completed-new-uranium-enrichment-facility-report" target="_blank">N. Korea appears to have completed new uranium enrichment facility: Report</a></div>
-      <div class="entry-title-zh">朝鲜似乎已经完成了新的铀浓缩设施：报告</div>
-      <div class="entry-summary"></div>
-      <div class="entry-meta"><span class="source-tag">Straits Times</span>2026-04-14 08:10</div>
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxNMW41NU1TY3RKTkxSSUdWTTl1NHlEOUtMQWFsSTY2MzhJQUZPVEh4S3d3dGtPejZRRE5iY3JmSDgzYnE5cnVRSXRzTG1CelRQSUs0TnlnSFZxZS16R0d4NTVsc1pmVnc4Y0JSYTJsMGJZZ0NCSENIRkNMVnJpT2J6dWV4NzVUczRuWmY4UTltSkEwR1YwZ3lveTNQOG8xMGU0Z0dCN0YtbnFwMU1MbURGc0s1TkZpX284SHY4Wm9feFY1bUdmNDFuT0hyYTNUUVR4RkNMakln?oc=5" target="_blank">Chinese Foreign Minister Wang Yi lands in Pyongyang for two-day North Korea visit - AP News</a></div>
+      <div class="entry-title-zh">中国外交部长王毅抵达平壤开始对朝鲜进行为期两天的访问 - 美联社新闻</div>
+      <div class="entry-summary">Chinese Foreign Minister Wang Yi lands in Pyongyang for two-day North Korea visit AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-10 02:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPYmFIa3MzYnFjWWNYWlZKUnlTek5FNEpMRXlhbDFlWnQxWmRBMk9oX3lxZEpnVHdmN1pqdUZrM2JJaTJsdmVneTRGZHhVSXFhWkQ3Ry1feGxFQTNyZFhWemVVc1RHeHVtZ3BoLUhQTERBQzJPRWg3V1pfN1pPRmZRNmR3ZjhwNGRRYXg1OTk4emROX2RYVjhCeWxGeTJ0cWpaVE1wcUR1S2IwWldMdVlHeTFWZEplXzZTZ0twaHRsbTJMSS1YZ1pN?oc=5" target="_blank">Chinese foreign minister tells North Korean minister Pyongyang is making strides despite US &#x27;oppression&#x27; - Reuters</a></div>
+      <div class="entry-title-zh">中国外长告诉朝鲜外长，尽管美国的“压迫”，平壤仍在取得进展 - 路透中文网</div>
+      <div class="entry-summary">Chinese foreign minister tells North Korean minister Pyongyang is making strides despite US &#x27;oppression&#x27; Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-09 22:14</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQNXZ6Q29KeTBKODdDczE1Nk9qR0Q2cEdGcUR2YzFCd1l0Z2dXRzdCRm9pVFIxbDRMVXcxd1JNQWZaUlJ4OTBYcjJNZ2FMek8tcmR4QXNFYWh3VEkzQ3lxNGpxOV9rYS11NXdDZm1qd0huZkE5eHlycEtMN2tkMW1BMHdBazlDbVhFWWgwQWRpUnJyV0YxMXhhcXpWTWthTzQ3Qnc?oc=5" target="_blank">North Korea says its latest weapons tests included missiles with cluster-bomb warheads - AP News</a></div>
+      <div class="entry-title-zh">朝鲜称其最新武器试验包括带有集束炸弹弹头的导弹 - 美联社新闻</div>
+      <div class="entry-summary">North Korea says its latest weapons tests included missiles with cluster-bomb warheads AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-09 18:17</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOMTcyeEVrVzEyd0NHZ0VzQ0dwYTNvb1NzUTdaVjFOeExDSzAzbW5tTUEzb0hPcU4zemMtYlJQbHBnWjg5cUJtdDYweDM1UER5WjlWaTFjakNOX2FyQTN6aHZTeTZHWHJiZ2dkQXZYYkdkWjQ5djBjT1lxak5kNXlaR05fY18xdjJNbnc3UEx2c0xxSzdTekVlaC1MQTFOTnZ4Sm9FY0dodDc0d1Z1SUF2dkJCemhDVW9zOUNXMDBBcw?oc=5" target="_blank">Chinese foreign minister visits Pyongyang to advance relations - Reuters</a></div>
+      <div class="entry-title-zh">中国外长访问平壤以推进关系 - 路透</div>
+      <div class="entry-summary">Chinese foreign minister visits Pyongyang to advance relations Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-09 14:47</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSlQyajNkYVB6WGZwOWRHVVlSby1OcXdVTUdkTTI2UlppcG9KeHNaNkI1RlM1RlpEMGRld3BwdmFpaW84M3hmUm8xT1U1ajhZc2xjLTNtaVNPTVNHZTBTNXhVQ09zVzB5RmNlZEViN0lpTDZQLXFaRC1la2Yzczl1T2Zsbl9Oemd1R19uYzdBajV4WGNITjdpT2VpRWxfWm5BTTRSakl1TFFVRVMxbGR3Y0lvQnVBYmlhb1B0dFdUeVZKSGNmcmNFYQ?oc=5" target="_blank">North Korea unveils cluster-bomb missile, electronic warfare capability - Reuters</a></div>
+      <div class="entry-title-zh">朝鲜展示集束炸弹导弹和电子战能力 - 路透中文网</div>
+      <div class="entry-summary">North Korea unveils cluster-bomb missile, electronic warfare capability Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-09 10:39</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxONEtVZDNzVkh6UHg5M2VBVmJoQTI5Ni1tRkhUc3hZTEd3V3BkRmhXWjBuVEhONGZwRzRnaUw1bHV4R1lmUTlMY2twSjJxejlOeHRWN1lTREowTTlwOUhwakRCT3pBODhPd2dyU3VZWTd6SWY4TktOekZBdC03ZTU5Y3ZIRUZxc1FLb3BuZlZ5dGExMWZt?oc=5" target="_blank">North Korea fires missiles toward sea after ridiculing South’s hopes for better ties - AP News</a></div>
+      <div class="entry-title-zh">朝鲜嘲笑韩国改善关系的希望后向海上发射导弹 - 美联社新闻</div>
+      <div class="entry-summary">North Korea fires missiles toward sea after ridiculing South’s hopes for better ties AP News</div>
+      <div class="entry-meta"><span class="source-tag">AP</span>2026-04-08 11:09</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title-en"><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxNSnQ1Wjg1TlFYVHF6cmNrR2E0QlZ0T0dvcmtWVTlILUVaYmtYUUplc0JLVG9pcVE0ODBtTTczN2xfemVTQ20wVlZEalZwdEJjT3FrYVdGd2c1SXF5cldjQVJxM0poN3BaSFo4dnVlekJfX29CRVFjMHBnSXJkRWFPRDRWWHJidkZCdk93VTNObXFNeVZJREhidkI1aDlGMzAtVkxJWXhFYXBrd21WV2ZMM0VkczJjZkxjSUFSZkJoZ3NOWE1qWkJ3cTJaQ01HVjA?oc=5" target="_blank">North Korea fires ballistic missiles as Pyongyang dismisses Seoul&#x27;s diplomacy hopes - Reuters</a></div>
+      <div class="entry-title-zh">朝鲜发射弹道导弹，平壤拒绝首尔的外交希望 - 路透中文网</div>
+      <div class="entry-summary">North Korea fires ballistic missiles as Pyongyang dismisses Seoul&#x27;s diplomacy hopes Reuters</div>
+      <div class="entry-meta"><span class="source-tag">Reuters</span>2026-04-08 10:17</div>
     </div>
   </div>
 
@@ -509,5 +568,22 @@ body {
     本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
   </div>
 </div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
 </body>
 </html>

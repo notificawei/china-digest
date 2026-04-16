@@ -143,6 +143,12 @@ COLUMN_1 = {
             "lang": "en",
             "filter": "none",
         },
+        {
+            "name": "China Global South Project",
+            "url": "https://news.google.com/rss/search?q=site:chinaglobalsouth.com&hl=en-US&gl=US&ceid=US:en",
+            "lang": "en",
+            "filter": "none",
+        },
     ],
 }
 
@@ -477,7 +483,15 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #121212;
 }
-.section-header .en-label { display: none; }
+.section-header .en-label {
+  display: block;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-top: 0.2rem;
+}
 .col-highlight .section-header { border-bottom-color: #d0021b; }
 .col-highlight .section-header h2 { color: #d0021b; }
 .entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
@@ -531,6 +545,26 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
 """
 
 
@@ -641,6 +675,9 @@ def render_html(col1_data, col3_data, col4_entries, date_str):
     </div>
     <div class="masthead-bottom-rule"></div>
   </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
   <div class="columns">
 {col1_html}
 {col3_html}
@@ -650,6 +687,23 @@ def render_html(col1_data, col3_data, col4_entries, date_str):
     本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
   </div>
 </div>
+<script>
+(function(){{
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {{
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {{
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    }});
+    document.querySelectorAll('.section').forEach(function(s) {{
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    }});
+  }});
+}})();
+</script>
 </body>
 </html>"""
 
@@ -685,7 +739,8 @@ def main():
         test_mode()
         return
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    KST = timezone(timedelta(hours=9))
+    today = datetime.now(KST).strftime("%Y-%m-%d")
     docs_dir = Path(__file__).parent / "docs"
     docs_dir.mkdir(exist_ok=True)
     archive_dir = docs_dir / "archive"

@@ -106,7 +106,15 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #121212;
 }
-.section-header .en-label { display: none; }
+.section-header .en-label {
+  display: block;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-top: 0.2rem;
+}
 .entry {
   border-bottom: 1px solid #e2e2e2;
   padding: 0.85rem 0;
@@ -161,6 +169,26 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
 
 </style>
 </head>
@@ -180,6 +208,9 @@ body {
     </div>
     <div class="masthead-bottom-rule"></div>
   </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
   <div class="columns">
 
   <div class="section">
@@ -192,15 +223,15 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOTG9PUmdlUUVKUWtGTDlqX0dCWGV6cllGRUpLN0QzODFTMXdBQ2tPNi1xMmg4cGtlVFBwZHdqT1VFT1A5VVdfRG1IeWxOLWhndFRmNnUwNVg4QUdzczJZVkxuOGNGOGRHVkNwUWR1R0Y4eTBXVGlXcktveS0zZHlNUE9UUTJXNDVCRjZWQUQ3MkZXbDhCSGhoc1k0dENCR09kVXc?oc=5" target="_blank">North Korea opens a housing district for families of its soldiers killed in Russia-Ukraine war - AP News</a></div>
-      <div class="entry-summary">North Korea opens a housing district for families of its soldiers killed in Russia-Ukraine war AP News</div>
-      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-02-15 08:00</div>
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOTElNYW0tQ2laWEJ2TFJQLU56ZHhSN1VZcENaZTJJYmFtOWxGYXk5a2VZY21WZlVJVlFPcUtNR29ZV3kxT19EMldRY05nZHRDaEgyMEtNY0NfRkVDRGdfRmpIbGRjRXA4Ni1MNzRTQjU5aHBUTkJxNWVUNkZzWVpiYUpUaVpZOTN4WUJFQkdhbw?oc=5" target="_blank">Kim Jong-un unveils housing for families of North Koreans killed in Ukraine war - The Guardian</a></div>
+      <div class="entry-summary">Kim Jong-un unveils housing for families of North Koreans killed in Ukraine war The Guardian</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Guardian</span>2026-02-17 08:00</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOTElNYW0tQ2laWEJ2TFJQLU56ZHhSN1VZcENaZTJJYmFtOWxGYXk5a2VZY21WZlVJVlFPcUtNR29ZV3kxT19EMldRY05nZHRDaEgyMEtNY0NfRkVDRGdfRmpIbGRjRXA4Ni1MNzRTQjU5aHBUTkJxNWVUNkZzWVpiYUpUaVpZOTN4WUJFQkdhbw?oc=5" target="_blank">Kim Jong-un unveils housing for families of North Koreans killed in Ukraine war - The Guardian</a></div>
-      <div class="entry-summary">Kim Jong-un unveils housing for families of North Koreans killed in Ukraine war The Guardian</div>
-      <div class="entry-meta"><span class="entry-source-tag">The Guardian</span>2026-02-15 08:00</div>
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOTG9PUmdlUUVKUWtGTDlqX0dCWGV6cllGRUpLN0QzODFTMXdBQ2tPNi1xMmg4cGtlVFBwZHdqT1VFT1A5VVdfRG1IeWxOLWhndFRmNnUwNVg4QUdzczJZVkxuOGNGOGRHVkNwUWR1R0Y4eTBXVGlXcktveS0zZHlNUE9UUTJXNDVCRjZWQUQ3MkZXbDhCSGhoc1k0dENCR09kVXc?oc=5" target="_blank">North Korea opens a housing district for families of its soldiers killed in Russia-Ukraine war - AP News</a></div>
+      <div class="entry-summary">North Korea opens a housing district for families of its soldiers killed in Russia-Ukraine war AP News</div>
+      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-02-15 08:00</div>
     </div>
 
     <div class="entry">
@@ -213,6 +244,12 @@ body {
       <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPNmVYQ2tMZWRKR1dSSW9vOWQ0X0gwU2x1REZkcm15S0FEcnQ4S2NVQlBiQUR3N2poeThfbWFHUklSRGluUW1zZ3MyS0N6VjZBZ0VIdjZPckZQTXY3MkMyal9lZkFGZmp4bU9jdzhoSzBsSG03VWVkSVZFOWNFaUNDMUNtRWJCVFRfeXk3NC04SkhxSFlDc3RXbzFELVhCZkdNQWQwNTZ5ZTBmQ0tybVNkY0VuT2xmSjlnZHV3bTFuYWtMU3R4Rlpfczdn?oc=5" target="_blank">Ukraine war briefing: Kim Jong-un celebrates sharing ‘blood, life and death’ with Russia - The Guardian</a></div>
       <div class="entry-summary">Ukraine war briefing: Kim Jong-un celebrates sharing ‘blood, life and death’ with Russia The Guardian</div>
       <div class="entry-meta"><span class="entry-source-tag">The Guardian</span>2025-12-26 08:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQanRsb2tsY3BPNGtoWC0yQ0lvS1plbldmTGloSHdfOVliWk1vQkQ4YlEtVDR3YWdaZVRkNUZuak9oT2F4VmdTM2tieXJfelRodXItMVFGSG91ekxQYnBqbU90NEpWMjRNUWxNLW1kd3hQSE03WWtFSXJsMUJ0anRTV096MTBxRzZWUXhWSzAyWXB2MmZINjJGV1BWLTRlVUV2U1hqX295bk5TdmE2OG1xOFpmUTNsbkpYb080THBWckJGa2FrREdIVW84Qmx6dw?oc=5" target="_blank">North Korean leader Kim hails troops returning from Russia mission, state media says - Reuters</a></div>
+      <div class="entry-summary">North Korean leader Kim hails troops returning from Russia mission, state media says Reuters</div>
+      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2025-12-12 08:00</div>
     </div>
 
     <div class="entry">
@@ -294,12 +331,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNcEs5cTFHQzgyd3VTcTN0amNlaG9JWl94WmNnVnhkdDRmNGU2QkVtYUs2ZzlsUEE4QzZOVXJWYUdzZld1VU0xeUJRYUFqY3RJZXY0VjFlS2tONG03N3Y3S1VRY09BLVV1Z2ZnR0Q0LVpXRGlkYTRNTjlqT0tOaExXZVp6VFFUX1JjLXRrd2xNalBhZUNNNTV6Q0FxSkZfNmFVQXFRWTdJQUlEWFZsTEVXWmhSenJkbDlYU3VrQ2xSR01TRjBW?oc=5" target="_blank">North Korea posts fastest growth in 8 years in 2024, driven by Russia ties, Seoul says - Reuters</a></div>
-      <div class="entry-summary">North Korea posts fastest growth in 8 years in 2024, driven by Russia ties, Seoul says Reuters</div>
-      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2025-08-29 07:00</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5uYnUzcVUwa0R2aHI0WE1KeUh6dUtYOG5oVkd5dUZ1VG5mWUZQdkFsbFhhXy1kR3FzNWMzRmMwWmtHWjBnWlNCeGRMY3J2TDM0dEN6WmN5aXdwQQ?oc=5" target="_blank">North Korea&#x27;s Kim Jong Un to join Putin at China military parade - BBC</a></div>
       <div class="entry-summary">North Korea&#x27;s Kim Jong Un to join Putin at China military parade BBC</div>
       <div class="entry-meta"><span class="entry-source-tag">BBC</span>2025-08-27 07:00</div>
@@ -320,10 +351,34 @@ body {
       <div class="entry-summary">Leaked Russian Records Reveal Obscure Firms Helping Bust North Korean Oil Sanctions Важные истории</div>
       <div class="entry-meta"><span class="entry-source-tag">iStories</span>2025-11-20 08:00</div>
     </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tass.com/politics/1968103" target="_blank">Russia’s top security official arrives in Pyongyang, scheduled to meet with Kim Jong Un</a></div>
+      <div class="entry-summary">This is his second visit to Pyongyang in less than three months</div>
+      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2025-06-04 03:28</div>
+    </div>
   </div>
 
   <div class="section">
     <div class="section-header"><h2>Russian Media · China</h2></div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tass.com/world/2117849" target="_blank">China to cooperate with Russia to restore peace in Middle East — ambassador</a></div>
+      <div class="entry-summary">Chinese Ambassador to Russia Zhang Hanhui also added that Beijing and Moscow stand for resolving the conflict politically through talks and call for an immediate cessation of hostilities</div>
+      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2026-04-16 00:05</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tass.com/politics/2117835" target="_blank">UN chief’s initiative on Strait of Hormuz requires all parties’ consent — diplomat</a></div>
+      <div class="entry-summary">Russian Deputy Foreign Minister Alexander Alimov noted that the UN Security Council continues work and consultations on the joint Russian-Chinese draft resolution on Iran</div>
+      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2026-04-15 22:22</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tass.com/economy/2117713" target="_blank">Germany&#x27;s economy stuck in ‘valley of death,’ Saxony&#x27;s minister president says</a></div>
+      <div class="entry-summary">In Michael Kretschmer&#x27;s view, Germany is currently in the midst of an &quot;economic war with China and Russia,&quot; and under Donald Trump, the United States has become more foe than friend</div>
+      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2026-04-15 17:07</div>
+    </div>
 
     <div class="entry">
       <div class="entry-title"><a href="https://www.rt.com/news/638459-trump-opening-hormuz-strait/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS" target="_blank">Trump ‘permanently opening’ Strait of Hormuz ‘for China’</a></div>
@@ -374,12 +429,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9QUDFsYjBwWXg1cTBzbW00UWZ6YUttczM4TGk0UnBOd21RN2h1YXk3MnhSNXFRZ2d0Y09rZ1VuVkVMbDMwU1VtckZoajl4MEs3SEdpdF9xWWo3bTQ?oc=5" target="_blank">US-Israel War on Iran - sputnikglobe.com</a></div>
-      <div class="entry-summary">US-Israel War on Iran sputnikglobe.com</div>
-      <div class="entry-meta"><span class="entry-source-tag">Sputnik</span>2026-03-22 13:11</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPS1VDWnBGUlVEZXBLY01GRlNvVlBkRUxwMm56c2hURFdsRUdxVE5CekVwRGh4NXl1dXF6d0trSDNEdlFoYy16YUdrTDdTT0hYWk8zWV9VMXZTTU9BdFZxMEZMa2dIQkV4SU9wZExjN1lPbDN6MHgwb3lKRy03Q3J2ZjRIczRyRjFVb2tXVjdrM1NMR2ZaeW1Xcm5NSHVpbTliYUxFOV9aUXZJQTlHVEdoSDVpTklhTWRxUFJlZTdhc01iZzJKaXfSAcsBQVVfeXFMTmhrelp3TDFuV2FxWS1mcTh4MDY5UHl4MUlnTjQ0LThpQ0N2aW9xSjdaOGt0c3hIdWN1dkw4OHZnN3dBVWxTOXVXSmJTdE84Q2xJU21vQjF4dm5MOEUzcnZYZHBoRjdwTGtFblExOXRLbnlsQnR1OVhGZmJER19Mcm41blZyc1NjdXBVV1FHMlowZVAzYk1rVEV5N2NoSTRkZDhFSWQzaldCXzZ1YVJlRjQzLTVYNDlZNmM1R3liUzVHb0tqOXkxX1B4U1U?oc=5" target="_blank">Russia Has Advanced Counterspace Weapons, Hypersonic Missiles - US Intel Chief - sputnikglobe.com</a></div>
       <div class="entry-summary">Russia Has Advanced Counterspace Weapons, Hypersonic Missiles - US Intel Chief sputnikglobe.com</div>
       <div class="entry-meta"><span class="entry-source-tag">Sputnik</span>2026-03-18 15:59</div>
@@ -404,6 +453,12 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFA1b3NtekxQSjZhblh0VjRod3pXbHRGSFBjYjl6RVZfTXVFdlYzTjRRLVg2MGVMTmpkaG5RMU1DVHF3bHQ2RjRCM2NuYWk3ZmZfdTh3cw?oc=5" target="_blank">US-Venezuela Row - sputnikglobe.com</a></div>
+      <div class="entry-summary">US-Venezuela Row sputnikglobe.com</div>
+      <div class="entry-meta"><span class="entry-source-tag">Sputnik</span>2026-01-03 08:00</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOTm9BN0FMYXdtZnE5bVBMc3h2REJ5aEt2bGJ0QUh0dXRyU3dTVHhkbkxxa1dsTDJVY1FDS2hINkp1aGQ0a0VSTjJfd1JRYlhzb2c5THBJOUZrd2t3VlRnT1VQTHBEYkt3UjFyUWx2aGpHNmRQeXZpZl93cUFzVTZsVFBMZGk0WnIzS3NMLUkzYnRWZzBBZmhYbWNjUVo3SFRrYmdLb09zYnFDbHBsUW1mcVlocnNqcDZBTzNGaHM2ajRtNzd30gHKAUFVX3lxTFBNZ1ZOSVNVbkNzX0dHcjRFZFhWMUhaeC1iU3lGWWROOWNwTHBVQlhDLTQ5c3BpMTFOcDRwZHdBNXRuNGI4bTRvNXYtYjlzc1lKcGV1RmlUVHlaZmNlUm1OUkgwd1dqc0FndGFBbjdNZDgtT3F3ZlhVTEdyWm9fWlFtWnVNazRFaDkteXVfOGVBbzR2X1hrN2tyNkszZTl5M3M5UGZuUnc0eDBCcGJoODdxVXptREdEU0JiRVc5cUl6clRpdjc1WlBzRlE?oc=5" target="_blank">Silence from Beijing as Russia vaunts Power of Siberia 2 gas pipeline deal - Новая газета Европа</a></div>
       <div class="entry-summary">Silence from Beijing as Russia vaunts Power of Siberia 2 gas pipeline deal Новая газета Европа</div>
       <div class="entry-meta"><span class="entry-source-tag">Novaya Gazeta Europe</span>2025-09-04 07:00</div>
@@ -416,33 +471,9 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://tass.com/world/1968325" target="_blank">Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly</a></div>
-      <div class="entry-summary">The ministers agreed to meet soon at an SCO event in China to discuss preliminary results of the agreements</div>
-      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2025-06-04 11:13</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://tass.com/world/1968213" target="_blank">Belarus, China agree to enhance their cooperation — Lukashenko</a></div>
-      <div class="entry-summary">According to the report, the two leaders held a two-and-a-half-hour-long meeting</div>
-      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2025-06-04 09:26</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://tass.com/world/1968143" target="_blank">West exerts unprecedented pressure on China — Belarusian president</a></div>
-      <div class="entry-summary">&quot;Today, the eyes of many states, including Belarus, are on Beijing,&quot; Alexander Lukashenko said</div>
-      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2025-06-04 06:53</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://tass.com/world/1968129" target="_blank">Xi says China views Beijing-Minsk relations in strategic terms</a></div>
-      <div class="entry-summary">The Chinese leader noted that the two sides have always treated each other with sincerity and trust</div>
-      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2025-06-04 06:01</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://tass.com/politics/1968027" target="_blank">Russia, China won&#x27;t sell each other out for US perks — Russian official</a></div>
-      <div class="entry-summary">Boris Titov noted that it is expedient to create new global economic poles and Russia and China can do this through consolidated efforts</div>
-      <div class="entry-meta"><span class="entry-source-tag">TASS</span>2025-06-03 18:02</div>
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5YSUd4UF9UVVh4ZG1UdUNwUEVUZURsMngxX2x4UTV0RG9RVFQ4Wm11V1NHLU5TVm9wY0R2bWRuV0ZtVjJmaV91MVJ6eDNaM25Ia1dyZ0JLX3RCajhXLXVXX1hrUXVVMkpZNGxkbmJsVG81UjjSAXhBVV95cUxQQ0JuSTctVE9WaXplS2kyNU5pT2hlbTlGVmJrclBiMUFwdDQxSVQ3b1hnNnNPMmhEOXBvYVNwZ29NempqTjlIRU1tUk84MEdzNjR5Vm9oT0tWUXZlRUoyYjg5cHFMQUdBSVZiSl9KVlp3WVlQOEFsRmo?oc=5" target="_blank">A two pipe problem. Moscow and Beijing are no closer to agreeing terms for the Power of Siberia 2 gas… - Новая газета Европа</a></div>
+      <div class="entry-summary">A two pipe problem. Moscow and Beijing are no closer to agreeing terms for the Power of Siberia 2 gas… Новая газета Европа</div>
+      <div class="entry-meta"><span class="entry-source-tag">Novaya Gazeta Europe</span>2024-07-01 07:00</div>
     </div>
   </div>
   </div>
@@ -450,5 +481,22 @@ body {
     Auto-generated · Content sourced from RSS feeds · For reference only
   </div>
 </div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
 </body>
 </html>

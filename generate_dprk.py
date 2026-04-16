@@ -9,7 +9,7 @@ import requests
 import html as htmllib
 import sys
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 try:
@@ -71,35 +71,42 @@ COLUMN_3 = {
     "label": "🌐 国际外媒",
     "en_label": "International Press",
     "sources": [
-        # 专题频道（无需过滤）
+        # 专题频道（仍需关键词确认，避免偶发无关内容）
         {
             "name": "The Diplomat",
             "url": "https://thediplomat.com/tag/north-korea/feed/",
+            "require_dprk": True,
         },
         {
             "name": "The Guardian",
             "url": "https://www.theguardian.com/world/north-korea/rss",
+            "require_dprk": True,
         },
         {
             "name": "Straits Times",
             "url": "https://www.straitstimes.com/tags/north-korea/rss.xml",
+            "require_dprk": True,
         },
         {
             "name": "RFA",
             "url": "https://www.rfa.org/english/news/korea/rss2.xml",
+            "require_dprk": True,
         },
-        # 通讯社（通过 Google News RSS 抓取，已按关键词过滤）
+        # 通讯社（Google News RSS 搜全文，仍需 title/summary 二次过滤）
         {
             "name": "AP",
             "url": "https://news.google.com/rss/search?q=north+korea+site:apnews.com&hl=en",
+            "require_dprk": True,
         },
         {
             "name": "AFP",
             "url": "https://news.google.com/rss/search?q=north+korea+site:afp.com&hl=en",
+            "require_dprk": True,
         },
         {
             "name": "Reuters",
             "url": "https://news.google.com/rss/search?q=north+korea+site:reuters.com&hl=en",
+            "require_dprk": True,
         },
         {
             "name": "The Economist",
@@ -371,7 +378,15 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #121212;
 }
-.section-header .en-label { display: none; }
+.section-header .en-label {
+  display: block;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-top: 0.2rem;
+}
 .entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
 .entry:last-child { border-bottom: none; }
 .entry-title-en {
@@ -418,6 +433,26 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
 """
 
 
@@ -509,6 +544,9 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
     </div>
     <div class="masthead-bottom-rule"></div>
   </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
   <div class="columns">
 {col1_html}
 {col2_html}
@@ -519,6 +557,23 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
     本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
   </div>
 </div>
+<script>
+(function(){{
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {{
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {{
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    }});
+    document.querySelectorAll('.section').forEach(function(s) {{
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    }});
+  }});
+}})();
+</script>
 </body>
 </html>"""
 
@@ -527,7 +582,8 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
 # ============================================================
 
 def main():
-    today = datetime.now().strftime("%Y-%m-%d")
+    KST = timezone(timedelta(hours=9))
+    today = datetime.now(KST).strftime("%Y-%m-%d")
     docs_dir = Path(__file__).parent / "docs" / "dprk"
     docs_dir.mkdir(parents=True, exist_ok=True)
 

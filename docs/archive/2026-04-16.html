@@ -103,7 +103,15 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #121212;
 }
-.section-header .en-label { display: none; }
+.section-header .en-label {
+  display: block;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-top: 0.2rem;
+}
 .col-highlight .section-header { border-bottom-color: #d0021b; }
 .col-highlight .section-header h2 { color: #d0021b; }
 .entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
@@ -157,6 +165,26 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
 
 </style>
 </head>
@@ -176,6 +204,9 @@ body {
     </div>
     <div class="masthead-bottom-rule"></div>
   </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
   <div class="columns">
 
   <div class="section ">
@@ -185,15 +216,39 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3350273/hong-kong-police-bust-beautician-led-syndicate-behind-hk410000-credit-card-scam?utm_source=rss_feed" target="_blank">Hong Kong police bust beautician-led syndicate behind HK$410,000 credit card theft</a></div>
+      <div class="entry-summary">Hong Kong police have arrested a syndicate led by a beautician that allegedly stole credit cards from patrons of a beauty salon in Mong Kok, causing losses of more than HK$410,000 (US$52,347). The force said on Thursday…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 06:22</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNbVlFUUFIT04wUDFQSWlPWldGRU14LXFUa1JiUkxUcENyQVF5RmhyN2JJdkNOOUhoZF80enBmV0pNZ2lya05WZTR5RThLZHR3WGxwRWwzbFFlbC1jWER1WnJEd2JBY0hibTVvUEFSdHptbHJTUW5pa3RhclgwNTVNMUVoU3BuQTJMWEU5MmZOcGozcUFHM0xzb1VvWndBSnhneFBSRkFPM3VLLTVMeTZla0ZFUXpqRlk?oc=5" target="_blank">Circle CEO sees &#x27;tremendous opportunity&#x27; for yuan-backed stablecoin - Reuters</a></div>
+      <div class="entry-summary">Circle CEO sees &#x27;tremendous opportunity&#x27; for yuan-backed stablecoin Reuters</div>
+      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-16 06:16</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/transport/article/3350268/greater-bay-airlines-suspends-bangkok-flights-over-4-months-amid-fuel-price-surge?utm_source=rss_feed" target="_blank">Greater Bay Airlines suspends Bangkok flights for over 4 months amid fuel price surge</a></div>
       <div class="entry-summary">Greater Bay Airlines has suspended its flights between Hong Kong and Bangkok for more than four months amid surging fuel prices driven by the conflict in the Middle East. The airline’s website on Thursday showed no…</div>
       <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 06:08</div>
     </div>
 
     <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUi1SV1hTMlo5bDR2bU8yWWc4M2tVbEQzNzF6bTN2dGZFNmZ3N191MndyRC1Nd0tSR1BPeVJpTGpJa3VTTU1mem80Q1kxUmh0WS13bWFrel9nMUdVZ2hIM0U0bS1wMkx1SXlmWDVhdWtkYjJ1dG14QTBMU2ZPUjdBQlZxdGJGZFJ0?oc=5" target="_blank">Shohei Ohtani pitches but doesn&#x27;t bat for first time since 2021. He&#x27;s still sore from a hit-by-pitch - AP News</a></div>
+      <div class="entry-summary">Shohei Ohtani pitches but doesn&#x27;t bat for first time since 2021. He&#x27;s still sore from a hit-by-pitch AP News</div>
+      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-16 06:05</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3350265/hong-kong-reports-99-participation-young-2019-protest-convicts-rehab-project?utm_source=rss_feed" target="_blank">Hong Kong reports 99% participation of young 2019 protest convicts in rehab project</a></div>
       <div class="entry-summary">Nearly 1,800 young Hongkongers convicted of protest and national security-related offences have taken part in a rehabilitation programme, authorities have said, including 99 per cent of those found guilty over the 2019…</div>
       <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 05:50</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQazV5bzJIdlBXVkFqNTR1d1gwM2hDS2paUk5xTGNHcWRiUkVZT3pzSHVVLXlaaU5oNlJSbzQ5VEw3SkdzYTBqcVZ0M29UUUFzNHV3VnY1RWdPNE02SFN0Z1JQTTBYa2VaYnQ2OG9MVEQyeVJKbHduTzB3elZjZ001dlI4RExjejB1d2V5dTd3?oc=5" target="_blank">China’s economy grows at 5% in first quarter, shrugging off initial impact of Iran war - AP News</a></div>
+      <div class="entry-summary">China’s economy grows at 5% in first quarter, shrugging off initial impact of Iran war AP News</div>
+      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-16 05:46</div>
     </div>
 
     <div class="entry">
@@ -206,6 +261,12 @@ body {
       <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/politics/article/3350262/macau-finance-minister-steps-down-personal-reasons?utm_source=rss_feed" target="_blank">Macau finance minister steps down for ‘personal reasons’</a></div>
       <div class="entry-summary">Macau’s finance minister has resigned over “personal reasons,” prompting the city’s chief executive to temporarily assume his duties until a new candidate is appointed. The cabinet change took effect on Thursday after…</div>
       <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 05:33</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/d3d721cf-7f38-4d39-ac31-995697d6e8c3" target="_blank">China’s battery champion pushes deeper into mining</a></div>
+      <div class="entry-summary">CATL puts $4.4bn into new subsidiary to strengthen supply chain self-sufficiency</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-04-16 05:22</div>
     </div>
 
     <div class="entry">
@@ -233,12 +294,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNNWptRFctVkZtU3hld3JOdXp2QjVpYmFTeHBNTG9nVVU5SWNFTUxLcVBqNDZ2d1VNTmw0RVc1eUYxMnUzU0NCWnhxZF9HQ09ldmpSN3NaLWtYQ21VaHdmT3lMZkVLeG1rT1NOQmNyLTZ4RkhxNWQtNl9FbnViNkNOSS11VlpMdkdGdkJLanpiRWk2dl9OWFFBdFpEYXhQdUNDWW9rbGZTTjRwSGZEUGJfTU5n?oc=5" target="_blank">US aircraft carrier breaks record for longest deployment since the Vietnam War - AP News</a></div>
-      <div class="entry-summary">US aircraft carrier breaks record for longest deployment since the Vietnam War AP News</div>
-      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-16 04:30</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title"><a href="https://www.ft.com/content/ea4c95c0-af00-4b79-8b7e-4bbe6d5e19f9" target="_blank">China shock 2.0: the countries feeling the ‘Chinese squeeze’</a></div>
       <div class="entry-summary">The sheer scale of the manufacturing superpower threatens to shut out south-east Asian rivals before they can rise</div>
       <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-04-16 04:07</div>
@@ -254,6 +309,18 @@ body {
       <div class="entry-title"><a href="https://www.ft.com/content/69188574-fd2b-4a59-8348-09b7f530d57d" target="_blank">How the world is preparing for oil shortages</a></div>
       <div class="entry-summary">It may not be those hit first who experience the most pain if the Strait of Hormuz stays closed</div>
       <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-04-16 04:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQMElXdkJGZFRCOHdUU2ZJOTVyTE41TVdlZnlnd2pmWk0yeTZubXRibE5IRzk4dzcwMWZfU05fLU1OdGY5MTZLSGJQME5vN0QzRzNqRVM0WmRDOTNXeTE4WU00ckd1Nml5ekdUN3pIYy1Xbk5Oc3JWaW96S0VzZTlwM2hHdXdzUVRuSmpESnpKTVVMLXgyVzBXV1pRQ2xUcXFEN0hDcVllaDNSVHZ5bjJfZ1N6dDI4bFRiR2Job2w1RHVic2hHb1Aw?oc=5" target="_blank">China&#x27;s March oil throughput slows on Middle East supply risks, crude output hits record - Reuters</a></div>
+      <div class="entry-summary">China&#x27;s March oil throughput slows on Middle East supply risks, crude output hits record Reuters</div>
+      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-16 03:20</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNa0dKbS1HTEhFNTMxZ0tXR3lOLVpxU1JrLUJoM2s3VXZPZThvZHBYcndBUXdUYkdJTnZxWE41UzJfVTF1NzFaRnNJN1pVN2hCRENobm5JN3ZiOGs0UVgzV2NvX1ZZazFra3RDaWt0U191Tk9ULWhNVW5xYktzcl9yUVpIYUp4OFRaQXhkaEdNM2JsZ21FNlVzaXJKMlljbDk2NENBTm5QQzZ5czhp?oc=5" target="_blank">US-sanctioned supertankers enter Gulf despite blockade - Reuters</a></div>
+      <div class="entry-summary">US-sanctioned supertankers enter Gulf despite blockade Reuters</div>
+      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-16 03:17</div>
     </div>
 
     <div class="entry">
@@ -275,9 +342,21 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3350238/tai-po-fire-probe-resident-recalls-deaths-3-family-members-domestic-helper?utm_source=rss_feed" target="_blank">Tai Po fire probe: resident recalls deaths of 3 family members, domestic helper</a></div>
-      <div class="entry-summary">This story has been made freely available as a public service to our readers. Please consider supporting SCMP’s journalism by subscribing. More Wang Fuk Court residents and senior staff at two engineering firms are set…</div>
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3350238/tai-po-fire-probe-resident-recalls-deaths-3-family-members-domestic-helper?utm_source=rss_feed" target="_blank">Tai Po fire probe: resident recalls deaths of family members – as it happened</a></div>
+      <div class="entry-summary">This story has been made freely available as a public service to our readers. Please consider supporting SCMP’s journalism by subscribing. More Wang Fuk Court residents and senior staff at two engineering firms…</div>
       <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 02:41</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOGRUOGN4cm1ZOUYwVXBod1o1ZGI0UWgzSXJBMXB2UlRqaERVRkhJSENLXzVsMnVjUG81Rnp6SkxFd0hiT0pDSmZySzNiaHgtWkQtYllFSU5obGhYQlhWVTEzMFZ3YlF3ZUs0Z2llUlBiSXZFbFhiMXZGNFFYbExvcUVnWE5pQVlXaHU5MnhTdjgtR0pIdmwtdm9pT0NnTzhscGFKanFCUmtPd1Y5XzhmUi1uZnlycGY4alIwMjNfS3NvS0U?oc=5" target="_blank">Instant view: China&#x27;s Q1 growth beats forecast as economy braces for fallout from Iran war - Reuters</a></div>
+      <div class="entry-summary">Instant view: China&#x27;s Q1 growth beats forecast as economy braces for fallout from Iran war Reuters</div>
+      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-16 02:27</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOaG54aTRFek5kejg4b0VZWUxCeTdZaUdSR3lINWZmSlRaSjZhMGttTU9NRUEyTElNRHJsLWR6UUU4Zi1Gb1lwV2owVjI1Nmc0OEpLY0Rfc0lMam13cjlvdXFla0N6enBLNUJCR2JoQ2l1dllmbUJpV3drN0NkQU9KUl9qcGdNaFBwVFN2YQ?oc=5" target="_blank">Roblox gaming platform reaches $12 million settlement with Nevada enhancing youth protections - AP News</a></div>
+      <div class="entry-summary">Roblox gaming platform reaches $12 million settlement with Nevada enhancing youth protections AP News</div>
+      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-16 02:06</div>
     </div>
 
     <div class="entry">
@@ -311,57 +390,9 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUi1SV1hTMlo5bDR2bU8yWWc4M2tVbEQzNzF6bTN2dGZFNmZ3N191MndyRC1Nd0tSR1BPeVJpTGpJa3VTTU1mem80Q1kxUmh0WS13bWFrel9nMUdVZ2hIM0U0bS1wMkx1SXlmWDVhdWtkYjJ1dG14QTBMU2ZPUjdBQlZxdGJGZFJ0?oc=5" target="_blank">Shohei Ohtani pitches but doesn&#x27;t bat for first time since 2021. He&#x27;s still sore from a hit-by-pitch - AP News</a></div>
-      <div class="entry-summary">Shohei Ohtani pitches but doesn&#x27;t bat for first time since 2021. He&#x27;s still sore from a hit-by-pitch AP News</div>
-      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-16 00:27</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxNZW9fVS05VVY1RkRoeFlLU0NCMFdsd2Q0eFRiNnNZRVQ5UU0wOXQtazdKRUNVbDhhZ05yNHQyUTkwMFNhc2YxX01DcDNxdTVkSEdGTTBOZG9JTzRfenZxWktUWkhkNFlTTTAzcEFxWDJOeFBQMlNxTV9LNUtDbmZDdXdfclEtb0MzUnQxZDlUVGVubE5oOXR5elNOaWxRazJfejEtUlJoaEh1LXpPOU51WTV3S2hXMEZMWXJHVF9BdWpPVkRIa2dzYUsyR3Iwdlp0SWRqUjdnOA?oc=5" target="_blank">China solar makers say war-induced renewables demand won&#x27;t fix overcapacity - Reuters</a></div>
       <div class="entry-summary">China solar makers say war-induced renewables demand won&#x27;t fix overcapacity Reuters</div>
       <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-16 00:07</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3350210/are-special-laws-quick-fix-speeding-hong-kongs-northern-metropolis?utm_source=rss_feed" target="_blank">Are special laws a quick fix for speeding up Hong Kong’s Northern Metropolis?</a></div>
-      <div class="entry-summary">Travelling from Hong Kong’s commercial heart to the site of the San Tin Technopole, a planned innovation hub under the Northern Metropolis megaproject, is an exercise in endurance. The roughly two-hour trek from…</div>
-      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 00:00</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNRGlCSS1Qc0dEUERaRXhrVkNOSVBIaGhwQ0dMSlo3bkxHSXNVTXo0S3dONG1HMG5FMm9sZFZYOVZZWU9HOHFsX3lwM1R2VmxKeVo5TnBQNGY2S1RoVVdVUmk4dkpWaURlZkotRVdlUlpLMUxkSnlUNTlGOHd6VElJLWJ0U0xObTdPVFQ5WnUyS2VuQXZ5NXY4ZUxFeVFRREVlVGFhX2s0ZE53ZTk0ekRDQVl1QQ?oc=5" target="_blank">Pakistani delegation meets in Tehran hoping for more US-Iran talks before ceasefire ends - AP News</a></div>
-      <div class="entry-summary">Pakistani delegation meets in Tehran hoping for more US-Iran talks before ceasefire ends AP News</div>
-      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-15 23:38</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://www.scmp.com/business/article/3350205/futu-securities-opens-coffee-shop-branch-it-adapts-changing-client-lifestyles?utm_source=rss_feed" target="_blank">Futu Securities opens coffee shop in branch as it adapts to changing client ‘lifestyles’</a></div>
-      <div class="entry-summary">Futu Securities is the latest non-food and beverage retailer to sell coffee and other drinks in one of its outlets in Hong Kong as the online stock brokerage adapts to its clients’ lifestyle, according to a spokesman.…</div>
-      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-15 23:30</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQT0pySGZlMXMzbWl0cTJnbEJqUDFScnpSYkJFMjBNZ1M0Z21MZnFucVlqY1hLVnMwbThKY1VjYy10cklnSzRZWlBGbU9RcnNIaUhUeTNaVm04Zkc5bGJvV3JNUElaaTRDVVladk5YRkRYSmhMbWhnN2R5d2V3MzkwcUpoLWNQU2hTVWJXdDZMWmxkM0F0ZzRoamNEbFdwWlc4M1d4dDlaRExEZlFRcjVmUVNIWVV2dw?oc=5" target="_blank">China&#x27;s Q1 economic rebound faces rough seas as Iran war jolts global outlook - Reuters</a></div>
-      <div class="entry-summary">China&#x27;s Q1 economic rebound faces rough seas as Iran war jolts global outlook Reuters</div>
-      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-15 23:02</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://www.ft.com/content/a10159af-c6b5-48e4-8a68-16676684cb22" target="_blank">China to drive a weight-loss drug price war</a></div>
-      <div class="entry-summary">The active ingredient semaglutide is starting to lose patent protection and China can produce GLP-1 related treatments at scale</div>
-      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-04-15 23:01</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPdkVLU2x6LWQ5V3NfVmpCN0lVYmhqWjNJMUxKZ1l1YWNUTy15bnRIcVdXM1hKUVdiUDl2RFVXeU81MnJHREdlWnRPS3Z2YTQxOTdlQ2VyYUtuT2l2Y1lfcWVjTWNXTGFFa3g4SkIzRmdRS0xzallnOXVSMjhWMEx0N2tsbEx3TFRHWUJWNlRISlJVU1RvckR0eUJUVGVTUnJkX0U5MUpwemhRQVhGYmpKUlhjeWFTVGs?oc=5" target="_blank">US warns that buyers of Iranian oil could be hit with sanctions - Reuters</a></div>
-      <div class="entry-summary">US warns that buyers of Iranian oil could be hit with sanctions Reuters</div>
-      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-15 22:06</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOdVVZMTBLOW4zV1NJS1ZOVnFmN0NEZl8tSnZPVDNKUTBUQWVaRkg2bU9pdzFxLTNoZnZsWThjM0lpNExkQ3lSNHlWQWNOM2FQeF9MamdCYWtXUkpKaGZSRWIwV0Q2emRJVjVvQkU5UHlVMEFqSDdBQ1BPeGtKR3JnNk1ocklla0FBWDFjallLb0VJRjhGbVBsbldCclBmdER6eEtDNnNB?oc=5" target="_blank">Breakingviews - China&#x27;s AI token obsession may be misguided - Reuters</a></div>
-      <div class="entry-summary">Breakingviews - China&#x27;s AI token obsession may be misguided Reuters</div>
-      <div class="entry-meta"><span class="entry-source-tag">Reuters</span>2026-04-15 22:00</div>
     </div>
   </div>
 
@@ -369,6 +400,12 @@ body {
     <div class="section-header">
       <h2>独立记者 Newsletter</h2>
       <span class="en-label">Independent Journalists</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20260416-whatsnew-march-hong-kong-trial-summary/" target="_blank">3月香港法庭：支聯會案鄒幸彤傳召辯方證人；記協就查冊提司法覆核敗訴｜Whatsnew</a></div>
+      <div class="entry-summary">一拳書館涉出售《黎智英傳》等「煽動刊物」被捕</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-16 06:20</div>
     </div>
 
     <div class="entry">
@@ -381,6 +418,12 @@ body {
       <div class="entry-title"><a href="https://theinitium.com/20260416-wsj-xi-jinping-meets-cheng-li-wun/" target="_blank">【華爾街日報】十四秒的漫長握手：習近平不動聲色博取台灣民心</a></div>
       <div class="entry-summary">就在白宮為中東戰局焦頭爛額之際，習近平與台灣國民黨主席鄭麗文在人民大會堂會晤。此舉意在表明：儘管中國戰艦仍在台灣海峽盤桓，北京仍能通過和平手段逐步收服台灣。</div>
       <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-15 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20260416-open-up-at-the-temple/" target="_blank">廟口開端：讓嚴肅新聞變成跨時代對話的媒介？</a></div>
+      <div class="entry-summary">只要彼此都願意釋出善意，無論隔著多大的差異，對話和理解都有可能發生。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-15 22:58</div>
     </div>
 
     <div class="entry">
@@ -426,6 +469,12 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/empire-of-aikaren-hao" target="_blank">【專訪】《Empire of AI》作者Karen Hao</a></div>
+      <div class="entry-summary">「我們究竟該如何打造AI？如何確保它為公共利益服務、讓世界更好？」</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-04-14 04:00</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title"><a href="https://theinitium.com/20260414-whatsnew-us-iran-talk-failed-trump-to-block-iran-port/" target="_blank">美伊和談破局：特朗普欲封鎖伊朗港口，油價急漲｜Whatsnew</a></div>
       <div class="entry-summary">談判破裂後，特朗普在福斯新聞的節目上罕見表示，物價上漲將會持續一段時間並影響政治。</div>
       <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-14 02:05</div>
@@ -441,6 +490,12 @@ body {
       <div class="entry-title"><a href="https://theinitium.com/20260414-wsj-how-hongkong-helps-the-flow-of-irans-hidden-billions/" target="_blank">【華爾街日報】香港如何助推伊朗巨額隱秘資金流轉</a></div>
       <div class="entry-summary">香港成為了中國協助伊朗在制裁下求生的關鍵樞紐。在這裏，註冊公司便捷、資金流轉順暢，美國制裁因此威力大減。</div>
       <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-13 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/042026-newsletter-01" target="_blank">水瓶周报｜整顿“机场”，建议立法规制AI侵权，张敬轩悔过，人类重返深空，匈牙利变天</a></div>
+      <div class="entry-summary">我们希望这份简报能让大家能在充斥八卦、谣言和广告的信息流中，提供一些值得我们共同关注的东西，让我们在混沌信息环境中，能够保持对当下的醒觉。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-04-13 20:10</div>
     </div>
 
     <div class="entry">
@@ -480,18 +535,6 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://theinitium.com/20260412-hongkong-culture-profile-herman-yau-lai-to/" target="_blank">邱禮濤《我們不是什麼》專訪：社會沒有你想像的開放</a></div>
-      <div class="entry-summary">這幾年全世界諸多壞事發生，這齣電影算不算他的一種回應？</div>
-      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-11 23:00</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://theinitium.com/20260413-rumble-sizzle-china-mobbing-of-quanhongchan/" target="_blank">中國跳水神童全紅嬋的生長痛：被網暴，錯在飯圈嗎？</a></div>
-      <div class="entry-summary">是誰造成女跳水選手的噩夢？</div>
-      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-11 22:59</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title"><a href="https://www.twreporter.org/a/photo-sudan-civil-war-three-years-medical-aid-witness" target="_blank">當逃離家園是3年戰火下的唯一選擇──蘇丹前線醫護在廢墟中守護生命</a></div>
       <div class="entry-summary">軍權整合與資源爭奪點燃的蘇丹內戰，已持續近3年，造成1,858人死亡、490人受傷，當地被國際評為全球人道危機最嚴重的國家。馬格蘭攝影師莫伊塞斯．薩曼與無國界醫生，以照片與文字記錄這場仍未結束的戰爭。</div>
       <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-04-11 16:00</div>
@@ -501,6 +544,12 @@ body {
       <div class="entry-title"><a href="https://www.twreporter.org/a/opinion-kaohsiung-new-material-recycling-industrial-park-around-dalinpu" target="_blank">【投書】半世紀工業汙染遷村無期，新建產業園區將使高雄大林蒲雪上加霜？</a></div>
       <div class="entry-summary">緊鄰大林電廠、大林煉油廠、中鋼、天然氣接收站與廢棄土石方堆置地的高雄大林蒲，半個多世紀以來承擔國家重工業發展的汙染與工安風險。在政府十年前許下的遷村承諾尚未實現之前，如今又將面臨新建產業園區的開發⋯⋯</div>
       <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-04-09 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/li-dao-guo-wuyouzhixian-the-utopiag-" target="_blank">一个“毛左”中年，站在法的门前</a></div>
+      <div class="entry-summary">李道国最为人知晓的身份是知名毛派政经评论网站“乌有之乡”的主编，为替辉县市储备窑村村民维权，他自学法律，4月初刚刚取得实习律师证。他的理想主义在维权中经历着基层法治水位的冲击，他选择“尊重这个牢笼的规则”，却不想走进了一个真实的牢笼。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-04-08 11:06</div>
     </div>
 
     <div class="entry">
@@ -520,6 +569,18 @@ body {
       <div class="entry-summary">在開打39天後，這場衝擊全球經濟的戰爭，因美國和伊朗的「短暫休兵」，暫時得到脆弱且充滿不確定性的喘息空間。</div>
       <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-04-07 16:00</div>
     </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/2025-b6e" target="_blank">【特稿】2025中國的思潮之亂──皇漢</a></div>
+      <div class="entry-summary">皇漢──這個曾經蟄伏在網絡深處、被主流社會視為亞文化的小眾群體，在2025年完成了一次令人咋舌的「社會化」，異化成一種社會通用的憤怒語言。</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-04-07 04:01</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/joy-air" target="_blank">不“幸福”的幸福航空</a></div>
+      <div class="entry-summary">2025年4月，幸福航空正式宣布停航，至今过去已近一年时间。一家以国企自居，且早先被视为“全球范围内规模最大、实现商业化运行的国产民机运营主体”，怎么会走到如今这一步？</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-03-31 15:49</div>
+    </div>
   </div>
 
   <div class="section col-highlight">
@@ -529,27 +590,27 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3350273/hong-kong-police-bust-beautician-led-syndicate-behind-hk410000-credit-card-scam?utm_source=rss_feed" target="_blank">Hong Kong police bust beautician-led syndicate behind HK$410,000 credit card theft</a></div>
+      <div class="entry-summary">Hong Kong police have arrested a syndicate led by a beautician that allegedly stole credit cards from patrons of a beauty salon in Mong Kok, causing losses of more than HK$410,000 (US$52,347). The force said on Thursday…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 06:22</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/transport/article/3350268/greater-bay-airlines-suspends-bangkok-flights-over-4-months-amid-fuel-price-surge?utm_source=rss_feed" target="_blank">Greater Bay Airlines suspends Bangkok flights for over 4 months amid fuel price surge</a></div>
       <div class="entry-summary">Greater Bay Airlines has suspended its flights between Hong Kong and Bangkok for more than four months amid surging fuel prices driven by the conflict in the Middle East. The airline’s website on Thursday showed no…</div>
       <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 06:08</div>
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3350265/hong-kong-reports-99-participation-young-2019-protest-convicts-rehab-project?utm_source=rss_feed" target="_blank">Hong Kong reports 99% participation of young 2019 protest convicts in rehab project</a></div>
-      <div class="entry-summary">Nearly 1,800 young Hongkongers convicted of protest and national security-related offences have taken part in a rehabilitation programme, authorities have said, including 99 per cent of those found guilty over the 2019…</div>
-      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-04-16 05:50</div>
+      <div class="entry-title"><a href="https://www.ft.com/content/d3d721cf-7f38-4d39-ac31-995697d6e8c3" target="_blank">China’s battery champion pushes deeper into mining</a></div>
+      <div class="entry-summary">CATL puts $4.4bn into new subsidiary to strengthen supply chain self-sufficiency</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-04-16 05:22</div>
     </div>
 
     <div class="entry">
       <div class="entry-title"><a href="https://abcnews.com/International/wireStory/australian-judge-rejects-us-marine-pilots-appeal-extradition-132087159" target="_blank">Australian judge rejects US Marine pilot&#x27;s appeal against extradition to U.S.</a></div>
       <div class="entry-summary">An Australian judge has rejected an appeal by former U.S. Marine Corps pilot Daniel Duggan to avoid extradition to the United States over allegations that he illegally trained Chinese military aviators more than a…</div>
       <div class="entry-meta"><span class="entry-source-tag">ABC News</span>2026-04-16 04:50</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNNWptRFctVkZtU3hld3JOdXp2QjVpYmFTeHBNTG9nVVU5SWNFTUxLcVBqNDZ2d1VNTmw0RVc1eUYxMnUzU0NCWnhxZF9HQ09ldmpSN3NaLWtYQ21VaHdmT3lMZkVLeG1rT1NOQmNyLTZ4RkhxNWQtNl9FbnViNkNOSS11VlpMdkdGdkJLanpiRWk2dl9OWFFBdFpEYXhQdUNDWW9rbGZTTjRwSGZEUGJfTU5n?oc=5" target="_blank">US aircraft carrier breaks record for longest deployment since the Vietnam War - AP News</a></div>
-      <div class="entry-summary">US aircraft carrier breaks record for longest deployment since the Vietnam War AP News</div>
-      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-16 04:30</div>
     </div>
 
     <div class="entry">
@@ -589,6 +650,12 @@ body {
     </div>
 
     <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOZVF3RG5abGJFaGZveGhTbFRremRNVjVaR1FEUVRIdGduSXdMTWNnX0RibmlsQzY2ODNhYUhOY05mLXRKWGpXN01nS0c3WEVzM3kyODdBZldnMFJpeVExaS0wSVkxRm9EQ25xWllVeHVpeE5zWFcxaG9tblNYWUE1ajRJcTI1VnlubEFmTXh4TlU?oc=5" target="_blank">Sabres ending their NHL-record playoff drought inspires joy beyond Buffalo - AP News</a></div>
+      <div class="entry-summary">Sabres ending their NHL-record playoff drought inspires joy beyond Buffalo AP News</div>
+      <div class="entry-meta"><span class="entry-source-tag">AP</span>2026-04-15 16:02</div>
+    </div>
+
+    <div class="entry">
       <div class="entry-title"><a href="https://www.wsj.com/world/middle-east/what-the-u-s-iran-conflict-reveals-about-chinas-diplomacy-84365864" target="_blank">What the U.S.-Iran Conflict Reveals About China’s Diplomacy</a></div>
       <div class="entry-summary">Analyst Drew Thompson explains how China’s restrained public response to Trump’s Iran campaign reflects a deliberate diplomatic approach by Beijing.</div>
       <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-04-15 16:00</div>
@@ -613,15 +680,21 @@ body {
     </div>
 
     <div class="entry">
-      <div class="entry-title"><a href="https://www.ft.com/content/1fddd2cd-1294-4e9c-a17d-5ea06b399355" target="_blank">Iran used Chinese spy satellite to target US bases</a></div>
-      <div class="entry-summary">Leaked documents show IRGC secretly acquired system and used it to guide strikes during war in March</div>
-      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-04-15 04:00</div>
-    </div>
-
-    <div class="entry">
       <div class="entry-title"><a href="https://theinitium.com/20260415-tech-in-numbers-wikipedia-against-ai-writing/" target="_blank">數說科技：維基百科能對抗AI寫作嗎？</a></div>
       <div class="entry-summary">辨識 AI 與讓 AI 更像人類之間，構成無止盡的循環。</div>
       <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-04-14 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/empire-of-aikaren-hao" target="_blank">【專訪】《Empire of AI》作者Karen Hao</a></div>
+      <div class="entry-summary">「我們究竟該如何打造AI？如何確保它為公共利益服務、讓世界更好？」</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-04-14 04:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/042026-newsletter-01" target="_blank">水瓶周报｜整顿“机场”，建议立法规制AI侵权，张敬轩悔过，人类重返深空，匈牙利变天</a></div>
+      <div class="entry-summary">我们希望这份简报能让大家能在充斥八卦、谣言和广告的信息流中，提供一些值得我们共同关注的东西，让我们在混沌信息环境中，能够保持对当下的醒觉。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-04-13 20:10</div>
     </div>
 
     <div class="entry">
@@ -635,23 +708,28 @@ body {
       <div class="entry-summary">近年來，各國陸續發生社群媒體疑遭蓄意操控而引發介選的政治事件。限制潛在外國對手的平台如TikTok，是否還符合言論自由的核心價值？左右派對此看法不一，但歐盟和美國當局都傾向警告，若允許獨裁政權掌控平台，將會導致民主倒退。</div>
       <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-04-12 16:00</div>
     </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://www.economist.com/china/2026/04/09/ai-micro-dramas-are-shaking-up-chinese-entertainment" target="_blank">AI micro-dramas are shaking up Chinese entertainment</a></div>
-      <div class="entry-summary">Regulators threaten to spoil the fun</div>
-      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-04-09 13:08</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-title"><a href="https://restofworld.org/2026/huawei-china-cloud-gulf-resilience-aws-strikes/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feeds" target="_blank">War in the Gulf could tilt the cloud race toward China</a></div>
-      <div class="entry-summary">Strikes on U.S. data centers highlight the risks of concentration and the growing role of geopolitics in cloud competition.</div>
-      <div class="entry-meta"><span class="entry-source-tag">Rest of World</span>2026-04-09 10:00</div>
-    </div>
   </div>
   </div>
   <div class="footer">
     本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
   </div>
 </div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
 </body>
 </html>
