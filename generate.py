@@ -111,25 +111,6 @@ COLUMN_1 = {
             "filter": "none",
             "require_china": True,
         },
-        # 通讯社（Google News RSS，已按关键词过滤）
-        {
-            "name": "AP",
-            "url": "https://news.google.com/rss/search?q=china+site:apnews.com&hl=en",
-            "lang": "en",
-            "filter": "none",
-        },
-        {
-            "name": "AFP",
-            "url": "https://news.google.com/rss/search?q=china+site:afp.com&hl=en",
-            "lang": "en",
-            "filter": "none",
-        },
-        {
-            "name": "Reuters",
-            "url": "https://news.google.com/rss/search?q=china+site:reuters.com&hl=en",
-            "lang": "en",
-            "filter": "none",
-        },
         # 财经媒体（直接 RSS，已是中国专栏）
         {
             "name": "The Economist",
