@@ -130,6 +130,13 @@ COLUMN_1 = {
             "lang": "en",
             "filter": "none",
         },
+        {
+            "name": "NYT",
+            "url": "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml",
+            "lang": "en",
+            "filter": "none",
+            "require_china": True,
+        },
     ],
 }
 
@@ -188,22 +195,49 @@ EN_GEO_BLACKLIST = [
     "nato", "g7", "g20", "united nations", "security council",
 ]
 
-# 第四栏：含以下任一词 → 收录
+# 第四栏：含以下任一词 → 收录（聚焦消费·社会·文化·科技·就业）
 COLUMN_4_WHITELIST = [
-    # AI / 科技
-    "人工智能", "ai", "算法", "大模型", "自动化", "机器人", "数字化",
-    "短视频", "直播", "平台", "互联网",
-    # 经济 / 就业
-    "失业", "裁员", "降薪", "消费降级", "降级", "债务",
-    "倒闭", "破产", "欠薪", "拖欠",
-    "就业", "找工作", "应届生", "毕业生", "求职",
-    "灵活就业", "外卖", "骑手", "工厂", "工人", "打工",
-    "生计", "民生", "收入", "贫困",
-    # 英文对应词
+    # 消费 / 购物行为
+    "消费", "购物", "消费降级", "消费升级", "情绪价值", "悦己",
+    "网购", "电商", "直播带货", "种草", "拔草",
+    "consumer", "consumption", "spending", "shopping", "retail",
+    "e-commerce", "livestream", "purchase", "buyer", "demand",
+
+    # 娱乐 / 内容 / 平台
+    "短视频", "微短剧", "短剧", "直播", "网红", "KOL", "博主",
+    "抖音", "小红书", "微博", "B站", "快手", "微信", "视频号",
+    "microdrama", "short drama", "short video", "influencer", "content creator",
+    "douyin", "xiaohongshu", "rednote", "bilibili", "weibo", "wechat",
+    "streaming", "entertainment", "drama", "idol", "fandom", "fan",
+    "gaming", "esports", "anime",
+
+    # 年轻人 / 社会现象
+    "年轻人", "打工人", "00后", "95后", "90后", "毕业生", "应届生",
+    "内卷", "躺平", "摆烂", "考公", "考研", "润", "移民",
+    "youth", "gen z", "millennial", "graduate", "college", "university",
+    "involution", "lying flat", "burnout",
+
+    # 情绪 / 心理 / 生活方式
+    "焦虑", "情绪", "心理", "幸福感", "精神", "孤独",
+    "情感", "恋爱", "婚姻", "生育", "生育率", "催婚",
+    "lifestyle", "wellbeing", "mental health", "anxiety", "loneliness",
+    "marriage", "dating", "birth rate", "fertility",
+
+    # 饮食 / 时尚 / 文化
+    "美食", "餐饮", "咖啡", "茶饮", "奶茶", "国潮",
+    "时尚", "美妆", "护肤", "穿搭",
+    "food", "restaurant", "coffee", "tea", "fashion", "beauty", "cosmetics",
+    "culture", "trend", "craze", "viral", "phenomenon",
+
+    # AI / 科技（保留原有）
+    "人工智能", "大模型", "算法", "自动化", "机器人", "数字化",
     "artificial intelligence", "algorithm", "automation",
+
+    # 经济 / 就业（保留原有）
+    "失业", "裁员", "降薪", "倒闭", "破产", "欠薪",
+    "就业", "找工作", "灵活就业", "外卖", "骑手", "工厂", "工人", "打工",
     "layoff", "unemployment", "job", "worker", "labor", "labour",
-    "income", "poverty", "gig economy", "delivery",
-    "strike", "wage", "factory", "migrant",
+    "income", "poverty", "gig economy", "delivery", "strike", "wage", "factory", "migrant",
 ]
 
 # ============================================================
@@ -611,7 +645,7 @@ def render_col4(col4_entries):
     parts = ["""
   <div class="section col-highlight">
     <div class="section-header">
-      <h2>🔥 重点议题 <span class="en-label">AI · Economy · Employment · Labor</span></h2>
+      <h2>🔥 重点议题 <span class="en-label">Consumer · Society · Culture · AI</span></h2>
     </div>"""]
 
     if col4_entries:
@@ -755,13 +789,13 @@ def main():
         if link in seen_links:
             continue
         source = getattr(e, "_source_name", "")
-        if per_source_count.get(source, 0) >= 2:
+        if per_source_count.get(source, 0) >= 3:
             continue
         seen_links.add(link)
         per_source_count[source] = per_source_count.get(source, 0) + 1
         col4_deduped.append(e)
 
-    print(f"\n【第三栏】聚合 {len(col4_deduped)} 条重点议题文章（每源最多 2 条）", file=sys.stderr)
+    print(f"\n【第三栏】聚合 {len(col4_deduped)} 条重点议题文章（每源最多 3 条）", file=sys.stderr)
 
     html_content = render_html(col1_data, col3_data, col4_deduped, today)
 
