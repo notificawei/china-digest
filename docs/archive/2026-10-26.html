@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>China Intelligence Digest · 2026-10-26</title>
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Georgia", "Times New Roman", "宋体", serif;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+}
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a {
+  color: #6f6f6f;
+  text-decoration: none;
+  margin: 0 0.7rem;
+}
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.columns > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 2rem;
+  border-right: 1px solid #e2e2e2;
+}
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 960px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+}
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+}
+.section { margin-bottom: 2.5rem; }
+.section-header {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
+}
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #121212;
+}
+.section-header .en-label {
+  display: inline;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+.col-highlight .section-header { border-bottom-color: #d0021b; }
+.col-highlight .section-header h2 { color: #d0021b; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
+.entry:last-child { border-bottom: none; }
+.entry-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
+}
+.entry-title a { color: inherit; text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
+.entry-summary {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
+}
+.entry-meta {
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.entry-source-tag {
+  font-weight: 700;
+  color: #6f6f6f;
+  margin-right: 0.3rem;
+}
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  padding: 0.5rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.footer {
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="masthead">
+    <div class="masthead-rules">
+      <h1>China Intelligence Digest</h1>
+      <div class="nav">
+        <span class="active">China</span>
+        <span class="sep">/</span>
+        <a href="/china-digest/dprk/">North Korea</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+      </div>
+      <div class="meta">2026-10-26 &nbsp;·&nbsp; Auto-generated</div>
+    </div>
+    <div class="masthead-bottom-rule"></div>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="columns">
+
+  <div class="section ">
+    <div class="section-header">
+      <h2>外媒报道 <span class="en-label">International Press</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3372074/interpols-hong-kong-meeting-consider-silver-notice-targeting-criminal-assets" target="_blank">Interpol’s Hong Kong meeting to consider ‘silver notice’ targeting criminal assets</a></div>
+      <div class="entry-summary">Interpol will seek approval at its general assembly in Hong Kong next month for a new “silver notice” system to target criminals’ assets and speed up financial investigations into transnational crime. Hong Kong’s police…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-26 00:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3372057/peak-lighting-outcry-spotlights-trouble-fast-track-governance" target="_blank">Peak lighting outcry spotlights the trouble with fast-track governance</a></div>
+      <div class="entry-summary">It’s common knowledge that Hong Kong has a spectacular skyline, especially at night. And given our current obsession with boosting tourism and other value-adding objectives, it shouldn’t come as a surprise that our…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 21:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/opinion/viktor-orban-u-n-secretary-general-china-russia-us-d968fcaf?mod=rss_worldnews" target="_blank">Opinion | Viktor Orbán, U.N. Secretary-General?</a></div>
+      <div class="entry-summary">Trump officials push the idea of a U.S.-Russia-China joint candidate.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-10-25 20:58</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/world/asia/the-u-s-shipbuilding-revival-is-taking-lessons-halfway-around-the-world-d60f1816?mod=rss_worldnews" target="_blank">The U.S. Shipbuilding Revival Is Taking Lessons Halfway Around the World</a></div>
+      <div class="entry-summary">South Korea’s Hanwha is a key player in President Trump’s push to revive an American industry that has ceded ground to China.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-10-25 19:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/transport/article/3372088/hk-express-passenger-injured-after-power-bank-overheats-flight-jeju" target="_blank">HK Express passenger injured after power bank overheats on flight to Jeju</a></div>
+      <div class="entry-summary">A traveller was injured after a power bank overheated and emitted smoke aboard an HK Express flight from Hong Kong to South Korea on Sunday, prompting crew members to deploy emergency safety measures before the aircraft…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 14:46</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069?mod=rss_worldnews" target="_blank">Kim Jong Un Makes Surprise Trip to China, Crosses New Bridge</a></div>
+      <div class="entry-summary">Ties are warming between Beijing and Pyongyang, though Chinese leader Xi Jinping didn’t attend the get-together.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-10-25 14:45</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/transport/article/3372083/hong-kong-boost-huanggang-port-capacity-after-halloween-concert-congestion" target="_blank">Hong Kong to boost Huanggang Port capacity after Halloween, concert congestion</a></div>
+      <div class="entry-summary">Hong Kong’s No 2 official has pledged to open extra clearance counters and vehicle lanes at the recently revamped Huanggang Port control point ahead of peak hours, after Halloween crowds and concertgoers created heavy…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 13:39</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3372082/louie-shums-death-heart-disease-hong-kong-and-what-do-emergency" target="_blank">Louie Shum’s death: heart disease in Hong Kong and what to do in an emergency</a></div>
+      <div class="entry-summary">The death of veteran Hong Kong stock market commentator Louie Shum Chun-ying has drawn public attention to heart disease, after a police source revealed he had a history of the condition as well as diabetes. Heart…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 12:50</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/world-opinion/article/3371928/wests-double-standard-global-unrest" target="_blank">The West’s double standard on global unrest</a></div>
+      <div class="entry-summary">In the early days of the student protests in France, mainstream Western media took the protesters’ claims about poor school facilities and declining resources at face value. Only when the violence spread across the…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 12:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3372012/really-terrified-how-blood-test-could-spare-cancer-patients-agonising-wait" target="_blank">‘Really terrified’: how a blood test could spare cancer patients an agonising wait</a></div>
+      <div class="entry-summary">In the second of a four-part Health Matters wellness series on frontier medicine in Hong Kong, Fiona Sun looks into how a new PCR system can detect cancer, infections and birth defects within hours, and what it will…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 11:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372073/hong-kong-seeks-bigger-role-yuan-regional-trade-treasury-chief-says" target="_blank">Hong Kong seeks bigger role for yuan in regional trade, treasury chief says</a></div>
+      <div class="entry-summary">Hong Kong officials held discussions with finance ministers and representatives from economies such as Brunei during last week’s Apec meeting on reducing reliance on the US dollar and expanding the use of local…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 10:44</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3372071/firefighters-battle-hill-fire-near-residential-area-tuen-mun" target="_blank">5-hour battle to bring hill fire near residential area in Tuen Mun under control</a></div>
+      <div class="entry-summary">Hong Kong firefighters battled for five hours to bring a hill fire near a residential area in Tuen Mun under control on Sunday, with a government helicopter sent to help bring the flames under control. No injuries were…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 10:18</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372069/upgrade-or-eyesore-why-hong-kongs-peak-light-display-has-hit-snag" target="_blank">Upgrade or eyesore? Why Hong Kong’s Peak light display has hit a snag</a></div>
+      <div class="entry-summary">A controversial lighting project along a walking trail on The Peak is in doubt following mounting complaints that the installations damage Hong Kong’s natural beauty. Designed as one of several new attractions meant to…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 09:04</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3372063/veteran-hong-kong-stock-commentator-louie-shum-dies-aged-66" target="_blank">Veteran Hong Kong stock commentator Louie Shum dies aged 66</a></div>
+      <div class="entry-summary">Veteran Hong Kong stock commentator Louie Shum Chun-ying has died aged 66, with a police source revealing he had a history of heart disease and diabetes. His twin sister confirmed on Sunday that he died on Saturday…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 07:46</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372062/weeknd-wows-hong-kong-fans-tribute-song-sampling-faye-wong-classic" target="_blank">The Weeknd wows Hong Kong fans with tribute song sampling Faye Wong classic</a></div>
+      <div class="entry-summary">Canadian singer The Weeknd surprised concertgoers in Hong Kong on Saturday with a new song inspired by the city, evoking nostalgia among local music fans. Abel Tesfaye – the Canadian singer, songwriter, record producer…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 07:34</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372059/aiib-keen-finance-projects-northern-metropolis-hong-kong-finance-chief-says" target="_blank">AIIB keen to fund Northern Metropolis, with loans viewed as key endorsement</a></div>
+      <div class="entry-summary">The China-led Asian Infrastructure Investment Bank (AIIB) has expressed interest in financing projects in the Northern Metropolis mega development, Hong Kong’s finance chief has said. Financial Secretary Paul Chan Mo-po…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 06:29</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372056/1-million-hong-kong-employees-get-full-portability-mpf-funds-december" target="_blank">1 million Hong Kong employees to get ‘full portability’ of MPF funds in December</a></div>
+      <div class="entry-summary">About 1 million employees in Hong Kong will be allowed to move their entire Mandatory Provident Fund (MPF) savings to a different provider once a year, starting December 21. The Mandatory Provident Fund Schemes…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 06:06</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/property/article/3371965/whats-next-hong-kong-developers-mainland-china" target="_blank">What’s next for Hong Kong developers in mainland China?</a></div>
+      <div class="entry-summary">Hong Kong’s major property developers are shifting investment in mainland China from residential projects to commercial assets, including hospitality, as weak home sales and fewer attractive investment opportunities…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 06:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/1c3065cf-538f-433a-9749-0355a3642c7c?syn-25a6b1a6=1" target="_blank">Luxury groups’ value drops by €250bn as Chinese consumer demand fades</a></div>
+      <div class="entry-summary">Slowdown in China and cooling global stock markets are exacerbating a downturn for European sector</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-10-25 05:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3372052/law-enforcement-alerted-about-firm-offering-lgbtq-surrogacy-services-hong-kong" target="_blank">Law enforcement alerted to firm offering LGBTQ surrogacy services in Hong Kong</a></div>
+      <div class="entry-summary">Hong Kong’s regulator for in vitro fertilisation (IVF) has referred a case to law enforcement agencies after a mainland Chinese influencer was suspected of offering to bring non-local surrogate mothers of LGBTQ parents…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 04:49</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372024/will-ai-powered-open-door-vending-machines-reshape-hong-kongs-retail-landscape" target="_blank">Will AI-powered open-door vending machines reshape Hong Kong’s retail landscape?</a></div>
+      <div class="entry-summary">Sherry Shum has embraced a new shopping routine after finding a smart vending machine near her home in Chai Wan in Hong Kong. The 37-year-old retail worker uses her phone to scan a QR code, opens the smart machine’s…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 04:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3371777/hong-kong-needs-civil-service-fit-changed-world" target="_blank">Hong Kong needs a civil service fit for a changed world</a></div>
+      <div class="entry-summary">Hong Kong’s civil service has long enjoyed a reputation for efficiency, professionalism and probity. It has also been a pillar of stability, particularly during the transition from British to Chinese rule. Outside the…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 01:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/10/24/world/asia/north-korea-kim-jong-un-china.html" target="_blank">Kim Jong-un Makes First Visit to China in Over a Year</a></div>
+      <div class="entry-summary">The North Korean leader crossed the border on a newly opened bridge for the trip, as the two countries move to deepen ties.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-10-25 01:14</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/education/article/3372020/school-bullying-cases-hong-kong-rise-32-nearly-500-year" target="_blank">School bullying cases in Hong Kong rise 32% to nearly 500 a year</a></div>
+      <div class="entry-summary">Hong Kong schools handled an average of 496 bullying cases each academic year from 2022 to 2025 – a 32 per cent jump compared with the previous three years, according to the Education Bureau. A youth group attributed…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 01:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/9fe60016-1520-4bfd-bcfc-f30caa0b1600?syn-25a6b1a6=1" target="_blank">SoftBank-backed drone maker wants every farmer to ‘have their own robot’</a></div>
+      <div class="entry-summary">Chinese start-up XAG believes pilotless crop sprayers are the answer to a dwindling workforce and rising temperatures</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-10-25 01:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3372037/man-arrested-over-suspected-rat-poison-stray-cat-food-kowloon-park" target="_blank">Man arrested over suspected rat poison in stray cat food at Kowloon park</a></div>
+      <div class="entry-summary">Police have arrested a 34-year-old man who allegedly mixed rat poison into food left for stray cats in a Kowloon park and was found in possession of a knife. The force said it received a report at around 3.30am on…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-24 15:47</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/fd106d25-3abf-4729-be26-683d1d115d2e?syn-25a6b1a6=1" target="_blank">North Korea’s Kim crosses new China border bridge to reaffirm ties</a></div>
+      <div class="entry-summary">Beijing is concerned that Pyongyang and Moscow are forging a stronger relationship, say analysts</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-10-24 15:44</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3372034/2-projector-stands-removed-controversial-peak-lighting-project-after-outcry" target="_blank">2 projector stands removed from controversial Peak lighting project after outcry</a></div>
+      <div class="entry-summary">Parts of two installations in a controversial lighting project along a walking trail on The Peak have been removed, days after Hong Kong’s tourism authorities pledged to balance the community’s needs and said the scheme…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-24 14:27</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3372027/how-operation-santa-claus-grew-christmas-donations-engine-change" target="_blank">How Operation Santa Claus grew from Christmas donations to ‘engine’ of change</a></div>
+      <div class="entry-summary">Over nearly four decades, Operation Santa Claus (OSC) has grown from a quirky holiday fundraiser into an “engine” for community change in Hong Kong. For some beneficiaries, the journey was a full circle. Rachel Chow…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-24 13:37</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3372028/halloween-comes-early-hong-kong-festivities-draw-crowds-lift-bar-business" target="_blank">Halloween comes early to Hong Kong as festivities draw crowds, lift bar business</a></div>
+      <div class="entry-summary">Halloween has arrived early in Hong Kong, with costumed revellers and families thronging the city’s streets a week early and some establishments seeing business increase by up to 20 per cent. The streets of Central were…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-24 12:47</div>
+    </div>
+  </div>
+
+  <div class="section ">
+    <div class="section-header">
+      <h2>独立记者 Newsletter <span class="en-label">Independent Journalists</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261026-mainland-homeschooling-in-china/" target="_blank">中國式在家上學：短暫不輝煌</a></div>
+      <div class="entry-summary">不管是在家上學 ，還是入讀公立學校，都只是教育的載體。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-25 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261026-mainland-silver-cod-mercury-poisoning-scare/" target="_blank">「銀鱈魚汞中毒」風波：被誤讀的是魚，還是吃魚的規則？</a></div>
+      <div class="entry-summary">這場風波里，我們真正缺少的是一套讓所有人都用得上的規則。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-25 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261025-game-on-cairn-who-pays-for-absolute-freedom/" target="_blank">《孤山獨影》：誰替「絕對自由」承擔後果？</a></div>
+      <div class="entry-summary">「她已經為這座山失去了那麼多，也就更加需要它證明，這一切沒有白費。」</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-24 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/bookreview-eddie-song-2026" target="_blank">宋瑛堂：在AI預言破滅的年代，做一個堅鋼臉皮海創意的譯者</a></div>
+      <div class="entry-summary">譯者應擅於結合職能指揮AI，仗著海創意，也應當勇於堅鋼臉皮，不能再怕被譏嘲是超譯。譯筆風格愈獨特、愈像原創的譯者總能搶下一片江山，非譯者的雙語達人、唱衰人類譯者的人，遲早會被AI俗譯俗到七孔爆腦漿，轉而擁抱人工創譯。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-24 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261024-opinion-paris-october-17-good-immigrant/" target="_blank">一個「好移民」能上街嗎？——10月17日之後的巴黎手記</a></div>
+      <div class="entry-summary">一場抗議為高中生和打工人爭取到的，是否多過它從一個超市老闆那裏奪走的？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-23 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/saturday-features-legal-profession-the-early-spring" target="_blank">林孟皇／從《早春晴朗》看職場權力：辦公室戀情、性騷擾與企業ESG治理</a></div>
+      <div class="entry-summary">《早春晴朗》真正反覆處理的其實不是單純的「愛情」，而是「權力」。從主管與下屬間的權力、高階主管對基層員工的壓迫、導演與演員間的身體自主界線，到雇主管理權與勞工人格尊嚴的拉扯，在在揭示了職場是一個由法律、制度、組織、資本、性別與人性共同構成的複雜場域。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-23 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261023-weekly/" target="_blank">這一週，不漏讀：火烈鳥運動</a></div>
+      <div class="entry-summary">今天是星期五，10月23日，歡迎來端周報。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-23 12:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261023-initium-audio-international-france-protest-turns-into-riots/" target="_blank">法國50萬人上街：一場高中抗議，如何燒遍全國？｜端聞 Podcast</a></div>
+      <div class="entry-summary">「那些參加暴亂的人腦子裏想的是什麼，為什麼這些法國人，會對法國作出這樣的事情？」</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-23 12:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261023-whatsnew-albania-student-protest-prime-minister/" target="_blank">阿爾巴尼亞學生抗議延燒逾一週：從火烈鳥運動到要求總理下台｜Whatsnew</a></div>
+      <div class="entry-summary">學生抗議升級為反政府示威，總理拉馬拒絕辭職，稱抗議威脅入歐前途。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-23 09:55</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/ai-study-future/" target="_blank">未來怎麼學</a></div>
+      <div class="entry-summary">媽媽說的用功讀書，在 AI 時代究竟是什麼意思？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-23 08:56</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261023-taiwan-fu-and-other-local-powers/" target="_blank">「花蓮王」傅崐萁，與黨中央「管不了」的地方豪傑</a></div>
+      <div class="entry-summary">在這場「猜忌懷疑的爛遊戲」當中，有一條重要的規則：雙方都要「憋著呼吸／越靠越近」。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-22 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261022-membership-event-gelato-4/" target="_blank">HAPPY一起端 —- 第四攤（線上出攤）</a></div>
+      <div class="entry-summary">677、滴答滴、撕撕、湊一攤</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-22 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261023-opinion-the-great-separation-is-1967-special/" target="_blank">徐曉宏《大分離》：國家發展經濟、群眾遠離政治的「共識」鬆動之後</a></div>
+      <div class="entry-summary">1967究竟產生了什麼只有中國才有的歷史後果？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-22 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/opinion-how-mataian-river-changed-course" target="_blank">【投書】水會記得走過的路──從馬太鞍溪百年河道變遷，思考水與砂的流向</a></div>
+      <div class="entry-summary">2025年馬太鞍溪堰塞湖溢流，不只洪水帶來災害，更在流域中留下超過3億立方公尺的不安定土砂，未來可能在強降雨事件中逐漸抵達下游，墊高馬太鞍溪，減少滯洪空間。政府提出哪些措施對應風險？過程中又面臨哪些挑戰？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-22 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261022-whatsnew-sally-rooney-books-not-be-sold-in-uk-support-for-palestine-action/" target="_blank">《正常人》作者薩莉・魯尼作品在英停售，反恐禁令如何波及出版？｜Whatsnew</a></div>
+      <div class="entry-summary">英國《反恐法》製造的間接限制，引發對言論自由的擔憂。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-22 07:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261022-whatsnew-taiwan-crosstalk-performer-staged-crash/" target="_blank">台灣相聲演員黃逸豪遭偽裝車禍衝撞，《反滲透法》為何用不上？｜Whatsnew</a></div>
+      <div class="entry-summary">檢方指車禍由中國大陸人士出資指使，但《反滲透法》對跟監、傷害行為尚未完整規範。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-22 06:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261022-opinion-xuxiaohong-the-great-separation/" target="_blank">徐曉宏《大分離》：從「造反有理」到「少談政治」</a></div>
+      <div class="entry-summary">中國改革時代那種「少談政治、多談發展」的常識，是不是文革本身留下的意外遺產？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-21 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261022-international-failing-gambia/" target="_blank">憂鬱的雨季：一個寫作者，如何在岡比亞失敗</a></div>
+      <div class="entry-summary">我深知自己並不真誠，曾猶豫過是否要寫出來這些細節，也擔心這會變成一種高高在上的指責。但道德焦慮的本質仍是無法平視。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-21 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/education-program" target="_blank">「報導者學院」公益教育方案申請辦法，即日起開放至11/15（日）截止</a></div>
+      <div class="entry-summary">「報導者學院」是由報導者文化基金會推出的公共學習平台，公益教育方案將免費提供「報導者學院」課程觀看資格，供教師與非營利組織工作者運用於教學、培訓及不同形式的共學，希望將此學習資源提供給更多需要的人。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-21 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/hello-world-2026-10-22" target="_blank">6個Q&amp;A解析美國期中選舉的魔咒與魔術數字：民主黨將重掌國會？苦戰的川普和2028接班前哨戰？</a></div>
+      <div class="entry-summary">2026年美國期中選舉在即，這不僅將左右國會的政黨版圖，更攸關兩年後的總統大選權力風向。共和黨民調落後，川普也無法擺脫「總統魔咒」？民主黨只要在參眾兩院多贏4席就能翻轉國會？選舉對台灣、國際局勢有什麼影響？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-21 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/baseball-cpbl-advanced-statistics" target="_blank">理工男逆擊的棒球夢：用進階數據掀起台灣野球革命新浪潮</a></div>
+      <div class="entry-summary">「有一次我們被某一支職業球隊找去開數據會議，當我們兩個踏進球團會議室時，坐在台下的是一、二軍所有的教練團成員，全部都要聽我們兩個講解進階數據。那一刻突然有點想哭，我們這種非科班也能成為『棒球人』。」</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-20 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/podcast-2026-10-21" target="_blank">離開學校人行道就沒了、學童事故熱點不在通學區範圍！為何政府改善力不從心、孩子上下學仍難安心？</a></div>
+      <div class="entry-summary">2022年行人地獄議題引起社會關注後，《報導者》把目光聚焦在全台國中小通學環境大體檢。這集，靖娟基金會、記者林雨佑將分享校園周邊交通安全檢核，以及與在地居民及官方溝通過程。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-20 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/column-gender-trouble-2026-10-20" target="_blank">賴婉琪／旅途上的喵星人：動物移民與家庭照顧</a></div>
+      <div class="entry-summary">2019年起香港大規模移民潮中，許多港人帶著寵物搬遷到英國。作者賴婉琪透過38個深度訪談，向英國的香港移民了解跨物種家庭如何「做照顧」，並記下動物移民與性別、照顧倫理、文化適應與醫療資源等多重面向的交織。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-19 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/nowhere-bookstore-taiwan-across-cities-stephan-thome" target="_blank">如何穿越這片水域？德國作家施益堅在海牙談台灣認同的層次與書寫</a></div>
+      <div class="entry-summary">談到台灣認同，將台灣視為「第二個家」的德國小說家施益堅說，認同是「我如何看待自己，以及我希望別人如何看待我」，這是對話的過程也是一場角力，「你必須讓對話持續、讓自己的聲音被聽見。」</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-18 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/opinion-senior-citizens-welfare-act-amendment-worsening-inequality" target="_blank">韓幸紋、滕西華／從稅負到健保費，長者健保費補助政策為何會加深世代分配不公平</a></div>
+      <div class="entry-summary">以年齡及稅率作為補助條件，能否辨識真正需要幫助的人？在租稅與健保收費制度原本就未充分反映負擔能力的情況下，這次修法究竟改善、還是加深了既有問題甚至世代分配不公平？本文認為，這項補助恐怕會加深既有的不公平。補助資格則應盡可能反映經濟能力，而非讓年齡成為補助的替代指標。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-17 16:00</div>
+    </div>
+  </div>
+
+  <div class="section col-highlight">
+    <div class="section-header">
+      <h2>🔥 重点议题 <span class="en-label">Consumer · Society · Culture · AI</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/world-opinion/article/3371928/wests-double-standard-global-unrest" target="_blank">The West’s double standard on global unrest</a></div>
+      <div class="entry-summary">In the early days of the student protests in France, mainstream Western media took the protesters’ claims about poor school facilities and declining resources at face value. Only when the violence spread across the…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 12:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3372012/really-terrified-how-blood-test-could-spare-cancer-patients-agonising-wait" target="_blank">‘Really terrified’: how a blood test could spare cancer patients an agonising wait</a></div>
+      <div class="entry-summary">In the second of a four-part Health Matters wellness series on frontier medicine in Hong Kong, Fiona Sun looks into how a new PCR system can detect cancer, infections and birth defects within hours, and what it will…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 11:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3372069/upgrade-or-eyesore-why-hong-kongs-peak-light-display-has-hit-snag" target="_blank">Upgrade or eyesore? Why Hong Kong’s Peak light display has hit a snag</a></div>
+      <div class="entry-summary">A controversial lighting project along a walking trail on The Peak is in doubt following mounting complaints that the installations damage Hong Kong’s natural beauty. Designed as one of several new attractions meant to…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-10-25 09:04</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/1c3065cf-538f-433a-9749-0355a3642c7c?syn-25a6b1a6=1" target="_blank">Luxury groups’ value drops by €250bn as Chinese consumer demand fades</a></div>
+      <div class="entry-summary">Slowdown in China and cooling global stock markets are exacerbating a downturn for European sector</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-10-25 05:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/995ede2d-c1de-4ba7-99e3-2e18d1c43c50?syn-25a6b1a6=1" target="_blank">China’s luxury brands are ready to elbow western rivals aside</a></div>
+      <div class="entry-summary">Investors are questioning whether appeal of homegrown Chinese luxury is a durable shift or a shortlived trend</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-10-24 04:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261024-opinion-paris-october-17-good-immigrant/" target="_blank">一個「好移民」能上街嗎？——10月17日之後的巴黎手記</a></div>
+      <div class="entry-summary">一場抗議為高中生和打工人爭取到的，是否多過它從一個超市老闆那裏奪走的？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-10-23 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/saturday-features-legal-profession-the-early-spring" target="_blank">林孟皇／從《早春晴朗》看職場權力：辦公室戀情、性騷擾與企業ESG治理</a></div>
+      <div class="entry-summary">《早春晴朗》真正反覆處理的其實不是單純的「愛情」，而是「權力」。從主管與下屬間的權力、高階主管對基層員工的壓迫、導演與演員間的身體自主界線，到雇主管理權與勞工人格尊嚴的拉扯，在在揭示了職場是一個由法律、制度、組織、資本、性別與人性共同構成的複雜場域。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-23 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/deb209b5-a5ed-4d24-a470-636ecc1e3668?syn-25a6b1a6=1" target="_blank">Volvo Cars shares plunge as much as 30% after it swings to loss</a></div>
+      <div class="entry-summary">Swedish carmaker to cut another 2,500 jobs and warns that the market ‘has not reached the bottom’</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-10-23 09:19</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html" target="_blank">Wealthy Chinese move offshore money to U.S. banks as Beijing’s tax net widens</a></div>
+      <div class="entry-summary">Bankers and lawyers say Chinese clients&#x27; demand for U.S. bank accounts has gathered pace as Beijing tightens the screws on Chinese offshore wealth.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-10-23 04:55</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/10/21/business/gm-ai-electric-vehicles-china.html" target="_blank">GM Aims to Bring ‘Eyes-Off’ Driving to AI-Powered Cars Within 2 Years</a></div>
+      <div class="entry-summary">General Motors is seeking help from artificial intelligence to keep up with Chinese companies that introduce vehicles very quickly.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-10-21 18:23</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/10/21/world/asia/china-exports-ai-controls.html" target="_blank">China’s Free A.I. Models Are Thrown Into Uncertainty</a></div>
+      <div class="entry-summary">Draft rules on the export of artificial intelligence technology show how China is trying to balance national security risks with its desire to outpace the United States.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-10-21 14:43</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/column-gender-trouble-2026-10-20" target="_blank">賴婉琪／旅途上的喵星人：動物移民與家庭照顧</a></div>
+      <div class="entry-summary">2019年起香港大規模移民潮中，許多港人帶著寵物搬遷到英國。作者賴婉琪透過38個深度訪談，向英國的香港移民了解跨物種家庭如何「做照顧」，並記下動物移民與性別、照顧倫理、文化適應與醫療資源等多重面向的交織。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-10-19 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/world/china/chinas-export-boom-masks-deep-economic-problems-at-home-945833ac?mod=rss_worldnews" target="_blank">China’s Export Boom Masks Deep Economic Problems at Home</a></div>
+      <div class="entry-summary">Even as China makes strides in areas such as AI, much of its domestic economy is dragged down by gloomy consumer sentiment and a real-estate slump.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-10-19 09:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.bbc.co.uk/news/articles/cm5ynwpzkgk1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">&#x27;I&#x27;d talk to the TV&#x27;: The paid companions bringing warmth to China&#x27;s lonely</a></div>
+      <div class="entry-summary">As loneliness grows in China, a new industry is emerging to provide companionship and support.</div>
+      <div class="entry-meta"><span class="entry-source-tag">BBC</span>2026-10-13 22:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.bbc.co.uk/news/videos/cm8xkxn8lqkeo?at_medium=RSS&amp;at_campaign=rss" target="_blank">Why the lonely in China are hiring &#x27;temporary children&#x27;</a></div>
+      <div class="entry-summary">A new industry being dubbed the “loneliness economy” has emerged in China, with people hiring themselves out as companions to help the elderly.</div>
+      <div class="entry-meta"><span class="entry-source-tag">BBC</span>2026-10-13 22:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.bbc.co.uk/news/articles/c65yn877dkk0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">UK university asks staff to review some partnerships with China after MI5 warning</a></div>
+      <div class="entry-summary">The UK&#x27;s internal security service had warned universities they may have unintentionally assisted China&#x27;s espionage.</div>
+      <div class="entry-meta"><span class="entry-source-tag">BBC</span>2026-10-04 05:20</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/09/21/what-mao-can-teach-china-about-managing-america" target="_blank">What Mao can teach China about managing America</a></div>
+      <div class="entry-summary">An insurgent power has fought the incumbent to a stalemate</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-09-21 13:32</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/09/17/unemployment-is-becoming-a-way-of-life-for-chinas-young" target="_blank">Unemployment is becoming a way of life for China’s young</a></div>
+      <div class="entry-summary">Some are pretending to work to keep up appearances</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-09-17 12:45</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/09/10/tung-chee-hwa-hong-kongs-first-chief-executive-has-died" target="_blank">Tung Chee-hwa, Hong Kong’s first chief executive, has died</a></div>
+      <div class="entry-summary">He had an impossible job, and did it badly</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-09-10 14:20</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNQ2VoQzFmV1drZTg4UGpmQ3lYbUNpamdSVFQ2aDNWY0U1aTBuVnJJS2RiMjFZUHZsUmV0RHNPR2x2TG45bXRoTFpfUE5aVzJLSFhIZGhZYmt3NUZqLWtmdWZZM21XbEowcXJKYzFlNWhmSkx2OGM1RVZhZUNZelRkNTNSUzRNT0hoaUNKcXdtcU1FR2thSVI5b0RhWkY0dw?oc=5" target="_blank">Nigeria Factory Unrest Reveals Trust Gap for Chinese Firms in Africa - The China-Global South Project</a></div>
+      <div class="entry-summary">Nigeria Factory Unrest Reveals Trust Gap for Chinese Firms in Africa The China-Global South Project</div>
+      <div class="entry-meta"><span class="entry-source-tag">China Global South Project</span>2026-08-09 07:00</div>
+    </div>
+  </div>
+  </div>
+  <div class="footer">
+    本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
+  </div>
+</div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
