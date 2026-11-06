@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southeast Asia Digest · 2026-11-06</title>
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Georgia", "Times New Roman", "宋体", serif;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+}
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a { color: #6f6f6f; text-decoration: none; margin: 0 0.7rem; }
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.columns > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 1.6rem;
+  border-right: 1px solid #e2e2e2;
+}
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 1100px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+  .columns > div:nth-child(4) { border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+}
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+}
+.section { margin-bottom: 2.5rem; }
+.section-header {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
+}
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #121212;
+}
+.section-header .en-label {
+  display: inline;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+.col-highlight .section-header { border-bottom-color: #1a7a3c; }
+.col-highlight .section-header h2 { color: #1a7a3c; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
+.entry:last-child { border-bottom: none; }
+.entry-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
+}
+.entry-title a { color: inherit; text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
+.entry-summary {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
+}
+.entry-meta {
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.entry-source-tag { font-weight: 700; color: #6f6f6f; margin-right: 0.3rem; }
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles { font-size: 0.85rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
+.footer {
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="masthead">
+    <div class="masthead-rules">
+      <h1>China Intelligence Digest</h1>
+      <div class="nav">
+        <a href="/china-digest/">China</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/dprk/">North Korea</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+        <span class="sep">/</span>
+        <span class="active">Southeast Asia</span>
+</div>
+      <div class="meta">2026-11-06 &nbsp;·&nbsp; Auto-generated</div>
+    </div>
+    <div class="masthead-bottom-rule"></div>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="columns">
+  <div class="section ">
+    <div class="section-header">
+      <h2>🌏 区域综合 <span class="en-label">Regional Media</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/travel/singapore-airlines-sia-new-cabin-products-first-class-business-class-2027-6526061" target="_blank" rel="noopener">Singapore Airlines unveils S$2 billion cabin upgrade with new First Class double beds, Business Class seats with privacy doors</a></div>
+    <div class="entry-summary">The next-generation seats will be rolled out progressively from the second half of 2027, with more privacy, improved comfort and personalised features across all four cabin classes.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 05:31</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/personal-ai-agents-assistant-advisory-muse-dots-hermes-grok-openclaw-6529836" target="_blank" rel="noopener">Singapore authorities warn of privacy, security risks from personal AI agents</a></div>
+    <div class="entry-summary">&quot;AI agents can be very useful, but you cannot treat them like human assistants and give them the same broad access to your information and implicit trust,&quot; said the authorities.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 05:30</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.ft.com/content/105cf446-175e-401b-b310-785051f91dd5" target="_blank" rel="noopener">Postcard from Bali: a literary festival in paradise</a></div>
+    <div class="entry-summary">The Ubud Writers &amp; Readers Festival offers fresh perspectives on an island wreathed in tropical fantasies</div>
+    <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-06 05:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/singapore-biomedical-startups-expand-china-cancer-diabetes-treatments-6516196" target="_blank" rel="noopener">From cancer to diabetes: Singapore biomedical startups expand into China to accelerate development of new treatments</a></div>
+    <div class="entry-summary">Singapore startups are tapping China’s vast patient pool, hospital networks and manufacturing capabilities, but they must also navigate its evolving regulatory landscape.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 04:51</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/stronger-haze-law-singapore-parliament-experts-6527081" target="_blank" rel="noopener">Singapore&#x27;s stronger haze law: How it might work and what it may not fix</a></div>
+    <div class="entry-summary">The gaps in transboundary haze prevention require measures beyond legislation, says one expert.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 03:55</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/cross-border-taxi-quota-increase-singapore-malaysia-6529936" target="_blank" rel="noopener">Singapore, Malaysia to expand cross-border taxi quota to 500 each, add two ride-hailing operators from Nov 16</a></div>
+    <div class="entry-summary">CDG Zig and Kumpool will join Grab as licensed operators under the Cross-Border Taxi Scheme from Nov 16.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 03:21</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.ft.com/content/5397eabe-5c04-4851-a216-9a269f69682c?syn-25a6b1a6=1" target="_blank" rel="noopener">Putin orders seizure of Japan Tobacco’s Russian business</a></div>
+    <div class="entry-summary">Expropriation of market’s largest cigarette company set to further strain ties between Moscow and Tokyo</div>
+    <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-06 02:59</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/entertainment/trevor-noah-pickleball-singapore-jaime-teo-6529806" target="_blank" rel="noopener">Trevor Noah plays pickleball in Singapore, including with actress Jaime Teo, during comedy tour</a></div>
+    <div class="entry-summary">The South African comedian, who was in Singapore for three comedy shows from Nov 3 to 5, played pickleball with local enthusiasts and actress Jaime Teo, and even gave some of his fellow players complimentary tickets to his performances.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 02:57</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/prince-holding-group-woman-charged-6529261" target="_blank" rel="noopener">Woman linked to Cambodia-based syndicate Prince Holding Group charged</a></div>
+    <div class="entry-summary">Chen Xiu Ling, also known as Karen Chen, was handed one charge each for instigating another person to falsify accounts and for attempted cheating.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 02:25</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/women/singaporean-football-doctor-bethany-koh-england-6485191" target="_blank" rel="noopener">Her school principal told her football wasn’t for girls – she’s now a doctor for a top women’s club in England</a></div>
+    <div class="entry-summary">From treating injuries on the pitch to making tough calls about when players can return to action, Singaporean doctor Bethany Koh has provided medical cover at more than 60 women’s football matches in England, including for Chelsea FC Women.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-05 23:14</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/commentary/singapore-haze-law-indonesia-fire-companies-pay-6527156" target="_blank" rel="noopener">Commentary: Singapore’s haze law gets sharper teeth. Will it finally bite?</a></div>
+    <div class="entry-summary">Previously, Singapore could act only after its skyline had faded. Now it has the power to do more before the haze arrives, says NUS law researcher Sean D Tseng.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-05 22:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://thediplomat.com/2026/11/the-politics-of-pandemic-preparedness-why-south-and-southeast-asia-need-a-stronger-voice/" target="_blank" rel="noopener">The Politics of Pandemic Preparedness: Why South and Southeast Asia Need a Stronger Voice</a></div>
+    <div class="entry-summary">The Pathogen Access and Benefit-Sharing annex, currently under negotiation, has profound implications for dependency and health sovereignty in South and Southeast Asia.</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Diplomat</span>2026-11-05 16:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://thediplomat.com/2026/11/japan-plans-new-defense-industrial-strategy-to-prepare-for-prolonged-conflicts/" target="_blank" rel="noopener">Japan Plans New Defense Industrial Strategy to Prepare for Prolonged Conflicts</a></div>
+    <div class="entry-summary">Tokyo seeks to boost production capacity for military emergencies and expand defense exports amid growing regional threats.</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Diplomat</span>2026-11-05 15:42</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.nytimes.com/2026/11/05/world/asia/japan-hokusai-great-wave-midterms.html" target="_blank" rel="noopener">Everyone’s Talking About the ‘Blue Tsunami.’ In Japan, It’s Complicated.</a></div>
+    <div class="entry-summary">The New York Post used a Hokusai work to depict Donald Trump being swept away by Democrats’ midterm election win. Some in Japan were bothered by the imagery.</div>
+    <div class="entry-meta"><span class="entry-source-tag">NYT Asia Pacific</span>2026-11-05 14:31</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/woman-arrested-prince-group-cambodia-scam-karen-chen-6527776" target="_blank" rel="noopener">Woman linked to Cambodia-based scam syndicate Prince Holding Group arrested at Changi Airport</a></div>
+    <div class="entry-summary">Karen Chen will be charged in court with one count of instigating another person to falsify accounts and another count of attempted cheating.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-05 13:58</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://thediplomat.com/2026/11/what-bangladeshi-prime-minister-tarique-rahman-brought-home-from-japan/" target="_blank" rel="noopener">What Bangladeshi Prime Minister Tarique Rahman Brought Home From Japan</a></div>
+    <div class="entry-summary">For Bangladesh, closer ties with Japan mean another source of funding and technology for its industries, as well as more support for maritime patrols.</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Diplomat</span>2026-11-05 12:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.nytimes.com/2026/11/05/business/softbank-robotics-china-block.html" target="_blank" rel="noopener">China Blocks SoftBank’s $5.4 Billion Robotics Takeover, Impeding Foreign Deals</a></div>
+    <div class="entry-summary">Chinese authorities stopped the sale of ABB Robotics, owned by a Swiss conglomerate, to SoftBank of Japan amid wider scrutiny of global transactions that could affect Beijing’s technology ambitions.</div>
+    <div class="entry-meta"><span class="entry-source-tag">NYT Asia Pacific</span>2026-11-05 11:23</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/nea-haze-mask-distribution-6526851" target="_blank" rel="noopener">Singapore to end N95 mask distribution on Saturday as haze abates</a></div>
+    <div class="entry-summary">The Ministry of Health will deactivate both the Public Health Preparedness Clinic Scheme and the Haze Subsidy Scheme from Nov 12.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-05 11:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/ihh-healthcare-hong-kong-malaysia-employees-leaving-6526861" target="_blank" rel="noopener">IHH Healthcare to shed over 300 employees across Singapore, Hong Kong and Malaysia</a></div>
+    <div class="entry-summary">The healthcare provider is also moving some employees into redesigned roles as it consolidates its business support services.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-05 09:29</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.nytimes.com/2026/11/04/world/asia/senji-kuroi-dead.html" target="_blank" rel="noopener">Senji Kuroi Has Died. He Interpreted ‘the Salaried Soul.’</a></div>
+    <div class="entry-summary">In books and essays, he captured the unease beneath Japan’s economic miracle and wrote about everyday people who might never appear in headlines.</div>
+    <div class="entry-meta"><span class="entry-source-tag">NYT Asia Pacific</span>2026-11-04 18:23</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://thediplomat.com/2026/11/the-next-phase-of-japan-vietnam-relations/" target="_blank" rel="noopener">The Next Phase of Japan-Vietnam Relations</a></div>
+    <div class="entry-summary">The question now is whether the two countries can turn their increasingly ambitious partnership into tangible economic and strategic results.</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Diplomat</span>2026-11-04 15:52</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.nytimes.com/2026/11/04/world/asia/thailand-kfc-curse-doctors.html" target="_blank" rel="noopener">Why Doctors in Thailand Fear KFC</a></div>
+    <div class="entry-summary">In a country where superstitions are as imaginative as they are many, physicians have come to fear a jinx involving Kentucky Fried Chicken.</div>
+    <div class="entry-meta"><span class="entry-source-tag">NYT Asia Pacific</span>2026-11-04 10:01</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.ft.com/content/656f10c4-26ec-430e-adfa-dcadf0dd61ff?syn-25a6b1a6=1" target="_blank" rel="noopener">Copper and conflict trigger profit surge for Buffett-backed Japanese commodity traders</a></div>
+    <div class="entry-summary">Mitsui chief warns geopolitical risks continue to be ‘unpredictable rather than calming down’</div>
+    <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-04 09:42</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.ft.com/content/b82627c8-726b-471d-9e49-f28b06765e79?syn-25a6b1a6=1" target="_blank" rel="noopener">Indonesia deploys 20,000 soldiers as wiretapping scandal erupts</a></div>
+    <div class="entry-summary">Senior police and presidential chief of staff arrested over accusations of illegally wiretapping Prabowo Subianto</div>
+    <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-04 08:46</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://thediplomat.com/2026/11/indonesias-navy-is-growing-is-its-combat-power-keeping-up/" target="_blank" rel="noopener">Indonesia’s Navy Is Growing. Is Its Combat Power Keeping Up?</a></div>
+    <div class="entry-summary">While fleet size is an important measure of operational capacity, a lot depends on how effectively new platforms are equipped, operated, and integrated.</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Diplomat</span>2026-11-03 07:06</div>
+  </div>
+  </div>
+  <div class="section ">
+    <div class="section-header">
+      <h2>🗺️ 国别媒体 <span class="en-label">Country Press</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/nation/2026/11/06/court-issues-house-arrest-order-for-najib-says-lawyer" target="_blank" rel="noopener">Court has issued house arrest order for Najib, says lawyer</a></div>
+    <div class="entry-summary">Farhan Shafee expects former prime minister Najib Razak to be released today.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:40</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/business/2026/11/06/chinese-stocks-tumble-as-global-tech-selloff-deepens" target="_blank" rel="noopener">Chinese stocks tumble as global tech selloff deepens</a></div>
+    <div class="entry-summary">The Shanghai Composite Index fell 1.1%, while the tech-focused Star 50 Index and the AI Index slumped as much as 5% before recouping some losses.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:33</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.japantimes.co.jp/news/2026/11/06/japan/politics/consumption-tax-bill-passed-lower-house/" target="_blank" rel="noopener">Bill to lower consumption tax on food clears Lower House</a></div>
+    <div class="entry-summary">The move advances a key measure in Prime Minister Sanae Takaichi&#x27;s push to ease the cost of living.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Japan Times</span>2026-11-06 05:32</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/business/2026/11/06/us-job-growth-expected-to-pick-up-in-october-with-moderation-in-wage-gains" target="_blank" rel="noopener">US job growth expected to pick up in October, with moderation in wage gains</a></div>
+    <div class="entry-summary">The unemployment rate is expected to remain unchanged at 4.2%, while annual wage growth is forecast to slow to 2.9% from 3.0% in September.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:31</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/world/2026/11/06/australia-sends-military-aircraft-to-help-fight-indonesia-fires" target="_blank" rel="noopener">Australia sends military aircraft to help fight Indonesia fires</a></div>
+    <div class="entry-summary">The C-130 Hercules plane left the Indonesian capital Jakarta for East Kalimantan province on Thursday to join local water-bombing efforts, the Indonesian disaster agency chief said.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:10</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/bahasa/tempatan/2026/11/06/umno-berjaya-kumpul-dana-untuk-najib-jalani-tahanan-rumah" target="_blank" rel="noopener">Umno bayar denda RM50 juta Najib</a></div>
+    <div class="entry-summary">Bekas perdana menteri itu kini akan menjalani baki hukuman di bawah tahanan rumah.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:08</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/nation/2026/11/06/csa-will-help-ease-political-hostilities-after-melaka-polls-says-ismail" target="_blank" rel="noopener">CSA will help ease political hostilities after Melaka polls, says Ismail</a></div>
+    <div class="entry-summary">The former prime minister says political parties should work together after the election instead of continuing their rivalry.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:02</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/world/2026/11/06/panel-votes-to-proceed-with-trump-s-massive-arch-despite-complaints" target="_blank" rel="noopener">Panel votes to proceed with Trump’s massive arch despite complaints</a></div>
+    <div class="entry-summary">The National Capital Planning Commission (NCPC) voted 8-4 to approve the project late Thursday, rejecting calls by the four dissenting commissioners to delay the decision.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/world/2026/11/06/indonesia-names-fourth-senior-police-officer-as-wiretapping-suspect" target="_blank" rel="noopener">Indonesia names fourth senior police officer as wiretapping suspect</a></div>
+    <div class="entry-summary">Police have questioned 13 officers and five criminal and IT experts while investigating attempts to intercept the communications of Indonesia&#x27;s president.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:56</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/nation/2026/11/06/umno-collects-enough-funds-to-allow-najib-to-serve-sentence-under-house-arrest" target="_blank" rel="noopener">Umno settles Najib’s RM50mil fine</a></div>
+    <div class="entry-summary">Former prime minister will now serve the remainder of his sentence under house arrest.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:56</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/bahasa/tempatan/2026/11/06/rayuan-pendakwaan-cabar-rosmah-kemuka-keterangan-baharu-tangguh-mahkamah-diberitahu" target="_blank" rel="noopener">Rayuan pendakwaan cabar Rosmah kemuka keterangan baharu tangguh, mahkamah diberitahu</a></div>
+    <div class="entry-summary">Mahkamah Tinggi tetapkan 14 Jan tahun depan untuk pengurusan kes seterusnya selepas dimaklumkan alasan penghakiman Mahkamah Rayuan belum diperoleh.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:47</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/leisure/2026/11/06/dolly-parton-s-manager-drops-lawsuit-against-nephew" target="_blank" rel="noopener">Dolly Parton’s manager drops lawsuit against nephew</a></div>
+    <div class="entry-summary">The lawsuit filed in September accused the late musician&#x27;s nephew of attempting to extort money from her estate.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:37</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/leisure/2026/11/06/why-deepavali-shoppers-still-make-time-for-the-bazaar" target="_blank" rel="noopener">Why Deepavali shoppers still make time for the bazaar</a></div>
+    <div class="entry-summary">Despite the popularity of online retailers, festive shopping in Seremban&#x27;s Little India remains all about people, touch and tradition.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:37</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/bahasa/tempatan/2026/11/06/bank-boleh-guna-penyata-akaun-janaan-komputer-tuntut-pinjaman-tertunggak" target="_blank" rel="noopener">Bank boleh guna penyata akaun janaan komputer tuntut pinjaman tertunggak</a></div>
+    <div class="entry-summary">Mahkamah Rayuan ketepi keputusan Mahkamah Tinggi menolak tuntutan SME Bank dapatkan semula RM689,207 daripada seorang peminjam dan dua penjamin.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:33</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/business/2026/11/06/china-blocks-us-5-4bil-abb-robotics-purchase-by-japan-s-softbank" target="_blank" rel="noopener">China blocks US$5.4bil ABB robotics purchase by Japan’s SoftBank</a></div>
+    <div class="entry-summary">SoftBank said it had received notice from Chinese regulators on Wednesday &#x27;that it had prohibited the acquisition of ABB&#x27;s robotics business in China&#x27;.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:27</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/nation/2026/11/06/prosecution-s-appeal-in-rosmah-s-fresh-evidence-bid-still-pending-court-told" target="_blank" rel="noopener">Prosecution’s appeal in Rosmah’s fresh evidence bid still pending, court told</a></div>
+    <div class="entry-summary">The appeal is against a Court of Appeal decision allowing Rosmah Mansor to adduce evidence to show that a witness testified under pressure from the prosecution.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/world/2026/11/06/belgian-pm-to-determine-govt-future-in-meeting-with-king" target="_blank" rel="noopener">Belgian PM to determine govt future in meeting with king</a></div>
+    <div class="entry-summary">Bart De Wever has offered his resignation to King Philippe, who is consulting coalition leaders before meeting the Belgian prime minister again.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/nation/2026/11/06/banks-can-use-computer-generated-statements-to-recover-loans-rules-court" target="_blank" rel="noopener">Banks can use computer-generated statements to recover loans, rules court</a></div>
+    <div class="entry-summary">The Court of Appeal overturns a High Court decision dismissing SME Bank&#x27;s claim to recover RM689,207 from a borrower and two personal guarantors.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:20</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/bahasa/tempatan/2026/11/06/nile-tech-tiada-akses-data-pengguna-myjpj-kata-mot" target="_blank" rel="noopener">Nile Tech tiada akses data pengguna MyJPJ, kata MOT</a></div>
+    <div class="entry-summary">Kementerian Pengangkutan maklumkan perkhidmatan pembaharuan insurans dalam MyJPJ hanya pautan yang bawa pengguna ke portal Nile Tech untuk lengkapkan transaksi.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:17</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.japantimes.co.jp/business/2026/11/06/economy/boe-raises-rates/" target="_blank" rel="noopener">Bank of England raises rates for first time since 2023 and warns more likely</a></div>
+    <div class="entry-summary">Policymakers said the amount of inflation pressure coming down the road after months of high energy prices required a rate rise now.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Japan Times</span>2026-11-06 04:16</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/nation/2026/11/06/nile-tech-has-no-access-to-myjpj-data-transport-ministry-says" target="_blank" rel="noopener">Nile Tech has no access to MyJPJ data, transport ministry says</a></div>
+    <div class="entry-summary">It says the insurance renewal service featured in MyJPJ merely serves as a link, directing users to the Nile Tech portal to complete their transactions.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:07</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/sports/2026/11/06/japan-s-kozo-tashima-looking-to-bring-integrity-to-fifa" target="_blank" rel="noopener">Japan’s Kozo Tashima looking to bring ‘integrity’ to Fifa</a></div>
+    <div class="entry-summary">Having served as a player, coach and football bureaucrat, the 68-year-old is set to become the first Japanese candidate for the Fifa presidency.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:02</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/business/2026/11/06/trump-s-political-humbling-signals-short-term-gain-long-term-pain-for-china" target="_blank" rel="noopener">Trump’s political humbling signals short-term gain, long-term pain for China</a></div>
+    <div class="entry-summary">Beijing now faces a Congress that may push harder on human rights, Chinese investments and a US$14 billion arms package for Taiwan that Donald Trump has withheld as a &#x27;negotiating chip&#x27; with Xi Jinping.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 04:02</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.japantimes.co.jp/business/2026/11/06/markets/blue-tsunami-wipes-nasdaq/" target="_blank" rel="noopener">Blue tsunami wipes out $2.5 trillion from Nasdaq as investors fret about AI trade</a></div>
+    <div class="entry-summary">It was the second straight day of selling in AI stocks and the fifth decline of more than 500 points in the Nasdaq Composite since mid-October.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Japan Times</span>2026-11-06 04:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/bahasa/tempatan/2026/11/06/umno-pas-sandaran-mustafa-tingkat-majoriti-bn-di-durian-tunggal" target="_blank" rel="noopener">Umno-PAS sandaran Mustafa tingkat majoriti BN di Durian Tunggal</a></div>
+    <div class="entry-summary">Calon BN yakin sokongan PAS dan kepimpinan parti mampu meningkatkan undi berbanding majoriti 559 diraih pada PRN 2021.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 03:56</div>
+  </div>
+  </div>
+  <div class="section ">
+    <div class="section-header">
+      <h2>🌿 环境 · 气候 <span class="en-label">Environment &amp; Climate</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/stronger-haze-law-singapore-parliament-experts-6527081" target="_blank" rel="noopener">Singapore&#x27;s stronger haze law: How it might work and what it may not fix</a></div>
+    <div class="entry-summary">The gaps in transboundary haze prevention require measures beyond legislation, says one expert.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia (env)</span>2026-11-06 03:55</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/2026/11/singapore-sand-imports-threaten-an-already-sinking-cambodian-fishing-community-again/" target="_blank" rel="noopener">Singapore sand imports threaten an already sinking Cambodian fishing community, again</a></div>
+    <div class="entry-summary">Editor’s note: *Cambodian fishers who spoke to Mongabay asked that pseudonyms be used, fearing reprisals. BANGKOK, Thailand — Sand mining vessels were once a familiar sight to residents of Koh Sralao, a fishing village in Cambodia’s Koh Kong…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-06 00:15</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/commentary/singapore-haze-law-indonesia-fire-companies-pay-6527156" target="_blank" rel="noopener">Commentary: Singapore’s haze law gets sharper teeth. Will it finally bite?</a></div>
+    <div class="entry-summary">Previously, Singapore could act only after its skyline had faded. Now it has the power to do more before the haze arrives, says NUS law researcher Sean D Tseng.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia (env)</span>2026-11-05 22:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/2026/11/indonesian-company-seeks-cites-approval-to-breed-and-sell-rare-asian-golden-cats/" target="_blank" rel="noopener">Indonesian company seeks CITES approval to breed and sell rare Asian golden cats</a></div>
+    <div class="entry-summary">With their shiny golden or reddish-brown fur, round ears, and white and black facial markings, Asian golden cats are cute. But don’t let their looks fool you: these cats, native to China and South and Southeast Asia, are fiercely territorial,…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-05 14:03</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/nea-haze-mask-distribution-6526851" target="_blank" rel="noopener">Singapore to end N95 mask distribution on Saturday as haze abates</a></div>
+    <div class="entry-summary">The Ministry of Health will deactivate both the Public Health Preparedness Clinic Scheme and the Haze Subsidy Scheme from Nov 12.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia (env)</span>2026-11-05 11:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/short-article/2026/11/artificial-mangrove-roots-offer-temporary-shield-for-thailands-eroding-coastline/" target="_blank" rel="noopener">Artificial mangrove roots offer temporary shield for Thailand’s eroding coastline</a></div>
+    <div class="entry-summary">Coastal communities near Bangkok in Thailand are testing artificial mangrove roots to combat severe shoreline erosion, reports Mongabay’s Carolyn Cowan. The shorelines of Phra Samut Chedi district, located in the Chao Phraya River Delta where…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-04 10:23</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/2026/11/microplastics-pollute-nearly-two-thirds-of-corals-in-malaysias-marine-protected-area-study-finds/" target="_blank" rel="noopener">Microplastics pollute nearly two-thirds of corals in Malaysia’s marine protected area, study finds</a></div>
+    <div class="entry-summary">KUALA LUMPUR — Microplastics, tiny plastic particles about 5 millimeters (0.2 inches) or smaller, have settled into the skeletons of corals in a marine protected area in Malaysia, according to a recent study. The study, published in the journal…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-04 09:33</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/2026/11/the-rspo-closed-the-case-on-first-resources-indonesian-forests-kept-falling-for-palm-oil-commentary/" target="_blank" rel="noopener">The RSPO closed the case on First Resources. Indonesian forests kept falling for palm oil (commentary)</a></div>
+    <div class="entry-summary">The Roundtable on Sustainable Palm Oil (RSPO) — as the name suggests — sets itself up as the arbiter of what is sustainable in the palm oil industry. For that to work, it has to do two things. First, it has to make sensible rules about what is and…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-03 10:27</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/short-article/2026/11/us-couple-sentenced-for-helping-finance-trade-in-rhino-horn-puma-bones-other-wildlife-parts/" target="_blank" rel="noopener">US couple sentenced for helping finance trade in rhino horn, puma bones, other wildlife parts</a></div>
+    <div class="entry-summary">A federal court in the U.S. has sentenced two residents of the state of California for their roles as financial facilitators in a scheme trafficking wildlife body parts between the U.S. and Vietnam. Linh Luu and Kevin Le, a married couple from…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-03 10:18</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.climatechangenews.com/2026/10/23/coal-in-a-green-mask-indonesias-co-firing-plan-will-harm-not-help-the-climate/" target="_blank" rel="noopener">Coal in a green mask: Indonesia’s co-firing plan will harm, not help, the climate</a></div>
+    <div class="entry-summary">Indonesia&#x27;s plan to mix in a little wood will give coal-fired power plants an excuse to operate for longer and raise deforestation pressures The post Coal in a green mask: Indonesia’s co-firing plan will harm, not help, the climate appeared first on…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Climate Home News</span>2026-10-23 00:00</div>
+  </div>
+  </div>
+  <div class="section col-highlight">
+    <div class="section-header">
+      <h2>🔥 重点议题 <span class="en-label">Environment · AI · Tech</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/business/2026/11/06/chinese-stocks-tumble-as-global-tech-selloff-deepens" target="_blank" rel="noopener">Chinese stocks tumble as global tech selloff deepens</a></div>
+    <div class="entry-summary">The Shanghai Composite Index fell 1.1%, while the tech-focused Star 50 Index and the AI Index slumped as much as 5% before recouping some losses.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:33</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/travel/singapore-airlines-sia-new-cabin-products-first-class-business-class-2027-6526061" target="_blank" rel="noopener">Singapore Airlines unveils S$2 billion cabin upgrade with new First Class double beds, Business Class seats with privacy doors</a></div>
+    <div class="entry-summary">The next-generation seats will be rolled out progressively from the second half of 2027, with more privacy, improved comfort and personalised features across all four cabin classes.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 05:31</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/personal-ai-agents-assistant-advisory-muse-dots-hermes-grok-openclaw-6529836" target="_blank" rel="noopener">Singapore authorities warn of privacy, security risks from personal AI agents</a></div>
+    <div class="entry-summary">&quot;AI agents can be very useful, but you cannot treat them like human assistants and give them the same broad access to your information and implicit trust,&quot; said the authorities.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 05:30</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/world/2026/11/06/australia-sends-military-aircraft-to-help-fight-indonesia-fires" target="_blank" rel="noopener">Australia sends military aircraft to help fight Indonesia fires</a></div>
+    <div class="entry-summary">The C-130 Hercules plane left the Indonesian capital Jakarta for East Kalimantan province on Thursday to join local water-bombing efforts, the Indonesian disaster agency chief said.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:10</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.freemalaysiatoday.com/category/world/2026/11/06/panel-votes-to-proceed-with-trump-s-massive-arch-despite-complaints" target="_blank" rel="noopener">Panel votes to proceed with Trump’s massive arch despite complaints</a></div>
+    <div class="entry-summary">The National Capital Planning Commission (NCPC) voted 8-4 to approve the project late Thursday, rejecting calls by the four dissenting commissioners to delay the decision.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Free Malaysia Today</span>2026-11-06 05:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/singapore-biomedical-startups-expand-china-cancer-diabetes-treatments-6516196" target="_blank" rel="noopener">From cancer to diabetes: Singapore biomedical startups expand into China to accelerate development of new treatments</a></div>
+    <div class="entry-summary">Singapore startups are tapping China’s vast patient pool, hospital networks and manufacturing capabilities, but they must also navigate its evolving regulatory landscape.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia</span>2026-11-06 04:51</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.japantimes.co.jp/business/2026/11/06/markets/blue-tsunami-wipes-nasdaq/" target="_blank" rel="noopener">Blue tsunami wipes out $2.5 trillion from Nasdaq as investors fret about AI trade</a></div>
+    <div class="entry-summary">It was the second straight day of selling in AI stocks and the fifth decline of more than 500 points in the Nasdaq Composite since mid-October.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Japan Times</span>2026-11-06 04:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/stronger-haze-law-singapore-parliament-experts-6527081" target="_blank" rel="noopener">Singapore&#x27;s stronger haze law: How it might work and what it may not fix</a></div>
+    <div class="entry-summary">The gaps in transboundary haze prevention require measures beyond legislation, says one expert.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia (env)</span>2026-11-06 03:55</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.bangkokpost.com/thailand/general/3349845/actress-boom-arrested-as-husband-surrenders-to-police" target="_blank" rel="noopener">Actress &#x27;Boom&#x27; arrested; as husband surrenders to police</a></div>
+    <div class="entry-summary">Police apprehended Panadda &quot;Boom&quot; Wongphudee at her house on Friday while her husband, Atip &quot;Got&quot; Anantawan, surrendered to authorities to fight serious charges, including public fraud and money laundry.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Bangkok Post</span>2026-11-06 03:44</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.japantimes.co.jp/business/2026/11/06/markets/market-nov-6/" target="_blank" rel="noopener">Nikkei 225 falls more than 7% following AI-related declines on Wall Street</a></div>
+    <div class="entry-summary">Concern is growing over tech investment after the Democratic Party&#x27;s resounding victory in the U.S. midterm elections.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Japan Times</span>2026-11-06 01:58</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.japantimes.co.jp/news/2026/11/06/japan/politics/regulatory-reform-minister-interview/" target="_blank" rel="noopener">New regulatory reform minister aims to make self-driving tech widely available</a></div>
+    <div class="entry-summary">Hiroshi Nakatsuka said he hopes to remove restrictions and collect data to allow for a swifter rolling out of self-driving technology in Japan.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Japan Times</span>2026-11-06 01:23</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.bangkokpost.com/business/motoring/3349735/changan-automobile-unveils-3year-expansion-plan" target="_blank" rel="noopener">Changan Automobile unveils 3-year expansion plan</a></div>
+    <div class="entry-summary">Chinese electric vehicle (EV) manufacturer Changan Automobile has marked its three-year presence in Thailand with the announcement of a new business strategy aimed at strengthening its operations and expanding its role in the country&#x27;s automotive…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Bangkok Post</span>2026-11-05 23:27</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.bangkokpost.com/business/general/3349590/analysts-propose-cleaner-power-development-plan" target="_blank" rel="noopener">Analysts propose cleaner power development plan</a></div>
+    <div class="entry-summary">Energy and climate specialists have proposed an alternative version of Thailand&#x27;s power development plan (PDP) dubbed the &quot;Resilient PDP&quot;, aimed at ensuring a smooth transition to a low-carbon economy without relying heavily on natural gas as a…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Bangkok Post</span>2026-11-05 22:01</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/commentary/singapore-haze-law-indonesia-fire-companies-pay-6527156" target="_blank" rel="noopener">Commentary: Singapore’s haze law gets sharper teeth. Will it finally bite?</a></div>
+    <div class="entry-summary">Previously, Singapore could act only after its skyline had faded. Now it has the power to do more before the haze arrives, says NUS law researcher Sean D Tseng.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia (env)</span>2026-11-05 22:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.nytimes.com/2026/11/05/world/asia/japan-hokusai-great-wave-midterms.html" target="_blank" rel="noopener">Everyone’s Talking About the ‘Blue Tsunami.’ In Japan, It’s Complicated.</a></div>
+    <div class="entry-summary">The New York Post used a Hokusai work to depict Donald Trump being swept away by Democrats’ midterm election win. Some in Japan were bothered by the imagery.</div>
+    <div class="entry-meta"><span class="entry-source-tag">NYT Asia Pacific</span>2026-11-05 14:31</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.mongabay.com/2026/11/indonesian-company-seeks-cites-approval-to-breed-and-sell-rare-asian-golden-cats/" target="_blank" rel="noopener">Indonesian company seeks CITES approval to breed and sell rare Asian golden cats</a></div>
+    <div class="entry-summary">With their shiny golden or reddish-brown fur, round ears, and white and black facial markings, Asian golden cats are cute. But don’t let their looks fool you: these cats, native to China and South and Southeast Asia, are fiercely territorial,…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay</span>2026-11-05 14:03</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://thediplomat.com/2026/11/what-bangladeshi-prime-minister-tarique-rahman-brought-home-from-japan/" target="_blank" rel="noopener">What Bangladeshi Prime Minister Tarique Rahman Brought Home From Japan</a></div>
+    <div class="entry-summary">For Bangladesh, closer ties with Japan mean another source of funding and technology for its industries, as well as more support for maritime patrols.</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Diplomat</span>2026-11-05 12:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.nytimes.com/2026/11/05/business/softbank-robotics-china-block.html" target="_blank" rel="noopener">China Blocks SoftBank’s $5.4 Billion Robotics Takeover, Impeding Foreign Deals</a></div>
+    <div class="entry-summary">Chinese authorities stopped the sale of ABB Robotics, owned by a Swiss conglomerate, to SoftBank of Japan amid wider scrutiny of global transactions that could affect Beijing’s technology ambitions.</div>
+    <div class="entry-meta"><span class="entry-source-tag">NYT Asia Pacific</span>2026-11-05 11:23</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://www.channelnewsasia.com/singapore/nea-haze-mask-distribution-6526851" target="_blank" rel="noopener">Singapore to end N95 mask distribution on Saturday as haze abates</a></div>
+    <div class="entry-summary">The Ministry of Health will deactivate both the Public Health Preparedness Clinic Scheme and the Haze Subsidy Scheme from Nov 12.</div>
+    <div class="entry-meta"><span class="entry-source-tag">Channel News Asia (env)</span>2026-11-05 11:22</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://laotiantimes.com/2026/11/05/telix-joins-thera4care-with-tlx400-tx-to-accelerate-translation-of-next-generation-fap-targeting-theranostics/" target="_blank" rel="noopener">Telix Joins Thera4Care with TLX400-Tx to Accelerate Translation of Next Generation FAP-Targeting Theranostics</a></div>
+    <div class="entry-summary">Thera4Care is an initiative aimed at establishing an integrated theranostics ecosystem to broaden patient access in Europe Telix’s fibroblast activation protein (FAP) targeting therapy candidate (TLX400-Tx) has been selected for evaluation with…</div>
+    <div class="entry-meta"><span class="entry-source-tag">Laotian Times</span>2026-11-05 05:30</div>
+  </div>
+  </div>
+  </div>
+  <div class="footer">
+    本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
+  </div>
+</div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
