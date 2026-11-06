@@ -210,6 +210,16 @@ COLUMN_3 = {
 # 关键词
 # ============================================================
 
+# 过滤掉不相关的企业/航空/峰会新闻
+SEA_BLACKLIST = [
+    "first class", "business class", "cabin upgrade", "airline seat", "aircraft",
+    "quarterly earnings", "quarterly results", "earnings report", "ipo ",
+    "stock exchange", "stock market", "index rose", "index fell",
+    "prime minister met", "president met", "bilateral meeting", "summit",
+    "diplomatic", "foreign minister", "state visit",
+    "real estate", "property launch", "condo", "luxury",
+]
+
 # 地理过滤：含以下任一词 → 通过 require_sea 检查
 SEA_KEYWORDS = [
     "indonesia", "indonesian", "jakarta", "bali", "surabaya",
@@ -311,6 +321,10 @@ def passes_filter(entry, source_cfg):
         max_chars=500,
     )
     full_text = title + " " + summary
+
+    # 全局黑名单：过滤企业/航空/峰会新闻
+    if text_contains(full_text, SEA_BLACKLIST):
+        return False
 
     if source_cfg.get("require_sea"):
         if not text_contains(full_text, SEA_KEYWORDS):
@@ -582,7 +596,7 @@ def render_entry(entry, show_source_tag=False):
   </div>"""
 
 
-def render_column(col_cfg, data_dict, col_class="", max_articles=25):
+def render_column(col_cfg, data_dict, col_class="", max_articles=25, max_per_source=None):
     label = esc(col_cfg["label"])
     en_label = esc(col_cfg["en_label"])
 
@@ -590,6 +604,17 @@ def render_column(col_cfg, data_dict, col_class="", max_articles=25):
     for src in col_cfg["sources"]:
         all_entries.extend(data_dict.get(src["name"], []))
     all_entries.sort(key=sort_key, reverse=True)
+
+    # 每源限制，防止单一来源占满整栏
+    if max_per_source:
+        seen_per_src = {}
+        capped = []
+        for e in all_entries:
+            src = getattr(e, "_source_name", "")
+            if seen_per_src.get(src, 0) < max_per_source:
+                capped.append(e)
+                seen_per_src[src] = seen_per_src.get(src, 0) + 1
+        all_entries = capped
 
     parts = [f"""  <div class="section {col_class}">
     <div class="section-header">
@@ -623,9 +648,9 @@ def render_focus_col(focus_entries):
 
 
 def render_html(col1_data, col2_data, col3_data, focus_entries, date_str):
-    col1_html = render_column(COLUMN_1, col1_data)
-    col2_html = render_column(COLUMN_2, col2_data)
-    col3_html = render_column(COLUMN_3, col3_data)
+    col1_html = render_column(COLUMN_1, col1_data, max_per_source=3)
+    col2_html = render_column(COLUMN_2, col2_data, max_per_source=3)
+    col3_html = render_column(COLUMN_3, col3_data, max_per_source=4)
     col4_html = render_focus_col(focus_entries)
 
     return f"""<!DOCTYPE html>

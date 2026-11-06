@@ -38,6 +38,9 @@ jobs:
       - name: Generate Southeast Asia digest
         run: python3 generate_sea.py
 
+      - name: Generate Global South digest
+        run: python3 generate_global_south.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
