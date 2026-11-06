@@ -77,47 +77,98 @@ COLUMN_2 = {
         {
             "name": "Japan Times",
             "url": "https://www.japantimes.co.jp/feed/",
-            "require_sea": True,
+            "require_sea": False,  # 已是日本媒体
         },
         {
             "name": "NHK World",
             "url": "https://www3.nhk.or.jp/nhkworld/en/news/feeds/",
-            "require_sea": True,
+            "require_sea": False,
+        },
+        {
+            "name": "Japan Today",
+            "url": "https://japantoday.com/feed",
+            "require_sea": False,
+        },
+        {
+            "name": "The Mainichi",
+            "url": "https://mainichi.jp/english/rss/etc/english.rss",
+            "require_sea": False,
         },
         # 印尼
         {
             "name": "Jakarta Post",
             "url": "https://www.thejakartapost.com/feed",
-            "require_sea": True,
+            "require_sea": False,
+        },
+        {
+            "name": "Tempo English",
+            "url": "https://en.tempo.co/rss/feed.xml",
+            "require_sea": False,
+        },
+        {
+            "name": "Coconuts Jakarta",
+            "url": "https://coconuts.co/jakarta/feed/",
+            "require_sea": False,
         },
         # 泰国
         {
             "name": "Bangkok Post",
             "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
-            "require_sea": True,
+            "require_sea": False,
+        },
+        {
+            "name": "The Nation Thailand",
+            "url": "https://www.nationthailand.com/rss.xml",
+            "require_sea": False,
+        },
+        {
+            "name": "Coconuts Bangkok",
+            "url": "https://coconuts.co/bangkok/feed/",
+            "require_sea": False,
         },
         # 马来西亚
         {
             "name": "Free Malaysia Today",
             "url": "https://www.freemalaysiatoday.com/feed/",
-            "require_sea": True,
+            "require_sea": False,
         },
         {
             "name": "Malaysiakini",
             "url": "https://www.malaysiakini.com/rss",
-            "require_sea": True,
+            "require_sea": False,
+        },
+        {
+            "name": "The Star Malaysia",
+            "url": "https://www.thestar.com.my/rss/News/Nation/",
+            "require_sea": False,
+        },
+        # 新加坡
+        {
+            "name": "Today Online",
+            "url": "https://www.todayonline.com/feed",
+            "require_sea": False,
         },
         # 柬埔寨
         {
             "name": "Khmer Times",
             "url": "https://www.khmertimeskh.com/feed/",
-            "require_sea": True,
+            "require_sea": False,
         },
-        # 老挝 / 区域 (RFA covers Laos extensively)
         {
-            "name": "RFA",
+            "name": "Phnom Penh Post",
+            "url": "https://www.phnompenhpost.com/feed",
+            "require_sea": False,
+        },
+        # 老挝
+        {
+            "name": "Laotian Times",
+            "url": "https://laotiantimes.com/feed/",
+            "require_sea": False,
+        },
+        {
+            "name": "RFA Laos",
             "url": "https://www.rfa.org/english/news/laos/rss2.xml",
-            "require_sea": False,  # 已是老挝专栏
+            "require_sea": False,
         },
     ],
 }
