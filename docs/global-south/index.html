@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>China in the Global South · 2026-11-06</title>
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Georgia", "Times New Roman", "宋体", serif;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+}
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a { color: #6f6f6f; text-decoration: none; margin: 0 0.7rem; }
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.columns > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 1.6rem;
+  border-right: 1px solid #e2e2e2;
+}
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 1100px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+  .columns > div:nth-child(4) { border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+}
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+}
+.section { margin-bottom: 2.5rem; }
+.section-header {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
+}
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #121212;
+}
+.section-header .en-label {
+  display: inline;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+.col-highlight .section-header { border-bottom-color: #c0392b; }
+.col-highlight .section-header h2 { color: #c0392b; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
+.entry:last-child { border-bottom: none; }
+.entry-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
+}
+.entry-title a { color: inherit; text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
+.entry-summary {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
+}
+.entry-meta {
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.entry-source-tag { font-weight: 700; color: #6f6f6f; margin-right: 0.3rem; }
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles { font-size: 0.85rem; color: #999; font-style: italic; padding: 0.5rem 0; font-family: "Helvetica Neue", Arial, sans-serif; }
+.footer {
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="masthead">
+    <div class="masthead-rules">
+      <h1>China Intelligence Digest</h1>
+      <div class="nav">
+        <a href="/china-digest/">China</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/dprk/">North Korea</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/sea/">Southeast Asia</a>
+        <span class="sep">/</span>
+        <span class="active">Global South</span>
+</div>
+      <div class="meta">2026-11-06 &nbsp;·&nbsp; Auto-generated</div>
+    </div>
+    <div class="masthead-bottom-rule"></div>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="columns">
+  <div class="section ">
+    <div class="section-header">
+      <h2>🌍 非洲 <span class="en-label">Africa</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOY1BQWXhNVVlwRGNfcmpfY1doOWNUdGZzcUt4Z1phaEozR0szblNDZDVwTEFvQkhoSzdGVmtydVJZLVF3Q2N6T2g2U2NzTjlNRmM5SmRMdzk3bWkxcTVLWVRQMG1Gbl9Wd01WNmxkUmNRdTQ2d25hXzVienJQTzFDbVRyaFFNQk02am5zY2RHX3lrZ2ZjRzJScG90MEFSRGZORms0Yw?oc=5" target="_blank" rel="noopener">Daily Mail retains seat on belt and road news network council - Zambia Daily Mail</a></div>
+    <div class="entry-summary">Daily Mail retains seat on belt and road news network council Zambia Daily Mail</div>
+    <div class="entry-meta"><span class="entry-source-tag">Zambia Daily Mail</span>2026-11-05 08:04</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBNWklZbE5JTFlnaFR0Nmc0VktNLTZqUTRac1VoZDNPblJxd1pJN2hFSmFNYlBRZjB1ZXVWUHNiOUJyUHlLbmstYUt2bHdTZTNONFlpQTdPZjMyaWhOekRmRWtSMDF4S0wxM3ZZQ3puN0NNajNLNnQxWU1Zb1JPSms?oc=5" target="_blank" rel="noopener">Edo signs deal with Chinese firm to establish airline - Punch Newspapers</a></div>
+    <div class="entry-summary">Edo signs deal with Chinese firm to establish airline Punch Newspapers</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Punch</span>2026-11-04 19:30</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOTzFWS1dVaTNxV2NINkkyV0lsV1UxcllzRi14eGIzMklja0Z2ZV9jcHpvc21iNl8tSUVOaFItNWtPNWc1cVJNOHlMSUk2cGFyUkVWUGtDTzZFQkNvaGtvTjl1Ukpwd2dHLTJYZVRPM0tiYnJiRXdFdkNnaHNvMG5TV1RPT1BmUmRFblRKWXFlOVdkY1NtaFpRY3V5MWpRQm1Vczk3blRnb1M1YW9KUUtEdmNaZw?oc=5" target="_blank" rel="noopener">Blacklisted Chinese firm bags Sh3.2bn Kenya roads contract - Daily Nation</a></div>
+    <div class="entry-summary">Blacklisted Chinese firm bags Sh3.2bn Kenya roads contract Daily Nation</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Nation</span>2026-11-04 03:30</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPREl4Vzczcnh2SVc0eGI0ZThtUHF2cTRfVjBNZ3ltS1FkWVAtM0d0UGdZWk9ISzBwSjl2RXNwLVotQ29xT0hXbnVfeUZheGpjSzM5Tl9MMVByX3pjOXh4UW9jc1VnY3Ntc2NkWEUxcHNIQ0Z1cHdkOFBkWkt5bTFoWWVjQkl5d3RvaUZNVg?oc=5" target="_blank" rel="noopener">China condemns US designation of Confucius Institutes as threat - Punch Newspapers</a></div>
+    <div class="entry-summary">China condemns US designation of Confucius Institutes as threat Punch Newspapers</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Punch</span>2026-10-26 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOUVJFUWt3VUZxSVE2eXpmVHNsTjhKdDB3NmtkelJQaVgtdnVMUzBDNUFEUUkzUVc4cEdkaUpJOXppZ05iaDBLbHJ3aVBFZ1VWTkxuRVVEVFJvYjNyX3ZWWDFOMDNRQ0VZLU1OUVZLaVdKc1NBSXp4WmRISnBVaUNIMV9TQmFTTTEyUGlDSGtkMDV2NTdUV2NKNXNxTFYwMk14?oc=5" target="_blank" rel="noopener">North Korea’s Kim crosses new bridge into China as trade ties warm - Egypt Independent</a></div>
+    <div class="entry-summary">North Korea’s Kim crosses new bridge into China as trade ties warm Egypt Independent</div>
+    <div class="entry-meta"><span class="entry-source-tag">Egypt Independent</span>2026-10-25 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPSFhPOHN5RDd4cHNfNW1NUFdhejNWbERWdW16WDl3LUlZNTY1cUhiSDZHY1AyN0s0TTRUQy1HVFk5RnEwT3BWNEhUUks2d0J1OUJPWFZsY1Q2dFNWWkRITncwa05kZDBBaGtuUDcxbzZaU1dNa0RmTnZ6MW01TkdzSUZVNW1pU3FQNEc4d1h2a3M1YkRtWUktRG5oQURxQWRvUTdXdmFXczhqb09LVWllV0pLWXlkUktCSTJDMXhSblJQbzBJWW84ZUhkZGt4MXVqZ2lj?oc=5" target="_blank" rel="noopener">Trucks line up as long-delayed China-North Korea bridge officially opens - The Citizen</a></div>
+    <div class="entry-summary">Trucks line up as long-delayed China-North Korea bridge officially opens The Citizen</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Citizen (TZ)</span>2026-10-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPbTZ0MWYwcVpIbjhLcHNQVWJlTnlyRnY3SVVfNzA1cXhiUHptOUI5cUtIZFRQNDdvWjVvczB5cDBRcmFDc1hxVlpNXzdGTnFXdVY0R3RnMm5UM3QzUXlvU3llRGVzWDlTTGZETjF0SHVpNzlnWHRYWl81cXNEOExtVGVkTmZqMnhFZE0wUG1rT0plZTdVRUlYTlQtSnlOQ3ZhR0RjYlpfTkNfNzJXU0E3S3RIOER3UUw4UVc4SnhzWQ?oc=5" target="_blank" rel="noopener">North Korea and China open new bridge after 12-year delay - Graphic Online</a></div>
+    <div class="entry-summary">North Korea and China open new bridge after 12-year delay Graphic Online</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Graphic</span>2026-10-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPRnpQekdCUVJrR19KZl93ZTVndjNzQmlIek9SanM1ZU0zeTkxYlc4ZkdZakc4cGowZlY3M012bXlCNGwxWXoza2wyc0pJYnY4VUZSdEpQYWViWDh5VkZXUUFCS0M0ekZGRFprMlhrN29LX25oU2RmRU8tZ3Fhb2EyRFNzRzNGQzBGa2VQVVIyQkRac3pvYW1nNF9PejhQRWJKYVRWRmwyQXZhZ2VVZXNHUFljODJuTG1HSGM2anlJeGI1UlJw?oc=5" target="_blank" rel="noopener">Nigeria, China deepen tourism cooperation to attract Chinese tourists - Premium Times Nigeria</a></div>
+    <div class="entry-summary">Nigeria, China deepen tourism cooperation to attract Chinese tourists Premium Times Nigeria</div>
+    <div class="entry-meta"><span class="entry-source-tag">Premium Times</span>2026-09-13 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQeVVIbWo4RTVCLTBVSmVNcVppLWhCWFFGMG40cFF6cUUtbFl5M25tMHBtOVd4M1h0VlQta1hNaWYwRHA0RldxLVlNWm1yV3hNLVhLV1A5c2N2TWRyWVE3SG01UzY2M2Zsc25pbS13dXJJYkxRN3NUSURMZ2R4Ty04MkRtMmloamIzU25PczBjM0o?oc=5" target="_blank" rel="noopener">China and Russia take aim at US at Chinese military forum - newsday.co.zw</a></div>
+    <div class="entry-summary">China and Russia take aim at US at Chinese military forum newsday.co.zw</div>
+    <div class="entry-meta"><span class="entry-source-tag">NewsDay Zimbabwe</span>2026-08-30 09:40</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNYkFZd3p4VV9rNnpBNlFFQUlHR21FaFJVaVVtYkhUeWRDVFdMRHF5WGtXa0JUSm1oUlAtb2R2eDBVYTB5eW5TbG1DT3dFeTYwTTJkbTcyU0QtdzJWNFNSbV82WXN5ZS1FSnBrVm16NGQyWGxOcnBiQmdCajh2eFRuSjA4bVdsbVQzcjZB?oc=5" target="_blank" rel="noopener">Chinese investments in Egypt exceed US$ 10 billion - Egypt Independent</a></div>
+    <div class="entry-summary">Chinese investments in Egypt exceed US$ 10 billion Egypt Independent</div>
+    <div class="entry-meta"><span class="entry-source-tag">Egypt Independent</span>2026-08-04 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMEp2N25aQXZfVTg1RXRVYUNYQmlpQlNzYmtqeFZ2OElRQ0I4TlVHSUh2S0NSZWF4QVNRbDByUmptOV9Hb2RQd1I0OEh5QWFFV0RtbEkzS09ZMUlGb3RSSDZRSUpEZmNmejhkVlNkaFI3OFo4T080OXgtSXhFbERwa0JfLUMtSDJVZ29iU1dtdzlQVjgtMDROUmdLVll4dS1Sa3U1RFg2YXlWOTRGWXhrZHk0ay1pUXMyQzY0M2pmSTdYZGMwdmZPazdoOU1aaTk2dy1R?oc=5" target="_blank" rel="noopener">CR5, Confucius Institute hold educational outreach to deepen Ghana-China ties - Graphic Online</a></div>
+    <div class="entry-summary">CR5, Confucius Institute hold educational outreach to deepen Ghana-China ties Graphic Online</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Graphic</span>2026-07-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNZXh4LXNONUhrcFhLUERMeUFCUWRrYTZtSWtJVVhOZU9WdF9uZDRYNFlsVEU1MDgxeE5QVDdjRHZnUlZrWk45NHFScC10Rldjc2NyQ1pxODFCWmdCVFFXeDlVLXQxWENxX3cwazJtbGZSdGE2eUZMZnJhYXRjNU15UVlDMmJKdFJ4U3g2U05faDIxUVllamNVVGQyeHBCdw?oc=5" target="_blank" rel="noopener">China warns EU against imposing sanctions on Chinese firms over Russia links - Punch Newspapers</a></div>
+    <div class="entry-summary">China warns EU against imposing sanctions on Chinese firms over Russia links Punch Newspapers</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Punch</span>2026-06-10 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNV2R3QVZtQmd1M3R1RW0xejA4cmdpbWVLNmNyZDc2UXF1eENLVlcxSXNLSzRnZUQ0QnkyQVhBTjZnVmFWQWFTWFVUTnVmdmRNeDY4cks0QmJ2YjhfcnZEc245QThIMWRjeEg1bzFSRkRXMjJSbkdGczZBd0JXc3VyTW1lOWJMVjBDckdwblhoYVo0UQ?oc=5" target="_blank" rel="noopener">Why China’s Xi wants a ‘brighter’ future with North Korea - Egypt Independent</a></div>
+    <div class="entry-summary">Why China’s Xi wants a ‘brighter’ future with North Korea Egypt Independent</div>
+    <div class="entry-meta"><span class="entry-source-tag">Egypt Independent</span>2026-06-09 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPbUlaRVlxSURUcU9QdlNUemk0LUVXWVN4eGJrTE5lNE1PeXppN0lSaGxOaGxMNW9ESGhiSUJXT0V3SzRDUEFIbFVndVJCRkNJNXpENmJhem1BeVdiYWZKRWt5NWw2elBTSWFMaUpQY0NUSTBTTkJFa01YcHhFX3FsUlBEUXBZTXpvb3pWMXRTT0p6Ym1fR1Z4UnRna2Z1c2R0WTZ4ODlocXZ1MHRwM2RrOFE1c0J0RlRobWs2SXRn?oc=5" target="_blank" rel="noopener">Britain, China set to revive &#x27;Golden Era&#x27; business dialogue - Graphic Online</a></div>
+    <div class="entry-summary">Britain, China set to revive &#x27;Golden Era&#x27; business dialogue Graphic Online</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Graphic</span>2026-01-23 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNcHpDenhkcmZuRzJlT3FGaWszbndBUVFzQ3FGSXA5RXhwdTlBeGlyNTQxb2U0N1dUNV9RY1gwNnM4T3haUEF5Q3lVOXVoOUtoTVIxOWhzQVZ5WlVWdDNzeldPZHIxeVMwTXpuMnBLLXpQNXhuNWh2NlRMX2tsUzlWV1hpNktzd1piRDdFTV9XMXlreWN0NWtVSjBKdkdKNnM?oc=5" target="_blank" rel="noopener">Made in China 2.0: Innovation, influence and geopolitics - Mail &amp; Guardian</a></div>
+    <div class="entry-summary">Made in China 2.0: Innovation, influence and geopolitics Mail &amp; Guardian</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mail &amp; Guardian</span>2025-08-13 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMV9VUFFXODRCYTRQOVd0dGdoSXN1Ykc2V1Q2cUVhMVlmaVlzZlAwWHpQMEt2WEI3TWN4bXNkRUdxVmpuOVo4UGN3N2tnZ0czQmU5b2trLU8zYlZRcGhzLXlwSGRodGFKSEFMSkUyeWsyNzk1T2hWckQzcVl1Sm1kSzZsd1FWcEo4dU9vT1otV2ZITGdDbnBZRGN0NXMyT1dPdVZpd3VldEkzZjMzTXo5b1ZIcEZ6eFU4VTBoa2c0SXI4UQ?oc=5" target="_blank" rel="noopener">China’s Belt and Road shifts focus to Africa with record-breaking investments - Mail &amp; Guardian</a></div>
+    <div class="entry-summary">China’s Belt and Road shifts focus to Africa with record-breaking investments Mail &amp; Guardian</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mail &amp; Guardian</span>2025-07-29 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE9fVWR6WS1saVJTMVhsdXpiN1FfZ1Ftc3pKRHQ1SG9ZdmZ5cmlyYUhFeEUyZk0xLUhIaXpEZlhyU19jbWNxTUJJQkJVdUk1YThtUmJyYg?oc=5" target="_blank" rel="noopener">“Trump Guitars” Made In China: Strumming A Tariff Tune - The Reporter Ethiopia</a></div>
+    <div class="entry-summary">“Trump Guitars” Made In China: Strumming A Tariff Tune The Reporter Ethiopia</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Reporter (ET)</span>2025-06-28 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOZXhUUjNacXNOQzJkaTc4M09zek5lcFlZWnoySG5nV0FncWtKS3JaQ3g3X2g5UWdHNW5rNDZSM0NYekJoZGxoNXAzNzYzbEllQ0ZxLTBJQ01kX2NNR2lUR3hCMGpfMmpySDVZZlVPdlloaUc2OVY5UFoyUC1zbWxHeTk1QWRIWFR2QmliWjhSTjBzNk5CZTdEY3o1YlgtM2RWVW0xa1V0RQ?oc=5" target="_blank" rel="noopener">China-Ghana zero tariff brings relief for traders - Graphic Online</a></div>
+    <div class="entry-summary">China-Ghana zero tariff brings relief for traders Graphic Online</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Graphic</span>2025-06-25 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPd1pidkE4ZnM2MVhLaTljZWphZW0xUXdoaEhZbUc3azJ0Y080bzJTeW1sdnJoTW1yM2pwYlQ5WlBNVm1SMjREUVp3eUpzc29pd1FuOEZkR3l2N2RYNnJ3T2VpQWwzNHN1eU5KcmI5dVlBeWJvNFJFbjFtX1NseVdaWjhlTW1QcFd5UUMzRw?oc=5" target="_blank" rel="noopener">State extols Chinese mining firms in Zambia - Zambia Daily Mail</a></div>
+    <div class="entry-summary">State extols Chinese mining firms in Zambia Zambia Daily Mail</div>
+    <div class="entry-meta"><span class="entry-source-tag">Zambia Daily Mail</span>2025-05-16 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBiOW8xdUdqa0dZeUpQQUxsd3d0X295YW5rYVNMTEE1M09tQVpKQ0Nyd0wxZ1R2ejBNLTFYa3JzcllZWm9ZVG5oRTV4b2xsbnkxRHltVEdaeXVnUkRXZkg3d2FhVXVubGctRTA2OUxXU0xGS3cyeFFGSQ?oc=5" target="_blank" rel="noopener">Nigeria imported N14tn Chinese goods in 2024 – NBS - Punch Newspapers</a></div>
+    <div class="entry-summary">Nigeria imported N14tn Chinese goods in 2024 – NBS Punch Newspapers</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Punch</span>2025-04-20 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNU0M4MnY3Y0x0NmhhaVZJa2xXM3l1bmVhTjFta2FEN1V2RlFnc09ucnQycHFhSlp6TVltbXBRbnNUemd0OFVyZks2M3lpc214aGQxdmN0VG5LdTBhV1o5YnF0a3RPcnRkRm8tSFZybGlsRkV4REsybGdodFM3cG5TaXRVNVE?oc=5" target="_blank" rel="noopener">ZDA, Chinese firm sign protection pact - Zambia Daily Mail</a></div>
+    <div class="entry-summary">ZDA, Chinese firm sign protection pact Zambia Daily Mail</div>
+    <div class="entry-meta"><span class="entry-source-tag">Zambia Daily Mail</span>2024-11-20 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQbngyaFgzR0pQeEJaREVnTTJydS1NWEJOT3RIbU9hX01qckt4WFRVVWUzbmNiVE83NmN0WTI2dnczMEJwTkRULUF3U1FOLVJ0a0NIVWdLUVRVWHRWZHFqUm8tRmxrOGxYekFhNDQ3MlVaWkdDZHJiUDJVb2R3TjRhUENRcEdpWXRYdWpxWmNxVlp0UzA1US11V2poUzNjLUJUMk5kMkJhWG53YmFJZXdwczFBa1A1blR5NHNEY1pR?oc=5" target="_blank" rel="noopener">ANALYSIS: Africa has much to gain from China’s more contained BRI - Premium Times Nigeria</a></div>
+    <div class="entry-summary">ANALYSIS: Africa has much to gain from China’s more contained BRI Premium Times Nigeria</div>
+    <div class="entry-meta"><span class="entry-source-tag">Premium Times</span>2024-07-24 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNTmM1alhCYU9DQXdsemJJeE9UUW5HV2w2SndLWkNzaDBNV3UxNTFkaHA4SXFrZFdScGo3djZvUDgtUFdmelVRTDFHdjFCaWlTTGVrb3VFaVV0eWszQ3YzWko4cFMzYTlCbFlyVUdpVmlRVVhkb3FidXJfazNrMVBycmFndjVCZVFWNS1OSGNMTmRyLXVGakhTRTNwRGpEdWlOYnk1WTdXSTJFdlZoaXAxQkx3RkNaeVE?oc=5" target="_blank" rel="noopener">Suspected Chinese rocket debris seen falling over village after launch, video shows - Egypt Independent</a></div>
+    <div class="entry-summary">Suspected Chinese rocket debris seen falling over village after launch, video shows Egypt Independent</div>
+    <div class="entry-meta"><span class="entry-source-tag">Egypt Independent</span>2024-06-24 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNQVJQN2VuME1KTlNveUt2dkZjeC1DWkc5ZHpBQkpmbEVWZzQ3VFlybFlFMk1relJLR2FzWTJzZXE0Nzh4eUltMld2NHNIZUVDRGhDaHNQcW9hSGRrVWJzQlQxX3BSQ2dSekl3WlU3eVQtUTB1UmlQaEk4cDMtWkZyNm5MMDhxRHNtVlE?oc=5" target="_blank" rel="noopener">Chinese firm invests $28.5m in drugs plant - Zambia Daily Mail</a></div>
+    <div class="entry-summary">Chinese firm invests $28.5m in drugs plant Zambia Daily Mail</div>
+    <div class="entry-meta"><span class="entry-source-tag">Zambia Daily Mail</span>2024-04-16 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxOczRHa0hpaGQxcTVMbUQydkVZenR5TlBWWWhPNFNZTkh6NW0zU0tQYlB3Vy04TE13ellsaHIzd2tLWGZ5ZkxFTU1WcmNLX3VwQ1Z2cE45RTllRjlCd1QyMG1uLVZ4V1YxYmVhQzhVOTdVOE9maDhQNUt2REVrQW01ZEVYb1B0ZlB0djFxcVNrejc1b09ibTQ2Sl9uNXlCVGt1c0NHdjNTUVBCTzFGLWtWU1NHLUFyZjFienV3SklCV3RaUUhfbEdxd0VTOVFENHp0SWVrR1hnY0hFQQ?oc=5" target="_blank" rel="noopener">China and Nigeria: Literature, culture and the creation of bridges of meaning, By ‘Lade Bandele - Premium Times Nigeria</a></div>
+    <div class="entry-summary">China and Nigeria: Literature, culture and the creation of bridges of meaning, By ‘Lade Bandele Premium Times Nigeria</div>
+    <div class="entry-meta"><span class="entry-source-tag">Premium Times</span>2023-12-01 08:00</div>
+  </div>
+  </div>
+  <div class="section ">
+    <div class="section-header">
+      <h2>🌎 拉丁美洲 <span class="en-label">Latin America</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPdVkydktONUR6Qjc1anJVOUduQ2lfb1FteTNlWTg5ZklVVXRKNzFsNlpXbGVFdG9PR2VYQVo2a2h5UGg5aTU5czhxcTVGRGdsWkRDeUZseGtnQjRvMl9KbTdHVWlFbDB6dkhkZnFZSXBsb2JpQU9JRnlDRTR1bEVBdHRfUGhQM3VMT1E?oc=5" target="_blank" rel="noopener">US Embassy Links Chinese Mining to Illegal Gold Digging in Costa Rica, China Calls It Unfounded - The Tico Times</a></div>
+    <div class="entry-summary">US Embassy Links Chinese Mining to Illegal Gold Digging in Costa Rica, China Calls It Unfounded The Tico Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Tico Times (CR)</span>2026-10-24 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1QZWZkQ0owWXlsa0ZmcTJVRF9NN2g0Z0phRzljdHpkb3NIZHFETWJZck1DTFB4cGNnU196c3o0d1MwUFVKNmpFTHpHckh0RHRxWmdvRldYdEcwUlJPVmRSMXNUT2p2c1FkSV9rMXhWZE03N05qQUE?oc=5" target="_blank" rel="noopener">US Warns Argentina: China Deals Won’t Bring Investment - The Rio Times</a></div>
+    <div class="entry-summary">US Warns Argentina: China Deals Won’t Bring Investment The Rio Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">Rio Times Online</span>2026-08-13 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOd2xoYjJZaVY2QmxLZFZ2UEEyQlpfUVJ5Wk1fbl9uUkUyN04xZVBkMXZ5TnJIaTVXckZQM014UUw2LUZSTE00X05ZcjNOM20wSGI1NGI3a1l1XzVsV2tCOFdJMWQzYUp4MVZQV2Zsc0UwOTJDT1ZPUFpxc1RxOTJ1WTM5T1JSRzVWWFZNYkU1OE5pazFFMFdrazJSaVV0b3RTZURYMUkxRk0wUFE0S0M2YnBn?oc=5" target="_blank" rel="noopener">Chinese Embassy rebukes US over visa threat to Argentine business leaders - Buenos Aires Herald</a></div>
+    <div class="entry-summary">Chinese Embassy rebukes US over visa threat to Argentine business leaders Buenos Aires Herald</div>
+    <div class="entry-meta"><span class="entry-source-tag">Buenos Aires Herald</span>2026-08-06 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxOUWpyaWRNbWpjUzYzVVJXZHVtb0QzcTRsOGpuT1M1QTV4SXdjamk2TndyMkdFcVMwVjhsaFd2QTBqdDdKVkJmYm1LMWNzT1F1QnIwZFNiSjktc2R3NnpQOFd0ZHJ6MGJELXpoeEpaU2xqN2ttcXdGdUZ5REJMdDdOX0lCcXFFQQ?oc=5" target="_blank" rel="noopener">Mexico launches ‘Plan China’ to lure more Chinese tourists: Friday’s mañanera recapped - Mexico News Daily</a></div>
+    <div class="entry-summary">Mexico launches ‘Plan China’ to lure more Chinese tourists: Friday’s mañanera recapped Mexico News Daily</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mexico News Daily</span>2026-05-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOMFF0VlFPMDdWQ2lHSXR3QTJlQVlDbmRzazZyZ1g4SzJNU00yTHZXVnFuSF82NmZLQ0ZsQWpzZnJSLU8xZ21MMk5uYnFIazlfWDM3TE5oZzRnbFVCZG1tbXRlcFZKZk0xMkVrdGUxQjZ1aDh0YjIzWHlHOHFmU1V6ZkZLamlkS1VOQU9QakdhcmFKN1B0UXBlYVVFTW9VV1BsclE?oc=5" target="_blank" rel="noopener">How the Andean lithium triangle can bridge the West and the East - Buenos Aires Herald</a></div>
+    <div class="entry-summary">How the Andean lithium triangle can bridge the West and the East Buenos Aires Herald</div>
+    <div class="entry-meta"><span class="entry-source-tag">Buenos Aires Herald</span>2026-05-08 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPdG1WQnpJekw3aUNjZkR0SEtsYmJFYTcxQmhraC1BLXdwbXJscU5BMzYxZFhpcjhPUmtJSkkyTnd4eUR1V2NqTWpaR1hDS2tSTGdZN1J3M1NrUW15UVZlY0QtVmtFenhVT3NzZXctcUZac3JzQWtpRV9YdTBmODVqYWxFMjBmM1VzMTVkNC1KWHV4cXBCTmU1YXgtOWNiZw?oc=5" target="_blank" rel="noopener">Panama–US tensions escalate over Chinese investment, visa threats - The Tico Times</a></div>
+    <div class="entry-summary">Panama–US tensions escalate over Chinese investment, visa threats The Tico Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Tico Times (CR)</span>2026-05-04 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQ1pLUUlYNHhQX29zMUl4WjA5aUFDZUt6ekdJS1ZZTFhDZ1RadHZGVEdjTXh3dVFnZlp5Tm8yaHJXNHdVTGhnLW55ai1EVTJjLUZYVEpwNHFYWF8tblhfQXl1d0hRMjAybnZKRzl1aHhKMlJaT0hoU29kanhCRVZEYkNsWVdYY3Q3RVVBa3YwdWJBMHotNVNfOTBTbnNIYWhoVk55VnJoRTZvdw?oc=5" target="_blank" rel="noopener">U.S. Monitors Surge in Detentions of Panama-Flagged Ships in Chinese Ports - The Tico Times</a></div>
+    <div class="entry-summary">U.S. Monitors Surge in Detentions of Panama-Flagged Ships in Chinese Ports The Tico Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Tico Times (CR)</span>2026-03-30 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQUE1tamswLS1WRWoyWFJVWVBfSnFBc0U3eVlrUnJvdUF4VmNxMDdoV1dST3NfUzktcGEtUWlONG1ja0ZyOG8wZnlzRHA2UUJ2bHVpSzR6WGRXWTJ1dURubW9FVjFNdEZhRG1SM1F5NDVNUjZjMU1tYlp2RDZ6OS12M0Z3ME1fUEZHYm1mSlNkdFROUmM0V0ljNkczMEJSeG5FdTRyWjExVWhNU2tPN09OaEtvczhSZ1VpOFJBSzZ4ZExONkhuS0JvY3JRNUs?oc=5" target="_blank" rel="noopener">Santa Cruz receives US$130 million Chinese loan to reactivate dam project - Buenos Aires Herald</a></div>
+    <div class="entry-summary">Santa Cruz receives US$130 million Chinese loan to reactivate dam project Buenos Aires Herald</div>
+    <div class="entry-meta"><span class="entry-source-tag">Buenos Aires Herald</span>2026-01-21 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPTWtfbEhXeEZQTmNFbGxRZzdhZERsMW9vNVhjajRYRjFvUFFOVTd5MlRHaTFOanljcHVrOFBMODhJYmJ0d3J1UUF6akx1NHBWZ3NtOF8tUW5STFBTendDclA1VVRZejVNZEtvVEFNUHA1T25RWEVGUnQxR3YwajRaUFBfdWUzWFdJai02TnZLZmhub1BCeFVTaQ?oc=5" target="_blank" rel="noopener">Chinese Embassy Warns Costa Rican Candidate Over Taiwan Ties - The Tico Times</a></div>
+    <div class="entry-summary">Chinese Embassy Warns Costa Rican Candidate Over Taiwan Ties The Tico Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Tico Times (CR)</span>2025-12-04 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWjRya3dkWlBXbjVGNlVuWW9LbjNSbU1lN3VWbGVvcHdfQkFuTjBhdG5SMTNPaTREbGUwRE1MZFp4QXo4NC0xa0lWTzFMV1ZQckUyTXJNMm4tVjcwNUk0aHdwc1pzOTdSMVJfLWRHQlZGYVprSzlDTGtmaFdBTElLNHpMRWZzZ1VoZHIw?oc=5" target="_blank" rel="noopener">Chinese fishing fleet raises concerns in Chile - MercoPress</a></div>
+    <div class="entry-summary">Chinese fishing fleet raises concerns in Chile MercoPress</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mercopress</span>2025-11-24 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNTTdqamlqWE9EMnoyNXFETERmWFFuMU5MUkdadjRlNmRkUWlnX1JVUGtydTFqbGpJeVdwcTB4elI0TXhFZzdkbXV4SXlCcnJIV1hnMUcxOFN4ejhtV3pxQjFVTW0zMHhvMnV3ckw0X25nTHFvOHp2NnNHVkNSYXFYX2xPY3M0Qk1BdTVIMg?oc=5" target="_blank" rel="noopener">Chinese fishing near Chilean waters on the rise? - MercoPress</a></div>
+    <div class="entry-summary">Chinese fishing near Chilean waters on the rise? MercoPress</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mercopress</span>2025-10-24 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQaXVyNE1YYXIyenJqY0VRM0dYRnZONGl0WGE2UUNfcVNtLWU0WWNLclhQbUg5UUxnRmJXdlp2ZWJpNVlRTlp3a1JXTm1iMzdocU9uQU9iemxON0RLYlZSR01SZ3dYN1VLWE9EM1hTTjNYVy1XMG00VFFjWkw2cmNIVWo2Qk5sZE5HOXlBb3pxdjltYTF5Mmh0MG05M2wyMURIV2lQUGhiOXoyZXhRN3p1dEYwcjh2YVQ2XzN2MQ?oc=5" target="_blank" rel="noopener">Hit by Chinese imports, slumping demand, Argentina’s textile industry is reeling - Buenos Aires Herald</a></div>
+    <div class="entry-summary">Hit by Chinese imports, slumping demand, Argentina’s textile industry is reeling Buenos Aires Herald</div>
+    <div class="entry-meta"><span class="entry-source-tag">Buenos Aires Herald</span>2025-10-11 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxObWwyZ3cxUG53dUc5TmJkbjFzQW9IbzJ1NVROVDdZTWxqc1NDZEQ0NDU1Z1c5dkZZQjdFaHhtMTFfS2lCUWJybnNwVzNxX2lKWDlwelNacC01dVlZUFBUNlhUVFBqVTVmR3pHR3FOd2lKaWZwVE4zVE9pbVJ2XzhfTk92WVZ1Mlk?oc=5" target="_blank" rel="noopener">Good news for Trump: Mexico is planning to raise tariffs on Chinese imports - Mexico News Daily</a></div>
+    <div class="entry-summary">Good news for Trump: Mexico is planning to raise tariffs on Chinese imports Mexico News Daily</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mexico News Daily</span>2025-08-28 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9KS21laU5zV2VxaThBNU9VQ0hRdVk0Ui1OVTVTUmpEUVpCUFhWSmZvNkV6X0ptTzdkQXpFNnZDem9rbEZQb2d6VVhmU2FjQy1Sb1B3ZEtHckF2X2dWaF9zQTJ3eFZvdXBSc2lqVE8zcWlGQ01VQWY1LUVBbTA?oc=5" target="_blank" rel="noopener">Colombia admitted to BRICS development bank - Colombia Reports</a></div>
+    <div class="entry-summary">Colombia admitted to BRICS development bank Colombia Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Colombia Reports</span>2025-06-20 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOczZ1LWI1LTFwM0h5QkdmTVZRYmVxRTRpRFB1M1ExendLUTQ0ZVFJaGtiWXYtUlAyNXBsLVBHUXhBSFdxWEtmV1VCaHhMT01QTDVLUFMxZWRRTG9JNGJXMHVFUDVwZTdBWXgxb1NvZFRSQkNwUTFlQ0JZSEtwS2VLUg?oc=5" target="_blank" rel="noopener">Colombia joins China’s Belt and Road Initiative - Colombia Reports</a></div>
+    <div class="entry-summary">Colombia joins China’s Belt and Road Initiative Colombia Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Colombia Reports</span>2025-05-14 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQU1BCSHVRVVcwQlJoa25FYVNVZjczcFBOX0RBb3puaHI3MWlIX05vbjdSSUNRdExHMVlSNlNmOVlVampGcEdxcWZRVTRvQnIzeFJHcWdmNGhFblJxeGJxT0ZuUVd0V1V6bUpXN3NHY2ZsYzFLRVZ1NUFHRDZ5RGFyLVlRdElVck5QczI3eUR3NA?oc=5" target="_blank" rel="noopener">FT: China is withholding approval for BYD’s Mexico plant due to tech concerns - Mexico News Daily</a></div>
+    <div class="entry-summary">FT: China is withholding approval for BYD’s Mexico plant due to tech concerns Mexico News Daily</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mexico News Daily</span>2025-03-19 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNbVZyRUpnZWxSWUQ2V0RnUm1EUTU3MGppQkVJcVh0ajdYTlpQTnB1cVdqTXYtN3JoclM1Qi04S3BRMkdObHNyQm44cTJZMUZTUEgxaHVENlBnRGhITXVROEtlWHBVT0J5VnlGWnNEZ1A2YkRuQ3E1SWlhcnlZclpRSnMxZFdLckpraExkUmlpTWdiNW05LXRKanhUTzNNRjNvZUhvSkFn?oc=5" target="_blank" rel="noopener">Authorities seize over 200,000 counterfeit Chinese products in Mexico City - Mexico News Daily</a></div>
+    <div class="entry-summary">Authorities seize over 200,000 counterfeit Chinese products in Mexico City Mexico News Daily</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mexico News Daily</span>2024-11-29 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQMkZ6VHNuZE84X3g2UkY5N1hyLUpyV2RlZ0JoTzhadWkwQ3dxQVVCSjhtZWtDN3U5TU9jWWFsRTMzRWo1MTM4NlFIejV5WG9LRU90cEJQYkFXc0dIcEhIWlZTeElDWWxEMHdfOE5yUW9WSnVGdTdYR2tDUFpTb3VaMXA5MFpkWU5ZVkFheG9HYS0wVV9wdkZR?oc=5" target="_blank" rel="noopener">Chinese mining company sues Colombia over paramilitary violence - Colombia Reports</a></div>
+    <div class="entry-summary">Chinese mining company sues Colombia over paramilitary violence Colombia Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Colombia Reports</span>2024-07-16 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPN2Q2clJaa3dGR3ROT2dIVy1VOGU1SEFxb2pBS210S3Q4ZWpUc2pBTzQtV2lMNzVNSmhGS2NTaUdHT252bWpkUHJaX1RwZWRPRjMyN2JwMVNvYkJBWEpGOEJBZlVGRG9RWTZkN3h2em9RN243MUt5RkN1QTV6bHZZYlJYN2dJNFN1dXNpV0R2bmNNZl9WdE1CQ3F1UXFfNlp5RlVzeHJNTnoxNEIwWnpoQktqRUlpaU96cURGcg?oc=5" target="_blank" rel="noopener">T&amp;T, China relations have deepened with Belt and Road Initiative - Trinidad Guardian</a></div>
+    <div class="entry-summary">T&amp;T, China relations have deepened with Belt and Road Initiative Trinidad Guardian</div>
+    <div class="entry-meta"><span class="entry-source-tag">Trinidad Guardian</span>2023-08-14 01:36</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNandTUmtEbVR2ZzNBemVkcS1iLVNnQUZ4NEhVNHJtaEpPalFOeDJvN1NLWEtLZVBQVXJtaXUyTklwQlNfZG1Gb1JiUEkwMDdqYTRWUkh1Qi1YZjBOVWJaVUJCUmNoazZjMGZkUWRqV1ZsZWVpbVEzclA3ZGc4NzN4YXV2SnI4STUybXlxVklnYTgwSncwRUJELTI0VzhNYlJnZ2JIeGlCMWVfaFBEWW5tQnFmdTlITVZjQXRBRm9zNkRUNTFDUlU4V9IBzgFBVV95cUxQWHBXRkRCN0FUS0xSek9sTmVPMDhnVTRSU21uaXVGN0tNMm9LV1dyNHJENHVPREdRQ1RIOVFtNVVBS3dsZ0dKWFEyR1Y1MEcwakFGeF9rX2UyRjlSOUFPbjFZUER0YTRqeVJ0T090WjYzaXZYdjR5a0Y1eHNFdVRIeE1xRGJPVEhsenNGR0t0azdtUjIxaGVCV3hjaTR6RDRKMUJCY2JELS1jTzBNMW1Iam9JV1dacGlxWjlpdVlublFZSVhaUVhscG81ZmYtdw?oc=5" target="_blank" rel="noopener">Peruvian President Pedro Castillo leaves Marxist political party that helped bring him to power - Peru Reports</a></div>
+    <div class="entry-summary">Peruvian President Pedro Castillo leaves Marxist political party that helped bring him to power Peru Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Peru Reports</span>2022-07-05 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE53Zm80el9zNVc3cUhaMWJvaEg2WHBKOEZiVEowd0QwbERsa09CR2cwZEQwUnRSa2dxYVVKRGJ4QnMwZnBGNzhfZFRZNzJGUlN5Z1E?oc=5" target="_blank" rel="noopener">Venezuela’s Maduro Secures $5bn Chinese Loan &amp; Joins Beijing’s New Silk Road Initiative - Venezuelanalysis</a></div>
+    <div class="entry-summary">Venezuela’s Maduro Secures $5bn Chinese Loan &amp; Joins Beijing’s New Silk Road Initiative Venezuelanalysis</div>
+    <div class="entry-meta"><span class="entry-source-tag">Venezuela Analysis</span>2018-09-17 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE1kWmx1YWd5RjFKV3JtV1lxRWgwSGxlcHJlYUpiYmhyamJaSHh3UkdUWFRlSlRLTndjZ1N6eUdPVkpMcXRBZXBEWmdQXzlORFlEWHB4akk0TmFzLUJwOEtQOS1SSdIBaEFVX3lxTE55UjRtYkp0SG1HMW45N0h2OFl1anpQMlliU3lWWTIydGw4OVEyU2hIaFVNMHlJdUZIRzNiRTBkcjdZZ21zeklDM2ZNcUZKeGNyRzgyOUw1MXBuUHNsWnJsOVU5X1JRNk1w?oc=5" target="_blank" rel="noopener">New British ambassador begins tenure in Peru - Peru Reports</a></div>
+    <div class="entry-summary">New British ambassador begins tenure in Peru Peru Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Peru Reports</span>2018-04-28 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1iZzNDLTJsWGVqbDJ0dk9CVmhjTWpxWmxRM2lHLWlyU05oYWhYaXZtRm1JM1JkQWVQMm05Q3Q0eEZMNWxZVjU1T255a2h2MFhPRFE?oc=5" target="_blank" rel="noopener">China’s Sinopec Sues Venezuela’s PDVSA - Venezuelanalysis</a></div>
+    <div class="entry-summary">China’s Sinopec Sues Venezuela’s PDVSA Venezuelanalysis</div>
+    <div class="entry-meta"><span class="entry-source-tag">Venezuela Analysis</span>2017-12-08 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZHhEaVREOEJzR1liU2hzQndkZnFlR0VnMVlScFo1QVJYMVBlWER4dGxRT1lpVlByMVdTTUNzRkcxOXB4RmpILXU2b0RrazVWdXJTcUFrU0JNQm1Cd3ZZclE5MjZKSjlZNmJVSFlMdU9rUHhYSWNiMzJhMkIyTUVJa3h0WmxFUGhISVJn0gGQAUFVX3lxTE9ueEQzdURoOWJKTW05c052SjM2b3BPSURSYTZjTk40M0tVbnlLQTRLcTJ2V0c1RjNBSzV6XzFKNHZjZVRCa1BadDkwS0JaU3NJdnhkdVR5eVRoNTZrMWpGYnhrd3l4VzlaZURXU2UzWmRlQi0yVW1idGtVdk4zUU5sR2VtamdqSEZpeVFUVmpLMA?oc=5" target="_blank" rel="noopener">Peru: Chinese imports devastate Lima’s garment district - Peru Reports</a></div>
+    <div class="entry-summary">Peru: Chinese imports devastate Lima’s garment district Peru Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Peru Reports</span>2016-09-20 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPRC1oTEpKN1NZNXlEMmNDLW9SLU5PSVk0V0MyTXhyZHc1bVFpbHlFWnh4UWpoQlRINE5hdDhFQVVjbmszQ2ozelZpSEhUX2FwWDdfTDBrTUx5M3Q2OEtyZXo2R1dHSGFyYTg5WWNDLUc0ZEREVHptX2hXTGhXRXA2T0lBM000c3VFellaTXAtdFnSAZYBQVVfeXFMT2s5X05DZy1XbG40X2NHaTUyX0ZLWHYzU1luWXdGWUJHNWlIMEZyNmQ1VWNkZ0hTUzdGMVhMamY2ZnJualVpaGlCWVJYaTRmN2U1cENsbDFzVWNjeWk5emQ5RGF0ckczakFBQnp5M0duc0FuY2ZwWTRlNW53Zk84N0YzM1FqZ1A0aVFQVXpWUExKX3ZjWkJR?oc=5" target="_blank" rel="noopener">Distressed Chinese firm to sell Peru’s largest fishery - Peru Reports</a></div>
+    <div class="entry-summary">Distressed Chinese firm to sell Peru’s largest fishery Peru Reports</div>
+    <div class="entry-meta"><span class="entry-source-tag">Peru Reports</span>2016-01-07 08:00</div>
+  </div>
+  </div>
+  <div class="section ">
+    <div class="section-header">
+      <h2>🔬 专项追踪 <span class="en-label">Specialist Trackers</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipgJBVV95cUxPN2piM1BVZTR0UlJlMlNxRDVNcFBEc3pDZTA2SW1ZUXZOQl9lOEdJRWNrWUhNVWhiUm1GYjFEMU53dUF6VWVUa3hVd0c3TTZ6VXo4c1NzWV9iYWdMOXNJUHFBdzR5bEZOLXZ5ZEdlSUwxa0dCT1BkMmFYY2ZGbDMwQTJTX2FaMVBmMGN6TnMzTDBweHd2TzM2N3h3T0IwdFlVUXF6N0h6LVRBcDFQQ1Q2R3hwbl84cHJHZWFvMWx2TS1JamFrMDlpRUhYeDVMU1M5TGZhQTJkWnVZbktsMkNHdWRHN1hBVFNJWUpJcWFFMXpPdjdPbmFobWNXSlBUZEZBYUlmNlFVS25Rd3ppdVJMd19JUlZzOVlfaEdRUS12eXhrZ0VuQ1E?oc=5" target="_blank" rel="noopener">Conservation news on Latin America - news - Mongabay</a></div>
+    <div class="entry-summary">Conservation news on Latin America news - Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2026-11-05 13:51</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNYUttSG1GVzI0MHlpWndjX0VnZTJ0TVIzODVvcktYMWdHeE5HNEd5Y3VPRi1Eb3c5T0tvNGZSam14aHNtUDIydVhYSXZMNENGcmhQc3dFOXluU2tyaURGbTlfRl9LUVBPWGE1NWRENnFjOUU0WjE0MWRIcFR4ZkNKZ0x2ckNna19rZndXcTAyQ0h1U2ljX2Qxak1KcnVBbUFlUWpGeXJwOXBhM2RTYnRiaktVc0tlaUsxS0pCMWFCVzlWQXVDdHlrMmVfZzg1aE9RQ0s3YXJ1ZVc5Z3VlUzZvQg?oc=5" target="_blank" rel="noopener">Cox’s Bazar court grants bail to 5 Chinese nationals, 1 Taiwanese; places them under embassy representatives’ custody - The Daily Star</a></div>
+    <div class="entry-summary">Cox’s Bazar court grants bail to 5 Chinese nationals, 1 Taiwanese; places them under embassy representatives’ custody The Daily Star</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Star (Bangladesh)</span>2026-11-04 23:32</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPRTRVM1BLdTNkWTFlQ3A4M29kZFhLUExxNHd0OTBKc0xTZ2FHbFA2SHhPYmJDOC1SaTVfSUVKRGY1QzRzMWdKNzFaZ1NkWTdIWHI1RDVkNVg1ZXMwMDFUZnk5VDdERzFCRjRqU3NwbjAtLWhpdDhUWXRsQjl3akRHVldzQTd4U2ZuRlhFN2xwU0stYlliakpPOWNWSlpMMmp6dG9xaVJ2aC0xdGFGMlMyVHJoMXJFZVFnMnNOaV9vVUN5anR0STBqbVBfQjBMQQ?oc=5" target="_blank" rel="noopener">PM seeks China&#x27;s help on Rohingya crisis; Liu to brief Xi on Dhaka&#x27;s concerns - The Daily Star</a></div>
+    <div class="entry-summary">PM seeks China&#x27;s help on Rohingya crisis; Liu to brief Xi on Dhaka&#x27;s concerns The Daily Star</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Star (Bangladesh)</span>2026-11-04 08:09</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeVJheG9ub3lmOFJzdTVVbDZ2elk5QnE4NDc4OFFIUFJ4RkNjdG5TY2h2WFRaZ2xmeTN1a2xtQzk2NHZST0hIWmhGb1JXSHBUVzFyRlVXMHFGNTRWc2ZRbXZiQTRNSVpaMTFfX25TYTBNblkwR0VOOGw0bFhCanh4WmRtM2I4M054RXZ3?oc=5" target="_blank" rel="noopener">Thailand Raises Taxes on Imported EVs as Local Carmakers Struggle With Chinese Competition - The China-Global South Project</a></div>
+    <div class="entry-summary">Thailand Raises Taxes on Imported EVs as Local Carmakers Struggle With Chinese Competition The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-11-03 07:13</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPZERKTHdXOW55b21hbDA1Z1NsWVg3bTFPTkxrRjdxNFlObzMzRkJoY19kN3dFNFAydnB2ZUVVY2lneC03XzQ1aW15SlJQMDd0T013MzVtSnlwcTFfNGdpQlZCQU1TTkdudlp2Mllxc2hlbG9MS19nekdVbDFQbTM4OVRjVldRZUtEb09Gcg?oc=5" target="_blank" rel="noopener">PHOTO ESSAY: Chinese Microdramas Hook Indonesian Viewers and Push Dubbing Studios to Their Limits - The China-Global South Project</a></div>
+    <div class="entry-summary">PHOTO ESSAY: Chinese Microdramas Hook Indonesian Viewers and Push Dubbing Studios to Their Limits The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-11-03 02:15</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBBeVRIX3o2R3E5aTBGS1RFNTdPOGgzaENzZ19tcHotZEVUeG92Z19nSDJ0TC1qY0FlYlRqTXM4dlIySkdCdHJJbGpaYU5OQk84eVZQNUZqNUJUNVF1WFpfZ0tINWUteTE5?oc=5" target="_blank" rel="noopener">How the West is losing Africa China is taking advantage of Guinea’s rare earths - UnHerd</a></div>
+    <div class="entry-summary">How the West is losing Africa China is taking advantage of Guinea’s rare earths UnHerd</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2026-11-03 00:02</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNOUdEQjQ1dUpxTFZ5RVgxdDlybGhsWFRsZkw5Z0llRnNHZTl5UGg4dDZpTm5lYnIyVlUyV3hhaWk1Q1BuMEZGYTdpRE4zXzdjYkhMSEt2eldjUTVzUzBCdTJnT1JKOEZwNUlCbnpLV3k4aWZ6VHVHNHNHb2k4dzZKYw?oc=5" target="_blank" rel="noopener">China’s Xi Says Middle East Should Not Become Battleground for Great Power Rivalry - The China-Global South Project</a></div>
+    <div class="entry-summary">China’s Xi Says Middle East Should Not Become Battleground for Great Power Rivalry The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-11-02 07:04</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNaE1TTS1nVVY2QWwxU1d4by02bEJ1QVl6ZzY1ajhiTURVWW1menVJZDhmN0JJNVlSX09TTHR6RHc3RlJUNlVBNUtEbFZmbWVPVGRZRUd4VXZkWFNhcVdNdnlrbWNGTTZSSVd3WlQweGZycmJNeWdVeXIxMGdYQlZQUw?oc=5" target="_blank" rel="noopener">Pakistan Closed Its Skies to Taiwan. Chinese Commentators Hope Others Follow - The China-Global South Project</a></div>
+    <div class="entry-summary">Pakistan Closed Its Skies to Taiwan. Chinese Commentators Hope Others Follow The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-11-02 05:03</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOMnI4N2FDR21iY0lzZUZ6cFdaeVJzeVNleGgwQVZpaGJNLUVmUUQ0cnEyQ0RZVzRSalVaNGtUcEJ4MFJZRUVaSUtTZ2JTTXhhY0VqYUFTSGNmdDV1bUdJSkk5MnNiS0otYXZHOWJQNTh1NnlGZmhuVXBMVnI0dHA0MG1qc2dkQXNrY2FPanhWemxFNUs1Y2hUcHpaZGk0UUZIUDcySkI3N211SllZd21LcXVB0gG3AUFVX3lxTE9iWmJTTXhxWEFtS3ZvMFhiWjZGalVsbTFQcmVWVE5OSXk5dnp1TGgtd294V3hBeFhyRk8yX0E3RkF6bVVLT05kZVBCTVNVQW43Y1FCMm1aOVJYdDNPWFduZWhIdk0yUU5IQWVxS0hTOWFhemJIby1xbjQ2NmRYZE9naWdnQ25rOEJtdXZFNnRULWctOGtYckl1TGFQbTRPeXJDcE1JemNOQ2lTNlo1VmFoZVE3ZlB5Zw?oc=5" target="_blank" rel="noopener">Britain&#x27;s Dart claims first WTA singles title in Guangzhou | Gulf Times - Gulf Times</a></div>
+    <div class="entry-summary">Britain&#x27;s Dart claims first WTA singles title in Guangzhou | Gulf Times Gulf Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">Gulf Times</span>2026-10-31 21:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOcnBiWENCVUlNV0FZQmJhVHZkTE9LTmR1a3Raa2d4YzAxZVVhVWJMSWpxYXZuY2VfUFNlSGZsdlZTaDhrQ0JfZk1mQWdPZ3ZxSVRLeDJKa1RMRHlyWTdmbXhKMjU0cXFmUDAzaFNZcFFaSVUwQzd6NzI5TU9EejBGM3Voemx0Q3pzdGt5WVNB?oc=5" target="_blank" rel="noopener">Chinese Firms Exit Kenya Rare Earths Race as U.S. Companies Move In - The China-Global South Project</a></div>
+    <div class="entry-summary">Chinese Firms Exit Kenya Rare Earths Race as U.S. Companies Move In The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-10-31 04:35</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNVTdMUUcwdkx2OGhOeVBGYXRPZmhSYWRxQUNqN1BwbWFfXzIydXg0Tkx2SmlVNUdLUmRJTU1fa2Q0RXROWkNyMXJmVENpOHJQaldFa1ZvbnN5ZmtPRjlkRjRaZzAwQzRoV2dlbnV2RWtRUDVhQjhlazZwdUpxQ2tqMnZubkpMZ09jTTdFeHJEelNZdHMzZ0ZzTl9wb25TUQ?oc=5" target="_blank" rel="noopener">China’s Factory Activity Returns to Contraction in October - The China-Global South Project</a></div>
+    <div class="entry-summary">China’s Factory Activity Returns to Contraction in October The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-10-31 03:35</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNNUlKRzAtZ0drZTdQbXZFVEtZdEd1NDhwUm9TZHU0Tm5yNnl1NVNNUUtZZEgyRzl5Xy1Xa2Jsb1UybjNhQ1VQbEt1d2lvZmdxVDZTZnktclVPRVc4NmQwaHpxZXU4YjFVUmNBOF9vS2xIS0RGT29iX0tNVzR6Ti14cmg1N0hKVkJDNlVmVUx5X3BqemZuWVR1MlgtM0VIeFc1czRmb0stMXdlV2t4ZHFMbUliU1Z4akdjMEpRUEJUb3ROWm9J?oc=5" target="_blank" rel="noopener">US Defense Department designates China’s Confucius Institutes a national security threat - Arab News</a></div>
+    <div class="entry-summary">US Defense Department designates China’s Confucius Institutes a national security threat Arab News</div>
+    <div class="entry-meta"><span class="entry-source-tag">Arab News</span>2026-10-23 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxORU8wTUxhM0NLc21sMjAtZFJaUUppc3ItOF9GbEJxbTJCV3ZBa0VUVlRocWZicGZYQmYydHkta3lZbnpRZzNkWjZRdTFCM1Foall1SmRCd3hoR0YxRVNJM3FET3VieUFEem96ZXRkRGZGb2R2TmJ1eVplWkVxQWo2Rmw0VDNOUFE3bzRzS3VtVTZmR29qb3NveFpxWUlJUFh3TzZFblBtYTNha0xFejlTb0h4WmRJTVVaSlpobDBsYzl1ZnVJMEpkS0JpU0JPNjJHMF9V0gHaAUFVX3lxTE8wY01kM3B4aExCQm01Q0RHSVRETHdod19palZHTlNTblA3RlhwZGFwQWpQWEtjYVVhRUdtTUM1TVNqNmxFSTRZbVh5Sk1heUhTOXVoRVF4SHBXYXZmVnpJcWhOWkxRbXNRemx5WGJDcXRnRHprOS1vM2xRYWxka09TWDVGZU04QXBRUlpNczhHd3N0dWpOY3VnUkZaLWViRGZ1UHdXVjJSbXB2LV9nRDgxa1RUY2ZpRkVORjhlUDdNbFVwN0dQQ0lKdzR6XzRjaGxuQmVIMVRST0FB?oc=5" target="_blank" rel="noopener">Chinese Navy says U.S. ship near Sabina Shoal jeopardised maritime security - The Hindu</a></div>
+    <div class="entry-summary">Chinese Navy says U.S. ship near Sabina Shoal jeopardised maritime security The Hindu</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Hindu</span>2026-10-20 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNRnpYWXI5enlDcjV1UXlWNl82U2hoWVpZdlQzazBJdFM4OXVzbmFpSGY3aHgzRk5scE1ydS1uc0sxbHU1UUYzR2x2c1U0NWtpdVVJelFGbjJRcXpObk9jT0J2aW5ocmQwRVJ2dHp4blF5eDJIZ3RCRTIzdTNCR0tIUTEwemlGNFVqOUl1Wk0wVjZrUF9LZGtUQ2lxYnlzTUxmTy1lVURyVjJKNzlscGtxeS1JRWJoUUY0blZNNQ?oc=5" target="_blank" rel="noopener">Gucci introduces ‘Made in China’ luxury footwear in push to reach middle-class buyers - Images Dawn</a></div>
+    <div class="entry-summary">Gucci introduces ‘Made in China’ luxury footwear in push to reach middle-class buyers Images Dawn</div>
+    <div class="entry-meta"><span class="entry-source-tag">Dawn (Pakistan)</span>2026-09-25 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNOG5NLUx3VUtJZFE5U2txME0tdDlrUUlHUTJpQXhkbk50c0xKTHV6aTFnRU9YYUJlSXQ1dkNhaWRCRV9Tdk1GNWs5Nk85UHE4c0lIb1pnN0haSjNyWXFjQkRmTUdybkVOdEJhcjVTUWJ2MXRESDk1Rjd1eWhKLVo0ZmFpdzVNcUpRU0FIS3c2bkRDdTdsRXlRaTVVdUh4bDJESWE0MVpSZHAwYXBLRW40WNIBtgFBVV95cUxPMGFrVnE4a3h2eXY3aVRjSlY0ZnBVV3JlbnNRekp3b3JNU0U1UUpScGlsWXdnajg1RUNDT2g1Z3c2YlZ1dVhSZWhUR1RRM1A1ZFJJNElhNmJ6eTk4MUh6NkdBTnJ5WXYyYTZfZUlTTzB1d2FuLWFXbnhFdUd0ajVqSzkwRjlFR2NPVmVNR29HZWxRcTR1TlpxMExIYWVNaE92bjRRbmkzTDZuY1V0ZHU4UGJkUk5qZw?oc=5" target="_blank" rel="noopener">‘Plastic pollution hotspots’ spawn a public health crisis across Latin America - news - Mongabay</a></div>
+    <div class="entry-summary">‘Plastic pollution hotspots’ spawn a public health crisis across Latin America news - Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2026-09-08 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNdHdZYkQwX29lUVRtQmVUTG9BbzRIQjVSaTRpQmtHOUhIalRud0JuNFk4amhwakI0MTBjVXY3TFQzaDZYbDBlblYtbUMxdkVaaW83a29RcUR1VlFmOHYwV0QzNWFMbFlYMVl5aFhEVEZfeDQwMFQwZUs5TEllMjFnNkVpZ2NmcDhiNEVvRnRfUFh0MU9xUVHSAZsBQVVfeXFMT19JQUpscExUTXhmekxhVkR0NzdrV1J3X2ZPdS1nTVhhYmduaV9JSm9yTFJ6UV9KQkdpRDJlWjlNX3FrWTR2eGk3UGxnZENBbHY3Q3NFb1I4eWRUc2MyT3IxUnRWOHpXdkY0aE1nUWFjV0NHMG9ZdFdaSV9ndkhJR2xyclBIZVFlY1lQUkhqeW14UzFldS1MZ2VBSWs?oc=5" target="_blank" rel="noopener">Why is Amazonian wildlife turning up at a Bangkok market? - news - Mongabay</a></div>
+    <div class="entry-summary">Why is Amazonian wildlife turning up at a Bangkok market? news - Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2026-09-08 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNYTFxUHNOdjk1Mm9iSTQwVTl3NTN3OGVxYWNGeTlHbWpzeUNvb1VfTkFibGxmZlVWMWJ2WExyM0tQMHhtbjlSLXA3Nm5zUlVxNjVhWnA3TGZabngyRlJ3Q25ZMUtMZ3BScDQ0SmdHRXZtOEhxUWIzLWpMbXlPLURuNmNIa3QxQjc0TW1pZmdWYlJCcllGd0ZGdTJMb9IBogFBVV95cUxOQUxBMWVSZGJIX3FoTkNvZTlETThYSFhNVVBlS0l6UnNydUE4Q0hlMGhVNmhlUklsanM5cjl3X2VHR1hweGUycnFacG1USTl4STZybTZabVNQZUtrSEVLcTJBMUhfT2ZHc2dZYXA1d0lPM0RxYU1BRkxBXzRNdHRhQUJTdkRsMWFoSzVuemNpMGYwOWZ0RzBQWmdmWmJLTHgwVnc?oc=5" target="_blank" rel="noopener">How Beijing innovates: Lessons from China’s market-state hybrid model - The Hindu</a></div>
+    <div class="entry-summary">How Beijing innovates: Lessons from China’s market-state hybrid model The Hindu</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Hindu</span>2026-08-07 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxONTdMS2hOb2Y3Rzg4R3lneFlQLVJoTm1uQUl5c3BiY3NEQnpRQ0IyUmExeGtqRUJzLXNmLUs0RERFVTZYNDJMWVVnZi0tM18tb0xOSTdMVzJMNUhMN2NOMkF0eV82SlQ5TEI2dnp1NVVUX1BBVmhCaTVBOFJMeHI0akdRMDhFTndzZTBLUWlrRnVkY2tzTGEtNDBSUFhXcXR5LW41Y1hmZzhIbUVxUGRiRHlR0gG3AUFVX3lxTE1RMTRwaTFmTXdOSGpQU0ZXZWtUU1A2RmxkcVdIT29vNUFic3hNQnZ6TmQwM2pGTldzWjdpd3M2SEhuTngwd2dUcFRJV1VnZkhUbmoxaVZBbThVaEc3bGN6WlJLczVEeXZTR2N5NXE1YmhEM1BmQzJqSVlFWV9BV1FEekdxTDJTMnNtS0U4WDQyZl96WFk3U3JXdUEwaXkxWjBmZU1kTEVyTG5Rb2tkUnJGTGQ5QUtoUQ?oc=5" target="_blank" rel="noopener">Peru-Brazil Bioceanic Railway brings too much risk to the Amazon, experts warn - news - Mongabay</a></div>
+    <div class="entry-summary">Peru-Brazil Bioceanic Railway brings too much risk to the Amazon, experts warn news - Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2026-03-31 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPSWg4WkRWUjZUWDBwRjFEX29IYWNKUGxCam9aSEJBM0Ywanl6N010cnF3WWhEU0xKTUYtQmhfUEVUS0pkcTA2ZWNjWFhvWVVMOHhtc3NqVXV3WGY4VFZ6Uk5OYlNvTlpJREtfQzJKbWlVSGVsSmswUFc4Zzl6MjdRUlRrR2F3Y2lmcmI4Z0hZb3hVVmw5TWc3QlY2aURELTdLc2xyLWJHS3p4ZlFCNnFzNDk2bljSAboBQVVfeXFMUGxlUUhNeVd5YWJpQ3ZqR0YwZksxYnlmUFM3d0VvQW1YdENsRWpTcjdKYkwwRUhseWhpMTBzbnBrM21VX25iajFRQVZOaUxXMzdZcTY4WjBlWW1MYlloWDJEYV9tTnFKcS16UU1OYXZnUHV5R2lyZkNzVmJGaWUwZFdzUHQ2TFZkamZraWpCUVRVbTBIZjRJN2VqN2ZNVjAzNWFNWFlpOE9JZ0FPUHliRFFER250X2dKWDVB?oc=5" target="_blank" rel="noopener">Asia now hub of growing illegal wildlife trade across 100+ countries, study shows - Mongabay</a></div>
+    <div class="entry-summary">Asia now hub of growing illegal wildlife trade across 100+ countries, study shows Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2026-03-30 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNzBUTU5kUXoxN3NyNUt2UWVsdndyQW5wWk1wQmRWbzBqMHYwaW9PN1R2UG5mV2o5cVo5WjBwWHR1OEtjNmxleXVJd2FtRFMwVEtSVE90bHMycUN2eXZuSHZmcmVWbW9kRTVxRDY1bVFxZTFqNXlxdXZaZFc1czQzQUd2aXdkUzRxMVNtVkFRRGdsTTJHNHR0cTBqRUlJWnAwS2x4RHNnajB4dw?oc=5" target="_blank" rel="noopener">Introduction | China&#x27;s Belt and Road: Implications for the United States - Council on Foreign Relations</a></div>
+    <div class="entry-summary">Introduction | China&#x27;s Belt and Road: Implications for the United States Council on Foreign Relations</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2026-01-29 16:18</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNSjkzY2dLUE9lcGd2ZVpraFZxTzlQU19mcTBUWVFMZ215WEpRNnhibVpoNmpFRWg0RGV3azl3M2JEOU1sNVV0Ul9VV1l3b3hOM1c1MmZrVzdUaTctVmlWNWhldTM2ZWJYMVBaeUU3VmJTN2VuVVRMeHE4RFAwYy1idzN5SmVrVkVfSmMzLTBJNXpRVWxpRlV0WW1aSjRhblRDZDJNeQ?oc=5" target="_blank" rel="noopener">Findings | China&#x27;s Belt and Road: Implications for the United States - Council on Foreign Relations</a></div>
+    <div class="entry-summary">Findings | China&#x27;s Belt and Road: Implications for the United States Council on Foreign Relations</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2026-01-29 03:02</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMncwUGtXaDUySlZFRW9NYzlUcUlqUWh4XzlLS3ByMW9zR1RjYkZveGNWZHlXblBUN09aRHM5U0pnU2JDREV5RkpqVWFGSVp3ZDc1THNLSFpITWhmNGxqUXl6UUxEdTdmZ00tei04NGxpZ2FkZGdMZXRLdHlLWFhWSzhsSUZGS1EzckczUE9oZDVUdnZoaDhxOTZKZVJiZ1Jyb1otMkFxTlBYUdIBsAFBVV95cUxOMFpibWRMRG13WVd4eE91Skd6c04xY3Q0em12RVEwbFVvMV9jblVZcnJzZGFrMkoyYV9zVTNmZXNIb2VjSjB4VGVwcjJJQy1LSXhOOHFZWjNyMTE5YTF0YjJCTlp3NTRQUEg5SVRaLXVYZ0xDU3pGdFlXQ0czRFVncVRKWGhfT2dIdzNjeHRuc3dUWWlqaUUxRUQ0MWZHQWNqTG5uS3ZnQlRHT0lPTkxObQ?oc=5" target="_blank" rel="noopener">Hubris and caution — China’s posture as 2026 begins - The Hindu</a></div>
+    <div class="entry-summary">Hubris and caution — China’s posture as 2026 begins The Hindu</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Hindu</span>2026-01-05 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPdjdTQThjaGxMUVRCdlFVVEFLanlWZVIxYVB2bm0ydlZtaU1UcW4tTzU2bHc3YkRtQ0R3MFVhc19YV3hpeW8wTV9ZQlV2bjhfSkxhQUNoc25GSk1sNkhhb092bEs2WGUyZWtuN0F2TFBUbEVYVjhaZ0Y2RU1tVGZlMjM4S0VaTkRYanlIbUVTdkY2U290QUhlT1ZMQjBtYUIxclBwRnhhVWxwNWdqZC1iSlRn0gG3AUFVX3lxTE1GYy1fdGVFTDIxQmtTaUwyN0VJc3ptVExTS0RzT29DendMQnc3VnFnZUNlUWdrNDRkZEFCSkJUZklTSzc3MC1jNlpyMjlOWVQ1Rk1QbXVCRjVKSlhDRHNkMEF1Q0pNWWMxYkhESDVaM0l1SEFQU0ptcXpHQnAzZmhKM1AxOGtSYXByeHJMdUxjekU5VnpHU0hlQlp2d0ZtUW53R1BOWm10VGJWS0RZTURLYm1BLWV5Yw?oc=5" target="_blank" rel="noopener">Latin America in 2025: Conservation promises collide with crime and extraction - news - Mongabay</a></div>
+    <div class="entry-summary">Latin America in 2025: Conservation promises collide with crime and extraction news - Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2025-12-31 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPWUNVQ1RmXzd6WUI3VGJ0OXVETUFpdkgyajhIdE5IVGFTVzNpY2xpTUFoU3hrRjZMVkJOd0VDNXZzOWwyYVFteGpJWmJPdGFBSmRSdEJFZXFKTmtiaWNzT0JoYlVKZkNuajB5ZWcxNGpuWmFDSnFMcFQtb0FmVUN6Ul94OUpPSGM2SEpqZUFPZUpMNV9YWXlxWmRfQ2g5Z2dxdEF0ZkNfaHh1YUdqRHBvYno4YnFiUTc0MEZ6c1hLdU56UW13N2cwcWxtYw?oc=5" target="_blank" rel="noopener">Italy’s policy on China: The Belt and Road gamble and its aftermath - Atlantic Council</a></div>
+    <div class="entry-summary">Italy’s policy on China: The Belt and Road gamble and its aftermath Atlantic Council</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2025-11-10 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQelV6YkdkNDVFbmtIMGFyYlZ0YWhQVlJjOFl3SzFCTWwxM0dyQjJuM1FSY01ORllvQ0tyUmJkUzVCYnZGVGpqR0JpR1N6cUZqaFpSMHgtbjhTdldJU29nOTg3Y1VIbVZocUdBdjlxQXpjVUNnZ2d6RWk3d29wVEJzLQ?oc=5" target="_blank" rel="noopener">China’s New Playbook for Latin America - Americas Quarterly</a></div>
+    <div class="entry-summary">China’s New Playbook for Latin America Americas Quarterly</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2025-10-14 07:00</div>
+  </div>
+  </div>
+  <div class="section col-highlight">
+    <div class="section-header">
+      <h2>🔥 重点追踪 <span class="en-label">China's Local Footprint</span></h2>
+    </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOY1BQWXhNVVlwRGNfcmpfY1doOWNUdGZzcUt4Z1phaEozR0szblNDZDVwTEFvQkhoSzdGVmtydVJZLVF3Q2N6T2g2U2NzTjlNRmM5SmRMdzk3bWkxcTVLWVRQMG1Gbl9Wd01WNmxkUmNRdTQ2d25hXzVienJQTzFDbVRyaFFNQk02am5zY2RHX3lrZ2ZjRzJScG90MEFSRGZORms0Yw?oc=5" target="_blank" rel="noopener">Daily Mail retains seat on belt and road news network council - Zambia Daily Mail</a></div>
+    <div class="entry-summary">Daily Mail retains seat on belt and road news network council Zambia Daily Mail</div>
+    <div class="entry-meta"><span class="entry-source-tag">Zambia Daily Mail</span>2026-11-05 08:04</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPRTRVM1BLdTNkWTFlQ3A4M29kZFhLUExxNHd0OTBKc0xTZ2FHbFA2SHhPYmJDOC1SaTVfSUVKRGY1QzRzMWdKNzFaZ1NkWTdIWHI1RDVkNVg1ZXMwMDFUZnk5VDdERzFCRjRqU3NwbjAtLWhpdDhUWXRsQjl3akRHVldzQTd4U2ZuRlhFN2xwU0stYlliakpPOWNWSlpMMmp6dG9xaVJ2aC0xdGFGMlMyVHJoMXJFZVFnMnNOaV9vVUN5anR0STBqbVBfQjBMQQ?oc=5" target="_blank" rel="noopener">PM seeks China&#x27;s help on Rohingya crisis; Liu to brief Xi on Dhaka&#x27;s concerns - The Daily Star</a></div>
+    <div class="entry-summary">PM seeks China&#x27;s help on Rohingya crisis; Liu to brief Xi on Dhaka&#x27;s concerns The Daily Star</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Star (Bangladesh)</span>2026-11-04 08:09</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOMnI4N2FDR21iY0lzZUZ6cFdaeVJzeVNleGgwQVZpaGJNLUVmUUQ0cnEyQ0RZVzRSalVaNGtUcEJ4MFJZRUVaSUtTZ2JTTXhhY0VqYUFTSGNmdDV1bUdJSkk5MnNiS0otYXZHOWJQNTh1NnlGZmhuVXBMVnI0dHA0MG1qc2dkQXNrY2FPanhWemxFNUs1Y2hUcHpaZGk0UUZIUDcySkI3N211SllZd21LcXVB0gG3AUFVX3lxTE9iWmJTTXhxWEFtS3ZvMFhiWjZGalVsbTFQcmVWVE5OSXk5dnp1TGgtd294V3hBeFhyRk8yX0E3RkF6bVVLT05kZVBCTVNVQW43Y1FCMm1aOVJYdDNPWFduZWhIdk0yUU5IQWVxS0hTOWFhemJIby1xbjQ2NmRYZE9naWdnQ25rOEJtdXZFNnRULWctOGtYckl1TGFQbTRPeXJDcE1JemNOQ2lTNlo1VmFoZVE3ZlB5Zw?oc=5" target="_blank" rel="noopener">Britain&#x27;s Dart claims first WTA singles title in Guangzhou | Gulf Times - Gulf Times</a></div>
+    <div class="entry-summary">Britain&#x27;s Dart claims first WTA singles title in Guangzhou | Gulf Times Gulf Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">Gulf Times</span>2026-10-31 21:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPREl4Vzczcnh2SVc0eGI0ZThtUHF2cTRfVjBNZ3ltS1FkWVAtM0d0UGdZWk9ISzBwSjl2RXNwLVotQ29xT0hXbnVfeUZheGpjSzM5Tl9MMVByX3pjOXh4UW9jc1VnY3Ntc2NkWEUxcHNIQ0Z1cHdkOFBkWkt5bTFoWWVjQkl5d3RvaUZNVg?oc=5" target="_blank" rel="noopener">China condemns US designation of Confucius Institutes as threat - Punch Newspapers</a></div>
+    <div class="entry-summary">China condemns US designation of Confucius Institutes as threat Punch Newspapers</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Punch</span>2026-10-26 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOUVJFUWt3VUZxSVE2eXpmVHNsTjhKdDB3NmtkelJQaVgtdnVMUzBDNUFEUUkzUVc4cEdkaUpJOXppZ05iaDBLbHJ3aVBFZ1VWTkxuRVVEVFJvYjNyX3ZWWDFOMDNRQ0VZLU1OUVZLaVdKc1NBSXp4WmRISnBVaUNIMV9TQmFTTTEyUGlDSGtkMDV2NTdUV2NKNXNxTFYwMk14?oc=5" target="_blank" rel="noopener">North Korea’s Kim crosses new bridge into China as trade ties warm - Egypt Independent</a></div>
+    <div class="entry-summary">North Korea’s Kim crosses new bridge into China as trade ties warm Egypt Independent</div>
+    <div class="entry-meta"><span class="entry-source-tag">Egypt Independent</span>2026-10-25 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPdVkydktONUR6Qjc1anJVOUduQ2lfb1FteTNlWTg5ZklVVXRKNzFsNlpXbGVFdG9PR2VYQVo2a2h5UGg5aTU5czhxcTVGRGdsWkRDeUZseGtnQjRvMl9KbTdHVWlFbDB6dkhkZnFZSXBsb2JpQU9JRnlDRTR1bEVBdHRfUGhQM3VMT1E?oc=5" target="_blank" rel="noopener">US Embassy Links Chinese Mining to Illegal Gold Digging in Costa Rica, China Calls It Unfounded - The Tico Times</a></div>
+    <div class="entry-summary">US Embassy Links Chinese Mining to Illegal Gold Digging in Costa Rica, China Calls It Unfounded The Tico Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Tico Times (CR)</span>2026-10-24 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNNUlKRzAtZ0drZTdQbXZFVEtZdEd1NDhwUm9TZHU0Tm5yNnl1NVNNUUtZZEgyRzl5Xy1Xa2Jsb1UybjNhQ1VQbEt1d2lvZmdxVDZTZnktclVPRVc4NmQwaHpxZXU4YjFVUmNBOF9vS2xIS0RGT29iX0tNVzR6Ti14cmg1N0hKVkJDNlVmVUx5X3BqemZuWVR1MlgtM0VIeFc1czRmb0stMXdlV2t4ZHFMbUliU1Z4akdjMEpRUEJUb3ROWm9J?oc=5" target="_blank" rel="noopener">US Defense Department designates China’s Confucius Institutes a national security threat - Arab News</a></div>
+    <div class="entry-summary">US Defense Department designates China’s Confucius Institutes a national security threat Arab News</div>
+    <div class="entry-meta"><span class="entry-source-tag">Arab News</span>2026-10-23 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPSFhPOHN5RDd4cHNfNW1NUFdhejNWbERWdW16WDl3LUlZNTY1cUhiSDZHY1AyN0s0TTRUQy1HVFk5RnEwT3BWNEhUUks2d0J1OUJPWFZsY1Q2dFNWWkRITncwa05kZDBBaGtuUDcxbzZaU1dNa0RmTnZ6MW01TkdzSUZVNW1pU3FQNEc4d1h2a3M1YkRtWUktRG5oQURxQWRvUTdXdmFXczhqb09LVWllV0pLWXlkUktCSTJDMXhSblJQbzBJWW84ZUhkZGt4MXVqZ2lj?oc=5" target="_blank" rel="noopener">Trucks line up as long-delayed China-North Korea bridge officially opens - The Citizen</a></div>
+    <div class="entry-summary">Trucks line up as long-delayed China-North Korea bridge officially opens The Citizen</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Citizen (TZ)</span>2026-10-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPbTZ0MWYwcVpIbjhLcHNQVWJlTnlyRnY3SVVfNzA1cXhiUHptOUI5cUtIZFRQNDdvWjVvczB5cDBRcmFDc1hxVlpNXzdGTnFXdVY0R3RnMm5UM3QzUXlvU3llRGVzWDlTTGZETjF0SHVpNzlnWHRYWl81cXNEOExtVGVkTmZqMnhFZE0wUG1rT0plZTdVRUlYTlQtSnlOQ3ZhR0RjYlpfTkNfNzJXU0E3S3RIOER3UUw4UVc4SnhzWQ?oc=5" target="_blank" rel="noopener">North Korea and China open new bridge after 12-year delay - Graphic Online</a></div>
+    <div class="entry-summary">North Korea and China open new bridge after 12-year delay Graphic Online</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Graphic</span>2026-10-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUJZVHNPbDRHWWxTVUlzcEVSSHNZc2RUTTNWb2xvVWFOWnNMNWx0MTBKU3BoYlZNY0pYcDhMTkFvSDE1XzV1TU90TGg0REs4ZWRsV0RraEFjcWZyQlRLNm8wVHZhRU9XeTZQbk5BZUpfSm5PZUJ6YUwtVnlnSDFpRGprNEJPZnNwN3FiR3dpWQ?oc=5" target="_blank" rel="noopener">Zijin’s Allied Gold Retreat Signals a Tougher Era for Chinese Mining Companies - The China-Global South Project</a></div>
+    <div class="entry-summary">Zijin’s Allied Gold Retreat Signals a Tougher Era for Chinese Mining Companies The China-Global South Project</div>
+    <div class="entry-meta"><span class="entry-source-tag">China-Global South Project</span>2026-09-04 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1QZWZkQ0owWXlsa0ZmcTJVRF9NN2g0Z0phRzljdHpkb3NIZHFETWJZck1DTFB4cGNnU196c3o0d1MwUFVKNmpFTHpHckh0RHRxWmdvRldYdEcwUlJPVmRSMXNUT2p2c1FkSV9rMXhWZE03N05qQUE?oc=5" target="_blank" rel="noopener">US Warns Argentina: China Deals Won’t Bring Investment - The Rio Times</a></div>
+    <div class="entry-summary">US Warns Argentina: China Deals Won’t Bring Investment The Rio Times</div>
+    <div class="entry-meta"><span class="entry-source-tag">Rio Times Online</span>2026-08-13 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNYTFxUHNOdjk1Mm9iSTQwVTl3NTN3OGVxYWNGeTlHbWpzeUNvb1VfTkFibGxmZlVWMWJ2WExyM0tQMHhtbjlSLXA3Nm5zUlVxNjVhWnA3TGZabngyRlJ3Q25ZMUtMZ3BScDQ0SmdHRXZtOEhxUWIzLWpMbXlPLURuNmNIa3QxQjc0TW1pZmdWYlJCcllGd0ZGdTJMb9IBogFBVV95cUxOQUxBMWVSZGJIX3FoTkNvZTlETThYSFhNVVBlS0l6UnNydUE4Q0hlMGhVNmhlUklsanM5cjl3X2VHR1hweGUycnFacG1USTl4STZybTZabVNQZUtrSEVLcTJBMUhfT2ZHc2dZYXA1d0lPM0RxYU1BRkxBXzRNdHRhQUJTdkRsMWFoSzVuemNpMGYwOWZ0RzBQWmdmWmJLTHgwVnc?oc=5" target="_blank" rel="noopener">How Beijing innovates: Lessons from China’s market-state hybrid model - The Hindu</a></div>
+    <div class="entry-summary">How Beijing innovates: Lessons from China’s market-state hybrid model The Hindu</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Hindu</span>2026-08-07 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMEp2N25aQXZfVTg1RXRVYUNYQmlpQlNzYmtqeFZ2OElRQ0I4TlVHSUh2S0NSZWF4QVNRbDByUmptOV9Hb2RQd1I0OEh5QWFFV0RtbEkzS09ZMUlGb3RSSDZRSUpEZmNmejhkVlNkaFI3OFo4T080OXgtSXhFbERwa0JfLUMtSDJVZ29iU1dtdzlQVjgtMDROUmdLVll4dS1Sa3U1RFg2YXlWOTRGWXhrZHk0ay1pUXMyQzY0M2pmSTdYZGMwdmZPazdoOU1aaTk2dy1R?oc=5" target="_blank" rel="noopener">CR5, Confucius Institute hold educational outreach to deepen Ghana-China ties - Graphic Online</a></div>
+    <div class="entry-summary">CR5, Confucius Institute hold educational outreach to deepen Ghana-China ties Graphic Online</div>
+    <div class="entry-meta"><span class="entry-source-tag">Daily Graphic</span>2026-07-15 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNV2R3QVZtQmd1M3R1RW0xejA4cmdpbWVLNmNyZDc2UXF1eENLVlcxSXNLSzRnZUQ0QnkyQVhBTjZnVmFWQWFTWFVUTnVmdmRNeDY4cks0QmJ2YjhfcnZEc245QThIMWRjeEg1bzFSRkRXMjJSbkdGczZBd0JXc3VyTW1lOWJMVjBDckdwblhoYVo0UQ?oc=5" target="_blank" rel="noopener">Why China’s Xi wants a ‘brighter’ future with North Korea - Egypt Independent</a></div>
+    <div class="entry-summary">Why China’s Xi wants a ‘brighter’ future with North Korea Egypt Independent</div>
+    <div class="entry-meta"><span class="entry-source-tag">Egypt Independent</span>2026-06-09 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOMFF0VlFPMDdWQ2lHSXR3QTJlQVlDbmRzazZyZ1g4SzJNU00yTHZXVnFuSF82NmZLQ0ZsQWpzZnJSLU8xZ21MMk5uYnFIazlfWDM3TE5oZzRnbFVCZG1tbXRlcFZKZk0xMkVrdGUxQjZ1aDh0YjIzWHlHOHFmU1V6ZkZLamlkS1VOQU9QakdhcmFKN1B0UXBlYVVFTW9VV1BsclE?oc=5" target="_blank" rel="noopener">How the Andean lithium triangle can bridge the West and the East - Buenos Aires Herald</a></div>
+    <div class="entry-summary">How the Andean lithium triangle can bridge the West and the East Buenos Aires Herald</div>
+    <div class="entry-meta"><span class="entry-source-tag">Buenos Aires Herald</span>2026-05-08 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxONTdMS2hOb2Y3Rzg4R3lneFlQLVJoTm1uQUl5c3BiY3NEQnpRQ0IyUmExeGtqRUJzLXNmLUs0RERFVTZYNDJMWVVnZi0tM18tb0xOSTdMVzJMNUhMN2NOMkF0eV82SlQ5TEI2dnp1NVVUX1BBVmhCaTVBOFJMeHI0akdRMDhFTndzZTBLUWlrRnVkY2tzTGEtNDBSUFhXcXR5LW41Y1hmZzhIbUVxUGRiRHlR0gG3AUFVX3lxTE1RMTRwaTFmTXdOSGpQU0ZXZWtUU1A2RmxkcVdIT29vNUFic3hNQnZ6TmQwM2pGTldzWjdpd3M2SEhuTngwd2dUcFRJV1VnZkhUbmoxaVZBbThVaEc3bGN6WlJLczVEeXZTR2N5NXE1YmhEM1BmQzJqSVlFWV9BV1FEekdxTDJTMnNtS0U4WDQyZl96WFk3U3JXdUEwaXkxWjBmZU1kTEVyTG5Rb2tkUnJGTGQ5QUtoUQ?oc=5" target="_blank" rel="noopener">Peru-Brazil Bioceanic Railway brings too much risk to the Amazon, experts warn - news - Mongabay</a></div>
+    <div class="entry-summary">Peru-Brazil Bioceanic Railway brings too much risk to the Amazon, experts warn news - Mongabay</div>
+    <div class="entry-meta"><span class="entry-source-tag">Mongabay (China impact)</span>2026-03-31 07:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNzBUTU5kUXoxN3NyNUt2UWVsdndyQW5wWk1wQmRWbzBqMHYwaW9PN1R2UG5mV2o5cVo5WjBwWHR1OEtjNmxleXVJd2FtRFMwVEtSVE90bHMycUN2eXZuSHZmcmVWbW9kRTVxRDY1bVFxZTFqNXlxdXZaZFc1czQzQUd2aXdkUzRxMVNtVkFRRGdsTTJHNHR0cTBqRUlJWnAwS2x4RHNnajB4dw?oc=5" target="_blank" rel="noopener">Introduction | China&#x27;s Belt and Road: Implications for the United States - Council on Foreign Relations</a></div>
+    <div class="entry-summary">Introduction | China&#x27;s Belt and Road: Implications for the United States Council on Foreign Relations</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2026-01-29 16:18</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNSjkzY2dLUE9lcGd2ZVpraFZxTzlQU19mcTBUWVFMZ215WEpRNnhibVpoNmpFRWg0RGV3azl3M2JEOU1sNVV0Ul9VV1l3b3hOM1c1MmZrVzdUaTctVmlWNWhldTM2ZWJYMVBaeUU3VmJTN2VuVVRMeHE4RFAwYy1idzN5SmVrVkVfSmMzLTBJNXpRVWxpRlV0WW1aSjRhblRDZDJNeQ?oc=5" target="_blank" rel="noopener">Findings | China&#x27;s Belt and Road: Implications for the United States - Council on Foreign Relations</a></div>
+    <div class="entry-summary">Findings | China&#x27;s Belt and Road: Implications for the United States Council on Foreign Relations</div>
+    <div class="entry-meta"><span class="entry-source-tag">BRI Observer</span>2026-01-29 03:02</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQUE1tamswLS1WRWoyWFJVWVBfSnFBc0U3eVlrUnJvdUF4VmNxMDdoV1dST3NfUzktcGEtUWlONG1ja0ZyOG8wZnlzRHA2UUJ2bHVpSzR6WGRXWTJ1dURubW9FVjFNdEZhRG1SM1F5NDVNUjZjMU1tYlp2RDZ6OS12M0Z3ME1fUEZHYm1mSlNkdFROUmM0V0ljNkczMEJSeG5FdTRyWjExVWhNU2tPN09OaEtvczhSZ1VpOFJBSzZ4ZExONkhuS0JvY3JRNUs?oc=5" target="_blank" rel="noopener">Santa Cruz receives US$130 million Chinese loan to reactivate dam project - Buenos Aires Herald</a></div>
+    <div class="entry-summary">Santa Cruz receives US$130 million Chinese loan to reactivate dam project Buenos Aires Herald</div>
+    <div class="entry-meta"><span class="entry-source-tag">Buenos Aires Herald</span>2026-01-21 08:00</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMncwUGtXaDUySlZFRW9NYzlUcUlqUWh4XzlLS3ByMW9zR1RjYkZveGNWZHlXblBUN09aRHM5U0pnU2JDREV5RkpqVWFGSVp3ZDc1THNLSFpITWhmNGxqUXl6UUxEdTdmZ00tei04NGxpZ2FkZGdMZXRLdHlLWFhWSzhsSUZGS1EzckczUE9oZDVUdnZoaDhxOTZKZVJiZ1Jyb1otMkFxTlBYUdIBsAFBVV95cUxOMFpibWRMRG13WVd4eE91Skd6c04xY3Q0em12RVEwbFVvMV9jblVZcnJzZGFrMkoyYV9zVTNmZXNIb2VjSjB4VGVwcjJJQy1LSXhOOHFZWjNyMTE5YTF0YjJCTlp3NTRQUEg5SVRaLXVYZ0xDU3pGdFlXQ0czRFVncVRKWGhfT2dIdzNjeHRuc3dUWWlqaUUxRUQ0MWZHQWNqTG5uS3ZnQlRHT0lPTkxObQ?oc=5" target="_blank" rel="noopener">Hubris and caution — China’s posture as 2026 begins - The Hindu</a></div>
+    <div class="entry-summary">Hubris and caution — China’s posture as 2026 begins The Hindu</div>
+    <div class="entry-meta"><span class="entry-source-tag">The Hindu</span>2026-01-05 08:00</div>
+  </div>
+  </div>
+  </div>
+  <div class="footer">
+    本文件由脚本自动生成 · 内容来自各地本地媒体 RSS · 仅供参考
+  </div>
+</div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
