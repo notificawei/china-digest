@@ -35,6 +35,9 @@ jobs:
       - name: Generate Russia digest
         run: python3 generate_russia.py
 
+      - name: Generate Southeast Asia digest
+        run: python3 generate_sea.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

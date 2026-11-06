@@ -539,6 +539,8 @@ def render_html(col1_data, col2_data, col3_data, col4_data, date_str):
         <span class="active">North Korea</span>
         <span class="sep">/</span>
         <a href="/china-digest/russia/">Russia</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/sea/">Southeast Asia</a>
       </div>
       <div class="meta">{date_str} &nbsp;·&nbsp; Auto-generated</div>
     </div>
