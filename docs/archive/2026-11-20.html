@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>China Intelligence Digest · 2026-11-20</title>
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Georgia", "Times New Roman", "宋体", serif;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+}
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a {
+  color: #6f6f6f;
+  text-decoration: none;
+  margin: 0 0.7rem;
+}
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.columns > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 2rem;
+  border-right: 1px solid #e2e2e2;
+}
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 960px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+}
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+}
+.section { margin-bottom: 2.5rem; }
+.section-header {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
+}
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #121212;
+}
+.section-header .en-label {
+  display: inline;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+.col-highlight .section-header { border-bottom-color: #d0021b; }
+.col-highlight .section-header h2 { color: #d0021b; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
+.entry:last-child { border-bottom: none; }
+.entry-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
+}
+.entry-title a { color: inherit; text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
+.entry-summary {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
+}
+.entry-meta {
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.entry-source-tag {
+  font-weight: 700;
+  color: #6f6f6f;
+  margin-right: 0.3rem;
+}
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  padding: 0.5rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.footer {
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="masthead">
+    <div class="masthead-rules">
+      <h1>China Intelligence Digest</h1>
+      <div class="nav">
+        <span class="active">China</span>
+        <span class="sep">/</span>
+        <a href="/china-digest/dprk/">North Korea</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/sea/">Southeast Asia</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/global-south/">Global South</a>
+      </div>
+      <div class="meta">2026-11-20 &nbsp;·&nbsp; Auto-generated</div>
+    </div>
+    <div class="masthead-bottom-rule"></div>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="columns">
+
+  <div class="section ">
+    <div class="section-header">
+      <h2>外媒报道 <span class="en-label">International Press</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/world/asia/trump-xi-putin.html" target="_blank">Trump Flaunts Camaraderie With Xi and Putin but Has Little to Show for It</a></div>
+      <div class="entry-summary">President Trump called Russia’s leader his “friend” and marveled at China’s warm welcome for his first-ever trilateral summit. But there were no breakthroughs on nuclear control, the war in Ukraine or A.I.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 19:07</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/business/anthropic-ipo-china-hong-kong.html" target="_blank">China Is Shut Out of Anthropic’s Blockbuster I.P.O.</a></div>
+      <div class="entry-summary">Anthropic excluded investment firms from China and Hong Kong from buying shares in advance of its initial public offering.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 19:04</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html" target="_blank">AMD dives on short-seller report of alleged China exposure</a></div>
+      <div class="entry-summary">AMD was slumping after a short-seller alleged that its firmware showed up at a blacklisted Chinese company. The company said it complies with U.S. law.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-11-19 18:24</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/world/africa/u-s-consortium-wins-bid-to-prospect-at-62-billion-kenyan-rare-earth-deposit-5700b009?mod=rss_worldnews" target="_blank">U.S. Consortium Wins Bid to Prospect at $62 Billion Kenyan Rare-Earth Deposit</a></div>
+      <div class="entry-summary">The bid is part of Washington’s effort to challenge China’s dominance of the critical minerals market.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-11-19 17:44</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/world/asia/russia-china-united-states-oil-joint-statement.html" target="_blank">At APEC Summit, U.S., China and Russia Vow to Increase Oil Supply Amid Global Energy Transition</a></div>
+      <div class="entry-summary">The United States, China and Russia agreed to boost the supply of refined petroleum products, as oil prices spike because of the Iran war.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 17:25</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/11/19/trump-xi-putin-trilateral-meeting-china.html" target="_blank">Trump, Xi, Putin said they plan to boost oil production, revamp UN after trilateral talks</a></div>
+      <div class="entry-summary">The leaders of the U.S., China and Russia met in Shenzhen, China on Thursday for a rare trilateral gathering.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-11-19 17:01</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/97912585-2412-496c-a224-78e69328bcdb?syn-25a6b1a6=1" target="_blank">Nscale warns of its exposure to suppliers facing US blacklist</a></div>
+      <div class="entry-summary">Nvidia-backed start-up’s $35bn IPO plans hit by ties to groups at risk of being placed on Washington’s ‘entity list’</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-19 14:39</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/article/3375118/hong-kong-building-maintenance-body-get-hk413m-operations-and-hire-160-staff" target="_blank">Hong Kong building maintenance body to get HK$413m for operations and hire 160 staff</a></div>
+      <div class="entry-summary">Owners of 80 per cent of Hong Kong’s private residential and mixed-use buildings older than 30 years, which are eligible for mandatory inspections, will receive government subsidies for services provided by a new public…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 14:37</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375117/roaring-back-hong-kongs-100-million-year-old-dinosaur-fossil-makes-its-debut" target="_blank">Roaring back: Hong Kong’s 100-million-year-old dinosaur fossil makes its debut</a></div>
+      <div class="entry-summary">Hong Kong’s first-ever dinosaur fossils, discovered on Port Island, belong to a sauropod measuring more than 20 metres (65 feet) long that lived about 100 million years ago, with the specimens going on public display on…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 14:29</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/world/europe/trump-xi-putin-nuclear-weapons-ukraine.html" target="_blank">Putin, Trump and Xi Condemn Nuclear War as Europe Watches Closely</a></div>
+      <div class="entry-summary">After their summit, the leaders of Russia, the United States and China agreed that “a nuclear war cannot be won and must never be fought.” Some analysts are skeptical that real change will result.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 14:23</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/11/19/chinas-prison-for-the-elite-is-massively-expanding" target="_blank">China’s prison for the elite is massively expanding</a></div>
+      <div class="entry-summary">Its list of inmates past and present is a Who’s Who of Chinese politics</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-11-19 14:01</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/11/19/chinas-buddhists-are-releasing-animals-where-they-do-not-belong" target="_blank">China’s Buddhists are releasing animals where they do not belong</a></div>
+      <div class="entry-summary">It is ruffling feathers in the Communist Party</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-11-19 14:01</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/11/19/chinas-efforts-to-strengthen-its-safety-net-fuel-public-anger" target="_blank">China’s efforts to strengthen its safety net fuel public anger</a></div>
+      <div class="entry-summary">People don’t want to pay into an unequal system they don’t trust</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-11-19 14:01</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/913e3748-6bf2-4c59-b2b6-31bf58a166ab?syn-25a6b1a6=1" target="_blank">Kenya awards prized rare earth deposit to US group</a></div>
+      <div class="entry-summary">Deal is a win for the Trump administration’s efforts to counter China’s dominance of the metals used for magnets</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-19 13:53</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.today.com/video/trump-holds-historic-meeting-with-xi-and-putin-273803845530" target="_blank">Trump holds historic meeting with Xi and Putin</a></div>
+      <div class="entry-summary">President Trump took part in historic three-way talks with Russian President Vladimir Putin and Chinese President Xi Jinping in China. NBC News&#x27; Garrett Haake has the details.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NBC News</span>2026-11-19 13:37</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375107/children-aged-3-5-account-largest-share-suspected-abuse-victims-ngo" target="_blank">Children aged 3 to 5 account for largest share of suspected abuse victims: NGO</a></div>
+      <div class="entry-summary">Children aged three to five accounted for the largest share of victims among 216 suspected child abuse cases recorded over the past financial year by a Hong Kong group, which attributed the trend to heavy pressure on…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 13:10</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375105/abby-chois-ex-husband-tells-trial-love-triangle-romance-and-sex-until-her-death" target="_blank">Abby Choi’s ex-husband tells trial of love triangle, romance and sex until her death</a></div>
+      <div class="entry-summary">Slain Hong Kong socialite Abby Choi Tin-fung’s ex-husband has told a court they were in a “complicated” relationship, noting that they had remained romantically and sexually involved after their divorce and up until her…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 12:48</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/world/asia/xi-putin-trump-meeting-china-russia.html" target="_blank">Behind Trump Meeting, Xi and Putin Share a Vision of Usurping U.S. Power</a></div>
+      <div class="entry-summary">President Trump joined the Chinese and Russian leaders for a summit in Shenzhen, even though the two autocrats are trying to reverse America’s victory in the Cold War.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 12:41</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-the-jensen-huang-saga-has-reinvigorated-washingtons-china-hawks-00536beb?mod=rss_worldnews" target="_blank">The Morning Risk Report: The Jensen Huang Saga Has Reinvigorated Washington’s China Hawks</a></div>
+      <div class="entry-summary">Plus: Microsoft-Bytedance cloud deal under fire from lawmakers and EU anti-money-laundering, public prosecution bodies team up.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-11-19 12:22</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/world/asia/trump-summit-china-media-bloomberg-reporter-nvidia.html" target="_blank">China Bars Bloomberg Reporter From Trilateral Talks for Asking a Question</a></div>
+      <div class="entry-summary">The exclusion of the reporter after she shouted a question to President Trump is an example of how tightly China tries to stage-manage events.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 12:08</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/19/world/asia/trump-xi-putin-kylin-villa.html" target="_blank">Villa Where Trump, Xi and Putin Met Once Hosted Kim Jong-il</a></div>
+      <div class="entry-summary">The secluded Kylin Villa resort in the Chinese city of Shenzhen once hosted the North Korean dictator, Xi Jinping’s father and envoys of the Dalai Lama.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 10:58</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/11/19/trump-xi-putin-photos-us-china-russia-trilateral-.html" target="_blank">APEC final day in photos: Trump, Xi and Putin shake hands; Takaichi kept at a distance</a></div>
+      <div class="entry-summary">Leaders gathered Thursday for the second day of the economic summit, ahead of a historic trilateral meeting between the U.S., Russia and China.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-11-19 10:54</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375077/man-guilty-murdering-yoga-instructor-ex-girlfriend-luxury-hong-kong-hotel" target="_blank">Man guilty of murdering yoga instructor ex-girlfriend at luxury Hong Kong hotel</a></div>
+      <div class="entry-summary">A former legal assistant has been found guilty of murdering his yoga instructor ex-girlfriend and leaving her body in a blood-filled bathtub in a luxury Hong Kong hotel room, with the presiding judge questioning whether…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 10:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74?syn-25a6b1a6=1" target="_blank">TSMC and Samsung suspend some chip shipments to Chinese customers</a></div>
+      <div class="entry-summary">Halt comes after US commerce department introduces new export controls</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-19 10:21</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/18/world/asia/xi-trump-hug-shenzhen.html" target="_blank">How to Decode the Xi-Trump Hug</a></div>
+      <div class="entry-summary">The welcome China’s leader, Xi Jinping, offered President Trump appeared to reflect a desire for a measure of stability at a time of growing disagreements.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-19 08:32</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3374793/ai-work-ready-hong-kong-graduates-its-no-longer-academic-question" target="_blank">AI work-ready Hong Kong graduates? It’s no longer an academic question</a></div>
+      <div class="entry-summary">Hong Kong’s tertiary institutions have long built their world-class reputations on academic rigour. Several of our universities have climbed even higher in prestigious global rankings, cementing our city’s status as an…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 08:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375054/mark-six-players-could-win-hk80-million-jackpot-snowball-draw" target="_blank">Mark Six players could win HK$80 million jackpot in snowball draw</a></div>
+      <div class="entry-summary">Hong Kong punters buying Mark Six tickets for next Tuesday’s lottery draw could vie for a jackpot of up to HK$80 million (US$10.2 million) under a new snowball initiative that increases the prize pool as total betting…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 08:21</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/fcf6d27b-a04c-4cef-8b03-ce2423566f1f" target="_blank">Trump hails historic meeting with Putin and Xi</a></div>
+      <div class="entry-summary">Summit with three leaders in southern Chinese city of Shenzhen during week of high-stakes diplomacy</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-19 07:43</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/11/19/japan-china-trump-takaichi-taiwan-.html" target="_blank">Takaichi gets chilly reception in China on first Japan leader visit since 2019</a></div>
+      <div class="entry-summary">Takaichi received a subdued welcome on her trip to attend the APEC summit, as Beijing shows limited appetite for repairing ties strained by Taiwan dispute.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-11-19 07:38</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375033/hong-kong-police-arrest-123-and-uncover-108-cases-anti-fraud-operation" target="_blank">Hong Kong police arrest 123 and uncover 108 cases in anti-fraud operation</a></div>
+      <div class="entry-summary">Hong Kong police have arrested 123 people and uncovered 108 fraud cases involving about HK$68 million (US$8.7 million) as part of a two-week operation against phone scams and money laundering. The citywide crackdown was…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 07:06</div>
+    </div>
+  </div>
+
+  <div class="section ">
+    <div class="section-header">
+      <h2>独立记者 Newsletter <span class="en-label">Independent Journalists</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261119-international-the-death-of-melbourne-hungrypanda-rider/" target="_blank">世界縫隙裏的華人外賣員，接單、罰款、受傷，直到死亡</a></div>
+      <div class="entry-summary">一個天天在城中心出現的人，為什麼大家在死後才知道他的名字？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261119-international-anthropic-ipo-ai-bubble/" target="_blank">Anthropic 上市：四問 AI 泡沫</a></div>
+      <div class="entry-summary">解讀「AI 泡沫論」的四大主張：算力帳單越滾越大，循環融資不可持續，模型價格持續下跌，生產力承諾仍未兌現。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-international-miami-vice-city-gta-6/" target="_blank">GTA 6發售：邁阿密如何出租自己的虛擬分身</a></div>
+      <div class="entry-summary">「罪惡都市」最初只是繼承了一套業已存在的邁阿密神話</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 22:58</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261119-whatsnew-trump-us-treasury-secretary-commerce-secretary-debate/" target="_blank">美國對華晶片管制內鬥：黃仁勳辭職後，矛頭轉向盧特尼克｜Whatsnew</a></div>
+      <div class="entry-summary">這場風暴觸及了特朗普政府路線分裂：該以國家安全為由嚴密封殺，還是讓中國「依賴」美國技術架構？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 22:58</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261119-wsj-why-trump-xi-wont-discuss-nvidia/" target="_blank">【華爾街日報】深圳峰會上，為何特朗普和習近平都不大可能提及英偉達</a></div>
+      <div class="entry-summary">特朗普和習近平離開峰會時，雙方脆弱的休戰局面或許仍能維持。但特朗普回國後，仍要面對圍繞技術和間諜活動的緊張局勢。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 22:55</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-chairmanship-hands-over" target="_blank">李屏賓交棒，張震接力──金馬主席的精神象徵與全新江湖</a></div>
+      <div class="entry-summary">「張震就是我的不二人選，」金馬執委會前任主席李屏賓斬釘截鐵地說。從台灣電影的舊時代走來，張震扛下了大旗朝著新世代前去，在那條承先啟後的路上，金馬的下一局江湖儼然成形。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-18 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/column-gender-trouble-2026-11-19" target="_blank">加碼補助、擴大公托、安全審計：從性別政見，思考我們想望的性平生活</a></div>
+      <div class="entry-summary">當我們把票投給自己想要的生活，也是在決定什麼樣的生活能夠被制度看見、支持與實現。因此檢視候選人的性別政見，不只要看提出了多少政策牛肉，更要追問：這些政策是否可能改變結構中的不平等？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-18 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-initium-audio-taiwan-election-travelogue-meinong/" target="_blank">台灣選舉漫遊錄：鐵票倉裡的搖擺區，是怎麼形成的？｜端聞 Podcast</a></div>
+      <div class="entry-summary">鐵票倉裡也有搖擺區。美濃人不輕易表態、各黨都尊重的政治性格，從何而來？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 12:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/2026-annual-survey-report/" target="_blank">當 AI 給出答案，我們還期待新聞機構做什麼？</a></div>
+      <div class="entry-summary">如果 AI 能準確回答任何問題，還需要新聞機構嗎？端傳媒今年的年度用戶調研裡，近 99% 的讀者說需要。讀者期待有人到現場、持續追蹤後續、查證並交代依據，也想弄懂事情為什麼發生。跨地域的華語視角，則是最多人認為端難以被取代的價值。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 09:53</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-china-october-right-protection-activities/" target="_blank">10月中國維權：遼寧肺結核篩查至少78學生共用針頭；廣東電鍍園火災逾一年未獲賠償｜Whatsnew</a></div>
+      <div class="entry-summary">足力健有機食品店欠薪，數百員工與加盟商維權；廣東兩所高中學生抗議：停水停電、禁開空調</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 08:50</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261117-taiwan-excellent-journalism-award-podcast/" target="_blank">第二十五屆卓越新聞獎 端傳媒「端聞」獲 Podcast 新聞節目獎</a></div>
+      <div class="entry-summary">今年卓新獎參賽總件數為770件，經過評審團38位委員一個多月的審閱討論後，從17個獎項選出共94件入選作品。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 04:21</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-international-nvidia-ai-chip-export-control-loopholes/" target="_blank">輝達事件揭晶片走私漏洞：美國為何管不住 AI 晶片？</a></div>
+      <div class="entry-summary">美國想管，台灣心力有限，新加坡力求中立，馬來西亞虛與委蛇，讓中國有機可乘。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-17 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-hongkong-indie-bookstores-publishing-future/" target="_blank">當人人憂心書業，她想出版笑話集——在香港做出版和開新書店的人</a></div>
+      <div class="entry-summary">或許幽默就是對香港文化如何繼續的一種回答。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-17 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-tech-in-numbers-eu-dsa-ai-regulation-challenges-2/" target="_blank">數說科技：美國可能迎來 AI 立法潮，但先行一步的歐盟成功了嗎？</a></div>
+      <div class="entry-summary">防止 AI 傷害兒童與青少年，是美國民眾的共識，但法律真的管得住 AI 嗎？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-17 22:58</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-local-elections-municipality-mayors-campaign-promises-check" target="_blank">社宅、幼托、長照、綠色運輸，4年後體檢六都現任市長競選政見落實程度</a></div>
+      <div class="entry-summary">4年過去，台北市長蔣萬安、新北市長侯友宜、桃園市長張善政、台中市長盧秀燕、台南市長黃偉哲、高雄市長陳其邁的競選政見落實了多少？有哪些跳票？專業組織對這6位現任市長落實政見程度又有哪些整體評價？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-17 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/podcast-2026-11-18" target="_blank">年邁母親一句「我想斷食」，是善終或磨難的開始？從照顧者親身說法看生命末期的抉擇困境</a></div>
+      <div class="entry-summary">這集，一起聽雅雯訴說，他如何陪伴母親完成人生最後一段旅程，特約記者陳玉梅也從報導者與照顧失智母親的經驗分享，關於「斷食」的認識及提醒，以及家屬尋求資源管道的建議。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-17 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-double-happiness" target="_blank">出包之後，有人陪你一起走過──《雙囍》許承傑、謝沛如重寫婚禮的意義</a></div>
+      <div class="entry-summary">「結一次婚、辦兩場婚禮，聽起來很荒唐，但我真的就辦了兩場婚禮。」許承傑的父母在他3歲的時候離婚，電影裡面童年的高庭生獨自一人搭飛機、往返在父母之間，時而掙扎、時而糾結的心境，很多就是導演自己的心路歷程。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-17 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/112026-newsletter-03" target="_blank">水瓶周报｜间谍疑云后再曝婚外情，黄仁勋引咎辞职；中国通过首部反跨境腐败法；陕西男子开挖掘机“反向强拆”政府大楼</a></div>
+      <div class="entry-summary">你希望看到怎样的新闻，你对周报有哪些意见或建议，欢迎留言或发邮件告诉我们，也欢迎有志于新闻写作的朋友加入周报团队，可以将作品和简历发送邮箱：aquariusage2024@gmail.com。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-11-17 11:37</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261117-whatsnew-taipei-mayor-election-final-polls/" target="_blank">台北市長封關民調出爐：四家結果兩勝兩負，為何仍是「麻花捲」？｜Whatsnew</a></div>
+      <div class="entry-summary">沈伯洋的支持熱度高度外顯，但台北市高齡族群的投票率往往高出年輕人一成五到兩成以上。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-17 04:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/bb6" target="_blank">【專題】台灣離島媒體金門篇：小且重要的地方連結</a></div>
+      <div class="entry-summary">「地方不是一個凝固的概念，人會來來去去，所以有時候需要切換視角去看事情。」</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-11-17 03:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261117-mainland-no-second-netease-on-keyun-road/" target="_blank">科韻路上，沒有第二個網易</a></div>
+      <div class="entry-summary">白天、晚上，那些高樓閃閃發光，陽光或是LED光，閃爍着，像一個近在眼前的美夢。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-16 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261117-mainland-testing-conducted-by-non-governmental-organizations/" target="_blank">「民間檢測」爆紅：如何分辨檢測是否可靠？</a></div>
+      <div class="entry-summary">檢測可不可信，不取決於是誰來測，而取決於怎麼測、測了什麼、又怎麼解讀。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-16 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-girl" target="_blank">在電影中長成大人──《女孩》白小櫻、林品彤一靜一動，詮釋舒淇的青春傷痕</a></div>
+      <div class="entry-summary">《女孩》是舒淇導演半自傳處女作，片中兩位「女孩」一靜一動彷彿雙生火焰，用不同的方式面對複雜的世界；她們透過電影學習壓抑情緒、理解倔強、擁抱自己，提早懂得那些長大成人的難題⋯⋯</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-16 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-local-elections-labor-party-china-united-front" target="_blank">促統力量攻基層：跨8縣市提名年輕新血，勞動黨轉為統派新箭頭？</a></div>
+      <div class="entry-summary">近10多年來與中國官方互動升級的老牌左翼政黨「勞動黨」，此次一口氣推出8縣市、12人參選，勞動黨候選人接受《報導者》訪問時皆不諱言大力促統立場，但強調是以「社會共好」理念進行選舉⋯⋯</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-15 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-moya-chou" target="_blank">從隱藏角色走入聚光燈，周佳聖：擁有視覺魔法的調光師，沒有標準答案</a></div>
+      <div class="entry-summary">30年前誤打誤撞進入調光行業的周佳聖，今年獲頒第63屆金馬獎年度傑出台灣電影工作者。從業以來經手無數廣告、MV、電影後期調光工作，周佳聖像是視覺魔法師，以光線和顏色，營造獨特的影像感受。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-15 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/private-entrepreneurs-judicial-cases-nian-yong-an" target="_blank">洛阳“珠宝大王”年永安：当庭举报官员背后的罪与非罪</a></div>
+      <div class="entry-summary">留置对大多数人来说是祸事，对年永安而言却是幸事，而这是他当庭举报政府官员换来的机会。银行主动发起的不良资产“出表配资”合作、基于涉案人员口供的资不抵债审计报告，构成了年永安身陷贷款诈骗、非法集资等六罪指控的主要证据。从政企合作的标杆到重罪指控对象，年永安的命运起伏，成为地方权力生态和金融体系运行的时代注脚。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-11-14 15:48</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/saturday-features-film-tua-kiau" target="_blank">從廣播幕後到主持《鬼谷子靈讖》，奔赴闖蕩的台語江湖──訪大驕</a></div>
+      <div class="entry-summary">出身外省家庭的大驕，24歲時加入「錢來也」張宗榮團隊，在台語廣播與電視節目中闖出一片天，尤其在現場Call-in節目《鬼谷子靈讖》，更成為無數觀眾熟悉的身影。從幕後到幕前，從同享風光到為入獄師父守江山，大驕始終如一保有自己。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-13 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/photo-minjian-photography-documentary-vision-exhibition-review" target="_blank">陳佳琦／照片到作品，影像到歷史：關於「民間／攝影：紀實影像的敘事生成」</a></div>
+      <div class="entry-summary">新北市美術館的「民間／攝影」展覽，並不滿足於重新發現過去不受重視的攝影家，更試圖重返照片成為作品的歷史情境，提出照片的意義不只來自攝影家，也在不同的社會關係、傳播媒介與觀看情境中，不斷被賦予、改寫與重新製造。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-13 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/e66" target="_blank">【譯見】調查：揭露資訊來源的創作者能獲得信任</a></div>
+      <div class="entry-summary">Creators who show their sources build trust, survey finds</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-11-13 06:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/112026-newsletter-02" target="_blank">水瓶周报｜美国中期选举现“蓝色海啸”，民主党翻转两院、创多项记录；黄之锋因“勾结外国势力”被判监10年；澳门闭门审讯首宗国安案，判监12年半</a></div>
+      <div class="entry-summary">你希望看到怎样的新闻，你对周报有哪些意见或建议，欢迎留言或发邮件告诉我们，也欢迎有志于新闻写作的朋友加入周报团队，可以将作品和简历发送邮箱：aquariusage2024@gmail.com。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-11-10 17:06</div>
+    </div>
+  </div>
+
+  <div class="section col-highlight">
+    <div class="section-header">
+      <h2>🔥 重点议题 <span class="en-label">Consumer · Society · Culture · AI</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375107/children-aged-3-5-account-largest-share-suspected-abuse-victims-ngo" target="_blank">Children aged 3 to 5 account for largest share of suspected abuse victims: NGO</a></div>
+      <div class="entry-summary">Children aged three to five accounted for the largest share of victims among 216 suspected child abuse cases recorded over the past financial year by a Hong Kong group, which attributed the trend to heavy pressure on…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 13:10</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375105/abby-chois-ex-husband-tells-trial-love-triangle-romance-and-sex-until-her-death" target="_blank">Abby Choi’s ex-husband tells trial of love triangle, romance and sex until her death</a></div>
+      <div class="entry-summary">Slain Hong Kong socialite Abby Choi Tin-fung’s ex-husband has told a court they were in a “complicated” relationship, noting that they had remained romantically and sexually involved after their divorce and up until her…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 12:48</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-the-jensen-huang-saga-has-reinvigorated-washingtons-china-hawks-00536beb?mod=rss_worldnews" target="_blank">The Morning Risk Report: The Jensen Huang Saga Has Reinvigorated Washington’s China Hawks</a></div>
+      <div class="entry-summary">Plus: Microsoft-Bytedance cloud deal under fire from lawmakers and EU anti-money-laundering, public prosecution bodies team up.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-11-19 12:22</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3374793/ai-work-ready-hong-kong-graduates-its-no-longer-academic-question" target="_blank">AI work-ready Hong Kong graduates? It’s no longer an academic question</a></div>
+      <div class="entry-summary">Hong Kong’s tertiary institutions have long built their world-class reputations on academic rigour. Several of our universities have climbed even higher in prestigious global rankings, cementing our city’s status as an…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-19 08:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/11/19/china-south-korea-trade-deal-films-gaming.html" target="_blank">&#x27;Parasite&#x27; backer and other South Korean media, gaming and travel stocks rally on China trade deal</a></div>
+      <div class="entry-summary">Korean media, gaming and travel stocks surged on hopes of greater access to China.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-11-19 03:43</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/business/energy-oil/europe-ditched-russian-fuel-now-its-hooked-on-chinese-green-tech-instead-6d3f2fd6?mod=rss_worldnews" target="_blank">Europe Ditched Russian Fuel. Now It’s Hooked on Chinese Green Tech Instead.</a></div>
+      <div class="entry-summary">Big price gaps on electric cars and solar gear have left the continent struggling to protect local factories.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-11-18 18:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-chairmanship-hands-over" target="_blank">李屏賓交棒，張震接力──金馬主席的精神象徵與全新江湖</a></div>
+      <div class="entry-summary">「張震就是我的不二人選，」金馬執委會前任主席李屏賓斬釘截鐵地說。從台灣電影的舊時代走來，張震扛下了大旗朝著新世代前去，在那條承先啟後的路上，金馬的下一局江湖儼然成形。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-18 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261118-china-october-right-protection-activities/" target="_blank">10月中國維權：遼寧肺結核篩查至少78學生共用針頭；廣東電鍍園火災逾一年未獲賠償｜Whatsnew</a></div>
+      <div class="entry-summary">足力健有機食品店欠薪，數百員工與加盟商維權；廣東兩所高中學生抗議：停水停電、禁開空調</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-18 08:50</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/13fb1482-46d8-46a8-9163-f2391204319d?syn-25a6b1a6=1" target="_blank">China’s robot makers have more to offer than viral backflip videos</a></div>
+      <div class="entry-summary">Established robotics companies are continuing to grow and many are highly profitable</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-17 05:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/7a6f84cf-ebea-4225-a31a-571fb877286a?syn-25a6b1a6=1" target="_blank">China’s economic activity slows more than expected in October</a></div>
+      <div class="entry-summary">Beijing has pushed to speed up budget spending to overcome weaker growth</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-16 04:38</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.bbc.co.uk/news/articles/cmvg652l927lo?at_medium=RSS&amp;at_campaign=rss" target="_blank">He spent $50,000 on Labubus but now the craze is dying</a></div>
+      <div class="entry-summary">Parent company Pop Mart&#x27;s revenue has fallen as appetite for the quirky collectible monsters wanes.</div>
+      <div class="entry-meta"><span class="entry-source-tag">BBC</span>2026-11-07 23:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/11/01/hit-podcasts-reveal-the-angst-of-chinas-youth" target="_blank">Hit podcasts reveal the angst of China’s youth</a></div>
+      <div class="entry-summary">The government is getting twitchy about their growing popularity</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-11-01 10:35</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/10/26/chinas-most-successful-astroturf-operation-grassroots-football" target="_blank">China’s most successful Astroturf operation: grassroots football</a></div>
+      <div class="entry-summary">Provincial leagues spur spending and a hometown renaissance</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-10-26 15:24</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/children-of-lgbtq-parents-in-china" target="_blank">彩虹宝宝“出柜”十年：同志伴侣生育背后的家庭日常</a></div>
+      <div class="entry-summary">大多数国家，同志运动有其路径，在讨论同志家庭生育养育的话题之前，大家会先争取同性婚姻和法律保护。但在中国，是“小孩生出来了，变成了一个不能否定的事实，你不得不回头去面对那些障碍，上户口、处理生育保险，等小孩逐渐长大，你要面对照顾、教育等问题。不管法律如何，我们自己先摸索一下，我摸到一点信息就给别人说一点，你摸到一点也再来分享一点，大家就这样被推着往前走。”</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-10-26 01:51</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/chongqing-time-fengjun-gender-conflict" target="_blank">时代峰峻冲突背后：社交媒体时代的性别战争</a></div>
+      <div class="entry-summary">8月中旬，重庆偶像经济公司时代峰峻楼下，连日来有打卡女粉丝被聚众男青年包围，并遭到辱骂和推搡。从网络嘲讽到线下“出征”，这起冲突折射出原本个体分散、却正被社交媒体平台整合的集体情绪：认为男性正在遭遇系统性的不公。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-10-19 16:11</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/092026-newsletter-05" target="_blank">水瓶周报：习近平访美结束，场面盛大，各取所需；美华回家近一月，安置追责仍未明；英国成立“打击厌女”工作组，成效待检视；因转发讨薪微博，兰州农民工景树仁被判刑4年；北京无人机管制再升级，禁飞区覆盖周边省</a></div>
+      <div class="entry-summary">我们致力于把过去一周最重要的信息及时传达给您。由于社交平台发布会遇到一些困难， 邮件订阅非常重要；您可以给我们写信：aquariusage2024@gmail.com，也可以直接在网页订阅我们的新闻简报。欢迎您与我们一起交流相关想法。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-09-28 18:10</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/09/21/what-mao-can-teach-china-about-managing-america" target="_blank">What Mao can teach China about managing America</a></div>
+      <div class="entry-summary">An insurgent power has fought the incumbent to a stalemate</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-09-21 13:32</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE5wbVp6N3Q3TVB3c1JJdkhGMll5dTNxVnJYYXRzb1dxeThHZnBZdnV2Wlk4QmFGa19rRUNUSktUeWp3LVRnX0FwclR4X3dOTzl4OXAzZjMzQl9KLWtoekxVY1IteVh4S1JWRF9fZnA5cVZfVHZnVFE?oc=5" target="_blank">China’s Internet Shines a Light on the Hidden Struggles of Construction Workers in Israel - The China-Global South Project</a></div>
+      <div class="entry-summary">China’s Internet Shines a Light on the Hidden Struggles of Construction Workers in Israel The China-Global South Project</div>
+      <div class="entry-meta"><span class="entry-source-tag">China Global South Project</span>2025-07-02 07:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLajB5QXRvTDBFeWRsYzgyR1lYcWpFRTRreEhnUFZ0ZmtoLTRpZ0Uwc3hwSDNKcS03R2NBUVp4R1IxcHNDZ1lEVUsxR2lqa2p1MnRUVVNrRmkwYXdvbHc?oc=5" target="_blank">Meet the Team - The China-Global South Project</a></div>
+      <div class="entry-summary">Meet the Team The China-Global South Project</div>
+      <div class="entry-meta"><span class="entry-source-tag">China Global South Project</span>2025-06-28 01:29</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.sixthtone.com/news/1019269/A Chinese Medical Drama’s Remedy for Big-City Blues: Go Home" target="_blank">A Chinese Medical Drama’s Remedy for Big-City Blues: Go Home</a></div>
+      <div class="entry-summary">A fired neurosurgeon starts over back home in “Small Town Remedy,” winning over young viewers rethinking what it means to succeed in the big city.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Sixth Tone</span></div>
+    </div>
+  </div>
+  </div>
+  <div class="footer">
+    本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
+  </div>
+</div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
