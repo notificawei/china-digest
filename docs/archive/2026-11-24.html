@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>China Intelligence Digest · 2026-11-24</title>
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Georgia", "Times New Roman", "宋体", serif;
+  background: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+}
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.masthead {
+  text-align: center;
+  padding: 1.4rem 0 0;
+  margin-bottom: 2rem;
+}
+.masthead-rules {
+  border-top: 3px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 1rem 0 0.8rem;
+}
+.masthead h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+}
+.masthead .nav {
+  margin-top: 0.65rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+.masthead .nav a {
+  color: #6f6f6f;
+  text-decoration: none;
+  margin: 0 0.7rem;
+}
+.masthead .nav a:hover { color: #121212; }
+.masthead .nav .active { color: #121212; font-weight: 700; margin: 0 0.7rem; }
+.masthead .nav .sep { color: #ccc; }
+.masthead .meta {
+  font-size: 0.68rem;
+  color: #6f6f6f;
+  margin-top: 0.55rem;
+  padding-bottom: 0.6rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.masthead-bottom-rule { border-top: 1px solid #121212; }
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+.columns > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 2rem;
+  border-right: 1px solid #e2e2e2;
+}
+.columns > div:first-child { padding-left: 0; }
+.columns > div:last-child { border-right: none; padding-right: 0; }
+@media (max-width: 960px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns > div:nth-child(2) { border-right: none; padding-right: 0; }
+  .columns > div:nth-child(3) { padding-left: 0; border-right: none; border-top: 1px solid #e2e2e2; padding-top: 1.5rem; margin-top: 0.5rem; }
+}
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+  .columns > div { border-right: none; padding: 0; border-top: 1px solid #e2e2e2; padding-top: 1.2rem; margin-top: 0.5rem; }
+  .columns > div:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+}
+.section { margin-bottom: 2.5rem; }
+.section-header {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #121212;
+}
+.section-header h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #121212;
+}
+.section-header .en-label {
+  display: inline;
+  font-size: 0.62rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+.col-highlight .section-header { border-bottom-color: #d0021b; }
+.col-highlight .section-header h2 { color: #d0021b; }
+.entry { border-bottom: 1px solid #e2e2e2; padding: 0.85rem 0; }
+.entry:last-child { border-bottom: none; }
+.entry-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.2rem;
+  font-family: "Georgia", serif;
+  line-height: 1.35;
+}
+.entry-title a { color: inherit; text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
+.entry-summary {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0.2rem;
+}
+.entry-meta {
+  font-size: 0.67rem;
+  color: #6f6f6f;
+  margin-top: 0.35rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.entry-source-tag {
+  font-weight: 700;
+  color: #6f6f6f;
+  margin-right: 0.3rem;
+}
+.entry-source-tag::after { content: " ·"; font-weight: 400; }
+.no-articles {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  padding: 0.5rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.footer {
+  text-align: center;
+  font-size: 0.67rem;
+  color: #bbb;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.search-bar {
+  padding: 0.7rem 0 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0.5rem;
+}
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #121212;
+}
+.search-bar input:focus { border-color: #121212; }
+.entry.search-hidden { display: none; }
+.section.search-all-hidden { display: none; }
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="masthead">
+    <div class="masthead-rules">
+      <h1>China Intelligence Digest</h1>
+      <div class="nav">
+        <span class="active">China</span>
+        <span class="sep">/</span>
+        <a href="/china-digest/dprk/">North Korea</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/russia/">Russia</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/sea/">Southeast Asia</a>
+        <span class="sep">/</span>
+        <a href="/china-digest/global-south/">Global South</a>
+      </div>
+      <div class="meta">2026-11-24 &nbsp;·&nbsp; Auto-generated</div>
+    </div>
+    <div class="masthead-bottom-rule"></div>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="columns">
+
+  <div class="section ">
+    <div class="section-header">
+      <h2>外媒报道 <span class="en-label">International Press</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375519/hong-kong-creates-building-maintenance-regulator-address-tai-po-fire-failings" target="_blank">Hong Kong creates building maintenance regulator to address Tai Po fire failings</a></div>
+      <div class="entry-summary">A new group tasked with overseeing building maintenance has been established to replace the Housing Bureau’s disgraced Independent Checking Unit, which was deemed culpable for a litany of failings leading up to last…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 14:57</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/28cb9178-ac22-44b9-99f5-d5f25a86d366?syn-25a6b1a6=1" target="_blank">What Nvidia tells us about America and China</a></div>
+      <div class="entry-summary">The company’s spy scandal shows how little leverage Washington has against Beijing</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-23 14:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nbcnews.com/tech/tech-news/nvidia-reinstates-jensen-huang-rcna610864" target="_blank">Jensen Huang returns as Nvidia CEO</a></div>
+      <div class="entry-summary">Jensen Huang will return as Nvidia’s president and CEO, the company’s board announced Monday in a stunning reversal for an executive who resigned two weeks ago following revelations of extramarital affairs, including…</div>
+      <div class="entry-meta"><span class="entry-source-tag">NBC News</span>2026-11-23 13:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375510/university-hong-kong-suspends-china-human-rights-course-law-dean-steps-down" target="_blank">University of Hong Kong puts on hold China human rights course as law dean steps down</a></div>
+      <div class="entry-summary">The University of Hong Kong (HKU) will put on hold a course on human rights in China for master’s and Juris Doctor students in the second semester of the 2026-27 academic year, after convenor Fu Hualing said he was…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 13:47</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375509/second-hong-kong-man-arrested-animal-cruelty-hanging-stray-dog" target="_blank">Second Hong Kong man arrested for animal cruelty in the hanging of a stray dog</a></div>
+      <div class="entry-summary">Hong Kong police have arrested a second man on suspicion of animal cruelty after a stray dog was found hanging from a tree in Tai Po. The man, aged 67, was arrested for alleged animal cruelty on Monday, one day after…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 13:40</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/b84dbcb1-f216-422e-89c7-f203e0ab2757?syn-25a6b1a6=1" target="_blank">Traders start to move US copper to China as Trump tariff fears ease</a></div>
+      <div class="entry-summary">Acute Chinese shortage and high local premium create lucrative arbitrage</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-23 12:21</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375473/after-fire-community-tai-po-feels-loss-friends-and-patrons" target="_blank">After the fire: a community in Tai Po feels the loss of friends and patrons</a></div>
+      <div class="entry-summary">A shadow hangs over a once bustling community, and reminders of those who have gone are everywhere. For the people that remain in Kwong Fuk Estate, letting go is the hardest part. Robert Wong grew up in Kwong Fuk…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 12:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375505/33-arrested-hong-kongs-bid-rigging-task-force-mounts-second-operation" target="_blank">33 held as Hong Kong targets bid-rigging syndicate behind 15 projects worth HK$130m</a></div>
+      <div class="entry-summary">Thirty-three people from a syndicate linked to 15 residential projects worth HK$130 million (US$16.6 million) have been arrested in a joint task force’s second operation targeting bid-rigging in Hong Kong’s building…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 11:54</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/education/article/3375504/john-lee-hails-young-hongkongers-fighting-spirit-after-record-worldskills-haul" target="_blank">John Lee hails young Hongkongers’ ‘fighting spirit’ after record WorldSkills haul</a></div>
+      <div class="entry-summary">Hong Kong Chief Executive John Lee Ka-chiu has praised the city’s younger generation for their “outstanding skills and fighting spirit” after a record-breaking performance at an international vocational competition.…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 11:49</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375496/abby-chois-ex-husband-denies-lying-says-lawyers-advice-hurt-brothers-defence" target="_blank">Abby Choi’s ex-husband denies lying, says lawyer’s advice hurt brother’s defence</a></div>
+      <div class="entry-summary">Slain Hong Kong socialite Abby Choi Tin-fung’s ex-husband has denied lying about the circumstances of her death and blamed a lawyer for allegedly giving misconceived advice that undermined his elder brother’s defence.…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 10:42</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375493/alleged-triad-member-fatal-hong-kong-crash-was-released-jail-two-weeks-ago" target="_blank">Alleged triad member in fatal Hong Kong crash was freed from jail two weeks ago</a></div>
+      <div class="entry-summary">A man arrested on suspicion of drink-driving after a crash in Hong Kong’s busy Tsim Sha Tsui district killed a pedestrian is an alleged triad member who was released from prison two weeks earlier, sources have said,…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 10:39</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375491/hong-kong-customs-seizes-hk68m-suspected-fake-goods-double-11-crackdown" target="_blank">Hong Kong customs seizes HK$68m in suspected fake goods in Double 11 crackdown</a></div>
+      <div class="entry-summary">Hong Kong customs officers have arrested two people and seized about 120,000 suspected counterfeit items worth an estimated HK$68 million (US$8.7 million) in a crackdown targeting the peak period of the recent Double 11…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 10:15</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375476/how-shared-stories-loosen-grip-inferno-traumatised-domestic-helpers" target="_blank">How shared stories loosen grip of Tai Po inferno on traumatised domestic helpers</a></div>
+      <div class="entry-summary">It has been a year since a catastrophic fire – Hong Kong’s deadliest in decades – tore through the towers of Wang Fuk Court. The charred debris from the site in Tai Po has long been cleared. But for many domestic…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 09:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.cnbc.com/2026/11/23/asia-markets-kospi-taiwan-china-csi300.html" target="_blank">How Asian countries are looking to prop up markets as AI downturn sinks stocks</a></div>
+      <div class="entry-summary">Market regulators in South Korea, China and Taiwan have introduced new measures to support markets.</div>
+      <div class="entry-meta"><span class="entry-source-tag">CNBC</span>2026-11-23 06:50</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/transport/article/3375443/hong-kong-ban-drones-kites-balloons-across-city-interpol-general-assembly" target="_blank">Hong Kong to ban drones, kites and balloons from airspace during Interpol assembly</a></div>
+      <div class="entry-summary">Hong Kong will close its airspace to drones, kites, balloons and paragliders during the four days of the Interpol General Assembly, which the city is hosting for the first time next week. Police said they would also…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 06:13</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/69459363-8299-4555-a39c-8980ee6c3590?syn-25a6b1a6=1" target="_blank">Asian regulators rush to support sagging markets as AI trade falters</a></div>
+      <div class="entry-summary">Shares of region’s chipmakers and hardware suppliers especially vulnerable to turn in sentiment</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-23 06:07</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375399/hong-kong-bar-association-mission-first-china-space-agency-meeting" target="_blank">Hong Kong Bar Association on mission with first China space agency meeting</a></div>
+      <div class="entry-summary">The Hong Kong Bar Association will meet the China National Space Administration for the first time during its annual visit to Beijing next week, seeking to gauge demand for space-related legal services and highlight the…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 06:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.nytimes.com/2026/11/23/world/asia/china-us-nuclear-ai.html" target="_blank">Behind China’s A.I. Anxieties, Fear of a Nuclear Checkmate</a></div>
+      <div class="entry-summary">Chinese military researchers are studying how to harness A.I., but they worry the technology makes their country’s nuclear forces more vulnerable to attack.</div>
+      <div class="entry-meta"><span class="entry-source-tag">NYT</span>2026-11-23 05:49</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/lifestyle/arts/article/3375426/why-hong-kongs-fine-art-asia-fair-has-moved-shenzhen-after-20-years" target="_blank">Why Hong Kong’s Fine Art Asia fair has moved to Shenzhen after 20 years</a></div>
+      <div class="entry-summary">Hong Kong’s longest-running art and antiques fair, Fine Art Asia (FAA), is relocating to Shenzhen for its upcoming 2026 edition, which will take place from November 26 to 29, with its founder citing a sharp market…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 05:17</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.ft.com/content/d279b04d-1fb7-49c7-a191-d34cf6467681?syn-25a6b1a6=1" target="_blank">China is winning the car war</a></div>
+      <div class="entry-summary">Western carmakers have been routed from China as EVs go mainstream. Now they are battling to avoid a similar fate at home</div>
+      <div class="entry-meta"><span class="entry-source-tag">Financial Times</span>2026-11-23 05:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wsj.com/finance/stocks/asian-regulators-step-up-efforts-to-calm-ai-driven-market-turmoil-95ea6cf8?mod=rss_worldnews" target="_blank">Asian Regulators Step Up Efforts to Calm AI-Driven Market Turmoil</a></div>
+      <div class="entry-summary">Regulators and market operators in China, South Korea and Taiwan have rolled out emergency measures to arrest the turmoil sparked by the global rout in artificial-intelligence stocks.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Wall Street Journal</span>2026-11-23 04:55</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3375433/hong-kong-names-former-lawmaker-chan-kin-por-hospital-authority-chairman" target="_blank">Hong Kong names former lawmaker Chan Kin-por as Hospital Authority chairman</a></div>
+      <div class="entry-summary">Former Hong Kong lawmaker and veteran insurance executive Chan Kin-por has pledged to improve management and retain staff as he prepares to become chairman of the Hospital Authority, describing the role as an “immense…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 04:52</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375408/tai-po-fire-survivors-battle-grief-fear-and-trauma-first-anniversary-nears" target="_blank">Tai Po fire survivors battle grief, fear and trauma as first anniversary nears</a></div>
+      <div class="entry-summary">A year after the deadly Wang Fuk Court blaze in Hong Kong, Hilary Lau has developed certain habits born out of the tragedy. The 49-year-old who lost both his parents can fall asleep only under a fire-resistant blanket…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 04:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/politics/article/3375417/beijing-hails-election-committee-poll-affirming-patriots-only-system-hong-kong" target="_blank">Beijing hails Election Committee poll for affirming ‘patriots-only’ system in Hong Kong</a></div>
+      <div class="entry-summary">Beijing has lauded Hong Kong’s Election Committee poll for showcasing what it called the broad representation, political inclusiveness and fair competition of the “patriots-only” system, saying the latest election…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 03:13</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3375230/reform-hong-kongs-sexual-offence-laws-better-late-never" target="_blank">Reform of Hong Kong’s sexual offence laws better late than never</a></div>
+      <div class="entry-summary">After two decades of waiting, Hong Kong’s laws on sexual offences are about to join the 21st century. Wednesday is International Day for the Elimination of Violence against Women. It is fitting that the city government…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 01:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375385/tai-po-fire-will-right-lessons-be-learned" target="_blank">Tai Po fire: will the right lessons be learned?</a></div>
+      <div class="entry-summary">Based on interviews and an independent committee’s scathing report, Connor Mycroft details the key turning points behind the avoidable Wang Fuk Court fire, as part of a series marking one year since the tragedy. As Hong…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 00:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/politics/article/3375398/hong-kong-election-committee-race-healthy-contest-surprise-upsets" target="_blank">Hong Kong Election Committee race: ‘healthy’ contest with some upsets</a></div>
+      <div class="entry-summary">Hong Kong’s Election Committee poll on Sunday drew a record turnout of nearly 99 per cent and delivered surprise upsets, with prominent business and professional leaders losing out in tighter races for seats on the body…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-22 17:08</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3375394/man-arrested-hong-kong-over-dog-found-hanging-tree-tai-po-trail" target="_blank">Man arrested in Hong Kong over dog found hanging from tree on Tai Po trail</a></div>
+      <div class="entry-summary">A man has been arrested in Hong Kong in connection with a mongrel found hanging from a tree on the Wilson Trail in Tai Po, the South China Morning Post has learned. A source said police arrested a 54-year-old man on…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-22 16:03</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/presented/news/hong-kong/topics/new-ambitions-lasting-partnerships/article/3375031/when-ambition-takes-different-path" target="_blank">When ambition takes a different path</a></div>
+      <div class="entry-summary">[The content of this article has been produced by our advertising partner.] Some of the happiest moments in SoMad&#x27;s career come when an artiste he has dressed for the red carpet wins a best-dressed award that night.…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-22 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375392/mirrors-anson-kong-rises-step-step-golden-horse-glory-we-are-born-good-wins" target="_blank">Hong Kong films shine as Angela Yuen, Anson Kong win at Golden Horse Awards</a></div>
+      <div class="entry-summary">Hong Kong actress Angela Yuen Lai-lam has won the best actress prize at the prestigious Golden Horse Awards in Taiwan, while Anson Kong Ip-sang of boy band Mirror has snagged the best supporting actor trophy. The…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-22 14:51</div>
+    </div>
+  </div>
+
+  <div class="section ">
+    <div class="section-header">
+      <h2>独立记者 Newsletter <span class="en-label">Independent Journalists</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261123-weekly/" target="_blank">補看週末：金馬港片豐收</a></div>
+      <div class="entry-summary">今天是星期一，11月23日，歡迎來端周報。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-23 12:45</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/202611-the-fragment-exchange/" target="_blank">碎片交換所：留下你的數位碎屑，換一聲真實世界的回響</a></div>
+      <div class="entry-summary">留下一個詞、一個Emoji，我們從端傳媒的報導裡，為你找一段可能與它呼應的人生。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-23 11:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261123-the-fragment-exchange/" target="_blank">滑了這麼久的手機，我離世界更近了嗎？</a></div>
+      <div class="entry-summary">在漫無目的的滑動之間，我們能否從此刻想到的一個詞出發，走近一個陌生人的生活？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-23 11:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261123-hongkong-wang-fuk-court-fire-1year-timeline/" target="_blank">餘燼未熄：宏福苑大火一年大事紀｜互動頁面</a></div>
+      <div class="entry-summary">香港如何走過災後一年？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-22 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261124-taiwan-why-dpp-may-dominate-local-elections/" target="_blank">「所有政治都是地方政治」：民進黨選情為何看漲？</a></div>
+      <div class="entry-summary">憑什麼，蔡英文和馬英九都做不到的事，賴清德卻在這週很有機會做到？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-22 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261123-photo-taiwan-election/" target="_blank">影像：選戰舞台，台灣日常</a></div>
+      <div class="entry-summary">選舉期間，城市的每一處都可能成為舞台。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-22 22:58</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/photo-2026-taipei-golden-horse-film-festival" target="_blank">金馬63：把艱難化為永恆的光</a></div>
+      <div class="entry-summary">資深演員、導演張艾嘉所帶領的評審團，選出一份分布平均的得獎名單。不過，無論星光大道、頒獎舞台，融匯華語、粵語、英語、韓語、日語，還有來自馬來西亞、新加坡的聲音，金馬獎匯集各方能量。來自多元背景的電影工作者，將「華語」電影拓展成海納百川的一方江湖。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-22 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261122-hongkong-compact-disc/" target="_blank">專訪《Compact Disc》導演Rico：出獄後，用攝影機「在傷口上做一場冥想」</a></div>
+      <div class="entry-summary">「我想將它放到最大，大到可以蓋過其他東西：蓋過那些痛苦、蓋過那些好折磨我的部分。」</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-21 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261122-hongkong-photo-wang-fuk-court-fire-vanished-window-view/" target="_blank">宏福大火一年，消失的窗景</a></div>
+      <div class="entry-summary">一個共同的風景，迸裂成不同的窗口、各異的現實。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-21 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/apec-shenzhen" target="_blank">当深圳普通人进入“APEC时间”</a></div>
+      <div class="entry-summary">深圳首次迎来APEC峰会，开启“全妆”时刻。但在光鲜都市盛景之下，市井的“毛边”正被悄然折叠：通宵栽花的日结工、反复清扫空地的环卫工、生计被按下暂停键的司机与小摊贩……当宏观叙事加诸这座“劳动者之城”，我们试图在盛会聚光灯外，打捞那些被遮蔽的普通人日常。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-11-21 18:15</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-we-are-all-strangers" target="_blank">痛苦而美麗，寫給新加坡的國族情書──陳哲藝、楊雁雁《我們不是陌生人》成長三部曲最終章</a></div>
+      <div class="entry-summary">三部曲系列如同一場陳哲藝對新加坡和解的漫長旅程。從《爸媽不在家》、《熱帶雨》到《我們不是陌生人》，他與老班底演員楊雁雁、許家樂歷經長達14年的旅程；體驗的成長苦痛、回看的家鄉情感，那些變與不變竟是如此美麗的事。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-21 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261121-job-inside-out-crayon-shin-chan-voice-actress/" target="_blank">我是蠟筆小新：「配音員可能會絕種，但如果我是最後一代，我都會感到榮幸」</a></div>
+      <div class="entry-summary">「當這個語言（廣東話）都有機會被淘汰，其實真的要更加珍惜。」語言隨歲月轉變，母語配音既可貴又不容易。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-20 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261121-camp-miasma-a-queer-monster-manifesto/" target="_blank">寫在《瘴氣營地》之後：21世紀酷兒怪物宣言</a></div>
+      <div class="entry-summary">從銀幕中的怪物到我們體內的妖，這一切是怎麼發生的？而創傷，可以是一個遊樂場嗎？</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-20 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/saturday-features-legal-profession-drama-the-odyssey" target="_blank">王子榮／《奧德賽》投射的司法難題：法律如何看見一個人的自我認同與內心傷痕？</a></div>
+      <div class="entry-summary">《奧德賽》藉神話探討經歷過殘酷戰爭與長年漂泊的人，心靈是否還能回歸平靜。法官王子榮則從法律人獨有視角，說明心理創傷進入法庭後的攻防：被害人提出PTSD診斷，就能成為犯罪認定的補強證據嗎？法官是如何判斷？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-20 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-yu-kan-ping" target="_blank">記得自己、理解他人，清醒地走過時間──虞戡平的山屋、忠犬與晚年</a></div>
+      <div class="entry-summary">《搭錯車》問世43年過去，「我真的很意外還有人記得我。」從拍電影到拍紀錄片、從紀錄消逝的傳統文化到傳承畢生所學的寶貴經驗，虞戡平始終記得自己所在的位置，只拍那些值得被挑戰、被記得、被看見的故事。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-20 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-we-are-born-good" target="_blank">吃盤乾炒牛河，找到善惡背後的理解──《善男信女》楊兩全的香港浮世繪</a></div>
+      <div class="entry-summary">相信與理解，是楊兩全想透過《善男信女》傳遞給所有觀眾的核心意義：兩名主角從一開始彼此的無法理解，最終發現有些苦痛和困境是相通的，然後就會在某個意想不到的瞬間，接住彼此，成為黑暗中的一點微光。吃飽了最後那盤「乾炒牛河」，就有力氣往下走了。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-20 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261120-weekly/" target="_blank">這一週，不漏讀：中美俄歷史性峰會</a></div>
+      <div class="entry-summary">今天是星期五，11月20日，歡迎來端周報。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-20 14:40</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/e13" target="_blank">【紐時幕後】我們如何開啟輝達調查報導？</a></div>
+      <div class="entry-summary">A global reporting effort by The New York Times included many twists and turns, from surprising photos and shipment records to a big break through astonishing tips from sources.</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-11-20 11:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261120-initium-audio-international-nvidia-post-jensen-huang-era/" target="_blank">黃仁勳時代終結，輝達與AI產業將走向何方？｜端聞 Podcast</a></div>
+      <div class="entry-summary">黃仁勳體現了這個時代的各種矛盾：試圖將美國設計、台灣製造的晶片賣到中國；既是 AI 浪潮的弄潮兒，也是兜底者。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-20 09:30</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261120-whatsnew-apec-shenzhen-explained/" target="_blank">中美俄元首首次三方會晤：深圳APEC值得留意的九個重點｜Whatsnew</a></div>
+      <div class="entry-summary">英國智庫評論認為，這次會談難以產生重大實質成果，有限的外交交易更有利於中國。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-20 07:15</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261120-international-inside-deutsche-bank-mass-file-leak/" target="_blank">【重磅】德意志銀行調查：八問 1500 萬份文件外泄</a></div>
+      <div class="entry-summary">特朗普、俄羅斯寡頭和中國高官的子女再一次出現在這個銀行外泄的文件之中。內部一再示警，交易照樣放行。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-19 23:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://theinitium.com/20261120-mainland-apec-shenzhen-b-side/" target="_blank">「全妝」深圳：APEC燈光秀下的城市與人</a></div>
+      <div class="entry-summary">「凝滯」，思思如此形容這幾天的生活。她需要撐過「凝滯」，持續完成運動動線，就像她在這一天偷偷來公司上班一樣，她需要錢。</div>
+      <div class="entry-meta"><span class="entry-source-tag">端传媒</span>2026-11-19 22:59</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/podcast-2026-11-20" target="_blank">台商西進潮落幕後，看見留下來的人如何生活：專訪《迴山》林佑恩、莊淳淨，如何在家庭裂痕裡練習靠近</a></div>
+      <div class="entry-summary">曾任《報導者》攝影記者的林佑恩帶著攝影機回家，花了6年多，把一家人的故事拍成《迴山》，並入圍第63屆金馬獎最佳紀錄片。這集，一起聽林佑恩與製片莊淳淨，聊聊這6年多來的拍攝過程，以及家人間的關係如何因拍攝而「改變」。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-19 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-local-elections-referendum-to-abolish-the-nuclear-free-policy" target="_blank">8年第4次核能公投：核電振興經濟？6大爭點看「廢除非核家園」公投</a></div>
+      <div class="entry-summary">「核三重啟」公投才剛結束1年多，下週「廢除非核家園」公投即將登場，這是台灣8年來第4次核能公投。AI發展需要核電支持？核電能解決台電虧損、保障國安？核廢料處置怎解？正反方各有哪些立論？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-19 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-echoes-of-taiwan-new-wave-cinema" target="_blank">《女孩》、《雙囍》領銜下，台灣新電影的餘熱與火傳</a></div>
+      <div class="entry-summary">舒淇《女孩》裡貫穿全片的基隆中山陸橋，呼喚著侯孝賢《千禧曼波》；許承傑《雙囍》裡的圓山大飯店意象，令人聯想到楊德昌《一一》與李安《囍宴》。綜觀台灣新電影過去40餘年，是承先並同時啟後，無論其精神是反抗、冒險還是情義，仍在今年的金馬獎遍地開花。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-19 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-chairmanship-hands-over" target="_blank">李屏賓交棒，張震接力──金馬主席的精神象徵與全新江湖</a></div>
+      <div class="entry-summary">「張震就是我的不二人選，」金馬執委會前任主席李屏賓斬釘截鐵地說。從台灣電影的舊時代走來，張震扛下了大旗朝著新世代前去，在那條承先啟後的路上，金馬的下一局江湖儼然成形。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-18 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/column-gender-trouble-2026-11-19" target="_blank">加碼補助、擴大公托、安全審計：從性別政見，思考我們想望的性平生活</a></div>
+      <div class="entry-summary">當我們把票投給自己想要的生活，也是在決定什麼樣的生活能夠被制度看見、支持與實現。因此檢視候選人的性別政見，不只要看提出了多少政策牛肉，更要追問：這些政策是否可能改變結構中的不平等？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-18 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/112026-newsletter-03" target="_blank">水瓶周报｜间谍疑云后再曝婚外情，黄仁勋引咎辞职；中国通过首部反跨境腐败法；陕西男子开挖掘机“反向强拆”政府大楼</a></div>
+      <div class="entry-summary">你希望看到怎样的新闻，你对周报有哪些意见或建议，欢迎留言或发邮件告诉我们，也欢迎有志于新闻写作的朋友加入周报团队，可以将作品和简历发送邮箱：aquariusage2024@gmail.com。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-11-17 11:37</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://tianjiancmp.substack.com/p/bb6" target="_blank">【專題】台灣離島媒體金門篇：小且重要的地方連結</a></div>
+      <div class="entry-summary">「地方不是一個凝固的概念，人會來來去去，所以有時候需要切換視角去看事情。」</div>
+      <div class="entry-meta"><span class="entry-source-tag">田间</span>2026-11-17 03:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/private-entrepreneurs-judicial-cases-nian-yong-an" target="_blank">洛阳“珠宝大王”年永安：当庭举报官员背后的罪与非罪</a></div>
+      <div class="entry-summary">留置对大多数人来说是祸事，对年永安而言却是幸事，而这是他当庭举报政府官员换来的机会。银行主动发起的不良资产“出表配资”合作、基于涉案人员口供的资不抵债审计报告，构成了年永安身陷贷款诈骗、非法集资等六罪指控的主要证据。从政企合作的标杆到重罪指控对象，年永安的命运起伏，成为地方权力生态和金融体系运行的时代注脚。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-11-14 15:48</div>
+    </div>
+  </div>
+
+  <div class="section col-highlight">
+    <div class="section-header">
+      <h2>🔥 重点议题 <span class="en-label">Consumer · Society · Culture · AI</span></h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375510/university-hong-kong-suspends-china-human-rights-course-law-dean-steps-down" target="_blank">University of Hong Kong puts on hold China human rights course as law dean steps down</a></div>
+      <div class="entry-summary">The University of Hong Kong (HKU) will put on hold a course on human rights in China for master’s and Juris Doctor students in the second semester of the 2026-27 academic year, after convenor Fu Hualing said he was…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 13:47</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/society/article/3375473/after-fire-community-tai-po-feels-loss-friends-and-patrons" target="_blank">After the fire: a community in Tai Po feels the loss of friends and patrons</a></div>
+      <div class="entry-summary">A shadow hangs over a once bustling community, and reminders of those who have gone are everywhere. For the people that remain in Kwong Fuk Estate, letting go is the hardest part. Robert Wong grew up in Kwong Fuk…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 12:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.scmp.com/news/hong-kong/education/article/3375504/john-lee-hails-young-hongkongers-fighting-spirit-after-record-worldskills-haul" target="_blank">John Lee hails young Hongkongers’ ‘fighting spirit’ after record WorldSkills haul</a></div>
+      <div class="entry-summary">Hong Kong Chief Executive John Lee Ka-chiu has praised the city’s younger generation for their “outstanding skills and fighting spirit” after a record-breaking performance at an international vocational competition.…</div>
+      <div class="entry-meta"><span class="entry-source-tag">SCMP</span>2026-11-23 11:49</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-we-are-all-strangers" target="_blank">痛苦而美麗，寫給新加坡的國族情書──陳哲藝、楊雁雁《我們不是陌生人》成長三部曲最終章</a></div>
+      <div class="entry-summary">三部曲系列如同一場陳哲藝對新加坡和解的漫長旅程。從《爸媽不在家》、《熱帶雨》到《我們不是陌生人》，他與老班底演員楊雁雁、許家樂歷經長達14年的旅程；體驗的成長苦痛、回看的家鄉情感，那些變與不變竟是如此美麗的事。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-21 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/saturday-features-legal-profession-drama-the-odyssey" target="_blank">王子榮／《奧德賽》投射的司法難題：法律如何看見一個人的自我認同與內心傷痕？</a></div>
+      <div class="entry-summary">《奧德賽》藉神話探討經歷過殘酷戰爭與長年漂泊的人，心靈是否還能回歸平靜。法官王子榮則從法律人獨有視角，說明心理創傷進入法庭後的攻防：被害人提出PTSD診斷，就能成為犯罪認定的補強證據嗎？法官是如何判斷？</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-20 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-echoes-of-taiwan-new-wave-cinema" target="_blank">《女孩》、《雙囍》領銜下，台灣新電影的餘熱與火傳</a></div>
+      <div class="entry-summary">舒淇《女孩》裡貫穿全片的基隆中山陸橋，呼喚著侯孝賢《千禧曼波》；許承傑《雙囍》裡的圓山大飯店意象，令人聯想到楊德昌《一一》與李安《囍宴》。綜觀台灣新電影過去40餘年，是承先並同時啟後，無論其精神是反抗、冒險還是情義，仍在今年的金馬獎遍地開花。</div>
+      <div class="entry-meta"><span class="entry-source-tag">报道者</span>2026-11-19 16:00</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.bbc.co.uk/news/articles/cmvg652l927lo?at_medium=RSS&amp;at_campaign=rss" target="_blank">He spent $50,000 on Labubus but now the craze is dying</a></div>
+      <div class="entry-summary">Parent company Pop Mart&#x27;s revenue has fallen as appetite for the quirky collectible monsters wanes.</div>
+      <div class="entry-meta"><span class="entry-source-tag">BBC</span>2026-11-07 23:02</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/11/01/hit-podcasts-reveal-the-angst-of-chinas-youth" target="_blank">Hit podcasts reveal the angst of China’s youth</a></div>
+      <div class="entry-summary">The government is getting twitchy about their growing popularity</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-11-01 10:35</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/10/26/chinas-most-successful-astroturf-operation-grassroots-football" target="_blank">China’s most successful Astroturf operation: grassroots football</a></div>
+      <div class="entry-summary">Provincial leagues spur spending and a hometown renaissance</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-10-26 15:24</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/children-of-lgbtq-parents-in-china" target="_blank">彩虹宝宝“出柜”十年：同志伴侣生育背后的家庭日常</a></div>
+      <div class="entry-summary">大多数国家，同志运动有其路径，在讨论同志家庭生育养育的话题之前，大家会先争取同性婚姻和法律保护。但在中国，是“小孩生出来了，变成了一个不能否定的事实，你不得不回头去面对那些障碍，上户口、处理生育保险，等小孩逐渐长大，你要面对照顾、教育等问题。不管法律如何，我们自己先摸索一下，我摸到一点信息就给别人说一点，你摸到一点也再来分享一点，大家就这样被推着往前走。”</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-10-26 01:51</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/chongqing-time-fengjun-gender-conflict" target="_blank">时代峰峻冲突背后：社交媒体时代的性别战争</a></div>
+      <div class="entry-summary">8月中旬，重庆偶像经济公司时代峰峻楼下，连日来有打卡女粉丝被聚众男青年包围，并遭到辱骂和推搡。从网络嘲讽到线下“出征”，这起冲突折射出原本个体分散、却正被社交媒体平台整合的集体情绪：认为男性正在遭遇系统性的不公。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-10-19 16:11</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://aquarianhq.substack.com/p/092026-newsletter-05" target="_blank">水瓶周报：习近平访美结束，场面盛大，各取所需；美华回家近一月，安置追责仍未明；英国成立“打击厌女”工作组，成效待检视；因转发讨薪微博，兰州农民工景树仁被判刑4年；北京无人机管制再升级，禁飞区覆盖周边省</a></div>
+      <div class="entry-summary">我们致力于把过去一周最重要的信息及时传达给您。由于社交平台发布会遇到一些困难， 邮件订阅非常重要；您可以给我们写信：aquariusage2024@gmail.com，也可以直接在网页订阅我们的新闻简报。欢迎您与我们一起交流相关想法。</div>
+      <div class="entry-meta"><span class="entry-source-tag">水瓶纪元</span>2026-09-28 18:10</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.economist.com/china/2026/09/21/what-mao-can-teach-china-about-managing-america" target="_blank">What Mao can teach China about managing America</a></div>
+      <div class="entry-summary">An insurgent power has fought the incumbent to a stalemate</div>
+      <div class="entry-meta"><span class="entry-source-tag">The Economist</span>2026-09-21 13:32</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.sixthtone.com/news/1019307/Lost Ground: China’s Coffee Brands Break Starbucks and Nestlé’s Grip on Yunnan" target="_blank">Lost Ground: China’s Coffee Brands Break Starbucks and Nestlé’s Grip on Yunnan</a></div>
+      <div class="entry-summary">Domestic coffee chains like Luckin and Manner are raising bean prices, but hurried harvests could threaten the region’s reputation.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Sixth Tone</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.sixthtone.com/news/1019298/China’s Cargo Drones Take Off With Two Successful Trials" target="_blank">China’s Cargo Drones Take Off With Two Successful Trials</a></div>
+      <div class="entry-summary">Two domestic companies successfully carried out flight and delivery tests of unmanned aircraft designed for cargo and emergency deliveries in the last week.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Sixth Tone</span></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.sixthtone.com/news/1019294/Why China’s Latest Blockbuster Game Had a Change of Heart" target="_blank">Why China’s Latest Blockbuster Game Had a Change of Heart</a></div>
+      <div class="entry-summary">After two decades of development, the makers of Phantom Blade Zero abandoned a punishing 66-life restriction to make their wuxia-meets-steampunk adventure accessible to a wider audience.</div>
+      <div class="entry-meta"><span class="entry-source-tag">Sixth Tone</span></div>
+    </div>
+  </div>
+  </div>
+  <div class="footer">
+    本文件由脚本自动生成 · 内容来自各媒体 RSS · 仅供参考
+  </div>
+</div>
+<script>
+(function(){
+  var inp = document.getElementById('search-input');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.entry').forEach(function(e) {
+      var match = !q || e.textContent.toLowerCase().indexOf(q) !== -1;
+      e.classList.toggle('search-hidden', !match);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      var visible = s.querySelectorAll('.entry:not(.search-hidden)').length;
+      s.classList.toggle('search-all-hidden', q.length > 0 && visible === 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
